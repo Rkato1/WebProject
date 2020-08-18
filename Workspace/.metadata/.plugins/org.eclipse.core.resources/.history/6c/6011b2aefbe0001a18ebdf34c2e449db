@@ -1,0 +1,10 @@
+package kh.java;
+
+import kh.func.SecondFunc;
+
+public class SecondStart {
+	public void main(String[] args) {
+		SecondFunc sf = new SecondFunc();
+		sf.printName();
+	}
+}
