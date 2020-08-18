@@ -46,5 +46,12 @@ public class Variable {
 		System.out.print("11");
 		System.out.print("22");
 		//println은 출력 후 줄 바꿈, print는 출력만
+		//System.out.printf(format, args);
+		//printf
+	}
+	public void func2() {
+		String name = "김현식";
+		int age = 28;
+		System.out.println("제 이름은 " + name + "이고 나이는 " + age + "살입니다.");
 	}
 }
