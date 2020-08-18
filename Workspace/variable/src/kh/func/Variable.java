@@ -45,13 +45,66 @@ public class Variable {
 		System.out.println("22");
 		System.out.print("11");
 		System.out.print("22");
-		//println은 출력 후 줄 바꿈, print는 출력만
-		//System.out.printf(format, args);
-		//printf
+		//println은 출력 후 줄 바꿈, print는 출력만		
 	}
 	public void func2() {
 		String name = "김현식";
 		int age = 28;
 		System.out.println("제 이름은 " + name + "이고 나이는 " + age + "살입니다.");
+		System.out.printf("제 이름은 %s이고 나이는 %d살입니다.", name, age);
+		//printf는 %로 자료형 구별에 편함
+		//%d 정수, %o 8진수, %x 16진수
+		//%f 실수(소수점아래6자리)  %e 지수형태표현
+		//%g %e, %f 중 더 짧은 표현을 사용
+		//%A 16진수 실수
+		//%c 문자, %s 문자열
+		//\ back slash escape문자
+		//\t tab만큼 공간확보 \n 줄 바꿈
+		//\' \" '와 "를 출력할 때 사용 \\ \출력
+	}
+	public void func3() {
+		int iNum = 100;
+		long lNum = 9999000000000l;
+		float fNum = 486.520f;
+		double dNum = 5697.890123;
+		char cTemp = 'A';
+		String sTemp = "Hello JAVA";
+		boolean bTemp = true;
+		System.out.println(iNum);
+		System.out.println(lNum);
+		System.out.println(fNum);
+		System.out.println(dNum);
+		System.out.println(cTemp);
+		System.out.println(sTemp);
+		System.out.println(bTemp);
+	}
+	public void func4() {
+		String sName = "김현식";
+		int age = 28;
+		char cGender = 'M';
+		String sAddress = "경기도";
+		String sPhoneNumber = "01012345678";
+		String sEMail = "silvestr0720@gmail.com";
+		String sName0 = "홍길동";
+		int age0 = 20;
+		char cGender0 = 'M';
+		String sAddress0 = "서울";
+		String sPhoneNumber0 = "01087654321";
+		String sEMail0 = "honggildong@gmail.com";
+		System.out.println("이름\t나이\t성별\t지역\t전화번호\t\t이메일");
+		System.out.println("------------------------------------------------------------------------");
+		System.out.print(sName + "\t");
+		System.out.print(age + "\t");
+		System.out.print(cGender + "\t");
+		System.out.print(sAddress + "\t");
+		System.out.print(sPhoneNumber + "\t");
+		System.out.print(sEMail + "\n");
+		System.out.println("------------------------------------------------------------------------");
+		System.out.print(sName0 + "\t");
+		System.out.print(age0 + "\t");
+		System.out.print(cGender0 + "\t");
+		System.out.print(sAddress0 + "\t");
+		System.out.print(sPhoneNumber0 + "\t");
+		System.out.print(sEMail0 + "\n");
 	}
 }
