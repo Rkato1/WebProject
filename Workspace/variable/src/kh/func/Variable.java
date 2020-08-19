@@ -1,5 +1,8 @@
 package kh.func;
 
+import java.util.Scanner;
+//Scanner 기능을 사용하기 위해 import 선언
+
 public class Variable {
 	public void func1() {
 		boolean bool1 = true;
@@ -106,5 +109,72 @@ public class Variable {
 		System.out.print(sAddress0 + "\t");
 		System.out.print(sPhoneNumber0 + "\t");
 		System.out.print(sEMail0 + "\n");
+	}
+	
+	public void scan() {
+		System.out.print("원하는 정수 입력 : ");
+		Scanner sc = new Scanner(System.in);
+		//Scanner를 사용하기 위해 클래스 생성
+		int num = sc.nextInt();
+		//정수 입력받기(값을 저장하기 위한 지역변수 선언)
+		System.out.println(num);
+		
+		System.out.print("원하는 실수 입력 : ");
+		double num1 = sc.nextDouble();
+		//실수 입력받기(값을 저장하기 위한 지역변수 선언)
+		System.out.println(num1);
+		
+		System.out.print("원하는 문자열 입력 : ");
+		String stemp = sc.next();
+		//문자열 입력받기(값을 저장하기 위한 지역변수 선언)
+		//sc.next()는 공백 존재시 구분이 불가능함(발생시 입력 종료)
+		System.out.println(stemp);
+		
+		System.out.print("원하는 문자열 입력 : ");
+		sc.nextLine();
+		//현재 Buffer에 남아있는 개행문자 처리
+		//위에서 loop 발생으로 넣어야함
+		String stemp0 = sc.nextLine();
+		//문자열 입력받기(값을 저장하기 위한 지역변수 선언)
+		//sc.nextLine() 띄어쓰기 가능
+		System.out.println(stemp0);
+		
+		System.out.print("원하는 문자 입력 : ");
+		char ch = sc.next().charAt(0);
+		//문자열 입력받기(그 중 첫 번째 인자를 받아옴)
+		System.out.println(ch);
+	}
+	
+	public void exam1() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("이름 입력 : ");
+		String name = sc.nextLine();
+		System.out.print("나이 입력 : ");
+		int age = sc.nextInt();
+		System.out.print("주소 입력 : ");
+		sc.nextLine();
+		String address = sc.nextLine();
+		System.out.print("키(실수) 입력 : ");
+		double height = sc.nextDouble();
+		System.out.print("몸무게(실수) 입력 : ");
+		double weight = sc.nextDouble();
+		System.out.print("성별 입력 : ");
+		char gender = sc.next().charAt(0);
+		
+		System.out.printf("이름 : %s, 나이 : %d, 주소 : %s, 키 : %d, 몸무게 : %.1f, 성별 : %c\n", name, age, address, (int)height, weight, gender);
+		//.1f는 소수점 첫째 자리까지 출력
+	}
+	
+	public void exam2() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("국어점수 입력 : ");
+		int inum = sc.nextInt();
+		System.out.print("수학점수 입력 : ");
+		int inum1 = sc.nextInt();
+		System.out.print("영어점수 입력 : ");
+		int inum2 = sc.nextInt();
+		int itemp = inum + inum1 + inum2;
+		double dtemp = itemp / 3;
+		System.out.printf("당신 성적의 총 합은 %d점이고 평균은 %.2f 입니다!", itemp, dtemp);
 	}
 }
