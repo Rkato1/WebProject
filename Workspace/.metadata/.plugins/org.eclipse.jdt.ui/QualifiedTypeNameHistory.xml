@@ -5,4 +5,6 @@
 <fullyQualifiedTypeName name="kr.or.iei.vo.Information"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="com.khmarket.vo.Goods"/>
+<fullyQualifiedTypeName name="kh.func.PrintMsg"/>
+<fullyQualifiedTypeName name="kh.func.Variable"/>
 </qualifiedTypeNameHistroy>
