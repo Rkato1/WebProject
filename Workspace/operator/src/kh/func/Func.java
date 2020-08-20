@@ -125,7 +125,7 @@ public class Func {
 		System.out.println(stemp);
 		//if문 처리
 		/*
-		if((int)dtemp >= 60) {
+		if(((int)dtemp >= 60) && (num1>=40) && (num2>=40) && (num3>=40)) {
 			System.out.println("합격");
 		}
 		else {
