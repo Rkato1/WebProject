@@ -3,8 +3,11 @@
 <fullyQualifiedTypeName name="dangsan.func.Func"/>
 <fullyQualifiedTypeName name="kh.func.SecondFunc"/>
 <fullyQualifiedTypeName name="kr.or.iei.vo.Information"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="com.khmarket.vo.Goods"/>
 <fullyQualifiedTypeName name="kh.func.PrintMsg"/>
 <fullyQualifiedTypeName name="kh.func.Variable"/>
+<fullyQualifiedTypeName name="kh.java.function.Example"/>
+<fullyQualifiedTypeName name="kh.func.Func"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

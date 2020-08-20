@@ -121,7 +121,7 @@ public class Func {
 		System.out.println("합계 : " + itemp);
 		System.out.printf("평균 : %.2f\n", dtemp);
 		//3항연산자 처리
-		String stemp = (int)dtemp >= 60 ? "합격" : "불합격";
+		String stemp = ((int)dtemp >= 60 && (num1>=40) && (num2>=40) && (num3>=40)) ? "합격" : "불합격";
 		System.out.println(stemp);
 		//if문 처리
 		/*
