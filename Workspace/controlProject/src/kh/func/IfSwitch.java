@@ -257,7 +257,28 @@ public class IfSwitch {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("일수를 알고싶은 달을 입력하세요 : ");
 		int inum = sc.nextInt();
+		
+		//break를 일부러 안줘서 출력되게 만드는 경우
 		switch(inum) {
+		case 1:
+		case 3:
+		case 5:
+		case 7:
+		case 8:
+		case 10:
+		case 12:
+			System.out.println(inum + "월달은 31일까지 있습니다.");
+			break;
+		case 2:
+			System.out.println(inum + "월달은 29일까지 있습니다.");
+			break;
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+			System.out.println(inum + "월달은 30일까지 있습니다.");
+			break;
+		/*
 		case 1:
 			System.out.println(inum + "월달은 31일까지 있습니다.");
 			break;
@@ -294,6 +315,7 @@ public class IfSwitch {
 		case 12:
 			System.out.println(inum + "월달은 31일까지 있습니다.");
 			break;
+			*/
 		}
 	}
 	
