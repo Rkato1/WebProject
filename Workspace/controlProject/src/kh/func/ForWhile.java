@@ -356,6 +356,7 @@ public class ForWhile {
 		*/
 		
 		//별찍기 13
+		/*
 		int i, j, k;
 		for(j=0; j<9; j++) {
 			if(j <= 4) {
@@ -373,6 +374,201 @@ public class ForWhile {
 				for(k=4; k<5-i; k--) {
 					System.out.print(" ");
 				}				
+			}
+			System.out.println();
+		}
+		*/
+		
+		//별찍기14, 모래시계
+		/*
+		int h, i, j, k, itemp = 0;
+		for(h=0; h<9; h++) {
+			if(h <= 4) {
+				for(i=0; i<h; i++) {
+					System.out.print("*");
+				}
+				for(j=10; j > itemp; j--) {
+					System.out.print(" ");
+				}
+				for(k=0; k<h; k++) {
+					System.out.print("*");
+				}
+				itemp+=2;
+			}
+			else {
+				for(i=4; i>h-4; i--) {
+					System.out.print("*");
+				}
+				for(j=10; j > itemp-4; j--) {
+					System.out.print(" ");
+				}
+				for(k=4; k>h-4; k--) {
+					System.out.print("*");
+				}
+				itemp-=2;
+			}
+			System.out.println();
+		}
+		*/
+		
+		//별찍기15 반모래시계, 아래
+		/*
+		int h, i, j, k, itemp = 1;
+		for(h=0; h<5; h++) {
+			for(i=4; i>h; i--) {
+				System.out.print(" ");
+			}
+			for(j=0; j < itemp; j++) {
+				System.out.print("*");
+			}
+			for(k=4; k>h; k--) {
+				System.out.print(" ");
+			}
+			itemp+=2;
+			System.out.println();
+		}
+		*/
+		
+		//별찍기16 반모래시계, 위
+		/*
+		int h, i, j, k, itemp = 9;
+		for(h=0; h<5; h++) {
+			for(i=5; i>5-h; i--) {
+				System.out.print(" ");
+			}
+			for(j=0; j < itemp; j++) {
+				System.out.print("*");
+			}
+			for(k=5; k>5-h; k--) {
+				System.out.print(" ");
+			}
+			itemp-=2;
+			System.out.println();
+		}
+		*/
+		
+		//별찍기17 모래시계
+		/*
+		int h, i, j, k, itemp = 1;
+		for(h=0; h<9; h++) {
+			if(h <= 4) {
+				for(i=4; i>h; i--) {
+					System.out.print(" ");
+				}
+				for(j=0; j < itemp; j++) {
+					System.out.print("*");
+				}
+				for(k=4; k>h; k--) {
+					System.out.print(" ");
+				}
+				itemp+=2;
+			}
+			else {
+				for(i=0; i<h-4; i++) {
+					System.out.print(" ");
+				}
+				for(j=4; j < itemp; j++) {
+					System.out.print("*");
+				}
+				for(k=0; k<h-4; k++) {
+					System.out.print(" ");
+				}
+				itemp-=2;
+			}
+			System.out.println();
+		}
+		*/
+		
+		//별찍기18 공백마름모
+		/*
+		int h, i, j, k, itemp = 1;
+		for(h=0; h<9; h++) {
+			if(h <= 4) {
+				for(i=5; i>h; i--) {
+					System.out.print("*");
+				}
+				for(j=1; j <= itemp; j++) {
+					System.out.print(" ");
+				}
+				for(k=5; k>h; k--) {
+					System.out.print("*");
+				}
+				itemp+=2;
+			}
+			else {
+				for(i=0; i<h-3; i++) {
+					System.out.print("*");
+				}
+				for(j=4; j < itemp; j++) {
+					System.out.print(" ");
+				}
+				for(k=0; k<h-3; k++) {
+					System.out.print("*");
+				}
+				itemp-=2;
+			}
+			System.out.println();
+		}
+		*/
+		
+		//모래시계19 공백모래시계
+		/*
+		int h, i, j, k, itemp = 9;
+		for(h=0; h<10; h++) {
+			if(h <= 4) {
+				for(i=0; i<h; i++) {
+					System.out.print("*");
+				}
+				for(j=itemp; j > 0; j--) {
+					System.out.print(" ");
+				}
+				for(k=0; k<h; k++) {
+					System.out.print("*");
+				}
+				itemp-=2;
+			}
+			else {
+				for(i=5; i>h-5; i--) {
+					System.out.print("*");
+				}
+				for(j=0; j <= itemp + 1; j++) {
+					System.out.print(" ");
+				}
+				for(k=5; k>h-5; k--) {
+					System.out.print("*");
+				}
+				itemp+=2;
+			}
+			System.out.println();
+		}
+		*/
+		
+		//모래시계 19, 공백모래시계
+		int h, i, j, k, itemp = 1;
+		for(h=0; h<9; h++) {
+			if(h <= 4) {
+				for(i=0; i<h+1; i++) {
+					System.out.print("*");
+				}
+				for(j=10; j > itemp; j--) {
+					System.out.print(" ");
+				}
+				for(k=0; k<h+1; k++) {
+					System.out.print("*");
+				}
+				itemp+=2;
+			}
+			else {
+				for(i=4; i>h-5; i--) {
+					System.out.print("*");
+				}
+				for(j=10; j > itemp-4; j--) {
+					System.out.print(" ");
+				}
+				for(k=4; k>h-5; k--) {
+					System.out.print("*");
+				}
+				itemp-=2;
 			}
 			System.out.println();
 		}
