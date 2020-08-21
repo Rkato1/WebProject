@@ -1,7 +1,7 @@
 package kh.java;
 
 import kh.func.ForWhile;
-import kh.func.IfSwitch;
+import kh.func.IfSwitch;	
 
 public class Start {
 
@@ -12,7 +12,9 @@ public class Start {
 		//is.test12();
 		ForWhile fw = new ForWhile();
 		//fw.forTest();
-		fw.test6();
+		//fw.test1();
+		//fw.whileTest();
+		fw.forTest3();
 	}
 
 }
