@@ -14,7 +14,7 @@ public class Start {
 		//fw.forTest();
 		//fw.test1();
 		//fw.whileTest();
-		fw.forTest3();
+		fw.forWhileTest4();
 	}
 
 }

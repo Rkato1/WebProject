@@ -543,6 +543,7 @@ public class ForWhile {
 		}
 		*/
 		
+		/*
 		//모래시계 19, 공백모래시계
 		int h, i, j, k, itemp = 1;
 		for(h=0; h<9; h++) {
@@ -572,5 +573,58 @@ public class ForWhile {
 			}
 			System.out.println();
 		}
+		*/
+		
+		//무한반복 생성코드
+		//for문
+		/*
+		for(;;) {
+			System.out.println("무한반복");
+		}
+		*/
+		
+		//while문
+		/*
+		while(true) {
+			System.out.println("무한반복");
+		}
+		*/
+		
+		//분기점
+		/*
+		Scanner sc = new Scanner(System.in);
+		for(int i=0; i<5; i++) {
+			System.out.println("Hello");
+			System.out.print("숫자 입력(1을 입력하면 그만출력함) : ");
+			int j = sc.nextInt();
+			if(j == 1) {
+				System.out.println("1 입력 break; 실행");
+				//탈출하는 분기점 코드
+				//반복문 종료
+				break;
+			}
+			else {
+				System.out.println( j + " 입력 continue; 실행");
+				//계속 실행하게 만드는 분기점 코드
+				//밑에 뭐가 있어도 바로 최상단으로 이동
+				//for문은 증감처리부터 다시 시작
+				//while문은 최상단부터 다시 시작
+				//continue이후코드는 실행되지 않음
+				continue;
+			}
+		}
+		*/
 	}
+	
+	public void forWhileTest4() {
+		for(int i=0; i<=5; i++) {
+			System.out.println(i + ".외부 for문");
+			for(int j=0; j<=5; j++) {
+				if(i==3) {
+					break;
+				}
+				System.out.println(j + ".내부 for문");
+			}
+		}
+	}	
 }
