@@ -8,7 +8,10 @@ public class RandomStart {
 		// TODO Auto-generated method stub
 		RandomTest rt = new RandomTest();
 		//rt.randomTest3();
-		rt.stringTest();
+		//rt.stringTest();
+		//rt.upDownGame();
+		//rt.baskinRobbins31Game();
+		rt.diceGame();
 	}
 
 }
