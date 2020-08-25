@@ -169,6 +169,12 @@ public class RandomTest {
 	public void upDownGame() {		
 		Scanner sc = new Scanner(System.in);
 		boolean gm = true;
+		//기록시스템을 만드는 변수
+		//하지만 초기에 작업하지 않아서 그냥 주석처리
+		//굳이 만들자면 loop에서 받아서 처리
+		int rank = 0;
+		int iTemp = 0;
+		
 		while(gm) {
 			System.out.println("===Up & Down Game ===");
 			System.out.print("1. Game Start\n2. Game Score\n3. End Game\n");
@@ -178,11 +184,16 @@ public class RandomTest {
 		
 			switch(inum) {
 			case 1:
-				upDownGameLoop();
+				iTemp = upDownGameLoop();
+				//rank가 0인 경우의 조건은
+				//최초에 0으로 초기화 되었기 때문
+				if(rank > iTemp || rank == 0) {
+					rank = iTemp;
+				}
 				break;
 			case 2:
-				System.out.println("점수는 미구현.");
-				gm = false;
+				System.out.println("현재 최고 기록은 " + rank + "입니다.");
+				//gm = false;
 				break;
 			case 3:
 				System.out.println("게임이 종료됩니다.");
@@ -192,7 +203,7 @@ public class RandomTest {
 		}
 	}
 	
-	public void upDownGameLoop() {
+	int upDownGameLoop() {
 		System.out.println("<< Game Start >>");
 		Random r = new Random();
 		Scanner sc = new Scanner(System.in);
@@ -218,6 +229,7 @@ public class RandomTest {
 			}
 			i++;
 		}
+		return i;
 	}
 	
 	public void baskinRobbins31Game() {
