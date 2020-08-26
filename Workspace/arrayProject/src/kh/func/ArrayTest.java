@@ -364,22 +364,105 @@ public class ArrayTest {
 		System.out.print("주민번호 입력 : ");
 		String ph = sc.next();
 		char chs[] = new char[14];
-		/*
-		for(int i=0;i<ph.length();i++) {
-			chs[i] = ph.charAt(i);
-			if(i>=7) {
-				chs[i]='*';
-			}
-			System.out.print(chs[i]);
-		}
-		*/
 		
 		chs = ph.toCharArray().clone();
 		for(int i=0;i<ph.length();i++) {
-			if(i>=7) {
+			if(i>7) {
 				chs[i]='*';
 			}
 			System.out.print(chs[i]);
 		}
 	}
+
+	public void sdarrTest() {
+		//2차원 배열 arr[가로_행번호][세로_열번호]
+		//기본값은 숫자형은 모두 0 
+		//boolean은 false, char ''		
+		int sdarr[][] = {{1,2,3},{4,5,6}};
+		int arr[][] = new int[5][5];
+		int k = 0;
+		//arr.length는 행의 갯수
+		for(int i=0;i<arr.length;i++) {
+			//arr[i].length는 그 행의 열의개수
+			for(int j=0;j<arr[i].length;j++) {
+				arr[i][j]=k;
+				k++;
+			}
+		}
+	}
+	
+	public void sdarrTest1() {
+		int arr[][] = new int[5][5];
+		int k=5;
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				arr[i][j]=k-j;
+			}
+			k+=5;
+		}
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				System.out.print(arr[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void sdarrTest2() {
+		int arr[][] = new int[5][5];
+		int k=1;
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				arr[j][i]=k++;
+			}
+		}
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				System.out.print(arr[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void sdarrTest3() {
+		int arr[][] = new int[5][5];
+		int k=5;
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				arr[i][j]=(j+1)*k-i;
+			}
+		}
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				System.out.print(arr[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void sdarrTest4() {
+		int arr[][] = new int[5][5];
+		int k=1;
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				if(i%2==0) {
+					arr[i][j]=k++;
+				}else {
+					arr[i][4-j]=k++;
+				}
+			}
+		}
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				System.out.print(arr[i][j] + "\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	
 }
