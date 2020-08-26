@@ -654,6 +654,8 @@ public class ArrayTest {
 		for(int i=0; i<iNum; i++) {
 			System.out.print(i+1+"번째 숫자 입력");
 			int k = sc.nextInt();
+			//^는 거듭제곱을 의미하지만
+			//여기선 xor연산자임			
 			if(k>0 && k<Math.pow(2, iNum)) {
 				arr2[i] = dec2binary(k, iNum);
 			}
@@ -703,7 +705,16 @@ public class ArrayTest {
 		Scanner sc = new Scanner(System.in);
 		int map1[][] = new int[5][5];
 		int map2[][] = new int[5][5];
+		//이부분을 boolean형 변수로 해도
+		//똑같이 구현이 가능함
 		char map[][] = new char[5][5];
+		
+		int size = 5;
+		int itemp=0;
+		//거듭제곱
+		for(int i=0;i<size;i++) {
+			itemp*=2;
+		}
 		
 		System.out.println("첫번째 배열 숫자입력");
 		for(int i=0;i<map1.length;i++) {
@@ -727,12 +738,16 @@ public class ArrayTest {
 		
 		for(int i=0;i<map.length;i++) {
 			for(int j=0;j<map[i].length;j++) {
+				//3항연산자
+				map[i][j] = map1[i][j]|map2[i][j]?'#':' ';
+				/*
 				if(map1[i][j]==1 || map2[i][j]==1) {
 					map[i][j]='#';
 				}
 				else {
 					map[i][j]=' ';
 				}
+				*/
 			}
 		}
 		
@@ -744,4 +759,5 @@ public class ArrayTest {
 		}
 		
 	}
+
 }

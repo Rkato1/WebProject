@@ -13,5 +13,4 @@ public class ArrayStart {
 		//at.snail2DArrayBack();
 		at.kakaoArrayTest2();
 	}
-
 }
