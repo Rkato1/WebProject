@@ -8,7 +8,7 @@ public class ArrayStart {
 		// TODO Auto-generated method stub
 		ArrayTest at = new ArrayTest();
 		//at.lottoArray();
-		at.arrCopy();
+		at.arrTest();
 	}
 
 }

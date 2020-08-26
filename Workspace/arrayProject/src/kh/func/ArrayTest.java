@@ -340,7 +340,7 @@ public class ArrayTest {
 		//문자열을 문자1개씩 분리해서 문자형 배열에 저장
 		//문자열 중에 몇번째 글자 하나만 문자로 추출
 		//얕은복사(값만 저장, 원본 변하면 얘도 바뀜)
-		int iA[]] = {1,2,3};
+		int iA[] = {1,2,3};
 		int iA1[] = iA;
 		//깊은복사(값과 주소 모두 저장, 원본 변해도 영향없음)
 		char ph1[] = new char[13];
@@ -352,11 +352,34 @@ public class ArrayTest {
 			System.out.print(i);
 		}
 		
+
+		//arraycopy메소드 원본배열,시작위치,복사배열,시작위치,길이
+		
 		//clone키워드를 사용해서 깊은 복사
 		char ph2[] = ph.toCharArray().clone();
 	}
 	
 	public void arrTest() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("주민번호 입력 : ");
+		String ph = sc.next();
+		char chs[] = new char[14];
+		/*
+		for(int i=0;i<ph.length();i++) {
+			chs[i] = ph.charAt(i);
+			if(i>=7) {
+				chs[i]='*';
+			}
+			System.out.print(chs[i]);
+		}
+		*/
 		
+		chs = ph.toCharArray().clone();
+		for(int i=0;i<ph.length();i++) {
+			if(i>=7) {
+				chs[i]='*';
+			}
+			System.out.print(chs[i]);
+		}
 	}
 }
