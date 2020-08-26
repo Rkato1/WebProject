@@ -7,7 +7,8 @@ public class ArrayStart {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayTest at = new ArrayTest();
-		at.lottoArray();
+		//at.lottoArray();
+		at.arrCopy();
 	}
 
 }
