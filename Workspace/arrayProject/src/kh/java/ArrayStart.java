@@ -8,7 +8,10 @@ public class ArrayStart {
 		// TODO Auto-generated method stub
 		ArrayTest at = new ArrayTest();
 		//at.lottoArray();
-		at.sdarrTest4();
+		//at.sdarrTest4();
+		//at.kakaoArrayTest();
+		//at.snail2DArrayBack();
+		at.kakaoArrayTest2();
 	}
 
 }

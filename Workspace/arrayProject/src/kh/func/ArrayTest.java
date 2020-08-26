@@ -384,6 +384,8 @@ public class ArrayTest {
 		//arr.length는 행의 갯수
 		for(int i=0;i<arr.length;i++) {
 			//arr[i].length는 그 행의 열의개수
+			//가변배열에서는 각 행마다 열의 길이가
+			//다를 수 있기 때문에 꼭 적어야함
 			for(int j=0;j<arr[i].length;j++) {
 				arr[i][j]=k;
 				k++;
@@ -464,5 +466,282 @@ public class ArrayTest {
 		}
 	}
 	
+	public void kakaoArrayTest() {
+		Scanner sc = new Scanner(System.in);
+		Random rd = new Random();
+		//행과 열을 저장할 변수
+		int row = 0, col =0;
+		//값 판별과정
+		while(true) {
+			System.out.print("가로행의 개수를 입력하세요(1~10) ==> ");
+			row = sc.nextInt();
+			if(row<1||row>10) {
+				System.out.println("반드시 1~10 사이의 정수를 입력해야 합니다.");
+			}else {
+				break;
+			}
+		}
+		
+		while(true) {
+			System.out.print("세로열의 개수를 입력하세요(1~10) ==> ");
+			col = sc.nextInt();
+			if(col<1||col>10) {
+				System.out.println("반드시 1~10 사이의 정수를 입력해야 합니다.");
+			}else {
+				break;
+			}
+		}
+		char chArray[][] = new char[row][col];
+		for(int i=0; i<row; i++) {
+			for(int j=0; j<col; j++) {
+				//알파벳은 총 26개
+				char ch = (char)(rd.nextInt(26)+97);
+				chArray[i][j] = ch;
+				System.out.print(chArray[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+
+	public void snail2DArray() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("2차원 배열 크기 입력(정방형) > ");
+		int temp = sc.nextInt();
+		int arr[][] = new int[temp][temp];
+		//행과 열
+		int row=0,col=-1;
+		//값 변수
+		int k=1;
+		//스위치개념의 변수
+		int iSwitch = 1;
+		
+		while(true){
+			//행의 값이 증감하는 코드
+			for(int i=0;i<temp;i++){
+        		col=col+iSwitch;
+        		arr[row][col]=k++;
+        	}
+
+        	temp=temp-1;
+        	//각각 n행n열의 배열은
+        	//달팽이시 n,n-1,n-1,n-2,n-2...
+        	//2,2,1,1을 거치게됨
+
+        	//종착지라면
+        	if(temp==0)
+        	break;
+        	//열의값이 증감하는코드
+        	for(int i=0;i<temp;i++){
+        		row=row+iSwitch;
+        		arr[row][col]=k++;
+        	}
+        	//행과 열이 모두 증감되었으므로 증감을 서로 변환
+        	iSwitch=iSwitch*(-1);
+        }
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				System.out.print(arr[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		//출처: https://cbts.tistory.com/60 [IT일기장]
+	}
+
+	public void snail2DArrayBack() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("2차원 배열 크기 입력(정방형) > ");
+		int temp = sc.nextInt();
+		int arr[][] = new int[temp][temp];
+		//행과 열
+		int row=0,col=-1;
+		//값 변수
+		int k=1;
+		//스위치개념의 변수
+		int iSwitch = 1;
+		
+		while(true){
+			//행의 값이 증감하는 코드
+			for(int i=0;i<temp;i++){
+        		col=col+iSwitch;
+        		arr[row][col]=k++;
+        	}
+
+        	temp=temp-1;
+        	//각각 n행n열의 배열은
+        	//달팽이시 n,n-1,n-1,n-2,n-2...
+        	//2,2,1,1을 거치게됨
+
+        	//종착지라면
+        	if(temp==0)
+        	break;
+        	//열의값이 증감하는코드
+        	for(int i=0;i<temp;i++){
+        		row=row+iSwitch;
+        		arr[row][col]=k++;
+        	}
+        	//행과 열이 모두 증감되었으므로 증감을 서로 변환
+        	iSwitch=iSwitch*(-1);
+        }
+		
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				System.out.print(arr[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+
+	//강사님 방식
+	public void snail2DArray2() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("2차원 배열 크기 입력(정방형) > ");
+		int size = sc.nextInt();
+		int[][] arr = new int[size][size];					//입력받은크기의 정방형 배열 생성
+		int k = 1;												//배열안의 채울 값 변수
+		int inc =1;											//인덱스번호 증감용 변수
+		int r=0;												//2차원배열 행 인덱스번호
+		int c=-1;												//2차원배열 열 인덱스번호
+		while(size>0) {
+			for(int i=0;i<size;i++) {
+				c=c+inc;
+				arr[r][c]=k;
+				k++;
+			}
+			size--;
+			for(int i=0;i<size;i++) {
+				r=r+inc;
+				arr[r][c]=k;
+				k++;
+			}
+			inc = -inc;
+		}
+		for(int i=0;i<arr.length;i++) {
+			for(int j=0;j<arr[i].length;j++) {
+				System.out.print(arr[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
+
+	public void kakaoArrayTest2() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("지도 한 변의 길이 입력 ");
+		int iNum = sc.nextInt();
+		//지도1의 배열
+		int arr1[][] = new int[iNum][iNum];
+		//지도2의 배열
+		int arr2[][] = new int[iNum][iNum];
+		//완성된 지도의 배열
+		char ch[][] = new char[iNum][iNum];
+		
+		System.out.println("지도1의 숫자 입력 : ");
+		//지도1에 숫자 입력
+		for(int i=0; i<iNum; i++) {
+			System.out.print(i+1+"번째 숫자 입력");
+			int k = sc.nextInt();
+			if(k>0 && k<Math.pow(2, iNum)) {
+				arr1[i] = dec2binary(k, iNum);
+			}
+			else {
+				System.out.println("잘못된 입력");
+				i--;
+			}
+		}
+		
+		System.out.println("지도2의 숫자 입력 : ");
+		//지도2에 숫자 입력
+		for(int i=0; i<iNum; i++) {
+			System.out.print(i+1+"번째 숫자 입력");
+			int k = sc.nextInt();
+			if(k>0 && k<Math.pow(2, iNum)) {
+				arr2[i] = dec2binary(k, iNum);
+			}
+			else {
+				System.out.println("잘못된 입력");
+				i--;
+			}
+		}
+		
+		//지도를 합쳐 완성된 지도로 변환하는 코드
+		for(int i=0;i<ch.length;i++) {
+			for(int j=0;j<ch[i].length;j++) {
+				if(arr1[i][j]==1 || arr2[i][j]==1) {
+					ch[i][j]='#';
+				}
+				else {
+					ch[i][j]=' ';
+				}
+			}
+		}
+		
+		//완성된 지도 출력
+		System.out.println("완성된 지도");
+		for(int i=0;i<ch.length;i++) {
+			for(int j=0;j<ch[i].length;j++) {
+				System.out.print(ch[i][j]+"\t");
+			}
+			System.out.println();
+		}
+	}
 	
+	//10진수를 2진수로 만드는 코드
+	int[] dec2binary(int i, int all) {
+		int arrTemp[] = new int[all];
+		int ori = i;
+		
+		for(int j=0; j<all; j++) {
+			//길이가 n인 배열의 마지막 인자는 n-1
+			arrTemp[all-j-1] = ori%2;
+			//나머지
+			ori /= 2;
+		}
+		return arrTemp;
+	}
+
+	public void kakao() {
+		Scanner sc = new Scanner(System.in);
+		int map1[][] = new int[5][5];
+		int map2[][] = new int[5][5];
+		char map[][] = new char[5][5];
+		
+		System.out.println("첫번째 배열 숫자입력");
+		for(int i=0;i<map1.length;i++) {
+			System.out.print(i+1+"번째 행 숫자 입력(범위0~31) : ");
+			int iNum = sc.nextInt();
+			map1[i] = dec2binary(iNum, 5);
+			/*
+			for(int j=0; j<map1[i].length;j++) {
+				map1[i][4-j] = iNum%2;
+				iNum/=2;
+			}
+			*/
+		}
+		
+		for(int i=0;i<map1.length;i++) {
+			for(int j=0; j<map1[i].length;j++) {
+				System.out.print(map1[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		
+		for(int i=0;i<map.length;i++) {
+			for(int j=0;j<map[i].length;j++) {
+				if(map1[i][j]==1 || map2[i][j]==1) {
+					map[i][j]='#';
+				}
+				else {
+					map[i][j]=' ';
+				}
+			}
+		}
+		
+		for(int i=0;i<map.length;i++) {
+			for(int j=0;j<map[i].length;j++) {
+				System.out.print(map[i][j]+"\t");
+			}
+			System.out.println();
+		}
+		
+	}
 }
