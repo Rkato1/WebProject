@@ -1,7 +1,0 @@
-package dangsan.a;
-
-public class FirstFunc {
-	public void ms1() {
-		System.out.println("첫번째 기능");
-	}
-}
