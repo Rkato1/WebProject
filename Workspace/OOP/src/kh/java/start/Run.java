@@ -2,14 +2,19 @@ package kh.java.start;
 
 import java.util.Scanner;
 
+import kh.java.controller.StudentController;
 import kh.java.func.Student;
 import kh.java.func.TV;
 
 public class Run {
 
 	public static void main(String[] args) {
+		
+		StudentController sc = new StudentController();
+		sc.main();
 		// TODO Auto-generated method stub
 
+		/*
 		//메모리에 TV객체 생성->인스턴스 tv
 		TV tv = new TV();
 		TV tv1 = new TV(30);
@@ -49,7 +54,7 @@ public class Run {
 		st1.setAge(sc.nextInt());
 		System.out.println("주소 입력 : ");
 		st1.setAddr(sc.next());
-		
+		*/
 	}
 
 }
