@@ -4,6 +4,11 @@ import kh.java.func.Calc;
 import kh.java.func.MethodTest;
 import kh.java.func.MethodTest2;
 
+//오버로딩-한 클래스 내 parameter 선언부가 다르고
+//이름이 같은 메소드를 여러개 정의하는 것
+//ex) int Add(int a)
+//	  int Add(int a,int b)
+//    int Add(int a,int b,int c)
 public class MethodStart {
 
 	public static void main(String[] args) {

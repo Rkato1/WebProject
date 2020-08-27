@@ -20,6 +20,7 @@ public class MethodTest2 {
 	}
 	
 	public void method1() {
+		//string은 참조형이지만 기본형처럼 사용됨
 		//배열은 참조형
 		int arr[] = {1,2,3,4,5};
 		//얕은복사(주소값 공유), 서로 값 영향줌
