@@ -739,15 +739,13 @@ public class ArrayTest {
 		for(int i=0;i<map.length;i++) {
 			for(int j=0;j<map[i].length;j++) {
 				//3항연산자
-				map[i][j] = map1[i][j]|map2[i][j]?'#':' ';
-				/*
+				//map[i][j] = map1[i][j]|map2[i][j]?'#':' ';
 				if(map1[i][j]==1 || map2[i][j]==1) {
 					map[i][j]='#';
 				}
 				else {
 					map[i][j]=' ';
 				}
-				*/
 			}
 		}
 		
