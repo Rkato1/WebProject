@@ -17,6 +17,15 @@ public class StudentController {
 		sc = new Scanner(System.in);
 	}
 	
+	//객체배열
+	//클래스병[] 변수명 = new 클래스명(크기);
+	//할당 후 값 저장(초기화)을 하지 않으면 전부 null
+	//A[] a = new A(2);
+	//a[0] = new A();
+	
+	//CRUD프로그램
+	//데이터를 저장, 출력, 수정, 삭제
+	//Create,Read,Update,Delete
 	public void main() {
 		while(true) {
 			System.out.println("==학생관리 프로그램==");
