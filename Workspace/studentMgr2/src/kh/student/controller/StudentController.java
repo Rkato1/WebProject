@@ -2,31 +2,24 @@ package kh.student.controller;
 
 import java.util.Scanner;
 
+import kh.student.model.vo.Student;
+
 public class StudentController {
-	//학생 10명의 정보를 저장하고 관리하는 프로그램
-	//(이름, 나이, 주소)
-	//단, 학생의 이름은 중복되지 않는다고 가정
-	
-	//정보를 받을 배열
-	String name[];
-	int age[];
-	String addr[];
-	
-	//현재 배열에 몇번째까지 사용하지 있는지 기록하는 변수
-	int index;
-	
-	//값을 입력받기 위한 변수
 	Scanner sc;
 	
-	//생성자(기본값을 설정할)
+	//학생정보를 저장할 배열
+	Student stu[];
+	
+	//parameter접근용 변수
+	int index;
+	
+	//생성자(초기화 및 값 할당)
 	public StudentController() {
 		sc = new Scanner(System.in);
-		name = new String[10];
-		age = new int[10];
-		addr = new String[10];
+		stu = new Student[10];
 	}
 	
-	//최초 실행화면(기본적인 메뉴가 출력)
+	//첫 화면 출력
 	public void main() {
 		while(true) {
 			System.out.println("==== 학생 관리 프로그램 v1 ====");
@@ -72,7 +65,6 @@ public class StudentController {
 			//입력
 			System.out.print("이름 입력 : ");
 			String str = sc.next();
-			//이름 중복체크(가정이므로 따로 로직을 생성하진 않음)
 			
 			System.out.print("나이 입력 : ");
 			int i = sc.nextInt();
@@ -82,9 +74,11 @@ public class StudentController {
 			String str1 = sc.next();
 			sc.nextLine();
 			
-			this.name[index]=str;
-			this.age[index]=i;
-			this.addr[index]=str1;
+			//초기화
+			stu[index] = new Student();
+			stu[index].setName(str);
+			stu[index].setAge(i);
+			stu[index].setAddr(str1);
 			
 			index++;
 		}else {
@@ -100,8 +94,7 @@ public class StudentController {
 		}
 		System.out.println("이름\t나이\t주소");
 		for(int i=0; i<index; i++) {
-			System.out.print(name[i] + "\t" + age[i] + "\t" + addr[i] + "\t");
-			System.out.println();
+			System.out.print(stu[i].getName() + "\t" + stu[i].getAge() + "\t" + stu[i].getAddr() + "\n");
 		}
 	}
 	
@@ -119,18 +112,8 @@ public class StudentController {
 		int itemp = searchIndex(sc.next());
 		if(itemp != -1) {
 			System.out.println("이름\t나이\t주소");
-			System.out.print(name[itemp] + "\t" + age[itemp] + "\t" + addr[itemp] + "\n");
+			System.out.print(stu[itemp].getName() + "\t" + stu[itemp].getAge() + "\t" + stu[itemp].getAddr() + "\n");
 		}
-		/*
-		for(int i=0;i<index;i++) {
-			if(sc.next().equals(name[i])) {
-				System.out.println("이름\t나이\t주소");
-				System.out.print(name[i] + "\t" + age[i] + "\t" + addr[i] + "\n");
-				isSearch = true;
-				break;
-			}
-		}
-		*/
 
 		//줄바꿈 초기화
 		sc.nextLine();
@@ -154,26 +137,13 @@ public class StudentController {
 		int itemp = searchIndex(sc.next());
 		if(itemp != -1) {
 			System.out.print("수정할 이름 입력 : ");
-			this.name[itemp] = sc.next();
+			stu[itemp].setName(sc.next());
 			System.out.print("수정할 나이 입력 : ");
-			this.age[itemp] = sc.nextInt();				
+			stu[itemp].setAge(sc.nextInt());				
 			System.out.print("수정할 주소 입력 : ");
-			this.addr[itemp] = sc.next();
+			stu[itemp].setAddr(sc.next());
 		}
-		/*
-		for(int i=0;i<index;i++) {
-			if(sc.next().equals(name[i])) {
-				System.out.print("수정할 이름 입력 : ");
-				this.name[i] = sc.next();
-				System.out.print("수정할 나이 입력 : ");
-				this.age[i] = sc.nextInt();				
-				System.out.print("수정할 주소 입력 : ");
-				this.addr[i] = sc.next();
-				isSearch = true;
-				break;
-			}
-		}
-		*/
+		
 		//줄바꿈 초기화
 		sc.nextLine();
 		//검색 결과가 있을수도 있고, 없을수도 있음
@@ -196,9 +166,9 @@ public class StudentController {
 		int itemp = searchIndex(sc.next());
 		if(itemp != -1) {
 			for(int i=itemp;i<index-1;i++) {
-				this.name[i]=this.name[i+1];
-				this.age[i]=this.age[i+1];
-				this.addr[i]=this.addr[i+1];
+				stu[i].setName(stu[i+1].getName());
+				stu[i].setAge(stu[i+1].getAge());
+				stu[i].setAddr(stu[i+1].getAddr());				
 			}
 			index--;
 		}
@@ -215,7 +185,7 @@ public class StudentController {
 	//몇 번째 인덱스에 있는지 조회하여 인덱스 번호리턴
 	public int searchIndex(String name) {
 		for(int i=0;i<index;i++) {
-			if(this.name[i].equals(name)) {
+			if(stu[i].getName().equals(name)) {
 				return i;
 			}
 		}

@@ -1,4 +1,4 @@
-package kh.student.run;
+package kh.student.start;
 
 import kh.student.controller.StudentController;
 
