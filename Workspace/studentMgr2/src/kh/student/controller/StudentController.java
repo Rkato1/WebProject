@@ -75,10 +75,14 @@ public class StudentController {
 			sc.nextLine();
 			
 			//초기화
+			/*
 			stu[index] = new Student();
 			stu[index].setName(str);
 			stu[index].setAge(i);
 			stu[index].setAddr(str1);
+			*/
+			//위 아래 모두 같지만 효율성은 밑이 더 좋다
+			stu[index] = new Student(str, i, str1);
 			
 			index++;
 		}else {
