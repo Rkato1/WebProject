@@ -146,6 +146,9 @@ public class StudentController {
 			stu[itemp].setAge(sc.nextInt());				
 			System.out.print("수정할 주소 입력 : ");
 			stu[itemp].setAddr(sc.next());
+			
+			//위와 같은 메소드
+			//stu[itemp] = new Student(이름입력값, 나이입력값, 주소입력값);
 		}
 		
 		//줄바꿈 초기화
