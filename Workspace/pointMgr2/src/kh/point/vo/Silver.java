@@ -2,19 +2,18 @@ package kh.point.vo;
 
 import java.util.Scanner;
 
-//extends Object(기본값)
-public class Vip { 
+public class Silver {
 	String name;
 	String grade;
 	int point;
 	
 	Scanner sc;
 	
-	public Vip() {
+	public Silver() {
 		sc = new Scanner(System.in);
 	}
 	
-	public Vip(String name, String grade, int point) {
+	public Silver(String name, String grade, int point) {
 		this.name = name;
 		this.grade = grade;
 		this.point = point;
@@ -33,14 +32,13 @@ public class Vip {
 		return this.grade;
 	}
 	public void setPoint(int point) {
-		this.point = point; 
+		this.point = point;
 	}
 	public int getPoint() {
 		return this.point;
 	}
 	//보너스개념
-	//버그 같은데 자꾸 소수점 오지게 나옴
 	public double getBonus() {
-		return 0.07*this.point;
+		return 0.02*this.point;
 	}
 }
