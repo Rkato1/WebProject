@@ -38,6 +38,7 @@ public class Vip {
 		return this.point;
 	}
 	//보너스개념
+	//버그 같은데 자꾸 소수점 오지게 나옴
 	public double getBonus() {
 		return 0.07*this.point;
 	}

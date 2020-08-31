@@ -111,13 +111,9 @@ public class PointController {
 		for(int i=0; i<sIndex; i++) {
 			System.out.print(s[i].getName() + "\t" + s[i].getGrade() + "\t" + s[i].getPoint() + "\t" + s[i].getBonus() + "\n");
 		}
-		System.out.println();
-		System.out.println("이름\t등급\t포인트\t보너스");
 		for(int i=0; i<gIndex; i++) {
 			System.out.print(g[i].getName() + "\t" + g[i].getGrade() + "\t" + g[i].getPoint() + "\t" + g[i].getBonus() + "\n");
 		}
-		System.out.println();
-		System.out.println("이름\t등급\t포인트\t보너스");
 		for(int i=0; i<vIndex; i++) {
 			System.out.print(v[i].getName() + "\t" + v[i].getGrade() + "\t" + v[i].getPoint() + "\t"+ v[i].getBonus() + "\n");
 		}
@@ -162,12 +158,46 @@ public class PointController {
 		System.out.print("수정할 회원의 이름을 입력 : ");
 		int itemp = searchIndex(sc.next());
 		if(itemp != -1) {
-			System.out.print("수정할 이름 입력 : ");
-			s[itemp].setName(sc.next());
-			System.out.print("수정할 등급 입력 : ");
-			s[itemp].setGrade(sc.next());				
-			System.out.print("수정할 포인트 입력 : ");
-			s[itemp].setPoint(sc.nextInt());			
+			System.out.print("");
+			System.out.print("회원 이름 입력 : ");
+			String str = sc.next();			
+			//줄바꿈(next는 두 번 연속으로 쓰면 무한루프 에러남)
+			sc.nextLine();
+			System.out.print("회원 등급 입력[silver/gold/vip] : ");
+			String str1 = sc.next();
+			System.out.print("회원 포인트 입력 : ");
+			int p = sc.nextInt();
+			if(searchResult == 1) {				
+				//수정할 회원정보가 s배열에 있으므로
+				//s배열에서 해당 정보를 삭제
+				for(int i=itemp;i<sIndex-1;i++) {
+					s[i]=s[i+1];
+				}
+				sIndex--;				
+			}else if(searchResult == 2) {
+				for(int i=itemp;i<gIndex-1;i++) {
+					g[i]=g[i+1];
+				}
+				gIndex--;
+			} else if(searchResult == 3) {
+				for(int i=itemp;i<vIndex-1;i++) {
+					v[i]=v[i+1];
+				}
+				vIndex--;
+			}else {
+				System.out.println("있을 수 없는 결과");
+			}
+			switch(str1) {
+			case "silver":
+				s[sIndex++] = new Silver(str, str1, p);
+				break;
+			case "gold":
+				g[gIndex++] = new Gold(str, str1, p);
+				break;
+			case "vip":
+				v[sIndex++] = new Vip(str, str1, p);
+				break;
+			}
 		}
 		
 		//줄바꿈 초기화
