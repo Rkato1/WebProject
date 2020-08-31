@@ -5,6 +5,7 @@ import java.util.Scanner;
 import kh.point.vo.Gold;
 import kh.point.vo.Silver;
 import kh.point.vo.Vip;
+import kh.point.vo.Vvip;
 
 public class PointController {
 	Scanner sc;
@@ -12,11 +13,13 @@ public class PointController {
 	Silver s[];
 	Gold g[];
 	Vip v[];
+	Vvip vv[];
 	
 	//parameter접근용 변수
 	int sIndex;
 	int gIndex;
 	int vIndex;
+	int vvIndex;
 	//검색된 등급 결과에 따라 값이 달라지는 변수
 	//silver,1 gold,2 vip,3
 	int searchResult;
@@ -27,6 +30,7 @@ public class PointController {
 		s = new Silver[10];
 		g = new Gold[10];
 		v = new Vip[10];
+		vv = new Vvip[10];
 	}
 	
 	//첫 화면 출력
@@ -76,7 +80,7 @@ public class PointController {
 		String str = sc.next();			
 		//줄바꿈(next는 두 번 연속으로 쓰면 무한루프 에러남)
 		sc.nextLine();
-		System.out.print("회원 등급 입력[silver/gold/vip] : ");
+		System.out.print("회원 등급 입력[silver/gold/vip/vvip] : ");
 		String str1 = sc.next();
 		System.out.print("회원 포인트 입력 : ");
 		int i = sc.nextInt();
@@ -94,6 +98,10 @@ public class PointController {
 		case "vip":
 			v[sIndex] = new Vip(str, str1, i);		
 			vIndex++;
+			break;
+		case "vvip":
+			vv[sIndex] = new Vvip(str, str1, i);		
+			vvIndex++;
 			break;
 		default:
 			System.out.println("잘못된 입력");
@@ -117,11 +125,14 @@ public class PointController {
 		for(int i=0; i<vIndex; i++) {
 			System.out.print(v[i].getName() + "\t" + v[i].getGrade() + "\t" + v[i].getPoint() + "\t"+ v[i].getBonus() + "\n");
 		}
+		for(int i=0; i<vvIndex; i++) {
+			System.out.print(vv[i].getName() + "\t" + vv[i].getGrade() + "\t" + vv[i].getPoint() + "\t"+ vv[i].getBonus() + "\n");
+		}
 	}
 	
 	//회원 이름을 검색해서 정보를 출력하는 메소드
 	public void selectMember(){
-		if(sIndex == 0 && gIndex == 0 && vIndex == 0) {
+		if(sIndex == 0 && gIndex == 0 && vIndex == 0 && vvIndex ==0) {
 			System.out.println("입력된 정보가 없습니다.");
 			return;
 		}
@@ -137,6 +148,8 @@ public class PointController {
 				System.out.print(g[itemp].getName() + "\t" + g[itemp].getGrade() + "\t" + g[itemp].getPoint() + "\n");
 			}else if(searchResult==3) {
 				System.out.print(v[itemp].getName() + "\t" + v[itemp].getGrade() + "\t" + v[itemp].getPoint() + "\n");
+			}else {
+				System.out.print(vv[itemp].getName() + "\t" + vv[itemp].getGrade() + "\t" + vv[itemp].getPoint() + "\n");
 			}
 		}else {
 			System.out.println("검색 결과 없음");
@@ -147,7 +160,7 @@ public class PointController {
 	
 	//회원 정보를 수정하는 메소드
 	public void updateMember() {
-		if(sIndex == 0 && gIndex == 0 && vIndex == 0) {
+		if(sIndex == 0 && gIndex == 0 && vIndex == 0 && vvIndex == 0) {
 			System.out.println("입력된 정보가 없습니다.");
 			return;
 		}
@@ -185,7 +198,11 @@ public class PointController {
 				}
 				vIndex--;
 			}else {
-				System.out.println("있을 수 없는 결과");
+				for(int i=itemp;i<vvIndex-1;i++) {
+					vv[i]=vv[i+1];
+				}
+				vIndex--;
+				//System.out.println("있을 수 없는 결과");
 			}
 			switch(str1) {
 			case "silver":
@@ -196,6 +213,9 @@ public class PointController {
 				break;
 			case "vip":
 				v[sIndex++] = new Vip(str, str1, p);
+				break;
+			case "vvip":
+				vv[sIndex++] = new Vvip(str, str1, p);
 				break;
 			}
 		}
@@ -210,7 +230,7 @@ public class PointController {
 	
 	//회원 정보를 삭제하는 메소드
 	public void deleteMember() {
-		if(sIndex == 0 && gIndex == 0 && vIndex == 0) {
+		if(sIndex == 0 && gIndex == 0 && vIndex == 0 && vvIndex == 0) {
 			System.out.println("입력된 정보가 없습니다.");
 			return;
 		}
@@ -236,6 +256,11 @@ public class PointController {
 					v[i]=v[i+1];				
 				}
 				vIndex--;
+			}else {
+				for(int i=itemp;i<vvIndex-1;i++) {
+					vv[i]=vv[i+1];				
+				}
+				vvIndex--;
 			}
 		}
 
@@ -269,6 +294,13 @@ public class PointController {
 		for(int i=0;i<vIndex;i++) {
 			if(v[i].getName().equals(name)) {
 				searchResult = 3;
+				//0~9
+				return i;
+			}
+		}
+		for(int i=0;i<vvIndex;i++) {
+			if(vv[i].getName().equals(name)) {
+				searchResult = 4;
 				//0~9
 				return i;
 			}
