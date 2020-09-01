@@ -1,21 +1,21 @@
-package kh.point.controller;
+package control;
 
 import java.util.Scanner;
 
-import kh.point.model.vo.Gold;
-import kh.point.model.vo.Grade;
-import kh.point.model.vo.Silver;
-import kh.point.model.vo.Vip;
-import kh.point.model.vo.Vvip;
+import vo.Gold;
+import vo.Grade;
+import vo.Silver;
+import vo.Vip;
 
-public class PointController {
+public class PointMgr {
 	Scanner sc;
-	Grade[] members;
+	Grade members[];
 	int index;
 	int searchResult = -1;
-	public PointController() {
+	public PointMgr() {
+		super();
 		sc = new Scanner(System.in);
-		members = new Grade[40];
+		members = new Grade[30];
 	}
 	
 	public void main() {
@@ -57,35 +57,29 @@ public class PointController {
 	
 	//회원 정보 입력받아 배열에 저장하는 메소드
 		public void insertMember() {
-			System.out.println("\n==== 회원 정보 입력====\n");
+			if(index>=30) {
+				System.out.println("인원초과");
+				return;
+			}
 			
-			//입력
-			System.out.print("회원 이름 입력 : ");
-			String str = sc.next();			
-			//줄바꿈(next는 두 번 연속으로 쓰면 무한루프 에러남)
-			sc.nextLine();
-			System.out.print("회원 등급 입력[silver/gold/vip/vvip] : ");
+			System.out.println("\n==== 회원 정보 입력====\n");
+			String str = "";
+			boolean isOverlap = true;
+			while(isOverlap) {
+				//입력
+				System.out.print("회원 이름 입력 : ");
+				str = sc.next();	
+				isOverlap = overlapName(str);
+				sc.nextLine();
+			}
+			System.out.print("회원 등급 입력[silver/gold/vip] : ");
 			String str1 = sc.next();
 			System.out.print("회원 포인트 입력 : ");
 			int i = sc.nextInt();
 			sc.nextLine();
 			
-			switch(str1) {
-			case"silver":
-				members[index++] = new Silver(str, str1, i);
-				break;
-			case "gold":
-				members[index++] = new Gold(str, str1, i);
-				break;
-			case "vip":
-				members[index++] = new Vip(str, str1, i);
-				break;
-			case "vvip":
-				members[index++] = new Vvip(str, str1, i);
-			default:
-				System.out.println("잘못된 입력");
-				break;
-			}
+			division(str, str1, i, index);
+			index++;
 		}
 		
 		//회원 정보를 전부 출력하는 메소드
@@ -97,14 +91,10 @@ public class PointController {
 			System.out.println("\n---- 전체 회원 정보 출력 ----\n");
 			System.out.println("이름\t등급\t포인트\t보너스");
 			for(int i=0; i<index; i++) {
-				System.out.print(members[i]);
-				//동일결과
-				/*
 				System.out.print(members[i].getName() + "\t" +
 								members[i].getGrade() + "\t" +
 								members[i].getPoint() + "\t" +
 								members[i].getBonus() + "\n");
-								*/
 			}
 		}
 		
@@ -120,9 +110,7 @@ public class PointController {
 			int itemp = searchIndex(sc.next());
 			if(itemp != -1) {
 				System.out.println("이름\t등급\t포인트\t보너스");
-				System.out.print(members[itemp]);
-				//같은 뜻
-				//System.out.print(members[itemp].getName() + "\t" + members[itemp].getGrade() + "\t" + members[itemp].getPoint() + "\t" + members[itemp].getBonus() + "\n");				
+				System.out.print(members[itemp].getName() + "\t" + members[itemp].getGrade() + "\t" + members[itemp].getPoint() + "\t" + members[itemp].getBonus() + "\n");				
 			}else {
 				System.out.println("검색 결과 없음");
 			}
@@ -143,28 +131,14 @@ public class PointController {
 			if(itemp != -1) {
 				System.out.print("");
 				System.out.print("회원 이름 입력 : ");
-				String str = sc.next();			
+				String str = sc.next();
 				//줄바꿈(next는 두 번 연속으로 쓰면 무한루프 에러남)
 				sc.nextLine();
-				System.out.print("회원 등급 입력[silver/gold/vip/vvip] : ");
+				System.out.print("회원 등급 입력[silver/gold/vip] : ");
 				String str1 = sc.next();
 				System.out.print("회원 포인트 입력 : ");
 				int p = sc.nextInt();
-				
-				switch(str1) {
-				case "silver":
-					members[itemp] = new Silver(str, str1, p);
-					break;
-				case "gold":
-					members[itemp] = new Gold(str, str1, p);
-					break;
-				case "vip":
-					members[itemp] = new Vip(str, str1, p);
-					break;
-				case "vvip":
-					members[itemp] = new Vvip(str, str1, p);
-					break;
-				}				
+				division(str, str1, p, itemp);
 			}else {
 				System.out.println("검색 결과 없음");
 			}
@@ -183,7 +157,7 @@ public class PointController {
 			int itemp = searchIndex(sc.next());
 			if(itemp != -1) {
 				for(int i=itemp;i<index-1;i++) {
-					members[i]=members[i+1];									
+					members[i]=members[i+1];
 				}
 				index--;				
 			}else {
@@ -203,5 +177,52 @@ public class PointController {
 				}
 			}
 			return -1;
+		}
+		
+		//수정 입력 할때 정보를 넣는 메소드
+		public void division(String name, String grade, int point, int index) {
+			switch(grade) {
+			case "silver":
+				members[index] = new Silver(name, grade, point);
+				break;
+			case "gold":
+				members[index] = new Gold(name, grade, point);
+				break;
+			case "vip":
+				members[index] = new Vip(name, grade, point);
+				break;
+			default:
+				System.out.println("잘못된 입력");
+				break;
+			}
+		}
+		
+		//다형성->부모타입변수에 자식타입 객체를 저장
+		public Grade division2(String name, String grade, int point, int index) {
+			switch(grade) {
+			case "silver":
+				return new Silver(name, grade, point);
+			case "gold":
+				return new Gold(name, grade, point);
+			case "vip":
+				return new Vip(name, grade, point);
+			default:
+				System.out.println("잘못된 입력");
+				return null;
+			}
+		}
+		
+		//이름 중복체크 메소드
+		public boolean overlapName(String str) {
+			if(index == 0) {
+				return false;
+			}
+			for(int i=0; i<index; i++) {
+				if(str.equals(members[i].getName())) {
+					System.out.println("이미 존재하는 이름");
+					return true;
+				}
+			}
+			return false;
 		}
 }

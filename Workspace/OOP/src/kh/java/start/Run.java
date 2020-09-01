@@ -1,17 +1,20 @@
 package kh.java.start;
 
-import java.util.Scanner;
-
 import kh.java.controller.StudentController;
-import kh.java.func.Student;
-import kh.java.func.TV;
+import kh.java.func.ObjTest;
 
 public class Run {
 
 	public static void main(String[] args) {
+		ObjTest ot = new ObjTest();
+		System.out.println(ot);
+		System.out.println(ot.toString());
+		ObjTest ot1 = new ObjTest();
+		System.out.println(ot1);
+		System.out.println(ot1.toString());
 		
-		StudentController sc = new StudentController();
-		sc.main();
+		//StudentController sc = new StudentController();
+		//sc.main();
 		// TODO Auto-generated method stub
 
 		/*
