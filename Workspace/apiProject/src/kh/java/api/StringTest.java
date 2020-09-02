@@ -1,5 +1,6 @@
 package kh.java.api;
 
+import java.util.Random;
 import java.util.StringTokenizer;
 
 public class StringTest {
@@ -92,6 +93,37 @@ public class StringTest {
 			}else {
 				System.out.print(ch[j]);
 			}
-		}	
-	}	
+		}
+	}
+	
+	//인증번호느낌
+	public void test() {
+		StringBuffer sb = new StringBuffer();
+		Random r = new Random();
+		//sb.append(자료형)
+		for(int i=0;i<6;i++) {
+			//0~9
+			sb.append(r.nextInt(10));
+		}
+		System.out.println("["+sb+"]");
+	}
+	
+	public void mathTest() {
+		//Math는 객체를 생성하지 않아도 바로 사용가능
+		
+		//절대값(실수,정수)
+		//Math.abs(arg0);
+		//올림
+		//Math.ceil(a);
+		//내림
+		//Math.floor(a);
+		//반올림
+		//Math.ceil(round);
+		//0.0~1.0사이값 출력
+		//Math.random();
+		//a,b 중 더 큰값 반환
+		//Math.max(a,b);
+		//a,b 중 더 작은값 반환
+		//Math.min(a,b);		
+	}
 }
