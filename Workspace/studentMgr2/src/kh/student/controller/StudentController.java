@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 import kh.student.model.vo.Student;
 
+//MVC
+//Model
+//View
+//Controller
+
 public class StudentController {
 	Scanner sc;
 	

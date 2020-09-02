@@ -1,7 +1,9 @@
 package kh.java.run;
 
+import kh.java.api.Calc;
 import kh.java.api.DateClass;
 import kh.java.api.StringTest;
+import kh.java.api.WrapperClass;
 
 public class ApiStart {
 
@@ -11,14 +13,20 @@ public class ApiStart {
 		//st.stringBufferTest();
 		//st.token();
 		//st.tokenExam();
-		st.test();
-		st.mathTest();
+		//st.test();
+		//st.mathTest();
 		
 		DateClass dc = new DateClass();
 		//dc.calendarClass();
 		//dc.dateTest();
 		//dc.exam1();
-		dc.ddayCal();
+		//dc.ddayCal();
+		
+		WrapperClass wc = new WrapperClass();
+		wc.test();
+		
+		Calc c = new Calc();
+		c.main();
 	}
 
 }
