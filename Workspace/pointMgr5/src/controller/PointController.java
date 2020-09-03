@@ -47,21 +47,29 @@ public class PointController {
 	
 	//회원 정보 입력받아 배열에 저장하는 메소드
 		public void insertMember() {
-			pv.insertMember(members[index], index++);
-			/*
-			switch(grade.getGrade()) {
+			//Grade g = pv.insertMember(index++);
+			//members[index++] = g;
+			members[index] = pv.insertMember(index++);
+			//insertArr(g);
+		}
+		/*
+		public void insertArr(Grade g) {
+			switch(g.getGrade()) {
 			case"silver":
-				members[index++] = new Silver(grade.getName(), grade.getGrade(), grade.getPoint());
+				members[index++] = g;
 				break;
 			case "gold":
-				members[index++] = new Gold(grade.getName(), grade.getGrade(), grade.getPoint());
+				members[index++] = new Gold(g.getName(), g.getGrade(), g.getPoint());
 				break;
 			case "vip":
-				members[index++] = new Vip(grade.getName(), grade.getGrade(), grade.getPoint());
+				members[index++] = new Vip(g.getName(), g.getGrade(), g.getPoint());
 				break;
-			}
-			*/
+			default:
+				System.out.println("잘못된 등급 입력");
+				break;
+			}			
 		}
+		*/
 		
 		//회원 정보를 전부 출력하는 메소드
 		public void selectAllMember() {
@@ -97,7 +105,7 @@ public class PointController {
 			searchResult = searchIndex(str);
 			pv.updateMember();
 			if(searchResult!=-1) {
-				Grade g = pv.insertMember(members[index], index++);
+				Grade g = pv.insertMember(index++);
 				members[searchResult] = g;
 			}else {
 				pv.noSearch();

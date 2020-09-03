@@ -9,7 +9,6 @@ import model.vo.Vip;
 
 public class PointView {
 	Scanner sc;
-	Grade g;
 
 	public PointView() {
 		sc = new Scanner(System.in);
@@ -27,25 +26,21 @@ public class PointView {
 		int itemp = sc.nextInt();
 		return itemp;
 	}
-	
-	public Grade insertMember(Grade g, int index) {
+	public Grade insertMember(int index) {
 		System.out.println("\n==== 회원 정보 입력====\n");		
 		System.out.print("회원 이름 입력 : ");
-		g.setName(sc.next());
+		String name = sc.next();		
 		System.out.print("회원 등급 입력[silver/gold/vip] : ");
-		g.setGrade(sc.next());
+		String grade = sc.next();
 		System.out.print("회원 포인트 입력 : ");
-		g.setPoint(sc.nextInt());
-		switch(g.getGrade()) {
+		int point = sc.nextInt();
+		switch(grade) {
 		case"silver":
-			g = new Silver(g.getName(), g.getGrade(), g.getPoint());
-			return g;
-		case "gold":
-			g = new Gold(g.getName(), g.getGrade(), g.getPoint());
-			return g;
-		case "vip":
-			g = new Vip(g.getName(), g.getGrade(), g.getPoint());
-			return g;
+			return new Silver(name, grade, point);
+		case "gold":			
+			return new Gold(name, grade, point);
+		case "vip":			
+			return new Vip(name, grade, point);
 		default:
 			System.out.println("잘못된 등급 입력");
 			break;
@@ -66,8 +61,9 @@ public class PointView {
 		System.out.println("이름\t등급\t포인트\t보너스");
 		for(int i=0; i<index; i++) {
 			System.out.print(members[i]);
-		}
+		}		
 	}
+	
 	
 	public void selectMember(Grade member) {		
 		System.out.println("이름\t등급\t포인트\t보너스");
@@ -83,5 +79,5 @@ public class PointView {
 	public void updateMember() {
 		// TODO Auto-generated method stub
 		
-	}
+	}	
 }
