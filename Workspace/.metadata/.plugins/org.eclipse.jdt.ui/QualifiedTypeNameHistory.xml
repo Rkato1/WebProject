@@ -11,12 +11,10 @@
 <fullyQualifiedTypeName name="kh.func.IfSwitch"/>
 <fullyQualifiedTypeName name="kh.func.ForWhile"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="kh.java.controller.StudentController"/>
 <fullyQualifiedTypeName name="kh.student.controller.StudentController"/>
 <fullyQualifiedTypeName name="kh.point.controller.PointController"/>
 <fullyQualifiedTypeName name="kh.java.func.Tiger"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
@@ -24,4 +22,9 @@
 <fullyQualifiedTypeName name="model.vo.Grade"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="view.View"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="func.Func"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
