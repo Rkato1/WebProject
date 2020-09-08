@@ -22,14 +22,16 @@ public class Func {
 	public Func() {
 		sc = new Scanner(System.in);
 		cities = new ArrayList<String>();
+		cacheList = new ArrayList<String>();
 	}
 	
 	public void main() {
 		while(true) {
 			System.out.print("캐시의 크기 입력 : ");
 			cacheSize = sc.nextInt();
-			if(cacheSize >=0 && cacheSize <= 30) {				
-				cacheList = new ArrayList<String>(cacheSize);
+			if(cacheSize >=0 && cacheSize <= 30) {
+				//0이 값으로 들어감
+				//cacheList = new ArrayList<String>(cacheSize);
 				break;
 			}else {
 				System.out.println("0부터 30사이의 값 입력");
@@ -37,8 +39,8 @@ public class Func {
 		}
 		while(true) {
 			System.out.print("도시 이름 입력 : ");
-			city = sc.next();			
-			if(city.length()<21&&(city.length()!=city.trim().length())) {
+			city = sc.next();
+			if((city.length()<21)) {
 				for(int i=0; i<city.length(); i++) {
 					char ch = city.charAt(i);
 					if(!((ch >= 65 && ch <=90)||(ch>=97 && ch<=122))) {
@@ -47,7 +49,9 @@ public class Func {
 						break;
 					}
 				}
-				if(btemp == true) {
+				if(btemp == true) {					
+					//엄밀히 따지자면 다른 리스트에 넣어야함
+					//하지만 기존 리스트 출력하라고 하지 않아서 대충 처리
 					cities.add(city.toLowerCase());
 				}else {
 					btemp = true;
@@ -66,7 +70,13 @@ public class Func {
 			}
 		}
 		for(int i=0; i<cities.size(); i++) {
-			if(cacheList.contains(cities.get(i))) {				
+			if((cacheList.contains(cities.get(i))&&(cacheList.size()!=0))) {
+				//Least Recently Used
+				if(cacheList.size()==cacheSize) {
+					System.out.println(cacheList.get(0));
+					cacheList.remove(0);
+					cacheList.add(cities.get(i));
+				}
 				totTime+=1;
 			}else {
 				cacheList.add(cities.get(i));
