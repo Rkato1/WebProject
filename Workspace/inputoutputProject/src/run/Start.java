@@ -4,6 +4,8 @@ import func.ByteStreamTest;
 import func.CharStream;
 import func.FileTest;
 import func.ImageStream;
+import func.SerialList;
+import func.SerialTest;
 
 public class Start {
 
@@ -19,7 +21,11 @@ public class Start {
 		FileTest ft = new FileTest();
 		//ft.fileTest();
 		ImageStream is = new ImageStream();
-		is.main();
+		//is.main();
+		SerialTest st = new SerialTest();
+		//st.main();
+		SerialList sl = new SerialList();
+		sl.main();
 	}
 
 }

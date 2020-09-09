@@ -88,7 +88,7 @@ public class CharStream {
 		BufferedReader br = null;
 		try {
 			FileReader fr = new FileReader(fileName);
-			br = new BufferedReader(fr);					
+			br = new BufferedReader(fr);
 			while(true) {
 				//br.readLine()
 				//파일에서 한줄을 읽어서 line변수에 저장
