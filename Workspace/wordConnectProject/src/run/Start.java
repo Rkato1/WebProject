@@ -2,6 +2,7 @@ package run;
 
 import func.Dict2Word;
 import func.WordConnectGame;
+import func.WordGame;
 
 public class Start {
 
@@ -10,6 +11,8 @@ public class Start {
 		Dict2Word d2w = new Dict2Word();
 		//d2w.inputText();
 		WordConnectGame wcg = new WordConnectGame();
-		wcg.main();
+		//wcg.main();
+		WordGame wg = new WordGame();
+		wg.main();
 	}
 }

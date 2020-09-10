@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//짜던코드
 public class WordConnectGame {
 	Scanner sc;
 	ArrayList<String> words;
