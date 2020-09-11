@@ -2,6 +2,10 @@ package run;
 
 import func.TCPChatClient;
 import func.TCPClient;
+import func.TCPClient2;
+import func.TCPNumBaseballGameClient;
+import func.UCPClientstrchk;
+import func.UDPClient;
 
 public class Run {
 
@@ -11,7 +15,15 @@ public class Run {
 		//tcpClient.main();
 		TCPChatClient tcpChatClient = new TCPChatClient();
 		//tcpChatClient.main();
-		tcpChatClient.main2();
+		//tcpChatClient.main2();
+		TCPClient2 tcpClient2 = new TCPClient2();
+		//tcpClient2.main();		
+		UDPClient udpClient = new UDPClient();
+		//udpClient.main();
+		UCPClientstrchk test = new UCPClientstrchk();
+		//test.main();
+		TCPNumBaseballGameClient tcpNumBaseballGameClient = new TCPNumBaseballGameClient();
+		tcpNumBaseballGameClient.main();
 	}
 
 }

@@ -7,13 +7,22 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.HashMap;
 
-public class TCPServer {
+public class TCPServerDNS {
+	HashMap<String, String> hashmap;
+	
+	public TCPServerDNS() {
+		hashmap = new HashMap<String, String>();
+		hashmap.put("www.naver.com", "210.89.160.88");
+		hashmap.put("www.google.co.kr", "216.58.200.67");
+		hashmap.put("www.iei.or.kr", "211.43.14.187");
+		hashmap.put("www.nate.com", "120.50.131.112");
+		hashmap.put("www.daum.net", "211.231.99.80");
+	}
+	
 	public void main() {
-		//1.서버에서 사용할 포트번호 지정
-		//0~65535
-		int port = 7777;
-		//2.서버용 소켓객체생성
+		int port = 5678;
 		ServerSocket serverSocket = null;
 		DataOutputStream dos = null;
 		DataInputStream dis = null;
@@ -36,7 +45,7 @@ public class TCPServer {
 			//clinet에 메세지 전송
 			dos.writeUTF("서버");
 			//clinet가 보낸 메시지를 수신하여 변수에 저장
-			String clientMsg = dis.readUTF();
+			String clientMsg = checkDNS(dis.readUTF());
 			System.out.println("클라이언트 메세지 : "+clientMsg);			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -53,5 +62,15 @@ public class TCPServer {
 				e.printStackTrace();
 			}			
 		}		
+	}
+
+	private String checkDNS(String readUTF) {
+		// TODO Auto-generated method stub
+		for(String str : hashmap.keySet()) {
+			if(str.equals(readUTF)) {
+				return hashmap.get(str);
+			}
+		}
+		return "입력한 값은 없습니다.";
 	}
 }

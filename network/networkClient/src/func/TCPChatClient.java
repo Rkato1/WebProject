@@ -7,6 +7,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class TCPChatClient {
@@ -33,14 +35,19 @@ public class TCPChatClient {
 			System.out.println("----- 채팅 시작 -----");
 			System.out.println("종료는 exit 입력");
 			while(true) {
+				//시간은 그때그떄 바뀜
+				SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 				recMsg = dis.readUTF();
+				String serverDate = dis.readUTF();
 				if(recMsg.equals("exit")) {
 					break;
 				}
-				System.out.println("서버 > "+recMsg);
-				System.out.print("나 > ");
+				System.out.println("("+serverDate+")서버 > "+recMsg);
+				Date clientDate = new Date();
+				System.out.print("("+sdf.format(clientDate)+")나 > ");
 				String sendMsg = sc.nextLine();
 				dos.writeUTF(sendMsg);
+				dos.writeUTF(sdf.format(clientDate));
 				if(sendMsg.equals("exit")) {
 					break;
 				}
