@@ -1,5 +1,6 @@
 package run;
 
+import func.ChattingClient;
 import func.TCPChatClient;
 import func.TCPClient;
 import func.TCPClient2;
@@ -23,7 +24,9 @@ public class Run {
 		UCPClientstrchk test = new UCPClientstrchk();
 		//test.main();
 		TCPNumBaseballGameClient tcpNumBaseballGameClient = new TCPNumBaseballGameClient();
-		tcpNumBaseballGameClient.main();
+		//tcpNumBaseballGameClient.main();
+		ChattingClient tests = new ChattingClient();
+		tests.chattingClient();
 	}
 
 }

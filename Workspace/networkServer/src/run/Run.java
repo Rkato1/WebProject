@@ -1,5 +1,6 @@
 package run;
 
+import func.ChattingServer;
 import func.TCPChatServer;
 import func.TCPChatServer2;
 import func.TCPNumBaseballGameServer;
@@ -25,7 +26,9 @@ public class Run {
 		UDPServer udpServer = new UDPServer();
 		//udpServer.main();\
 		TCPNumBaseballGameServer tcpNumBaseballGame = new TCPNumBaseballGameServer();
-		tcpNumBaseballGame.main();		
+		//tcpNumBaseballGame.main();
+		ChattingServer test = new ChattingServer();
+		test.chattingServer();
 	}
 
 }

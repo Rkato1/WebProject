@@ -23,10 +23,15 @@ public class ApiStart {
 		//dc.ddayCal();
 		
 		WrapperClass wc = new WrapperClass();
-		wc.test();
+		//wc.test();
 		
 		Calc c = new Calc();
-		c.main();
+		//c.main();
+		
+		TempKakao temp = new TempKakao();
+		//temp.main();
+		TempKakao2 tmp = new TempKakao2();
+		tmp.main();
 	}
 
 }
