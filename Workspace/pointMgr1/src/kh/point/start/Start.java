@@ -1,5 +1,5 @@
 package kh.point.start;
-//Ä¸½¶È­
+//ìº¡ìŠí™”
 import kh.point.controller.PointController;
 import kh.point.vo.Vvip;
 
@@ -11,13 +11,13 @@ public class Start {
 		pc.main();
 		
 		/*
-		//»ó¼Ó ¹Ş¾ÒÀ¸¹Ç·Î »óÀ§ Å¬·¡½º ¸Ş¼Òµå »ç¿ë°¡´É
+		//ìƒì† ë°›ì•˜ìœ¼ë¯€ë¡œ ìƒìœ„ í´ë˜ìŠ¤ ë©”ì†Œë“œ ì‚¬ìš©ê°€ëŠ¥
 		Vvip vv = new Vvip();
 		vv.setName("sik");
 		vv.setGrade("vvip");
 		vv.setPoint(1000);		
 		
-		//»ı¼ºÀÚ´Â »ó¼ÓÀÌ µÇÁö ¾ÊÀ½
+		//ìƒì„±ìëŠ” ìƒì†ì´ ë˜ì§€ ì•ŠìŒ
 		Vvip vv1 = new Vvip("1","vvip",1000);
 		*/
 	}

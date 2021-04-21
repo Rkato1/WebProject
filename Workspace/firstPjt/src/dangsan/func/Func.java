@@ -2,6 +2,6 @@ package dangsan.func;
 
 public class Func {
 	public void printMsg() {
-		System.out.println("±â´ÉÇÔ¼ö");
+		System.out.println("ê¸°ëŠ¥í•¨ìˆ˜");
 	}
 }

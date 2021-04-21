@@ -2,9 +2,9 @@ package dangsan.a;
 
 public class FirstFunc {
 	public void ms1() {
-		System.out.println("Ã¹¹øÂ° ±â´É");
+		System.out.println("ì²«ë²ˆì§¸ ê¸°ëŠ¥");
 	}
 	public void ms2() {
-		System.out.println("µÎ¹øÂ° ±â´É");
+		System.out.println("ë‘ë²ˆì§¸ ê¸°ëŠ¥");
 	}
 }

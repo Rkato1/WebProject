@@ -8,8 +8,8 @@ public class Silver extends Grade{
 	public Silver(String str, String str1, int i) {
 		super(str,str1,i);
 	}
-	//Ãß»óÅ¬·¡½º´Â Ãß»ó¸Ş¼Òµå¸¦ ¿À¹ö¶óÀÌµùÇÑ ¸Ş¼Òµå¸¦ 
-	//»ç¿ëÇÏÁö ¾ÊÀ¸¸é ¿¡·¯³²
+	//ì¶”ìƒí´ë˜ìŠ¤ëŠ” ì¶”ìƒë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©í•œ ë©”ì†Œë“œë¥¼ 
+	//ì‚¬ìš©í•˜ì§€ ì•Šìœ¼ë©´ ì—ëŸ¬ë‚¨
 	@Override
 	public double getBonus() {
 		return 0.02*getPoint();

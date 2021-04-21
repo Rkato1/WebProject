@@ -1,14 +1,14 @@
 package kh.point.vo;
 
 public class Vvip extends Silver{
-	//ctrl+shift+c-ÁÖ¼®Ã³¸®
+	//ctrl+shift+c or ctrl+/-ì£¼ì„ì²˜ë¦¬
 
 	public Vvip() {
 		
 	}
 	
 	public Vvip(String str, String str1, int i) {
-		//»óÀ§ Å¬·¡½ºÀÇ »ı¼ºÀÚ
+		//ìƒìœ„ í´ë˜ìŠ¤ì˜ ìƒì„±ì
 		super(str,str1,i);
 	}
 	

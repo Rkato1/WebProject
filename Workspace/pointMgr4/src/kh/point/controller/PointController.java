@@ -20,14 +20,14 @@ public class PointController {
 	
 	public void main() {
 		while(true) {
-			System.out.println("\n\n---- È¸¿ø °ü¸® ÇÁ·Î±×·¥ v»ó¼Ó ----\n");
-			System.out.println("1.È¸¿ø µî·Ï");
-			System.out.println("2.È¸¿ø ÀüÃ¼ Á¤º¸ Ãâ·Â");
-			System.out.println("3.È¸¿ø 1¸í Á¤º¸ Ãâ·Â");
-			System.out.println("4.È¸¿ø Á¤º¸ ¼öÁ¤");
-			System.out.println("5.È¸¿ø »èÁ¦");
-			System.out.println("0.ÇÁ·Î±×·¥ Á¾·á");
-			System.out.print("¼±ÅÃ > ");
+			System.out.println("\n\n---- íšŒì› ê´€ë¦¬ í”„ë¡œê·¸ë¨ vìƒì† ----\n");
+			System.out.println("1.íšŒì› ë“±ë¡");
+			System.out.println("2.íšŒì› ì „ì²´ ì •ë³´ ì¶œë ¥");
+			System.out.println("3.íšŒì› 1ëª… ì •ë³´ ì¶œë ¥");
+			System.out.println("4.íšŒì› ì •ë³´ ìˆ˜ì •");
+			System.out.println("5.íšŒì› ì‚­ì œ");
+			System.out.println("0.í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+			System.out.print("ì„ íƒ > ");
 			int itemp = sc.nextInt();
 			switch(itemp) {
 			case 1:
@@ -46,27 +46,27 @@ public class PointController {
 				deleteMember();
 				break;
 			case 0:
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				return;
 			default:
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				break;
 			}
 		}		
 	}
 	
-	//È¸¿ø Á¤º¸ ÀÔ·Â¹Ş¾Æ ¹è¿­¿¡ ÀúÀåÇÏ´Â ¸Ş¼Òµå
+	//íšŒì› ì •ë³´ ì…ë ¥ë°›ì•„ ë°°ì—´ì— ì €ì¥í•˜ëŠ” ë©”ì†Œë“œ
 		public void insertMember() {
-			System.out.println("\n==== È¸¿ø Á¤º¸ ÀÔ·Â====\n");
+			System.out.println("\n==== íšŒì› ì •ë³´ ì…ë ¥====\n");
 			
-			//ÀÔ·Â
-			System.out.print("È¸¿ø ÀÌ¸§ ÀÔ·Â : ");
+			//ì…ë ¥
+			System.out.print("íšŒì› ì´ë¦„ ì…ë ¥ : ");
 			String str = sc.next();			
-			//ÁÙ¹Ù²Ş(next´Â µÎ ¹ø ¿¬¼ÓÀ¸·Î ¾²¸é ¹«ÇÑ·çÇÁ ¿¡·¯³²)
+			//ì¤„ë°”ê¿ˆ(nextëŠ” ë‘ ë²ˆ ì—°ì†ìœ¼ë¡œ ì“°ë©´ ë¬´í•œë£¨í”„ ì—ëŸ¬ë‚¨)
 			sc.nextLine();
-			System.out.print("È¸¿ø µî±Ş ÀÔ·Â[silver/gold/vip/vvip] : ");
+			System.out.print("íšŒì› ë“±ê¸‰ ì…ë ¥[silver/gold/vip/vvip] : ");
 			String str1 = sc.next();
-			System.out.print("È¸¿ø Æ÷ÀÎÆ® ÀÔ·Â : ");
+			System.out.print("íšŒì› í¬ì¸íŠ¸ ì…ë ¥ : ");
 			int i = sc.nextInt();
 			sc.nextLine();
 			
@@ -83,22 +83,22 @@ public class PointController {
 			case "vvip":
 				members[index++] = new Vvip(str, str1, i);
 			default:
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				break;
 			}
 		}
 		
-		//È¸¿ø Á¤º¸¸¦ ÀüºÎ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
+		//íšŒì› ì •ë³´ë¥¼ ì „ë¶€ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 		public void selectAllMember() {
 			if(index == 0) {
-				System.out.println("ÀÔ·ÂµÈ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+				System.out.println("ì…ë ¥ëœ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 				return;
 			}
-			System.out.println("\n---- ÀüÃ¼ È¸¿ø Á¤º¸ Ãâ·Â ----\n");
-			System.out.println("ÀÌ¸§\tµî±Ş\tÆ÷ÀÎÆ®\tº¸³Ê½º");
+			System.out.println("\n---- ì „ì²´ íšŒì› ì •ë³´ ì¶œë ¥ ----\n");
+			System.out.println("ì´ë¦„\të“±ê¸‰\tí¬ì¸íŠ¸\të³´ë„ˆìŠ¤");
 			for(int i=0; i<index; i++) {
 				System.out.print(members[i]);
-				//µ¿ÀÏ°á°ú
+				//ë™ì¼ê²°ê³¼
 				/*
 				System.out.print(members[i].getName() + "\t" +
 								members[i].getGrade() + "\t" +
@@ -108,47 +108,47 @@ public class PointController {
 			}
 		}
 		
-		//È¸¿ø ÀÌ¸§À» °Ë»öÇØ¼­ Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
+		//íšŒì› ì´ë¦„ì„ ê²€ìƒ‰í•´ì„œ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 		public void selectMember(){
 			if(index == 0) {
-				System.out.println("ÀÔ·ÂµÈ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+				System.out.println("ì…ë ¥ëœ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 				return;
 			}
 			
-			System.out.println("==== È¸¿ø Á¤º¸ Á¶È¸ ====");
-			System.out.print("°Ë»öÇÒ È¸¿øÀÇ ÀÌ¸§À» ÀÔ·Â : ");
+			System.out.println("==== íšŒì› ì •ë³´ ì¡°íšŒ ====");
+			System.out.print("ê²€ìƒ‰í•  íšŒì›ì˜ ì´ë¦„ì„ ì…ë ¥ : ");
 			int itemp = searchIndex(sc.next());
 			if(itemp != -1) {
-				System.out.println("ÀÌ¸§\tµî±Ş\tÆ÷ÀÎÆ®\tº¸³Ê½º");
+				System.out.println("ì´ë¦„\të“±ê¸‰\tí¬ì¸íŠ¸\të³´ë„ˆìŠ¤");
 				System.out.print(members[itemp]);
-				//°°Àº ¶æ
+				//ê°™ì€ ëœ»
 				//System.out.print(members[itemp].getName() + "\t" + members[itemp].getGrade() + "\t" + members[itemp].getPoint() + "\t" + members[itemp].getBonus() + "\n");				
 			}else {
-				System.out.println("°Ë»ö °á°ú ¾øÀ½");
+				System.out.println("ê²€ìƒ‰ ê²°ê³¼ ì—†ìŒ");
 			}
-			//ÁÙ¹Ù²Ş ÃÊ±âÈ­
+			//ì¤„ë°”ê¿ˆ ì´ˆê¸°í™”
 			sc.nextLine();
 		}
 		
-		//È¸¿ø Á¤º¸¸¦ ¼öÁ¤ÇÏ´Â ¸Ş¼Òµå
+		//íšŒì› ì •ë³´ë¥¼ ìˆ˜ì •í•˜ëŠ” ë©”ì†Œë“œ
 		public void updateMember() {
 			if(index == 0) {
-				System.out.println("ÀÔ·ÂµÈ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+				System.out.println("ì…ë ¥ëœ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 				return;
 			}
 			
-			System.out.println("==== È¸¿ø Á¤º¸ ¼öÁ¤ ====");
-			System.out.print("¼öÁ¤ÇÒ È¸¿øÀÇ ÀÌ¸§À» ÀÔ·Â : ");
+			System.out.println("==== íšŒì› ì •ë³´ ìˆ˜ì • ====");
+			System.out.print("ìˆ˜ì •í•  íšŒì›ì˜ ì´ë¦„ì„ ì…ë ¥ : ");
 			int itemp = searchIndex(sc.next());
 			if(itemp != -1) {
 				System.out.print("");
-				System.out.print("È¸¿ø ÀÌ¸§ ÀÔ·Â : ");
+				System.out.print("íšŒì› ì´ë¦„ ì…ë ¥ : ");
 				String str = sc.next();			
-				//ÁÙ¹Ù²Ş(next´Â µÎ ¹ø ¿¬¼ÓÀ¸·Î ¾²¸é ¹«ÇÑ·çÇÁ ¿¡·¯³²)
+				//ì¤„ë°”ê¿ˆ(nextëŠ” ë‘ ë²ˆ ì—°ì†ìœ¼ë¡œ ì“°ë©´ ë¬´í•œë£¨í”„ ì—ëŸ¬ë‚¨)
 				sc.nextLine();
-				System.out.print("È¸¿ø µî±Ş ÀÔ·Â[silver/gold/vip/vvip] : ");
+				System.out.print("íšŒì› ë“±ê¸‰ ì…ë ¥[silver/gold/vip/vvip] : ");
 				String str1 = sc.next();
-				System.out.print("È¸¿ø Æ÷ÀÎÆ® ÀÔ·Â : ");
+				System.out.print("íšŒì› í¬ì¸íŠ¸ ì…ë ¥ : ");
 				int p = sc.nextInt();
 				
 				switch(str1) {
@@ -166,20 +166,20 @@ public class PointController {
 					break;
 				}				
 			}else {
-				System.out.println("°Ë»ö °á°ú ¾øÀ½");
+				System.out.println("ê²€ìƒ‰ ê²°ê³¼ ì—†ìŒ");
 			}
-			//ÁÙ¹Ù²Ş ÃÊ±âÈ­
+			//ì¤„ë°”ê¿ˆ ì´ˆê¸°í™”
 			sc.nextLine();
 		}
 		
-		//È¸¿ø Á¤º¸¸¦ »èÁ¦ÇÏ´Â ¸Ş¼Òµå
+		//íšŒì› ì •ë³´ë¥¼ ì‚­ì œí•˜ëŠ” ë©”ì†Œë“œ
 		public void deleteMember() {
 			if(index == 0) {
-				System.out.println("ÀÔ·ÂµÈ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+				System.out.println("ì…ë ¥ëœ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 				return;
 			}
-			System.out.println("---- È¸¿ø Á¤º¸ »èÁ¦ ----");
-			System.out.print("»èÁ¦ÇÒ È¸¿øÀÇ ÀÌ¸§À» ÀÔ·Â : ");
+			System.out.println("---- íšŒì› ì •ë³´ ì‚­ì œ ----");
+			System.out.print("ì‚­ì œí•  íšŒì›ì˜ ì´ë¦„ì„ ì…ë ¥ : ");
 			int itemp = searchIndex(sc.next());
 			if(itemp != -1) {
 				for(int i=itemp;i<index-1;i++) {
@@ -187,14 +187,14 @@ public class PointController {
 				}
 				index--;				
 			}else {
-				System.out.println("°Ë»ö °á°ú ¾øÀ½");
+				System.out.println("ê²€ìƒ‰ ê²°ê³¼ ì—†ìŒ");
 			}
-			//ÁÙ¹Ù²Ş ÃÊ±âÈ­
+			//ì¤„ë°”ê¿ˆ ì´ˆê¸°í™”
 			sc.nextLine();
 		}
 		
-		//Á¶È¸ÇÒ ÀÌ¸§À» ¸Å°³º¯¼ö·Î ¹Ş¾Æ ¹è¿­ÀÇ
-		//¸î ¹øÂ° ÀÎµ¦½º¿¡ ÀÖ´ÂÁö Á¶È¸ÇÏ¿© ÀÎµ¦½º ¹øÈ£¸®ÅÏ
+		//ì¡°íšŒí•  ì´ë¦„ì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ ë°°ì—´ì˜
+		//ëª‡ ë²ˆì§¸ ì¸ë±ìŠ¤ì— ìˆëŠ”ì§€ ì¡°íšŒí•˜ì—¬ ì¸ë±ìŠ¤ ë²ˆí˜¸ë¦¬í„´
 		public int searchIndex(String name) {
 			for(int i=0;i<index;i++) {
 				if(members[i].getName().equals(name)) {

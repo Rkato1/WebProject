@@ -1,6 +1,6 @@
 package kh.point.model.vo;
 
-//abstract Ãß»óÈ­ Å°¿öµå
+//abstract ì¶”ìƒí™” í‚¤ì›Œë“œ
 public abstract class Grade {
 	String name;
 	String grade;
@@ -36,7 +36,7 @@ public abstract class Grade {
 		this.point = point;
 	}
 	
-	//Ãß»ó ¸Ş¼Òµå´Â Ãß»óÅ¬·¡½º¿¡¼­¸¸ »ç¿ë°¡´ÉÇÔ
+	//ì¶”ìƒ ë©”ì†Œë“œëŠ” ì¶”ìƒí´ë˜ìŠ¤ì—ì„œë§Œ ì‚¬ìš©ê°€ëŠ¥í•¨
 	public abstract double getBonus();
 	
 	@Override

@@ -2,6 +2,6 @@ package kr.or.iei.vo;
 
 public class Information {
 	public void printInfo() {
-		System.out.println("±èÇö½Ä, 28, 0720");
+		System.out.println("ê¹€í˜„ì‹, 28, 0720");
 	}
 }

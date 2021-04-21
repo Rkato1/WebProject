@@ -11,40 +11,40 @@ import java.util.StringTokenizer;
 
 public class ImageStream {
 	public void main() {
-		//ÅØ½ºÆ®¸¦ ÀĞ±â À§ÇÑ º¸Á¶½ºÆ®¸²°´Ã¼ 
+		//í…ìŠ¤íŠ¸ë¥¼ ì½ê¸° ìœ„í•œ ë³´ì¡°ìŠ¤íŠ¸ë¦¼ê°ì²´ 
 		BufferedReader br = null;
-		//º¸Á¶½ºÆ®¸² Ãß°¡
+		//ë³´ì¡°ìŠ¤íŠ¸ë¦¼ ì¶”ê°€
 		BufferedOutputStream bos = null;
-		//ÆÄÀÏ ³»º¸³»±â À§ÇÑ °´Ã¼
+		//íŒŒì¼ ë‚´ë³´ë‚´ê¸° ìœ„í•œ ê°ì²´
 		//FileOutputStream fos = null;
 		try {
-			//ÆÄÀÏ ÀĞ±â À§ÇÑ ¸ŞÀÎ½ºÆ®¸² »ı¼º
+			//íŒŒì¼ ì½ê¸° ìœ„í•œ ë©”ì¸ìŠ¤íŠ¸ë¦¼ ìƒì„±
 			FileReader fr = new FileReader("quiz.txt");
-			//¼Óµµ¸¦ À§ÇØ º¸Á¶½ºÆ®¸² Ãß°¡
+			//ì†ë„ë¥¼ ìœ„í•´ ë³´ì¡°ìŠ¤íŠ¸ë¦¼ ì¶”ê°€
 			br = new BufferedReader(fr);
-			//ÆÄÀÏÀ» ÀÌ¹ÌÁö ÇüÅÂ·Î ³»º¸³»±â À§ÇÑ °´Ã¼
+			//íŒŒì¼ì„ ì´ë¯¸ì§€ í˜•íƒœë¡œ ë‚´ë³´ë‚´ê¸° ìœ„í•œ ê°ì²´
 			//fos = new FileOutputStream("img.gif");
 			bos = new BufferedOutputStream(new FileOutputStream("img.gif"));
-			//1ÁÙÂ¥¸® ÆÄÀÏÀÌ¹Ç·Î ÇÑ¹ø¸¸ ¼öÇà
+			//1ì¤„ì§œë¦¬ íŒŒì¼ì´ë¯€ë¡œ í•œë²ˆë§Œ ìˆ˜í–‰
 			String str = br.readLine();
-			//°ø¹é ±âÁØÀ¸·Î ¹®ÀÚ¿­ ÄÆ
+			//ê³µë°± ê¸°ì¤€ìœ¼ë¡œ ë¬¸ìì—´ ì»·
 			StringTokenizer sT = new StringTokenizer(str, " ");
 			ArrayList<Byte> al = new ArrayList<Byte>();
-			//³²¾ÆÀÖ´Ù¸é(³¡³¯‹š±îÁö)
+			//ë‚¨ì•„ìˆë‹¤ë©´(ëë‚ ë–„ê¹Œì§€)
 			while(sT.hasMoreTokens()) {
 				String no = sT.nextToken();
-				//16Áø¼ö byte·Î º¯È¯
+				//16ì§„ìˆ˜ byteë¡œ ë³€í™˜
 				byte b = (byte)Integer.parseInt(no,16);
 				al.add(b);
 			}
-			//ÆÄÀÏ³»º¸³»±â
+			//íŒŒì¼ë‚´ë³´ë‚´ê¸°
 			for(Byte by : al) {
 				bos.write(by);
-				//¿ø·¡ ¸îÆÛ¼¾Æ® ¿Ï¼ºµÈÁö¸¦ º¸¿©ÁÖ°í ½Í¾úÁö¸¸ ¹º°¡ ²¿ÀÓ
-				//System.out.println(((double)al.indexOf(by)/al.size())+"%¿Ï·á");
+				//ì›ë˜ ëª‡í¼ì„¼íŠ¸ ì™„ì„±ëœì§€ë¥¼ ë³´ì—¬ì£¼ê³  ì‹¶ì—ˆì§€ë§Œ ë­”ê°€ ê¼¬ì„
+				//System.out.println(((double)al.indexOf(by)/al.size())+"%ì™„ë£Œ");
 				//fos.write(by);
 			}
-			System.out.println("¿Ï·á");
+			System.out.println("ì™„ë£Œ");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

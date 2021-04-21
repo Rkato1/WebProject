@@ -24,7 +24,7 @@ public class TCPChatServer2 {
 		hashmap.put("www.daum.net", "211.231.99.80");
 	}
 	public void main() {
-		//1.Æ÷Æ®¹øÈ£ÁöÁ¤
+		//1.í¬íŠ¸ë²ˆí˜¸ì§€ì •
 		int port = 5678;
 		ServerSocket serverSocket = null;
 		DataOutputStream dos = null;
@@ -33,25 +33,25 @@ public class TCPChatServer2 {
 		
 		try {
 			serverSocket = new ServerSocket(port);
-			System.out.println("[Ã¤ÆÃ¼­¹ö ½ÃÀÛ]");
+			System.out.println("[ì±„íŒ…ì„œë²„ ì‹œì‘]");
 			while(true) {
-				System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ´ë±â Áß..");
+				System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ëŒ€ê¸° ì¤‘..");
 				Socket clientSocket = serverSocket.accept();
-				System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ¿Ï·á");
+				System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ì™„ë£Œ");
 				InputStream in = clientSocket.getInputStream();
 				OutputStream out = clientSocket.getOutputStream();
 				dis = new DataInputStream(in);
 				dos = new DataOutputStream(out);
-				dos.writeUTF("´Ğ³×ÀÓÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+				dos.writeUTF("ë‹‰ë„¤ì„ì„ ì…ë ¥í•˜ì„¸ìš”");
 				String nickName = dis.readUTF();
-				System.out.println("----- Ã¤ÆÃ ½ÃÀÛ -----");
-				System.out.println("Á¾·á´Â exit ÀÔ·Â");
+				System.out.println("----- ì±„íŒ… ì‹œì‘ -----");
+				System.out.println("ì¢…ë£ŒëŠ” exit ì…ë ¥");
 				while(true) {
-					//½Ã°£Àº ±×¶§±×¶§ ¹Ù²ñ
+					//ì‹œê°„ì€ ê·¸ë•Œê·¸ë•Œ ë°”ë€œ
 					Date serverDate = new Date();
 					SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-					System.out.print("("+sdf.format(serverDate)+")[¼­¹ö] : ");
-					//±âÁ¸ »óÈ£ Ã¤ÆÃ
+					System.out.print("("+sdf.format(serverDate)+")[ì„œë²„] : ");
+					//ê¸°ì¡´ ìƒí˜¸ ì±„íŒ…
 					String sendMsg = sc.nextLine();
 					dos.writeUTF(sendMsg);
 					dos.writeUTF(sdf.format(serverDate));
@@ -64,7 +64,7 @@ public class TCPChatServer2 {
 						break;
 					}
 					System.out.println("("+clientDate+")["+nickName+"] : "+checkDNS(recMsg));
-					//±âÁ¸ »óÈ£ Ã¤ÆÃ
+					//ê¸°ì¡´ ìƒí˜¸ ì±„íŒ…
 					//System.out.println("("+clientDate+")["+nickName+"] : "+recMsg);
 				}
 			}
@@ -85,7 +85,7 @@ public class TCPChatServer2 {
 	}
 	
 	public String now() {
-		//ÇÑÁÙÄÆ
+		//í•œì¤„ì»·
 		//return new SimpleDateFormat("(HH:mm:ss)").format(new Date());
 		Date time = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("(HH:mm:ss)");		
@@ -101,22 +101,22 @@ public class TCPChatServer2 {
 		
 		try {
 			serverSocket = new ServerSocket(port);
-			System.out.println("[Ã¤ÆÃ¼­¹ö ½ÃÀÛ]");
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ´ë±â Áß..");
+			System.out.println("[ì±„íŒ…ì„œë²„ ì‹œì‘]");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ëŒ€ê¸° ì¤‘..");
 			Socket clientSocket = serverSocket.accept();
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ¿Ï·á");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ì™„ë£Œ");
 			InputStream in = clientSocket.getInputStream();
 			OutputStream out = clientSocket.getOutputStream();
 			dis = new DataInputStream(in);
 			dos = new DataOutputStream(out);
-			System.out.println("----- Ã¤ÆÃ ½ÃÀÛ -----");
-			System.out.println("Á¾·á´Â exit ÀÔ·Â");
+			System.out.println("----- ì±„íŒ… ì‹œì‘ -----");
+			System.out.println("ì¢…ë£ŒëŠ” exit ì…ë ¥");
 			while(true) {
 				String recMsg = dis.readUTF();
 				if(recMsg.equals("exit")) {
 					break;
 				}
-				System.out.println("[Å¬¶óÀÌ¾ğÆ®] : "+checkDNS(recMsg));
+				System.out.println("[í´ë¼ì´ì–¸íŠ¸] : "+checkDNS(recMsg));
 				dos.writeUTF(recMsg);
 			}
 		} catch (IOException e) {
@@ -141,6 +141,6 @@ public class TCPChatServer2 {
 				return hashmap.get(str);
 			}
 		}
-		return "ÀÔ·ÂÇÑ °ªÀº ¾ø½À´Ï´Ù.";
+		return "ì…ë ¥í•œ ê°’ì€ ì—†ìŠµë‹ˆë‹¤.";
 	}
 }

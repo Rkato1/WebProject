@@ -8,41 +8,41 @@ import java.util.Scanner;
 
 public class ByteStreamTest {
 	
-	//ÆÄÀÏ¿¡ ³»¿ë Àû¾î¼­ ³»º¸³»´Â ÇÔ¼ö
+	//íŒŒì¼ì— ë‚´ìš© ì ì–´ì„œ ë‚´ë³´ë‚´ëŠ” í•¨ìˆ˜
 	public void primaryStream() {
 		Scanner sc = new Scanner(System.in);
-		//ÆÄÀÏ ³»º¸³»´Â Å¬·¡½º
+		//íŒŒì¼ ë‚´ë³´ë‚´ëŠ” í´ë˜ìŠ¤
 		FileOutputStream fOut = null;
-		System.out.print("ÀúÀåÇÒ ÆÄÀÏ¸í ÀÔ·Â : ");
+		System.out.print("ì €ì¥í•  íŒŒì¼ëª… ì…ë ¥ : ");
 		String fileName = sc.nextLine();
 		
 		try {
-			//ÆÄÀÏ»ı¼º(ÀÌ¹Ì Á¸ÀçÇÏ´Â °æ¿ì µ¤¾î¾²±â)
+			//íŒŒì¼ìƒì„±(ì´ë¯¸ ì¡´ì¬í•˜ëŠ” ê²½ìš° ë®ì–´ì“°ê¸°)
 			fOut = new FileOutputStream(fileName);
-			System.out.println("["+ fileName+"] ÆÄÀÏ¿¡ ÀúÀåÇÒ ³»¿ë ÀÔ·Â : ");
-			System.out.println("Á¾·á´Â exit ÀÔ·Â");
+			System.out.println("["+ fileName+"] íŒŒì¼ì— ì €ì¥í•  ë‚´ìš© ì…ë ¥ : ");
+			System.out.println("ì¢…ë£ŒëŠ” exit ì…ë ¥");
 			int lineNumber = 1;
 			while(true) {
 				System.out.print((lineNumber++)+" : ");
-				//windows °³ÇàÃ³¸® ¹®ÀÚ Ãß°¡(ÆÄÀÏ¿¡¼­ ±Û¾¾ ÁÙ¹Ù²ŞÀ» À§ÇØ Ãß°¡)
-				//±Û¾¾¸¦ ÀÔ·Â¹Ş¾Æ ¾²±â
+				//windows ê°œí–‰ì²˜ë¦¬ ë¬¸ì ì¶”ê°€(íŒŒì¼ì—ì„œ ê¸€ì”¨ ì¤„ë°”ê¿ˆì„ ìœ„í•´ ì¶”ê°€)
+				//ê¸€ì”¨ë¥¼ ì…ë ¥ë°›ì•„ ì“°ê¸°
 				String str = sc.nextLine()+"\r\n";
-				//Á¾·á½ÅÈ£°¡ ³ª¿Ô´Ù¸é
+				//ì¢…ë£Œì‹ í˜¸ê°€ ë‚˜ì™”ë‹¤ë©´
 				if(str.equals("exit\r\n")) {
 					break;
 				}
-				//³»º¸³¾ ±Û¾¾¸¦ ÀúÀåÇÒ ¹è¿­(string to byte)
+				//ë‚´ë³´ë‚¼ ê¸€ì”¨ë¥¼ ì €ì¥í•  ë°°ì—´(string to byte)
 				byte arr[] = str.getBytes();
-				//ÆÄÀÏ¿¡ µ¥ÀÌÅÍ¸¦ ³»º¸³»´Â ÄÚµå
+				//íŒŒì¼ì— ë°ì´í„°ë¥¼ ë‚´ë³´ë‚´ëŠ” ì½”ë“œ
 				fOut.write(arr);
 			}
 		}
-		//window±ÇÇÑ¿¡ µû¶ó ÆÄÀÏ»ı¼ºÀÌ ºÒ°¡´ÉÇÑ °æ¿ì
+		//windowê¶Œí•œì— ë”°ë¼ íŒŒì¼ìƒì„±ì´ ë¶ˆê°€ëŠ¥í•œ ê²½ìš°
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//ÀÔÃâ·Â ¿À·ù ¹ß»ı½Ã
+		//ì…ì¶œë ¥ ì˜¤ë¥˜ ë°œìƒì‹œ
 		catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -60,14 +60,14 @@ public class ByteStreamTest {
 	
 	public void subStream() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀúÀåÇÒ ÆÄÀÏ¸í : ");
+		System.out.print("ì €ì¥í•  íŒŒì¼ëª… : ");
 		String fileName = sc.nextLine();
 		DataOutputStream dos = null;
 		try {
 			FileOutputStream fos = new FileOutputStream(fileName);
 			dos = new DataOutputStream(fos);
-			System.out.println("["+fileName+"] ÆÄÀÏ¿¡ ÀúÀåµÉ ³»¿ë ÀÔ·Â : ");
-			System.out.println("Á¾·á´Â exit ÀÔ·Â");
+			System.out.println("["+fileName+"] íŒŒì¼ì— ì €ì¥ë  ë‚´ìš© ì…ë ¥ : ");
+			System.out.println("ì¢…ë£ŒëŠ” exit ì…ë ¥");
 			int lineNumber = 1;
 			while(true) {
 				System.out.print((lineNumber++)+" : ");
@@ -75,7 +75,7 @@ public class ByteStreamTest {
 				if(str.equals("exit")) {
 					break;
 				}
-				//¹Ù·Î ³»º¸³¾¼ö ÀÖÀ½
+				//ë°”ë¡œ ë‚´ë³´ë‚¼ìˆ˜ ìˆìŒ
 				dos.writeChars(str);
 			}
 		} catch (FileNotFoundException e) {
@@ -86,7 +86,7 @@ public class ByteStreamTest {
 			e.printStackTrace();
 		}finally {
 			try {
-				//º¸Á¶½ºÆ®¸² close, ÁÖ½ºÆ®¸²Àº ÀÚµ¿À¸·Î close
+				//ë³´ì¡°ìŠ¤íŠ¸ë¦¼ close, ì£¼ìŠ¤íŠ¸ë¦¼ì€ ìë™ìœ¼ë¡œ close
 				dos.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

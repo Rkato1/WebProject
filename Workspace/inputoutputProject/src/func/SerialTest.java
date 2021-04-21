@@ -14,17 +14,17 @@ public class SerialTest {
 	public SerialTest() {
 		super();
 		sc = new Scanner(System.in);
-		ui = new UserInfo("±âº»°ª",0,"±âº»°ª");
+		ui = new UserInfo("ê¸°ë³¸ê°’",0,"ê¸°ë³¸ê°’");
 		Score score = new Score(50,50,50);
 		ui.setScore(score);
 		// TODO Auto-generated constructor stub
 	}
 	public void main() {
 		while(true) {
-			System.out.println("1. À¯Àú Á¤º¸ ÀÔ·Â ÈÄ ³»º¸³»±â");
-			System.out.println("2. À¯Àú Á¤º¸ ÀĞ¾î¿À±â");
-			System.out.println("3. ÇöÀç À¯Àú Á¤º¸ Ãâ·Â");
-			System.out.print("¼±ÅÃ > ");
+			System.out.println("1. ìœ ì € ì •ë³´ ì…ë ¥ í›„ ë‚´ë³´ë‚´ê¸°");
+			System.out.println("2. ìœ ì € ì •ë³´ ì½ì–´ì˜¤ê¸°");
+			System.out.println("3. í˜„ì¬ ìœ ì € ì •ë³´ ì¶œë ¥");
+			System.out.print("ì„ íƒ > ");
 			int sel = sc.nextInt();
 			switch(sel) {
 			case 1:
@@ -37,47 +37,47 @@ public class SerialTest {
 				printUser();
 				break;
 			default:
-				System.out.println("1~3 »çÀÌ Á¤¼ö Á¦´ë·Î ÀÔ·Â");
+				System.out.println("1~3 ì‚¬ì´ ì •ìˆ˜ ì œëŒ€ë¡œ ì…ë ¥");
 				continue;
 			}
 		}
 	}	
 	public void printUser() {
 		// TODO Auto-generated method stub
-		System.out.println("ÀÌ¸§ : "+ui.getName());
-		System.out.println("³ªÀÌ : "+ui.getAge());
-		System.out.println("ÁÖ¼Ò : "+ui.getAddr());
-		System.out.println("±¹¾îÁ¡¼ö : "+ui.getScore().getKor());
-		System.out.println("¿µ¾îÁ¡¼ö : "+ui.getScore().getEng());
-		System.out.println("¼öÇĞÁ¡¼ö : "+ui.getScore().getMath());
+		System.out.println("ì´ë¦„ : "+ui.getName());
+		System.out.println("ë‚˜ì´ : "+ui.getAge());
+		System.out.println("ì£¼ì†Œ : "+ui.getAddr());
+		System.out.println("êµ­ì–´ì ìˆ˜ : "+ui.getScore().getKor());
+		System.out.println("ì˜ì–´ì ìˆ˜ : "+ui.getScore().getEng());
+		System.out.println("ìˆ˜í•™ì ìˆ˜ : "+ui.getScore().getMath());
 	}
 	public void outputUser() {
 		// TODO Auto-generated method stub
-		System.out.print("À¯Àú ÀÌ¸§ ÀÔ·Â : ");
+		System.out.print("ìœ ì € ì´ë¦„ ì…ë ¥ : ");
 		String name = sc.next();		
-		System.out.print("À¯Àú ³ªÀÌ ÀÔ·Â : ");
+		System.out.print("ìœ ì € ë‚˜ì´ ì…ë ¥ : ");
 		int age = sc.nextInt();
-		System.out.print("À¯Àú ÁÖ¼Ò ÀÔ·Â : ");
+		System.out.print("ìœ ì € ì£¼ì†Œ ì…ë ¥ : ");
 		String addr = sc.next();
 		UserInfo u = new UserInfo(name, age, addr);
-		System.out.print("±¹¾î Á¡¼ö ÀÔ·Â : ");
+		System.out.print("êµ­ì–´ ì ìˆ˜ ì…ë ¥ : ");
 		int kor = sc.nextInt();
-		System.out.print("¼öÇĞ Á¡¼ö ÀÔ·Â : ");
+		System.out.print("ìˆ˜í•™ ì ìˆ˜ ì…ë ¥ : ");
 		int math = sc.nextInt();
-		System.out.print("¿µ¾î Á¡¼ö ÀÔ·Â : ");
+		System.out.print("ì˜ì–´ ì ìˆ˜ ì…ë ¥ : ");
 		int eng = sc.nextInt();
 		Score s = new Score(kor, math, eng);
 		u.setScore(s);
-		//°´Ã¼ ³»º¸³»±â À§ÇÑ º¸Á¶½ºÆ®¸²
+		//ê°ì²´ ë‚´ë³´ë‚´ê¸° ìœ„í•œ ë³´ì¡°ìŠ¤íŠ¸ë¦¼
 		ObjectOutputStream oos = null;
-		//¸ŞÀÎ½ºÆ®¸²
+		//ë©”ì¸ìŠ¤íŠ¸ë¦¼
 		try {
 			FileOutputStream fos = new FileOutputStream("object.txt");
 			oos = new ObjectOutputStream(fos);
-			//¸ğµç °´Ã¼¸¦ ³»º¸³¾¶§ »ç¿ëÇÔ(¸Å°³º¯¼ö´Â objectÅ¸ÀÔ)
-			//Á÷·ÄÈ­
+			//ëª¨ë“  ê°ì²´ë¥¼ ë‚´ë³´ë‚¼ë•Œ ì‚¬ìš©í•¨(ë§¤ê°œë³€ìˆ˜ëŠ” objectíƒ€ì…)
+			//ì§ë ¬í™”
 			oos.writeObject(u);
-			System.out.println("ÀúÀå¿Ï·á");
+			System.out.println("ì €ì¥ì™„ë£Œ");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -96,15 +96,15 @@ public class SerialTest {
 	
 	public void inputUser() {
 		// TODO Auto-generated method stub
-		//°´Ã¼¸¦ ÀĞ¾î¿À±â À§ÇÑ º¸Á¶½ºÆ®¸²
+		//ê°ì²´ë¥¼ ì½ì–´ì˜¤ê¸° ìœ„í•œ ë³´ì¡°ìŠ¤íŠ¸ë¦¼
 		ObjectInputStream ois = null;
 		try {
 			FileInputStream fis = new FileInputStream("object.txt");
 			ois = new ObjectInputStream(fis);
-			//ÀúÀåµÈ °´Ã¼ ºÒ·¯¿À±â(objectÇüÅÂÀÌ¹Ç·Î ´Ù¿îÄ³½ºÆÃ¼±¾ğ)
-			//¿ªÁ÷·ÄÈ­
+			//ì €ì¥ëœ ê°ì²´ ë¶ˆëŸ¬ì˜¤ê¸°(objectí˜•íƒœì´ë¯€ë¡œ ë‹¤ìš´ìºìŠ¤íŒ…ì„ ì–¸)
+			//ì—­ì§ë ¬í™”
 			this.ui = (UserInfo)ois.readObject();
-			System.out.println("ºÒ·¯¿À±â ¿Ï·á");
+			System.out.println("ë¶ˆëŸ¬ì˜¤ê¸° ì™„ë£Œ");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

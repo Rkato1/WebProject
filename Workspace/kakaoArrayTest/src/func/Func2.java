@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Func2 {
-	//°¡Àå ÁÁÀº ÇØ°á¹æ¹ıÀº
-	//LinkedList¸¦ »ç¿ëÇÏ´Â°Í	
+	//ê°€ì¥ ì¢‹ì€ í•´ê²°ë°©ë²•ì€
+	//LinkedListë¥¼ ì‚¬ìš©í•˜ëŠ”ê²ƒ	
 	
 	public void map() {
 		String[] cities = {"Jeju","Pangyo","Seoul","LA","Rome","Paris"};
@@ -18,16 +18,16 @@ public class Func2 {
 			for(int i=0;i<cities.length;i++) {
 				if(cacheList.containsKey(cities[i].toLowerCase())) {
 					totTime += 1;
-					//ÀüÃ¼ °ª¿¡ 1Ãß°¡
+					//ì „ì²´ ê°’ì— 1ì¶”ê°€
 					for(String key : cacheList.keySet()) {
 						cacheList.put(key, cacheList.get(key)+1);
 					}
-					//ÇöÀç µµ½Ã¿¡ 0 ´ëÀÔ
+					//í˜„ì¬ ë„ì‹œì— 0 ëŒ€ì…
 					cacheList.put(cities[i].toLowerCase(), 0);					
 				}else {
 					totTime += 5;
 					if(cacheList.size()==cacheSize) {
-						//»èÁ¦µÉ Å°°ª ÀúÀå
+						//ì‚­ì œë  í‚¤ê°’ ì €ì¥
 						String removeKey = null;
 						for(String key : cacheList.keySet()) {
 							if(removeKey==null) {
@@ -60,15 +60,15 @@ public class Func2 {
 		}else {
 			for(int i=0;i<cities.length;i++) {
 				int searchResult = searchCache(cache, cities[i].toLowerCase());
-				//Ä³½Ã¿¡ µµ½Ã¸íÀÌ ¾ø´Â°æ¿ì
+				//ìºì‹œì— ë„ì‹œëª…ì´ ì—†ëŠ”ê²½ìš°
 				if(searchResult == -1) {	
 					totalTime += 5;
-					//ÇöÀç Ä³½Ã¿¡ ²ËÂ÷ÀÖÀ¸¸é 0¹øÀÎµ¦½º »èÁ¦
+					//í˜„ì¬ ìºì‹œì— ê½‰ì°¨ìˆìœ¼ë©´ 0ë²ˆì¸ë±ìŠ¤ ì‚­ì œ
 					if(cache.size() == cacheSize) {
 						cache.remove(0);
 					}
 				}
-				//Ä³½Ã¿¡ µµ½Ã¸íÀÌ ÀÖ´Â°æ¿ì
+				//ìºì‹œì— ë„ì‹œëª…ì´ ìˆëŠ”ê²½ìš°
 				else {
 					totalTime += 1;
 					cache.remove(searchResult);				
@@ -76,7 +76,7 @@ public class Func2 {
 				cache.add(cities[i].toLowerCase());
 			}
 		}
-		System.out.println("°á°ú : "+totalTime);
+		System.out.println("ê²°ê³¼ : "+totalTime);
 	}
 
 	public int searchCache(ArrayList<String> cache, String city) {

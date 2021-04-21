@@ -2,7 +2,7 @@ package func;
 
 import java.io.Serializable;
 
-//±‚¡∏
+//Í∏∞Ï°¥
 //public class Score{
 public class Score implements Serializable{
 	static final long serialVersionUID  = 22222L;

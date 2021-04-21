@@ -10,25 +10,25 @@ public class Start {
 	public static void main(String[] args) {
 		AnimalMgr am = new AnimalMgr();
 		Tiger t = new Tiger(200);
-		//´ÙÇü¼º¿¡ ÀÇÇØ¼­ Ã³¸® °¡´É
+		//ë‹¤í˜•ì„±ì— ì˜í•´ì„œ ì²˜ë¦¬ ê°€ëŠ¥
 		am.setData(t);
 		AnimalMgr am1 = new AnimalMgr();
 		Bear b = new Bear(1000);
-		//´ÙÇü¼º¿¡ ÀÇÇØ¼­ Ã³¸® °¡´É
+		//ë‹¤í˜•ì„±ì— ì˜í•´ì„œ ì²˜ë¦¬ ê°€ëŠ¥
 		am1.setData(b);
 		AnimalMgrGeneric<Tiger> amg = new AnimalMgrGeneric<Tiger>();
-		//Generic¿¡ ÀÇÇØ¼­ Ã³¸®°¡´É
+		//Genericì— ì˜í•´ì„œ ì²˜ë¦¬ê°€ëŠ¥
 		amg.setData(t);
 		AnimalMgrGeneric<Bear> amg1 = new AnimalMgrGeneric<Bear>();
-		//Generic¿¡ ÀÇÇØ¼­ Ã³¸®°¡´É
+		//Genericì— ì˜í•´ì„œ ì²˜ë¦¬ê°€ëŠ¥
 		amg1.setData(b);
 		
-		//ÇÏ·Á¸é ´Ù¿îÄ³½ºÆÃ ÇÊ¿ä
+		//í•˜ë ¤ë©´ ë‹¤ìš´ìºìŠ¤íŒ… í•„ìš”
 		//System.out.println(am.getData().getHp());
 		System.out.println(((Tiger)am.getData()).getHp());
 		System.out.println(((Bear)am1.getData()).getHp());
 		
-		//Generic¿¡ ÀÇÇØ¼­ Ã³¸®°¡´É
+		//Genericì— ì˜í•´ì„œ ì²˜ë¦¬ê°€ëŠ¥
 		System.out.println(amg.getData().getHp());
 		System.out.println(amg1.getData().getHp());
 		// TODO Auto-generated method stub
@@ -38,13 +38,13 @@ public class Start {
 		String s = ge.getData();
 		System.out.println(s);
 		
-		//±âº»ÇüÀº ¾Èµé¾î°¨
+		//ê¸°ë³¸í˜•ì€ ì•ˆë“¤ì–´ê°
 		//GenericEx<int> ge2 = new GenericEx<int>();
-		//»ç¿ëÇÏ°í ½ÍÀ¸¸é WrapperÅ¬·¡½º¸¦ ÀÌ¿ëÇØ¼­
+		//ì‚¬ìš©í•˜ê³  ì‹¶ìœ¼ë©´ Wrapperí´ë˜ìŠ¤ë¥¼ ì´ìš©í•´ì„œ
 		GenericEx<Integer> ge2 = new GenericEx<Integer>();
 		int num = ge2.getData();
 		
-		//2°³¸¦ »ç¿ëÇÒ°æ¿ì <T,E>
+		//2ê°œë¥¼ ì‚¬ìš©í• ê²½ìš° <T,E>
 		GenericEx2<String, Integer> ge3 = new GenericEx2<String, Integer>();
 		//String
 		ge3.getData();

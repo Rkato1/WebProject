@@ -6,19 +6,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//Â¥´øÄÚµå
+//ì§œë˜ì½”ë“œ
 public class WordConnectGame {
 	Scanner sc;
 	ArrayList<String> words;
 	BufferedReader br = null;
 	
-	//½ÂÆĞ º¯¼ö
+	//ìŠ¹íŒ¨ ë³€ìˆ˜
 	int w, l;
-	//Àß¸ø±âÀÔÇßÀ»¶§ÀÇ ¼ö
+	//ì˜ëª»ê¸°ì…í–ˆì„ë•Œì˜ ìˆ˜
 	int count;
-	//·ÎÁ÷Ã¼Å©
+	//ë¡œì§ì²´í¬
 	boolean btemp = true;
-	//Ã¹±ÛÀÚ¿Í ³¡±ÛÀÚ ÀúÀå
+	//ì²«ê¸€ìì™€ ëê¸€ì ì €ì¥
 	char ch=' ', ch1;
 	public WordConnectGame() {
 		super();
@@ -31,7 +31,7 @@ public class WordConnectGame {
 			br = new BufferedReader(fr);
 			while(true) {
 				String line = br.readLine();
-				//³¡±îÁö ´Ù ÀĞ¾úÀ¸¸é
+				//ëê¹Œì§€ ë‹¤ ì½ì—ˆìœ¼ë©´
 				if(line == null) {
 					break;
 				}
@@ -52,24 +52,24 @@ public class WordConnectGame {
 	
 	public void main() {
 		while(true) {
-			System.out.println("\n----- ³¡¸»ÀÕ±â -----\n");
-			System.out.println("1.°ÔÀÓ ½ÃÀÛ");
-			System.out.println("2.ÀüÀû È®ÀÎ");
-			System.out.println("3.ÇÁ·Î±×·¥ Á¾·á");
-			System.out.print("¼±ÅÃ > ");
+			System.out.println("\n----- ëë§ì‡ê¸° -----\n");
+			System.out.println("1.ê²Œì„ ì‹œì‘");
+			System.out.println("2.ì „ì  í™•ì¸");
+			System.out.println("3.í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+			System.out.print("ì„ íƒ > ");
 			int sel = sc.nextInt();
 			switch(sel) {
 			case 1:
 				wordGameChoose();
 				break;
 			case 2:
-				System.out.printf("½Â¸® : %d½Â\nÆĞ¹è : %dÆĞ\n", w, l);
+				System.out.printf("ìŠ¹ë¦¬ : %dìŠ¹\níŒ¨ë°° : %díŒ¨\n", w, l);
 				break;
 			case 3:
-				System.out.println("½Ã½ºÅÛ Á¾·á");
+				System.out.println("ì‹œìŠ¤í…œ ì¢…ë£Œ");
 				return;
 			default:
-				System.out.println("1~3 »çÀÌ Á¤¼ö ÀÔ·Â");
+				System.out.println("1~3 ì‚¬ì´ ì •ìˆ˜ ì…ë ¥");
 				break;
 			}
 		}
@@ -78,10 +78,10 @@ public class WordConnectGame {
 	private void wordGameChoose() {
 		// TODO Auto-generated method stub
 		while(true) {
-			System.out.println("\n--- ¼±°ø/ÈÄ°ø ¼±ÅÃ ---\n");
-			System.out.println("1.¼±°ø");
-			System.out.println("2.ÈÄ°ø");
-			System.out.print("¼±ÅÃ > ");
+			System.out.println("\n--- ì„ ê³µ/í›„ê³µ ì„ íƒ ---\n");
+			System.out.println("1.ì„ ê³µ");
+			System.out.println("2.í›„ê³µ");
+			System.out.print("ì„ íƒ > ");
 			int sel = sc.nextInt();
 			switch(sel) {
 			case 1:
@@ -91,7 +91,7 @@ public class WordConnectGame {
 				wordGame(1);
 				break;
 			default:
-				System.out.println("1~2 »çÀÌ Á¤¼ö ÀÔ·Â. ¸ŞÀÎ¸Ş´º·Î µ¹¾Æ°¨");
+				System.out.println("1~2 ì‚¬ì´ ì •ìˆ˜ ì…ë ¥. ë©”ì¸ë©”ë‰´ë¡œ ëŒì•„ê°");
 				return;
 			}
 		}
@@ -133,7 +133,7 @@ public class WordConnectGame {
 		if(str.equals("gg")) {
 			gameEnd();
 		}
-		//³¡¸»ÀÕ±â´Ï±î ÀÌÀü ³¡ÀÌ ½ÃÀÛÀÌ µÊ
+		//ëë§ì‡ê¸°ë‹ˆê¹Œ ì´ì „ ëì´ ì‹œì‘ì´ ë¨
 		ch1 = ch;
 		ch = str.charAt(0);
 		if(ch1==' ') {
@@ -142,14 +142,14 @@ public class WordConnectGame {
 			if(i%2==0) {
 				if(str.length()<2) {
 					count++;
-					System.out.println("¿Ã¹Ù¸£Áö ¾ÊÀº ´Ü¾îÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");			
+					System.out.println("ì˜¬ë°”ë¥´ì§€ ì•Šì€ ë‹¨ì–´ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");			
 					if(count==3) {
 						gameEnd();
 					}
 				}else {
 					if(str.charAt(0)!=ch1) {
 						count++;
-						System.out.println("¿Ã¹Ù¸£Áö ¾ÊÀº ´Ü¾îÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");			
+						System.out.println("ì˜¬ë°”ë¥´ì§€ ì•Šì€ ë‹¨ì–´ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”.");			
 						if(count==3) {
 							gameEnd();
 						}
@@ -167,7 +167,7 @@ public class WordConnectGame {
 	
 	private void gameEnd() {
 		count=0;
-		System.out.println("ÆĞ¹è");
+		System.out.println("íŒ¨ë°°");
 		l++;
 		main();
 	}

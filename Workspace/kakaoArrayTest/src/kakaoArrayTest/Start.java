@@ -9,9 +9,9 @@ public class Start {
 		Func f = new Func();
 		f.main();
 		
-		//ÀüÃ¼ ¼Ò¹®ÀÚ·Î º¯°æ
+		//ì „ì²´ ì†Œë¬¸ìë¡œ ë³€ê²½
 		//.toLowerCase();
-		//ÀüÃ¼ ´ë¹®ÀÚ·Î º¯°æ
+		//ì „ì²´ ëŒ€ë¬¸ìë¡œ ë³€ê²½
 		//.toUpperCase();
 	}
 

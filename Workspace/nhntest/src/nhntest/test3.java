@@ -2,12 +2,12 @@ package nhntest;
 
 public class test3 {
 	private static void solution(int numOfOrder, String[] orderArr) {
-	    // TODO: ÀÌ°÷¿¡ ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä. Ãß°¡·Î ÇÊ¿äÇÑ ÇÔ¼ö¿Í Àü¿ªº¯¼ö¸¦ ¼±¾ğÇØ¼­ »ç¿ëÇÏ¼Åµµ µË´Ï´Ù.
+	    // TODO: ì´ê³³ì— ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”. ì¶”ê°€ë¡œ í•„ìš”í•œ í•¨ìˆ˜ì™€ ì „ì—­ë³€ìˆ˜ë¥¼ ì„ ì–¸í•´ì„œ ì‚¬ìš©í•˜ì…”ë„ ë©ë‹ˆë‹¤.
 		if(numOfOrder<1 || numOfOrder>10) {
-			System.out.println("ÁÖ¹®Ç¥ Àå¼ö ¹üÀ§ ÃÊ°ú");
+			System.out.println("ì£¼ë¬¸í‘œ ì¥ìˆ˜ ë²”ìœ„ ì´ˆê³¼");
 		}else {
 			if(orderArr.length<1 || orderArr.length>30) {
-				System.out.println("Á÷¿øÀÌ ÀÛ¼ºÇÑ ÁÖ¹®Ç¥ÀÇ ±æÀÌ ÃÊ°ú");
+				System.out.println("ì§ì›ì´ ì‘ì„±í•œ ì£¼ë¬¸í‘œì˜ ê¸¸ì´ ì´ˆê³¼");
 			}else{
 				
 			}

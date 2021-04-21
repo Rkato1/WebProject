@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Func {
 	public void oper1() {
-		//´ëÀÔ¿¬»êÀÚ(¿ìÃø °ªÀ» ÁÂÃø º¯¼ö¿¡ ´ëÀÔÇÑ´Ù)
+		//ëŒ€ì…ì—°ì‚°ì(ìš°ì¸¡ ê°’ì„ ì¢Œì¸¡ ë³€ìˆ˜ì— ëŒ€ì…í•œë‹¤)
 		int num1 = 10;
 		//10
 		System.out.println(num1);
@@ -12,34 +12,34 @@ public class Func {
 		num1 += 10;
 		//20
 		System.out.println(num1);
-		//+=, -=, *=, /=(¸ò), %=(³ª¸ÓÁö) ¸ğµÎ °°À½
+		//+=, -=, *=, /=(ëª«), %=(ë‚˜ë¨¸ì§€) ëª¨ë‘ ê°™ìŒ
 		
-		//»ê¼ú¿¬»êÀÚ
-		//++a, --a ÀüÀ§¿¬»êÀÚ °ªÀ» 1Áõ°¨ ÈÄ ¿¬»êÀ» ÁøÇà
-		//a++, a-- ÈÄÀ§¿¬»êÀÚ °ªÀ» ¿¬»ê ÁøÇà ÈÄ 1Áõ°¨
+		//ì‚°ìˆ ì—°ì‚°ì
+		//++a, --a ì „ìœ„ì—°ì‚°ì ê°’ì„ 1ì¦ê° í›„ ì—°ì‚°ì„ ì§„í–‰
+		//a++, a-- í›„ìœ„ì—°ì‚°ì ê°’ì„ ì—°ì‚° ì§„í–‰ í›„ 1ì¦ê°
 		int a = 1;
-		System.out.println("±âº»°ª" + a);
-		System.out.println("ÀüÀ§¿¬»êÀÚ °á°ú : " + ++a);
+		System.out.println("ê¸°ë³¸ê°’" + a);
+		System.out.println("ì „ìœ„ì—°ì‚°ì ê²°ê³¼ : " + ++a);
 		a = 1;
-		System.out.println("ÈÄÀ§¿¬»êÀÚ °á°ú : " + a++);
+		System.out.println("í›„ìœ„ì—°ì‚°ì ê²°ê³¼ : " + a++);
 		
-		//°ü°è¿¬»êÀÚ
+		//ê´€ê³„ì—°ì‚°ì
 		// <,	>,	<=,			>=,		 ==,  !=
-		// ÀÛ´Ù, Å©´Ù,	ÀÛ°Å³ª °°´Ù,	Å©°Å³ª °°´Ù, °°´Ù, °°Áö ¾Ê´Ù
+		// ì‘ë‹¤, í¬ë‹¤,	ì‘ê±°ë‚˜ ê°™ë‹¤,	í¬ê±°ë‚˜ ê°™ë‹¤, ê°™ë‹¤, ê°™ì§€ ì•Šë‹¤
 		
-		//³í¸®¿¬»êÀÚ
+		//ë…¼ë¦¬ì—°ì‚°ì
 		//&&(or), ||(and), !(not)
 		
-		//ºñÆ®³í¸®¿¬»êÀÚ
+		//ë¹„íŠ¸ë…¼ë¦¬ì—°ì‚°ì
 		//&(or) |(and)
-		//^(xor) µÎ ºñÆ®°¡ °°À¸¸é 0, ´Ù¸£¸é 1
+		//^(xor) ë‘ ë¹„íŠ¸ê°€ ê°™ìœ¼ë©´ 0, ë‹¤ë¥´ë©´ 1
 		
-		//shift¿¬»êÀÚ
-		// <<(ºñÆ® ÁÂÃøÀÌµ¿), >>(ºñÆ® ¿ìÃøÀÌµ¿) ÁÂÃø ºó°ø°£ ¾ç¼ö¸é0, À½¼ö¸é1
-		// >>>(ºñÆ®¿ìÃøÀÌµ¿) ÁÂÃø ºó°ø°£ ¸ğµÎ 0
+		//shiftì—°ì‚°ì
+		// <<(ë¹„íŠ¸ ì¢Œì¸¡ì´ë™), >>(ë¹„íŠ¸ ìš°ì¸¡ì´ë™) ì¢Œì¸¡ ë¹ˆê³µê°„ ì–‘ìˆ˜ë©´0, ìŒìˆ˜ë©´1
+		// >>>(ë¹„íŠ¸ìš°ì¸¡ì´ë™) ì¢Œì¸¡ ë¹ˆê³µê°„ ëª¨ë‘ 0
 		
-		//3Ç×¿¬»êÀÚ
-		// ? a:b, T¸é a, F¸é b
+		//3í•­ì—°ì‚°ì
+		// ? a:b, Të©´ a, Fë©´ b
 	}
 	
 	public void oper2() {
@@ -47,10 +47,10 @@ public class Func {
 		int b = 10;
 		int c;
 		c = (a++) + (++b) + a;
-		//ÇöÀç java¿¡¼­´Â 32°¡ ³ª¿À°í
-		//c¿¡¼­´Â 31ÀÌ ³ª¿À´Âµ¥
-		//c´Â ÇÑ ÁÙÀ» ¿¬»ê ÇÏ³ª·Î º¸°í
-		//java´Â °¢°¢ º¸±â ¶§¹®
+		//í˜„ì¬ javaì—ì„œëŠ” 32ê°€ ë‚˜ì˜¤ê³ 
+		//cì—ì„œëŠ” 31ì´ ë‚˜ì˜¤ëŠ”ë°
+		//cëŠ” í•œ ì¤„ì„ ì—°ì‚° í•˜ë‚˜ë¡œ ë³´ê³ 
+		//javaëŠ” ê°ê° ë³´ê¸° ë•Œë¬¸
 		System.out.println("a = " + a);
 		System.out.println("b = " + b);
 		System.out.println("c = " + c);
@@ -60,93 +60,93 @@ public class Func {
 		char a = 'a';//97
 		//char b = (char)(a-32);//65 'A'
 		char b = (char)(a^32);//65 'A'
-		//xor¿¬»êÀ» »ç¿ëÇØ¼­ ´ë¹®ÀÚ·Î º¯È¯
-		//(char)(a-32) ¼Ò¹®ÀÚ¸¦ ´ë¹®ÀÚ·Î
+		//xorì—°ì‚°ì„ ì‚¬ìš©í•´ì„œ ëŒ€ë¬¸ìë¡œ ë³€í™˜
+		//(char)(a-32) ì†Œë¬¸ìë¥¼ ëŒ€ë¬¸ìë¡œ
 		System.out.println(b);
 	}
 	
 	public void oper4() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹¹ø¤Š Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì¨° ì •ìˆ˜ ì…ë ¥ : ");
 		int num1 = sc.nextInt();
-		System.out.print("µÎ¹ø¤Š Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì¨° ì •ìˆ˜ ì…ë ¥ : ");
 		int num2 = sc.nextInt();
 		
 		int result = num1<num2 ? num1 : num2;
-		System.out.println("µÎ ¼ö Áß ÀÛÀº ¼ö´Â : " + result);
+		System.out.println("ë‘ ìˆ˜ ì¤‘ ì‘ì€ ìˆ˜ëŠ” : " + result);
 	}
 	
 	public void oper5() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹¹ø¤Š ¼ö ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì¨° ìˆ˜ ì…ë ¥ : ");
 		int num1 = sc.nextInt();
-		System.out.print("µÎ¹ø¤Š ¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì¨° ìˆ˜ ì…ë ¥ : ");
 		int num2 = sc.nextInt();
-		System.out.println("µÎ ¼ö¸¦ ´õÇÑ ¼ö : " + (num1 + num2));
-		System.out.println("µÎ ¼ö¸¦ »« ¼ö : " + (num1 - num2));
-		System.out.println("µÎ ¼ö¸¦ °öÇÑ ¼ö : " + (num1 * num2));
-		System.out.printf("µÎ ¼ö¸¦ ³ª´« ¼ö : %.2f", ((double)num1 / num2));
+		System.out.println("ë‘ ìˆ˜ë¥¼ ë”í•œ ìˆ˜ : " + (num1 + num2));
+		System.out.println("ë‘ ìˆ˜ë¥¼ ëº€ ìˆ˜ : " + (num1 - num2));
+		System.out.println("ë‘ ìˆ˜ë¥¼ ê³±í•œ ìˆ˜ : " + (num1 * num2));
+		System.out.printf("ë‘ ìˆ˜ë¥¼ ë‚˜ëˆˆ ìˆ˜ : %.2f", ((double)num1 / num2));
 	}
 	
 	public void oper6() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int num1 = sc.nextInt();
-		//3Ç×¿¬»êÀÚ Ã³¸®
-		String stemp = num1 > 19 ? "¼ºÀÎÀÔ´Ï´Ù. ¾î¼­¿À¼¼¿ä" : "¹Ì¼º³âÀÚ´Â ÀÔÀåºÒ°¡ÀÔ´Ï´Ù";
+		//3í•­ì—°ì‚°ì ì²˜ë¦¬
+		String stemp = num1 > 19 ? "ì„±ì¸ì…ë‹ˆë‹¤. ì–´ì„œì˜¤ì„¸ìš”" : "ë¯¸ì„±ë…„ìëŠ” ì…ì¥ë¶ˆê°€ì…ë‹ˆë‹¤";
 		System.out.println(stemp);
-		//if¹® Ã³¸®
+		//ifë¬¸ ì²˜ë¦¬
 		/*
 		if(num1 > 19) {
-			System.out.println("¼ºÀÎÀÔ´Ï´Ù.¾î¼­¿À¼¼¿ä");
+			System.out.println("ì„±ì¸ì…ë‹ˆë‹¤.ì–´ì„œì˜¤ì„¸ìš”");
 		}
 		else
 		{
-			System.out.println("¹Ì¼º³âÀÚ´Â ÀÔÀåºÒ°¡ÀÔ´Ï´Ù");
+			System.out.println("ë¯¸ì„±ë…„ìëŠ” ì…ì¥ë¶ˆê°€ì…ë‹ˆë‹¤");
 		}
 		*/
 	}
 	
 	public void oper7() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("±¹¾î Á¡¼ö ÀÔ·Â : ");
+		System.out.print("êµ­ì–´ ì ìˆ˜ ì…ë ¥ : ");
 		int num1 = sc.nextInt();
-		System.out.print("¿µ¾î Á¡¼ö ÀÔ·Â : ");
+		System.out.print("ì˜ì–´ ì ìˆ˜ ì…ë ¥ : ");
 		int num2 = sc.nextInt();
-		System.out.print("¼öÇĞ Á¡¼ö ÀÔ·Â : ");
+		System.out.print("ìˆ˜í•™ ì ìˆ˜ ì…ë ¥ : ");
 		int num3 = sc.nextInt();
 		
 		int itemp = num1 + num2 + num3;
 		double dtemp = (double)itemp / 3;
-		System.out.println("ÇÕ°è : " + itemp);
-		System.out.printf("Æò±Õ : %.2f\n", dtemp);
-		//3Ç×¿¬»êÀÚ Ã³¸®
-		String stemp = ((int)dtemp >= 60 && (num1>=40) && (num2>=40) && (num3>=40)) ? "ÇÕ°İ" : "ºÒÇÕ°İ";
+		System.out.println("í•©ê³„ : " + itemp);
+		System.out.printf("í‰ê·  : %.2f\n", dtemp);
+		//3í•­ì—°ì‚°ì ì²˜ë¦¬
+		String stemp = ((int)dtemp >= 60 && (num1>=40) && (num2>=40) && (num3>=40)) ? "í•©ê²©" : "ë¶ˆí•©ê²©";
 		System.out.println(stemp);
-		//if¹® Ã³¸®
+		//ifë¬¸ ì²˜ë¦¬
 		/*
 		if(((int)dtemp >= 60) && (num1>=40) && (num2>=40) && (num3>=40)) {
-			System.out.println("ÇÕ°İ");
+			System.out.println("í•©ê²©");
 		}
 		else {
-			System.out.println("ºÒÇÕ°İ");
+			System.out.println("ë¶ˆí•©ê²©");
 		}
 		*/
 	}
 	
 	public void oper8() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print(" Á¤¼ö ÀÔ·Â : ");
+		System.out.print(" ì •ìˆ˜ ì…ë ¥ : ");
 		int num1 = sc.nextInt();
-		//3Ç×¿¬»êÀÚ Ã³¸®
-		String stemp = num1 % 2 == 1 ? "È¦¼ö!": "Â¦¼ö!";
+		//3í•­ì—°ì‚°ì ì²˜ë¦¬
+		String stemp = num1 % 2 == 1 ? "í™€ìˆ˜!": "ì§ìˆ˜!";
 		System.out.println(stemp);
-		//if¹® Ã³¸®
+		//ifë¬¸ ì²˜ë¦¬
 		if(num1 % 2 == 1) {
-			System.out.println("È¦¼ö!");
+			System.out.println("í™€ìˆ˜!");
 		}
 		else {
-			System.out.println("Â¦¼ö!");
+			System.out.println("ì§ìˆ˜!");
 		}
 	}
 }

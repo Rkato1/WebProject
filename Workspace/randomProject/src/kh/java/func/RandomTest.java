@@ -3,34 +3,34 @@ package kh.java.func;
 import java.util.Random;
 import java.util.Scanner;
 
-//³­¼ö - ÀÓÀÇÀÇ ¼ö Random
-//ÀÓÀÇÀÇ °ª ¶Ç´Â ¹«ÀÛÀ§·Î ¸¸µé¾îÁö´Â ¾Ë ¼ö ¾ø´Â °ª
+//ë‚œìˆ˜ - ì„ì˜ì˜ ìˆ˜ Random
+//ì„ì˜ì˜ ê°’ ë˜ëŠ” ë¬´ì‘ìœ„ë¡œ ë§Œë“¤ì–´ì§€ëŠ” ì•Œ ìˆ˜ ì—†ëŠ” ê°’
 
 public class RandomTest {
 	
-	//±İ¾×À» À§ÇÑ Àü¿ªº¯¼ö
+	//ê¸ˆì•¡ì„ ìœ„í•œ ì „ì—­ë³€ìˆ˜
 	int money = 10;
 	
-	//ÀüÀûÀ» À§ÇÑ Àü¿ª º¯¼öµé
+	//ì „ì ì„ ìœ„í•œ ì „ì—­ ë³€ìˆ˜ë“¤
 	int w = 0;
 	int l = 0;
 	int d = 0;
 	public void randomTest1() {
-		//³­¼ö »ç¿ë ÁØºñ
+		//ë‚œìˆ˜ ì‚¬ìš© ì¤€ë¹„
 		Random r = new Random();
 		
 		for(int i=0; i<5; i++) {
-			//int ¹üÀ§ ³»ÀÇ ¼ıÀÚ Áß ÀÓÀÇÀÇ °ªÀ» Á¤¼öÇü º¯¼ö¿¡ ´ëÀÔ 
+			//int ë²”ìœ„ ë‚´ì˜ ìˆ«ì ì¤‘ ì„ì˜ì˜ ê°’ì„ ì •ìˆ˜í˜• ë³€ìˆ˜ì— ëŒ€ì… 
 			//int ranNum = r.nextInt();
-			//¹üÀ§ Á¦ÇÑ(0~9)
+			//ë²”ìœ„ ì œí•œ(0~9)
 			int ranNum = r.nextInt(10);
-			//1ºÎÅÍ 10±îÁöÀÇ ³­¼ö¸¦ Á¤¼öÇü º¯¼ö¿¡ ´ëÀÔ
+			//1ë¶€í„° 10ê¹Œì§€ì˜ ë‚œìˆ˜ë¥¼ ì •ìˆ˜í˜• ë³€ìˆ˜ì— ëŒ€ì…
 			int ranNum1 = r.nextInt(10) + 1;
 			//20~35
 			int ranNum2 = r.nextInt(16) + 20;
 		
-			//System.out.println(i+1 + "¹øÂ° ³­¼ö´Â " + ranNum);
-			System.out.println(i+1 + "¹øÂ° ³­¼ö´Â " + ranNum1);
+			//System.out.println(i+1 + "ë²ˆì§¸ ë‚œìˆ˜ëŠ” " + ranNum);
+			System.out.println(i+1 + "ë²ˆì§¸ ë‚œìˆ˜ëŠ” " + ranNum1);
 		}
 	}
 	
@@ -38,34 +38,34 @@ public class RandomTest {
 		Random r = new Random();
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("=== µ¿Àü ¾Õ µÚ ¸ÂÃß±â ===");
-		System.out.print("¼ıÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä(1.¾Õ¸é / 2.µŞ¸é) : ");
+		System.out.println("=== ë™ì „ ì• ë’¤ ë§ì¶”ê¸° ===");
+		System.out.print("ìˆ«ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”(1.ì•ë©´ / 2.ë’·ë©´) : ");
 		int inum = sc.nextInt();
 		int ranNum = r.nextInt(2) + 1;
 		
 		if(ranNum == inum) {
-			System.out.println("\n¸ÂÃè½À´Ï´Ù^^");
+			System.out.println("\në§ì·„ìŠµë‹ˆë‹¤^^");
 		}
 		else{
-			System.out.println("\n¶¯!Æ²·È½À´Ï´Ù!");
+			System.out.println("\në•¡!í‹€ë ¸ìŠµë‹ˆë‹¤!");
 		}
 	}
 	
 	public void stringTest() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹¹øÂ° ¹®ÀÚ¿­ ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì§¸ ë¬¸ìì—´ ì…ë ¥ : ");
 		String str = sc.next();
-		System.out.print("µÎ¹øÂ° ¹®ÀÚ¿­ ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì§¸ ë¬¸ìì—´ ì…ë ¥ : ");
 		String str1 = sc.next();
 		
-		//¹®ÀÚ¿­ÀÇ ºñ±³´Â °æ¿ì°¡ Á¶±İ ´Ù¸§
+		//ë¬¸ìì—´ì˜ ë¹„êµëŠ” ê²½ìš°ê°€ ì¡°ê¸ˆ ë‹¤ë¦„
 		//if(str == str1) {
-		//equals ¸Ş¼Òµå¸¦ »ç¿ëÇØ¾ß °°´Ù°í ºñ±³ °¡´É
+		//equals ë©”ì†Œë“œë¥¼ ì‚¬ìš©í•´ì•¼ ê°™ë‹¤ê³  ë¹„êµ ê°€ëŠ¥
 		if(str.equals(str1)) {
-			System.out.println("¹®ÀÚ¿­ÀÌ °°´Ù!");
+			System.out.println("ë¬¸ìì—´ì´ ê°™ë‹¤!");
 		}
 		else {
-			System.out.println("¹®ÀÚ¿­ÀÌ ´Ù¸£´Ù!");
+			System.out.println("ë¬¸ìì—´ì´ ë‹¤ë¥´ë‹¤!");
 		}
 	}
 	
@@ -73,8 +73,8 @@ public class RandomTest {
 		Random r = new Random();
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("=== °¡À§ ¹ÙÀ§ º¸ °ÔÀÓ ===");
-		System.out.print("¼ıÀÚ¸¦ ¼±ÅÃÇÏ¼¼¿ä(1.°¡À§ / 2.¹ÙÀ§ / 3.º¸) : ");
+		System.out.println("=== ê°€ìœ„ ë°”ìœ„ ë³´ ê²Œì„ ===");
+		System.out.print("ìˆ«ìë¥¼ ì„ íƒí•˜ì„¸ìš”(1.ê°€ìœ„ / 2.ë°”ìœ„ / 3.ë³´) : ");
 		int inum = sc.nextInt();
 		int ranNum = r.nextInt(3) + 1;
 		String str1 = "";
@@ -82,24 +82,24 @@ public class RandomTest {
 		char c = ' ';
 		
 		
-		//½Â¸®Á¶°Ç
-		//inum - ranNumÀÌ -2³ª 1ÀÌ¸é ÀÌ±è
-		//¹İ´ë·Î  -1ÀÌ³ª 2¸é ÄÄÇ»ÅÍ°¡ ÀÌ±è
+		//ìŠ¹ë¦¬ì¡°ê±´
+		//inum - ranNumì´ -2ë‚˜ 1ì´ë©´ ì´ê¹€
+		//ë°˜ëŒ€ë¡œ  -1ì´ë‚˜ 2ë©´ ì»´í“¨í„°ê°€ ì´ê¹€
 		
-		//ºñ±³ÇÏ´Â ¹æ¹ı
+		//ë¹„êµí•˜ëŠ” ë°©ë²•
 		if(inum == 1) {
-			str1 = "°¡À§";
+			str1 = "ê°€ìœ„";
 			switch(ranNum) {
 			case 1:
-				str2 = "°¡À§";
+				str2 = "ê°€ìœ„";
 				c = 'T';
 				break;
 			case 2:
-				str2 = "¹ÙÀ§";
+				str2 = "ë°”ìœ„";
 				c = 'L';
 				break;
 			case 3:
-				str2 = "º¸";
+				str2 = "ë³´";
 				c = 'W';
 				break;
 			default:
@@ -107,18 +107,18 @@ public class RandomTest {
 			}
 		}
 		else if(inum == 2) {
-			str1 = "¹ÙÀ§";
+			str1 = "ë°”ìœ„";
 			switch(ranNum) {
 			case 1:
-				str2 = "°¡À§";
+				str2 = "ê°€ìœ„";
 				c = 'W';
 				break;
 			case 2:
-				str2 = "¹ÙÀ§";
+				str2 = "ë°”ìœ„";
 				c = 'T';
 				break;
 			case 3:
-				str2 = "º¸";
+				str2 = "ë³´";
 				c = 'L';
 				break;
 			default:
@@ -126,18 +126,18 @@ public class RandomTest {
 			}
 		}
 		else if(inum == 3) {
-			str1 = "º¸";
+			str1 = "ë³´";
 			switch(ranNum) {
 			case 1:
-				str2 = "°¡À§";
+				str2 = "ê°€ìœ„";
 				c = 'L';
 				break;
 			case 2:
-				str2 = "¹ÙÀ§";
+				str2 = "ë°”ìœ„";
 				c = 'W';
 				break;
 			case 3:
-				str2 = "º¸";
+				str2 = "ë³´";
 				c = 'T';
 				break;
 			default:
@@ -145,23 +145,23 @@ public class RandomTest {
 			}
 		}
 		else {
-			System.out.println("Àß¸øµÈ ÀÔ·Â");
+			System.out.println("ì˜ëª»ëœ ì…ë ¥");
 		}
-		System.out.println("======== °á°ú ========");
-		System.out.println("´ç½ÅÀº " + str1 + "¸¦ ³Â½À´Ï´Ù.");
-		System.out.println("ÄÄÇ»ÅÍ´Â " + str2 + "¸¦ ³Â½À´Ï´Ù.");
+		System.out.println("======== ê²°ê³¼ ========");
+		System.out.println("ë‹¹ì‹ ì€ " + str1 + "ë¥¼ ëƒˆìŠµë‹ˆë‹¤.");
+		System.out.println("ì»´í“¨í„°ëŠ” " + str2 + "ë¥¼ ëƒˆìŠµë‹ˆë‹¤.");
 		System.out.println("======================");
 		if(c == 'W') {
-			System.out.println("´ç½ÅÀÌ ÀÌ°å½À´Ï´Ù.¤Ğ.¤Ğ");
+			System.out.println("ë‹¹ì‹ ì´ ì´ê²¼ìŠµë‹ˆë‹¤.ã… .ã… ");
 		}
 		else if(c == 'L') {
-			System.out.println("´ç½ÅÀÌ Á³½À´Ï´Ù.¤Ğ.¤Ğ");
+			System.out.println("ë‹¹ì‹ ì´ ì¡ŒìŠµë‹ˆë‹¤.ã… .ã… ");
 		}
 		else if(c == 'T') {
-			System.out.println("ºñ°å½À´Ï´Ù.¤Ğ.¤Ğ");
+			System.out.println("ë¹„ê²¼ìŠµë‹ˆë‹¤.ã… .ã… ");
 		}
 		else {
-			System.out.println("¿À·ù¹ß»ı");
+			System.out.println("ì˜¤ë¥˜ë°œìƒ");
 		}
 		
 	}
@@ -169,9 +169,9 @@ public class RandomTest {
 	public void upDownGame() {		
 		Scanner sc = new Scanner(System.in);
 		boolean gm = true;
-		//±â·Ï½Ã½ºÅÛÀ» ¸¸µå´Â º¯¼ö
-		//ÇÏÁö¸¸ ÃÊ±â¿¡ ÀÛ¾÷ÇÏÁö ¾Ê¾Æ¼­ ±×³É ÁÖ¼®Ã³¸®
-		//±»ÀÌ ¸¸µéÀÚ¸é loop¿¡¼­ ¹Ş¾Æ¼­ Ã³¸®
+		//ê¸°ë¡ì‹œìŠ¤í…œì„ ë§Œë“œëŠ” ë³€ìˆ˜
+		//í•˜ì§€ë§Œ ì´ˆê¸°ì— ì‘ì—…í•˜ì§€ ì•Šì•„ì„œ ê·¸ëƒ¥ ì£¼ì„ì²˜ë¦¬
+		//êµ³ì´ ë§Œë“¤ìë©´ loopì—ì„œ ë°›ì•„ì„œ ì²˜ë¦¬
 		int rank = 0;
 		int iTemp = 0;
 		
@@ -180,23 +180,23 @@ public class RandomTest {
 			System.out.print("1. Game Start\n2. Game Score\n3. End Game\n");
 			int inum = sc.nextInt();
 			
-			System.out.println("¼±ÅÃ > "+ inum);
+			System.out.println("ì„ íƒ > "+ inum);
 		
 			switch(inum) {
 			case 1:
 				iTemp = upDownGameLoop();
-				//rank°¡ 0ÀÎ °æ¿ìÀÇ Á¶°ÇÀº
-				//ÃÖÃÊ¿¡ 0À¸·Î ÃÊ±âÈ­ µÇ¾ú±â ¶§¹®
+				//rankê°€ 0ì¸ ê²½ìš°ì˜ ì¡°ê±´ì€
+				//ìµœì´ˆì— 0ìœ¼ë¡œ ì´ˆê¸°í™” ë˜ì—ˆê¸° ë•Œë¬¸
 				if(rank > iTemp || rank == 0) {
 					rank = iTemp;
 				}
 				break;
 			case 2:
-				System.out.println("ÇöÀç ÃÖ°í ±â·ÏÀº " + rank + "ÀÔ´Ï´Ù.");
+				System.out.println("í˜„ì¬ ìµœê³  ê¸°ë¡ì€ " + rank + "ì…ë‹ˆë‹¤.");
 				//gm = false;
 				break;
 			case 3:
-				System.out.println("°ÔÀÓÀÌ Á¾·áµË´Ï´Ù.");
+				System.out.println("ê²Œì„ì´ ì¢…ë£Œë©ë‹ˆë‹¤.");
 				gm = false;
 				break;
 			}
@@ -210,10 +210,10 @@ public class RandomTest {
 		int i = 0;
 		int ranNum = r.nextInt(99) + 1;
 		for(;;) {
-			System.out.print(i+1 + " È¸Â÷ ¹øÈ£ ÀÔ·Â : ");
+			System.out.print(i+1 + " íšŒì°¨ ë²ˆí˜¸ ì…ë ¥ : ");
 			int j = sc.nextInt();
 			if(j>=100 && j<1) {
-				System.out.println("ÀÔ·Â¹üÀ§ ¿À·ù");
+				System.out.println("ì…ë ¥ë²”ìœ„ ì˜¤ë¥˜");
 			}
 			else {
 				if(j > i) {
@@ -223,7 +223,7 @@ public class RandomTest {
 					System.out.println("<< UP >>");
 				}
 				else {
-					System.out.println("<< Á¤´ä >>");
+					System.out.println("<< ì •ë‹µ >>");
 					break;
 				}
 			}
@@ -247,12 +247,12 @@ public class RandomTest {
 				baskinRobbins31Logic();
 				break;
 			case 2:
-				//System.out.println("Á¡¼ö´Â ¹Ì±¸Çö.");
+				//System.out.println("ì ìˆ˜ëŠ” ë¯¸êµ¬í˜„.");
 				gameScore();
 				gm = false;
 				break;
 			case 3:
-				System.out.println("°ÔÀÓÀÌ Á¾·áµË´Ï´Ù.");
+				System.out.println("ê²Œì„ì´ ì¢…ë£Œë©ë‹ˆë‹¤.");
 				gm = false;
 				break;
 			}
@@ -274,8 +274,8 @@ public class RandomTest {
 			for(int k = 0; k<i; k++) {
 				System.out.print(temp + "!\n");
 				if(temp == 31) {
-					System.out.println("31! ³ªÀÇ ½Â¸®");
-					System.out.println("<< °ÔÀÓ Á¾·á >>");
+					System.out.println("31! ë‚˜ì˜ ìŠ¹ë¦¬");
+					System.out.println("<< ê²Œì„ ì¢…ë£Œ >>");
 					w++;
 					gm = false;
 					break;
@@ -288,8 +288,8 @@ public class RandomTest {
 				for(int k = 0; k<ranNum; k++) {
 					System.out.print(temp + "!\n");
 					if(temp == 31) {
-						System.out.println("31! ³ªÀÇ ÆĞ¹è");
-						System.out.println("<< °ÔÀÓ Á¾·á >>");
+						System.out.println("31! ë‚˜ì˜ íŒ¨ë°°");
+						System.out.println("<< ê²Œì„ ì¢…ë£Œ >>");
 						gm = false;
 						l++;
 						break;
@@ -301,7 +301,7 @@ public class RandomTest {
 	}
 	
 	void gameScore() {
-		System.out.println("<< ´ç½ÅÀÇ ÀüÀû >>");
+		System.out.println("<< ë‹¹ì‹ ì˜ ì „ì  >>");
 		System.out.printf("W I N : %d\n", w);
 		System.out.printf("L O S E : %d\n", l);
 		System.out.printf("D R A W : %d\n", d);
@@ -312,15 +312,15 @@ public class RandomTest {
 		int u = userTot;
 		int c = comTot;
 		if(u==c) {
-			System.out.println("ºñ±è");
+			System.out.println("ë¹„ê¹€");
 			d++;
 		}
 		else if(u>c) {
-			System.out.println("´ç½ÅÀÇ ½Â¸®");
+			System.out.println("ë‹¹ì‹ ì˜ ìŠ¹ë¦¬");
 			w++;
 		}
 		else {
-			System.out.println("´ç½ÅÀÇ ÆĞ¹è");
+			System.out.println("ë‹¹ì‹ ì˜ íŒ¨ë°°");
 			l++;
 		}
 	}
@@ -331,15 +331,15 @@ public class RandomTest {
 		int l1 = lTemp;
 		if(w>w1) {
 			money += m1;
-			System.out.println("³²Àº µ· : "+ money);
+			System.out.println("ë‚¨ì€ ëˆ : "+ money);
 		}
 		else{
 			if(l>l1) {
 				money -= m1;
-				System.out.println("³²Àº µ· : "+ money);
+				System.out.println("ë‚¨ì€ ëˆ : "+ money);
 			}
 			else {
-				System.out.println("³²Àº µ· : "+ money);
+				System.out.println("ë‚¨ì€ ëˆ : "+ money);
 			}
 		}
 	}
@@ -365,12 +365,12 @@ public class RandomTest {
 					diceGameLogic();
 					break;
 				case 2:
-					//System.out.println("Á¡¼ö´Â ¹Ì±¸Çö.");
+					//System.out.println("ì ìˆ˜ëŠ” ë¯¸êµ¬í˜„.");
 					gameScore();
 					gm = false;
 					break;
 			case 3:
-					System.out.println("°ÔÀÓÀÌ Á¾·áµË´Ï´Ù.");
+					System.out.println("ê²Œì„ì´ ì¢…ë£Œë©ë‹ˆë‹¤.");
 					gm = false;
 					break;
 				}
@@ -394,21 +394,21 @@ public class RandomTest {
 				int j = r.nextInt(6)+1;
 				cTot+=j;
 			}
-			System.out.println("´ç½ÅÀÇ ÁÖ»çÀ§ÀÇ ÇÕ : "+ uTot);
-			System.out.print("¹èÆÃÀ» ÇÏ°Ú½À´Ï±î(y/n)");
+			System.out.println("ë‹¹ì‹ ì˜ ì£¼ì‚¬ìœ„ì˜ í•© : "+ uTot);
+			System.out.print("ë°°íŒ…ì„ í•˜ê² ìŠµë‹ˆê¹Œ(y/n)");
 			char ch = sc.next().charAt(0);
-			//System.out.println("ÄÄÇ»ÅÍ ÁÖ»çÀ§ÀÇ ÇÕ : "+ cTot);
+			//System.out.println("ì»´í“¨í„° ì£¼ì‚¬ìœ„ì˜ í•© : "+ cTot);
 			if(ch=='y') {
 				boolean btemp = true;
 				int mTemp=0;
 				while(btemp) {
-					System.out.printf("¾ó¸¶¸¦ °Å½Ã°Ú½À´Ï±î?(0~%d)", money);
+					System.out.printf("ì–¼ë§ˆë¥¼ ê±°ì‹œê² ìŠµë‹ˆê¹Œ?(0~%d)", money);
 					mTemp = sc.nextInt();
 					if(mTemp<=money && mTemp>=0) {
 						btemp = false;
 					}
 					else {
-						System.out.println("±İ¾×ÃÊ°ú È¤Àº Àß¸øµÈ ¹üÀ§");
+						System.out.println("ê¸ˆì•¡ì´ˆê³¼ í˜¹ì€ ì˜ëª»ëœ ë²”ìœ„");
 						//continue;
 					}
 				}
@@ -424,7 +424,7 @@ public class RandomTest {
 				gm=false;
 			}
 			else {
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 			}			
 		}
 	}

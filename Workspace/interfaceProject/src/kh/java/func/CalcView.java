@@ -6,25 +6,25 @@ public class CalcView {
 	public void main() {
 		Scanner sc = new Scanner(System.in);
 		Calc c = new Calcimpl();
-		System.out.print("Ã¹¹øÂ° ¼ö ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì§¸ ìˆ˜ ì…ë ¥ : ");
 		int num1 = sc.nextInt();
-		System.out.print("µÎ¹øÂ° ¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì§¸ ìˆ˜ ì…ë ¥ : ");
 		int num2 = sc.nextInt();
-		System.out.print("¿¬»êÀÚ ÀÔ·Â(+,-,*,/) : ");
+		System.out.print("ì—°ì‚°ì ì…ë ¥(+,-,*,/) : ");
 		char oper = sc.next().charAt(0);
 		
 		switch(oper) {
 		case '+':
-			System.out.println("°á°ú :" + c.sum(num1, num2));
+			System.out.println("ê²°ê³¼ :" + c.sum(num1, num2));
 			break;
 		case '-':
-			System.out.println("°á°ú :" + c.sub(num1, num2));
+			System.out.println("ê²°ê³¼ :" + c.sub(num1, num2));
 			break;
 		case '*':
-			System.out.println("°á°ú :" + c.mul(num1, num2));
+			System.out.println("ê²°ê³¼ :" + c.mul(num1, num2));
 			break;
 		case '/':
-			System.out.println("°á°ú :" + c.div(num1, num2));
+			System.out.println("ê²°ê³¼ :" + c.div(num1, num2));
 			break;
 		}
 	}

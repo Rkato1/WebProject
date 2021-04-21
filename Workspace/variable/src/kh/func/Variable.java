@@ -1,69 +1,69 @@
 package kh.func;
 
 import java.util.Scanner;
-//Scanner ±â´ÉÀ» »ç¿ëÇÏ±â À§ÇØ import ¼±¾ğ
+//Scanner ê¸°ëŠ¥ì„ ì‚¬ìš©í•˜ê¸° ìœ„í•´ import ì„ ì–¸
 
 public class Variable {
 	public void func1() {
 		boolean bool1 = true;
 		boolean bool2 = false;
-		//³í¸®Çü º¯¼ö
+		//ë…¼ë¦¬í˜• ë³€ìˆ˜
 		char ch1 = 'a';
-		//¹®ÀÚ º¯¼ö
+		//ë¬¸ì ë³€ìˆ˜
 		int num = 10;
-		//Á¤¼öÇü º¯¼ö
+		//ì •ìˆ˜í˜• ë³€ìˆ˜
 		double d = 3.14;
 		double d2;
-		//º¯¼ö ¼±¾ğ ÈÄ ÃÊ±âÈ­ÇÏÁö ¾Ê°í »ç¿ëÇÏ´Â °æ¿ì ¿¡·¯ ¹ß»ı
+		//ë³€ìˆ˜ ì„ ì–¸ í›„ ì´ˆê¸°í™”í•˜ì§€ ì•Šê³  ì‚¬ìš©í•˜ëŠ” ê²½ìš° ì—ëŸ¬ ë°œìƒ
 		d2 = 5.12;
-		//½Ç¼öÇü º¯¼ö
+		//ì‹¤ìˆ˜í˜• ë³€ìˆ˜
 		
 		long lNum = 10000000000l;
-		//¹üÀ§°¡ ´õ Å« Á¤¼öÇü º¯¼ö
+		//ë²”ìœ„ê°€ ë” í° ì •ìˆ˜í˜• ë³€ìˆ˜
 		float f = 3.14f;
-		//¹üÀ§°¡ ÀÛÀº ½Ç¼öÇü º¯¼ö(¿ÀÂ÷ ¹üÀ§°¡ Ä¿Á®¼­ Àß »ç¿ëÇÏÁö ¾ÊÀ½)
+		//ë²”ìœ„ê°€ ì‘ì€ ì‹¤ìˆ˜í˜• ë³€ìˆ˜(ì˜¤ì°¨ ë²”ìœ„ê°€ ì»¤ì ¸ì„œ ì˜ ì‚¬ìš©í•˜ì§€ ì•ŠìŒ)
 		
 		final double PI = 3.14;
-		//final Å°¿öµå°¡ ÀÖÀ»¶§¿¡´Â ÃÖÃÊ ÃÊ±âÈ­ ÀÌÈÄ °ª º¯°æÀÌ ºÒ°¡´É
+		//final í‚¤ì›Œë“œê°€ ìˆì„ë•Œì—ëŠ” ìµœì´ˆ ì´ˆê¸°í™” ì´í›„ ê°’ ë³€ê²½ì´ ë¶ˆê°€ëŠ¥
 		
 		String str = "abcdef";
-		//¹®ÀÚ¿­ º¯¼ö
+		//ë¬¸ìì—´ ë³€ìˆ˜
 		System.out.println(str.charAt(0));
-		//ÀÌ º¯¼öÀÇ Ã¹¹øÂ° ÀÚ¸®¸¸ Ãâ·ÂÇÏ±â
+		//ì´ ë³€ìˆ˜ì˜ ì²«ë²ˆì§¸ ìë¦¬ë§Œ ì¶œë ¥í•˜ê¸°
 		
 		int num1 = 2147483647;
 		long res = (long)num1 + 1;
-		//int ¹üÀ§¸¦ ÃÊ°úÇß±â ¶§¹®¿¡ ¿øÇÏ´Â °ªÀ» µµÃâÇÏ±â À§ÇØ °­Á¦ Çüº¯È¯À» ÇØÁà¾ßÇÔ
+		//int ë²”ìœ„ë¥¼ ì´ˆê³¼í–ˆê¸° ë•Œë¬¸ì— ì›í•˜ëŠ” ê°’ì„ ë„ì¶œí•˜ê¸° ìœ„í•´ ê°•ì œ í˜•ë³€í™˜ì„ í•´ì¤˜ì•¼í•¨
 		System.out.println(res);
 		
 		byte b1 = 10;
 		byte b2 = 20;
 		//byte b3 = b1 + b2;
-		//java¿¡¼­ °è»ê½Ã ±âº» int·Î Ä¡È¯ÇØ¼­ ¿À·ù
+		//javaì—ì„œ ê³„ì‚°ì‹œ ê¸°ë³¸ intë¡œ ì¹˜í™˜í•´ì„œ ì˜¤ë¥˜
 		int b3 = b1 + b2;
 		byte b4 = (byte)(b1 + b2);
-		//ÇØ°á ¹æ¹ı , À§´Â ¿¬»ê ÀÌÈÄ Çüº¯È¯, ¾Æ·¡´Â Çüº¯È¯ ÀÌÈÄ ¿¬»ê(Ã³¸®°¡ Á¶±İ ´Ù¸§, ¹üÀ§ ÃÊ°ú¿ì·Á)
+		//í•´ê²° ë°©ë²• , ìœ„ëŠ” ì—°ì‚° ì´í›„ í˜•ë³€í™˜, ì•„ë˜ëŠ” í˜•ë³€í™˜ ì´í›„ ì—°ì‚°(ì²˜ë¦¬ê°€ ì¡°ê¸ˆ ë‹¤ë¦„, ë²”ìœ„ ì´ˆê³¼ìš°ë ¤)
 		
 		System.out.println("11");
 		System.out.println("22");
 		System.out.print("11");
 		System.out.print("22");
-		//printlnÀº Ãâ·Â ÈÄ ÁÙ ¹Ù²Ş, print´Â Ãâ·Â¸¸		
+		//printlnì€ ì¶œë ¥ í›„ ì¤„ ë°”ê¿ˆ, printëŠ” ì¶œë ¥ë§Œ		
 	}
 	public void func2() {
-		String name = "±èÇö½Ä";
+		String name = "ê¹€í˜„ì‹";
 		int age = 28;
-		System.out.println("Á¦ ÀÌ¸§Àº " + name + "ÀÌ°í ³ªÀÌ´Â " + age + "»ìÀÔ´Ï´Ù.");
-		System.out.printf("Á¦ ÀÌ¸§Àº %sÀÌ°í ³ªÀÌ´Â %d»ìÀÔ´Ï´Ù.", name, age);
-		//printf´Â %·Î ÀÚ·áÇü ±¸º°¿¡ ÆíÇÔ
-		//%d Á¤¼ö, %o 8Áø¼ö, %x 16Áø¼ö
-		//%f ½Ç¼ö(¼Ò¼öÁ¡¾Æ·¡6ÀÚ¸®)  %e Áö¼öÇüÅÂÇ¥Çö
-		//%g %e, %f Áß ´õ ÂªÀº Ç¥ÇöÀ» »ç¿ë
-		//%A 16Áø¼ö ½Ç¼ö
-		//%c ¹®ÀÚ, %s ¹®ÀÚ¿­
-		//\ back slash escape¹®ÀÚ
-		//\t tab¸¸Å­ °ø°£È®º¸ \n ÁÙ ¹Ù²Ş
-		//\' \" '¿Í "¸¦ Ãâ·ÂÇÒ ¶§ »ç¿ë \\ \Ãâ·Â
+		System.out.println("ì œ ì´ë¦„ì€ " + name + "ì´ê³  ë‚˜ì´ëŠ” " + age + "ì‚´ì…ë‹ˆë‹¤.");
+		System.out.printf("ì œ ì´ë¦„ì€ %sì´ê³  ë‚˜ì´ëŠ” %dì‚´ì…ë‹ˆë‹¤.", name, age);
+		//printfëŠ” %ë¡œ ìë£Œí˜• êµ¬ë³„ì— í¸í•¨
+		//%d ì •ìˆ˜, %o 8ì§„ìˆ˜, %x 16ì§„ìˆ˜
+		//%f ì‹¤ìˆ˜(ì†Œìˆ˜ì ì•„ë˜6ìë¦¬)  %e ì§€ìˆ˜í˜•íƒœí‘œí˜„
+		//%g %e, %f ì¤‘ ë” ì§§ì€ í‘œí˜„ì„ ì‚¬ìš©
+		//%A 16ì§„ìˆ˜ ì‹¤ìˆ˜
+		//%c ë¬¸ì, %s ë¬¸ìì—´
+		//\ back slash escapeë¬¸ì
+		//\t tabë§Œí¼ ê³µê°„í™•ë³´ \n ì¤„ ë°”ê¿ˆ
+		//\' \" 'ì™€ "ë¥¼ ì¶œë ¥í•  ë•Œ ì‚¬ìš© \\ \ì¶œë ¥
 	}
 	public void func3() {
 		int iNum = 100;
@@ -82,19 +82,19 @@ public class Variable {
 		System.out.println(bTemp);
 	}
 	public void func4() {
-		String sName = "±èÇö½Ä";
+		String sName = "ê¹€í˜„ì‹";
 		int age = 28;
 		char cGender = 'M';
-		String sAddress = "°æ±âµµ";
+		String sAddress = "ê²½ê¸°ë„";
 		String sPhoneNumber = "01012345678";
 		String sEMail = "silvestr0720@gmail.com";
-		String sName0 = "È«±æµ¿";
+		String sName0 = "í™ê¸¸ë™";
 		int age0 = 20;
 		char cGender0 = 'M';
-		String sAddress0 = "¼­¿ï";
+		String sAddress0 = "ì„œìš¸";
 		String sPhoneNumber0 = "01087654321";
 		String sEMail0 = "honggildong@gmail.com";
-		System.out.println("ÀÌ¸§\t³ªÀÌ\t¼ºº°\tÁö¿ª\tÀüÈ­¹øÈ£\t\tÀÌ¸ŞÀÏ");
+		System.out.println("ì´ë¦„\të‚˜ì´\tì„±ë³„\tì§€ì—­\tì „í™”ë²ˆí˜¸\t\tì´ë©”ì¼");
 		System.out.println("------------------------------------------------------------------------");
 		System.out.print(sName + "\t");
 		System.out.print(age + "\t");
@@ -112,69 +112,69 @@ public class Variable {
 	}
 	
 	public void scan() {
-		System.out.print("¿øÇÏ´Â Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì›í•˜ëŠ” ì •ìˆ˜ ì…ë ¥ : ");
 		Scanner sc = new Scanner(System.in);
-		//Scanner¸¦ »ç¿ëÇÏ±â À§ÇØ Å¬·¡½º »ı¼º
+		//Scannerë¥¼ ì‚¬ìš©í•˜ê¸° ìœ„í•´ í´ë˜ìŠ¤ ìƒì„±
 		int num = sc.nextInt();
-		//Á¤¼ö ÀÔ·Â¹Ş±â(°ªÀ» ÀúÀåÇÏ±â À§ÇÑ Áö¿ªº¯¼ö ¼±¾ğ)
+		//ì •ìˆ˜ ì…ë ¥ë°›ê¸°(ê°’ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ì§€ì—­ë³€ìˆ˜ ì„ ì–¸)
 		System.out.println(num);
 		
-		System.out.print("¿øÇÏ´Â ½Ç¼ö ÀÔ·Â : ");
+		System.out.print("ì›í•˜ëŠ” ì‹¤ìˆ˜ ì…ë ¥ : ");
 		double num1 = sc.nextDouble();
-		//½Ç¼ö ÀÔ·Â¹Ş±â(°ªÀ» ÀúÀåÇÏ±â À§ÇÑ Áö¿ªº¯¼ö ¼±¾ğ)
+		//ì‹¤ìˆ˜ ì…ë ¥ë°›ê¸°(ê°’ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ì§€ì—­ë³€ìˆ˜ ì„ ì–¸)
 		System.out.println(num1);
 		
-		System.out.print("¿øÇÏ´Â ¹®ÀÚ¿­ ÀÔ·Â : ");
+		System.out.print("ì›í•˜ëŠ” ë¬¸ìì—´ ì…ë ¥ : ");
 		String stemp = sc.next();
-		//¹®ÀÚ¿­ ÀÔ·Â¹Ş±â(°ªÀ» ÀúÀåÇÏ±â À§ÇÑ Áö¿ªº¯¼ö ¼±¾ğ)
-		//sc.next()´Â °ø¹é Á¸Àç½Ã ±¸ºĞÀÌ ºÒ°¡´ÉÇÔ(¹ß»ı½Ã ÀÔ·Â Á¾·á)
+		//ë¬¸ìì—´ ì…ë ¥ë°›ê¸°(ê°’ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ì§€ì—­ë³€ìˆ˜ ì„ ì–¸)
+		//sc.next()ëŠ” ê³µë°± ì¡´ì¬ì‹œ êµ¬ë¶„ì´ ë¶ˆê°€ëŠ¥í•¨(ë°œìƒì‹œ ì…ë ¥ ì¢…ë£Œ)
 		System.out.println(stemp);
 		
-		System.out.print("¿øÇÏ´Â ¹®ÀÚ¿­ ÀÔ·Â : ");
+		System.out.print("ì›í•˜ëŠ” ë¬¸ìì—´ ì…ë ¥ : ");
 		sc.nextLine();
-		//ÇöÀç Buffer¿¡ ³²¾ÆÀÖ´Â °³Çà¹®ÀÚ Ã³¸®
-		//À§¿¡¼­ loop ¹ß»ıÀ¸·Î ³Ö¾î¾ßÇÔ
+		//í˜„ì¬ Bufferì— ë‚¨ì•„ìˆëŠ” ê°œí–‰ë¬¸ì ì²˜ë¦¬
+		//ìœ„ì—ì„œ loop ë°œìƒìœ¼ë¡œ ë„£ì–´ì•¼í•¨
 		String stemp0 = sc.nextLine();
-		//¹®ÀÚ¿­ ÀÔ·Â¹Ş±â(°ªÀ» ÀúÀåÇÏ±â À§ÇÑ Áö¿ªº¯¼ö ¼±¾ğ)
-		//sc.nextLine() ¶ç¾î¾²±â °¡´É
+		//ë¬¸ìì—´ ì…ë ¥ë°›ê¸°(ê°’ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ì§€ì—­ë³€ìˆ˜ ì„ ì–¸)
+		//sc.nextLine() ë„ì–´ì“°ê¸° ê°€ëŠ¥
 		System.out.println(stemp0);
 		
-		System.out.print("¿øÇÏ´Â ¹®ÀÚ ÀÔ·Â : ");
+		System.out.print("ì›í•˜ëŠ” ë¬¸ì ì…ë ¥ : ");
 		char ch = sc.next().charAt(0);
-		//¹®ÀÚ¿­ ÀÔ·Â¹Ş±â(±× Áß Ã¹ ¹øÂ° ÀÎÀÚ¸¦ ¹Ş¾Æ¿È)
+		//ë¬¸ìì—´ ì…ë ¥ë°›ê¸°(ê·¸ ì¤‘ ì²« ë²ˆì§¸ ì¸ìë¥¼ ë°›ì•„ì˜´)
 		System.out.println(ch);
 	}
 	
 	public void exam1() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀÌ¸§ ÀÔ·Â : ");
+		System.out.print("ì´ë¦„ ì…ë ¥ : ");
 		String name = sc.nextLine();
-		System.out.print("³ªÀÌ ÀÔ·Â : ");
+		System.out.print("ë‚˜ì´ ì…ë ¥ : ");
 		int age = sc.nextInt();
-		System.out.print("ÁÖ¼Ò ÀÔ·Â : ");
+		System.out.print("ì£¼ì†Œ ì…ë ¥ : ");
 		sc.nextLine();
 		String address = sc.nextLine();
-		System.out.print("Å°(½Ç¼ö) ÀÔ·Â : ");
+		System.out.print("í‚¤(ì‹¤ìˆ˜) ì…ë ¥ : ");
 		double height = sc.nextDouble();
-		System.out.print("¸ö¹«°Ô(½Ç¼ö) ÀÔ·Â : ");
+		System.out.print("ëª¸ë¬´ê²Œ(ì‹¤ìˆ˜) ì…ë ¥ : ");
 		double weight = sc.nextDouble();
-		System.out.print("¼ºº° ÀÔ·Â : ");
+		System.out.print("ì„±ë³„ ì…ë ¥ : ");
 		char gender = sc.next().charAt(0);
 		
-		System.out.printf("ÀÌ¸§ : %s, ³ªÀÌ : %d, ÁÖ¼Ò : %s, Å° : %d, ¸ö¹«°Ô : %.1f, ¼ºº° : %c\n", name, age, address, (int)height, weight, gender);
-		//.1f´Â ¼Ò¼öÁ¡ Ã¹Â° ÀÚ¸®±îÁö Ãâ·Â
+		System.out.printf("ì´ë¦„ : %s, ë‚˜ì´ : %d, ì£¼ì†Œ : %s, í‚¤ : %d, ëª¸ë¬´ê²Œ : %.1f, ì„±ë³„ : %c\n", name, age, address, (int)height, weight, gender);
+		//.1fëŠ” ì†Œìˆ˜ì  ì²«ì§¸ ìë¦¬ê¹Œì§€ ì¶œë ¥
 	}
 	
 	public void exam2() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("±¹¾îÁ¡¼ö ÀÔ·Â : ");
+		System.out.print("êµ­ì–´ì ìˆ˜ ì…ë ¥ : ");
 		int inum = sc.nextInt();
-		System.out.print("¼öÇĞÁ¡¼ö ÀÔ·Â : ");
+		System.out.print("ìˆ˜í•™ì ìˆ˜ ì…ë ¥ : ");
 		int inum1 = sc.nextInt();
-		System.out.print("¿µ¾îÁ¡¼ö ÀÔ·Â : ");
+		System.out.print("ì˜ì–´ì ìˆ˜ ì…ë ¥ : ");
 		int inum2 = sc.nextInt();
 		int itemp = inum + inum1 + inum2;
 		double dtemp = itemp / 3;
-		System.out.printf("´ç½Å ¼ºÀûÀÇ ÃÑ ÇÕÀº %dÁ¡ÀÌ°í Æò±ÕÀº %.2f ÀÔ´Ï´Ù!", itemp, dtemp);
+		System.out.printf("ë‹¹ì‹  ì„±ì ì˜ ì´ í•©ì€ %dì ì´ê³  í‰ê· ì€ %.2f ì…ë‹ˆë‹¤!", itemp, dtemp);
 	}
 }

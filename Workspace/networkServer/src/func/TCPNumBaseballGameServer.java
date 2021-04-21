@@ -16,7 +16,7 @@ public class TCPNumBaseballGameServer {
 	int count;
 	int strike, ball;
 	public void main() {
-		//1.Æ÷Æ®¹øÈ£ÁöÁ¤
+		//1.í¬íŠ¸ë²ˆí˜¸ì§€ì •
 		int port = 5678;
 		ServerSocket serverSocket = null;
 		DataOutputStream dos = null;
@@ -27,25 +27,25 @@ public class TCPNumBaseballGameServer {
 		try {
 			serverSocket = new ServerSocket(port);
 			System.out.println("<<<<<Baseball Game>>>>>");
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ´ë±â Áß...");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ëŒ€ê¸° ì¤‘...");
 			Socket clientSocket = serverSocket.accept();
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ¿Ï·á");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ì™„ë£Œ");
 			InputStream in = clientSocket.getInputStream();
 			OutputStream out = clientSocket.getOutputStream();
 			dis = new DataInputStream(in);
 			dos = new DataOutputStream(out);
 			numS = NumBaseballGameNumber();
-			System.out.println("¼­¹ö ¼ıÀÚ : "+numS[0]+numS[1]+numS[2]);
+			System.out.println("ì„œë²„ ìˆ«ì : "+numS[0]+numS[1]+numS[2]);
 			System.out.println("<<<<< game start >>>>>");
 			while(true) {
 				int num1 = dis.readInt();
 				int num2 = dis.readInt();
 				int num3 = dis.readInt();
-				System.out.println("Å¬¶óÀÌ¾ğÆ®°¡ ÀÔ·ÂÇÑ ¼ö -> "+num1+num2+num3+"\n");				
+				System.out.println("í´ë¼ì´ì–¸íŠ¸ê°€ ì…ë ¥í•œ ìˆ˜ -> "+num1+num2+num3+"\n");				
 				String str = NumBaseballGameLogic(num1, num2, num3);
 				dos.writeUTF(str);
 				System.out.println(str);
-				if(str.equals("°ÔÀÓ ³¡")) {
+				if(str.equals("ê²Œì„ ë")) {
 					break;
 				}
 			}
@@ -87,10 +87,10 @@ public class TCPNumBaseballGameServer {
 			}
 		}
 		if(strike!=3) {
-			String stemp = count+"È¸ -----> "+strike+"½ºÆ®¶óÀÌÅ©"+ball+"º¼";
+			String stemp = count+"íšŒ -----> "+strike+"ìŠ¤íŠ¸ë¼ì´í¬"+ball+"ë³¼";
 			return stemp;
 		}else {
-			return "°ÔÀÓ ³¡";
+			return "ê²Œì„ ë";
 		}
 	}
 

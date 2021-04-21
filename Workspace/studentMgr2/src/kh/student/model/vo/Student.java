@@ -2,24 +2,24 @@ package kh.student.model.vo;
 
 public class Student {
 	
-	//ÀÌ¸§, ³ªÀÌ, ÁÖ¼Ò
+	//ì´ë¦„, ë‚˜ì´, ì£¼ì†Œ
 	String name;
 	int age;
 	String addr;
 	
-	//±âº»»ı¼ºÀÚ
+	//ê¸°ë³¸ìƒì„±ì
 	public Student(){
 		
 	}
 	
-	//¸Å°³º¯¼ö ÀÖ´Â »ı¼ºÀÚ
+	//ë§¤ê°œë³€ìˆ˜ ìˆëŠ” ìƒì„±ì
 	public Student(String name, int age, String addr) {
 		this.name = name;
 		this.age = age;
 		this.addr = addr;
 	}
 	
-	//°¢ º¯¼öº° getter/setter	
+	//ê° ë³€ìˆ˜ë³„ getter/setter	
 	public String getName() {
 		return name;
 	}

@@ -2,6 +2,6 @@ package kh.java.func;
 
 public class Animal {
 	public void breath() {
-		System.out.println("ÇÏ¾Ç");
+		System.out.println("í•˜ì•…");
 	}
 }

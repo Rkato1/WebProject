@@ -14,25 +14,25 @@ public class StudentView {
 	
 	public int showMenu() {
 		// TODO Auto-generated method stub
-		System.out.print("\n--- ÇĞ»ı °ü¸® ÇÁ·Î±×·¥ ---\n");
-		System.out.println("1. ÇĞ»ı Á¤º¸ µî·Ï");
-		System.out.println("2. ÀüÃ¼ ÇĞ»ı Á¤º¸");
-		System.out.println("3. ÇĞ»ı Á¤º¸ Ãâ·Â(1¸í)");
-		System.out.println("4. ÇĞ»ı Á¤º¸ ¼öÁ¤");
-		System.out.println("5. ÇĞ»ı Á¤º¸ »èÁ¦");
-		System.out.print("¼±ÅÃ > ");
+		System.out.print("\n--- í•™ìƒ ê´€ë¦¬ í”„ë¡œê·¸ë¨ ---\n");
+		System.out.println("1. í•™ìƒ ì •ë³´ ë“±ë¡");
+		System.out.println("2. ì „ì²´ í•™ìƒ ì •ë³´");
+		System.out.println("3. í•™ìƒ ì •ë³´ ì¶œë ¥(1ëª…)");
+		System.out.println("4. í•™ìƒ ì •ë³´ ìˆ˜ì •");
+		System.out.println("5. í•™ìƒ ì •ë³´ ì‚­ì œ");
+		System.out.print("ì„ íƒ > ");
 		int itemp = sc.nextInt();
 		return itemp;
 	}
 	
 	public Student insertStudent() {
 		// TODO Auto-generated method stub
-		System.out.print("\n--- ÇĞ»ı Á¤º¸ µî·Ï ---\n");
-		System.out.print("ÇĞ»ı ÀÌ¸§ ÀÔ·Â ");
+		System.out.print("\n--- í•™ìƒ ì •ë³´ ë“±ë¡ ---\n");
+		System.out.print("í•™ìƒ ì´ë¦„ ì…ë ¥ ");
 		String name = sc.next();
-		System.out.print("ÇĞ»ı ³ªÀÌ ÀÔ·Â ");
+		System.out.print("í•™ìƒ ë‚˜ì´ ì…ë ¥ ");
 		int age = sc.nextInt();
-		System.out.print("ÇĞ»ı ÁÖ¼Ò ÀÔ·Â ");
+		System.out.print("í•™ìƒ ì£¼ì†Œ ì…ë ¥ ");
 		String addr= sc.next();
 		Student st = new Student(name, age, addr);
 		return st;
@@ -40,8 +40,8 @@ public class StudentView {
 	
 	public void printAllStudent(Student st[], int index) {
 		// TODO Auto-generated method stub
-		System.out.println("\n--- ÀüÁ¦ ÇĞ»ı Á¤º¸ Ãâ·Â---");
-		System.out.println("ÀÌ¸§\t³ªÀÌ\tÁÖ¼Ò");
+		System.out.println("\n--- ì „ì œ í•™ìƒ ì •ë³´ ì¶œë ¥---");
+		System.out.println("ì´ë¦„\të‚˜ì´\tì£¼ì†Œ");
 		for(int i=0;i<index;i++) {
 			System.out.println(st[i].getName()+"\t"+st[i].getAge()+"\t"+st[i].getAddr());
 		}
@@ -49,15 +49,15 @@ public class StudentView {
 
 	//public void printStudent(Student st[], int index) {
 	public void printStudent(Student st) {
-		System.out.println("\n--- ÇĞ»ı Á¤º¸ Ãâ·Â---");		
-		System.out.println("ÀÌ¸§\t³ªÀÌ\tÁÖ¼Ò");
+		System.out.println("\n--- í•™ìƒ ì •ë³´ ì¶œë ¥---");		
+		System.out.println("ì´ë¦„\të‚˜ì´\tì£¼ì†Œ");
 		//System.out.println(st[index].getName()+"\t"+st[index].getAge()+"\t"+st[index].getAddr());
 		System.out.println(st.getName()+"\t"+st.getAge()+"\t"+st.getAddr());
 	}
 
 	public String getName(String str) {
 		// TODO Auto-generated method stub
-		System.out.print(str+"ÇÒ ÇĞ»ı ÀÌ¸§ ÀÔ·Â ");
+		System.out.print(str+"í•  í•™ìƒ ì´ë¦„ ì…ë ¥ ");
 		String name = sc.next();
 		return name;
 	}
@@ -68,8 +68,8 @@ public class StudentView {
 	
 	public void noSearch() {
 		// TODO Auto-generated method stub
-		printMsg("°Ë»ö°á°ú¾øÀ½");
-		//±»ÀÌ ÇÊ¿ä´Â ¾øÁö¸¸ ÆíÀÇ¼º
-		//System.out.println("°Ë»ö°á°ú¾øÀ½");
+		printMsg("ê²€ìƒ‰ê²°ê³¼ì—†ìŒ");
+		//êµ³ì´ í•„ìš”ëŠ” ì—†ì§€ë§Œ í¸ì˜ì„±
+		//System.out.println("ê²€ìƒ‰ê²°ê³¼ì—†ìŒ");
 	}
 }

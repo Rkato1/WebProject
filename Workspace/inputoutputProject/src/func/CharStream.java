@@ -12,13 +12,13 @@ public class CharStream {
 	public void primaryStream() {
 		Scanner sc = new Scanner(System.in);
 		FileWriter fw = null;
-		System.out.print("ÀúÀåÇÒ ÆÄÀÏ¸í ÀÔ·Â : ");
+		System.out.print("ì €ì¥í•  íŒŒì¼ëª… ì…ë ¥ : ");
 		String fileName = sc.nextLine();
 		
 		try {
 			fw = new FileWriter(fileName);
-			System.out.println("["+ fileName+"] ÆÄÀÏ¿¡ ÀúÀåÇÒ ³»¿ë ÀÔ·Â : ");
-			System.out.println("Á¾·á´Â exit ÀÔ·Â");
+			System.out.println("["+ fileName+"] íŒŒì¼ì— ì €ì¥í•  ë‚´ìš© ì…ë ¥ : ");
+			System.out.println("ì¢…ë£ŒëŠ” exit ì…ë ¥");
 			int lineNumber = 1;
 			while(true) {
 				System.out.print((lineNumber++)+" : ");
@@ -41,22 +41,22 @@ public class CharStream {
 		}
 	}
 	
-	//ÇÑ±Ûµµ ¾È±úÁü
+	//í•œê¸€ë„ ì•ˆê¹¨ì§
 	public void subStream() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀúÀåÇÒ ÆÄÀÏ¸í ÀÔ·Â : ");
+		System.out.print("ì €ì¥í•  íŒŒì¼ëª… ì…ë ¥ : ");
 		String fileName = sc.nextLine();
-		//°æ·Î¼³Á¤
+		//ê²½ë¡œì„¤ì •
 		String path = "C:\\Users\\user\\Desktop\\";
 		BufferedWriter bw = null;
 		
 		try {
 			//FileWriter fw = new FileWriter(path+fileName);
 			//bw = new BufferedWriter(fw);
-			//ÇÕÄ¡±â
+			//í•©ì¹˜ê¸°
 			bw = new BufferedWriter(new FileWriter(path+fileName));
-			System.out.println("["+ fileName+"] ÆÄÀÏ¿¡ ÀúÀåÇÒ ³»¿ë ÀÔ·Â : ");
-			System.out.println("Á¾·á´Â exit ÀÔ·Â");
+			System.out.println("["+ fileName+"] íŒŒì¼ì— ì €ì¥í•  ë‚´ìš© ì…ë ¥ : ");
+			System.out.println("ì¢…ë£ŒëŠ” exit ì…ë ¥");
 			int lineNumber = 1;
 			while(true) {
 				System.out.print((lineNumber++)+" : ");
@@ -65,7 +65,7 @@ public class CharStream {
 					break;
 				}
 				bw.write(str);
-				//ÁÙ¹Ù²Ş
+				//ì¤„ë°”ê¿ˆ
 				bw.newLine();
 			}
 		} catch (IOException e) {
@@ -83,7 +83,7 @@ public class CharStream {
 	
 	public void charStreamReader() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("·ÎµåÇÒ ÆÄÀÏ¸í ÀÔ·Â : ");
+		System.out.print("ë¡œë“œí•  íŒŒì¼ëª… ì…ë ¥ : ");
 		String fileName = sc.nextLine();
 		BufferedReader br = null;
 		try {
@@ -91,9 +91,9 @@ public class CharStream {
 			br = new BufferedReader(fr);
 			while(true) {
 				//br.readLine()
-				//ÆÄÀÏ¿¡¼­ ÇÑÁÙÀ» ÀĞ¾î¼­ lineº¯¼ö¿¡ ÀúÀå
+				//íŒŒì¼ì—ì„œ í•œì¤„ì„ ì½ì–´ì„œ lineë³€ìˆ˜ì— ì €ì¥
 				String line = br.readLine();
-				//³¡±îÁö ´Ù ÀĞ¾úÀ¸¸é
+				//ëê¹Œì§€ ë‹¤ ì½ì—ˆìœ¼ë©´
 				if(line == null) {
 					break;
 				}

@@ -2,18 +2,18 @@ package func;
 
 import java.io.Serializable;
 
-//°´Ã¼·Î •û±â À§ÇØ¼­ ÀÎÅÍÆäÀÌ½º »ó¼Ó
+//ê°ì²´ë¡œ ëº´ê¸° ìœ„í•´ì„œ ì¸í„°í˜ì´ìŠ¤ ìƒì†
 public class UserInfo implements Serializable{
-	//¹ÛÀ¸·Î »©³¾¶§ ÀÓÀÇÀûÀ¸·Î »ı¼ºµÇÁö¸¸ Áö±İÀº °ªÀ» ÇÒ´ç(Á÷·ÄÈ­, ¿ªÁ÷·ÄÈ­¿¡ ÇÊ¼ö)
+	//ë°–ìœ¼ë¡œ ë¹¼ë‚¼ë•Œ ì„ì˜ì ìœ¼ë¡œ ìƒì„±ë˜ì§€ë§Œ ì§€ê¸ˆì€ ê°’ì„ í• ë‹¹(ì§ë ¬í™”, ì—­ì§ë ¬í™”ì— í•„ìˆ˜)
 	static final long serialVersionUID  = 111111L;
 	String name;
 	int age;
-	//transient¸¦ »ç¿ëÇÏ¸é Á÷·ÄÈ­¿¡¼­ Á¦¿Ü
+	//transientë¥¼ ì‚¬ìš©í•˜ë©´ ì§ë ¬í™”ì—ì„œ ì œì™¸
 	//transient int age;
 	String addr;
 	
-	//ctrl+/ ºí·°ÁÖ¼® on/off
-	//Á÷·ÄÈ­¼±¾ğÀ» ÇÏÁö ¾ÊÀº Å¬·¡½º
+	//ctrl+/ ë¸”ëŸ­ì£¼ì„ on/off
+	//ì§ë ¬í™”ì„ ì–¸ì„ í•˜ì§€ ì•Šì€ í´ë˜ìŠ¤
 	Score score;
 
 	public Score getScore() {

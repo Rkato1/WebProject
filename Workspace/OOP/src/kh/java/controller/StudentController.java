@@ -5,10 +5,10 @@ import java.util.Scanner;
 import kh.java.func.Student;
 
 public class StudentController {
-	//voÃ³¸®
-	//getter, setter ±»ÀÌ ¾ÈÇØµµ µÊ
+	//voì²˜ë¦¬
+	//getter, setter êµ³ì´ ì•ˆí•´ë„ ë¨
 	
-	//Àü¿ªº¯¼ö ¼±¾ğ
+	//ì „ì—­ë³€ìˆ˜ ì„ ì–¸
 	private Student s;
 	private Scanner sc;
 	
@@ -17,24 +17,24 @@ public class StudentController {
 		sc = new Scanner(System.in);
 	}
 	
-	//°´Ã¼¹è¿­
-	//Å¬·¡½ºº´[] º¯¼ö¸í = new Å¬·¡½º¸í(Å©±â);
-	//ÇÒ´ç ÈÄ °ª ÀúÀå(ÃÊ±âÈ­)À» ÇÏÁö ¾ÊÀ¸¸é ÀüºÎ null
+	//ê°ì²´ë°°ì—´
+	//í´ë˜ìŠ¤ë³‘[] ë³€ìˆ˜ëª… = new í´ë˜ìŠ¤ëª…(í¬ê¸°);
+	//í• ë‹¹ í›„ ê°’ ì €ì¥(ì´ˆê¸°í™”)ì„ í•˜ì§€ ì•Šìœ¼ë©´ ì „ë¶€ null
 	//A[] a = new A(2);
 	//a[0] = new A();
 	
-	//CRUDÇÁ·Î±×·¥
-	//µ¥ÀÌÅÍ¸¦ ÀúÀå, Ãâ·Â, ¼öÁ¤, »èÁ¦
+	//CRUDí”„ë¡œê·¸ë¨
+	//ë°ì´í„°ë¥¼ ì €ì¥, ì¶œë ¥, ìˆ˜ì •, ì‚­ì œ
 	//Create,Read,Update,Delete
 	public void main() {
 		while(true) {
-			System.out.println("==ÇĞ»ı°ü¸® ÇÁ·Î±×·¥==");
-			System.out.println("1.ÇĞ»ı Á¤º¸ ÀÔ·Â");
-			System.out.println("2.ÇĞ»ı Á¤º¸ Ãâ·Â");
-			System.out.println("3.ÇĞ»ı Á¤º¸ ¼öÁ¤");
-			System.out.println("4.ÇĞ»ı Á¤º¸ »èÁ¦");
-			System.out.println("5.ÇÁ·Î±×·¥ Á¾·á");
-			System.out.print("¼±ÅÃ > ");
+			System.out.println("==í•™ìƒê´€ë¦¬ í”„ë¡œê·¸ë¨==");
+			System.out.println("1.í•™ìƒ ì •ë³´ ì…ë ¥");
+			System.out.println("2.í•™ìƒ ì •ë³´ ì¶œë ¥");
+			System.out.println("3.í•™ìƒ ì •ë³´ ìˆ˜ì •");
+			System.out.println("4.í•™ìƒ ì •ë³´ ì‚­ì œ");
+			System.out.println("5.í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+			System.out.print("ì„ íƒ > ");
 			int sel = sc.nextInt();
 			
 			switch(sel) {
@@ -52,71 +52,71 @@ public class StudentController {
 				deleteStudent();
 				break;
 			case 5:
-				return;//¸Ş¼Òµå¸¦ Á¾·á½ÃÅ´
+				return;//ë©”ì†Œë“œë¥¼ ì¢…ë£Œì‹œí‚´
 			default:
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				break;
 			}
 		}
 	}
 	
-	//°ªÀ» ÀÔ·Â¹Ş¾Æ º¯¼ö¿¡ ³Ö¾îÁÖ´Â ¸Ş¼Òµå
+	//ê°’ì„ ì…ë ¥ë°›ì•„ ë³€ìˆ˜ì— ë„£ì–´ì£¼ëŠ” ë©”ì†Œë“œ
 	public void insertStudent() {
-		System.out.print("ÇĞ»ı ÀÌ¸§ ÀÔ·Â : ");
+		System.out.print("í•™ìƒ ì´ë¦„ ì…ë ¥ : ");
 		String name = sc.next();
 		s.setName(name);
-		System.out.print("ÇĞ»ı ³ªÀÌ ÀÔ·Â : ");
+		System.out.print("í•™ìƒ ë‚˜ì´ ì…ë ¥ : ");
 		int age = sc.nextInt();
 		s.setAge(age);
-		System.out.print("ÇĞ»ı ÁÖ¼Ò ÀÔ·Â : ");
-		//ÁÙ¹Ù²ŞÀ¸·Î ÀÔ·Â ÃÊ±âÈ­
+		System.out.print("í•™ìƒ ì£¼ì†Œ ì…ë ¥ : ");
+		//ì¤„ë°”ê¿ˆìœ¼ë¡œ ì…ë ¥ ì´ˆê¸°í™”
 		sc.nextLine();
 		String addr = sc.next();
 		s.setAddr(addr);
-		System.out.println("Á¤º¸ÀÔ·Â¿Ï·á");
+		System.out.println("ì •ë³´ì…ë ¥ì™„ë£Œ");
 	}
 	
-	//ÀÔ·Â¹ŞÀº °ªÀ» º¸¿©ÁÖ´Â ¸Ş¼Òµå
+	//ì…ë ¥ë°›ì€ ê°’ì„ ë³´ì—¬ì£¼ëŠ” ë©”ì†Œë“œ
 	public void showStudent() {
-		System.out.println("ÇĞ»ıÀÇ ÀÌ¸§Àº : " + s.getName());
-		System.out.println("ÇĞ»ıÀÇ ³ªÀÌ´Â : " + s.getAge());
-		System.out.println("ÇĞ»ıÀÇ ÁÖ¼Ò´Â : " + s.getAddr());
+		System.out.println("í•™ìƒì˜ ì´ë¦„ì€ : " + s.getName());
+		System.out.println("í•™ìƒì˜ ë‚˜ì´ëŠ” : " + s.getAge());
+		System.out.println("í•™ìƒì˜ ì£¼ì†ŒëŠ” : " + s.getAddr());
 	}
 	
-	//±âÁ¸ °ªÀ» º¯°æÇÏ´Â ¸Ş¼Òµå
+	//ê¸°ì¡´ ê°’ì„ ë³€ê²½í•˜ëŠ” ë©”ì†Œë“œ
 	public void updateStudent() {		
-		System.out.println("¼öÁ¤Ç×¸ñ ¼±ÅÃ");
-		System.out.println("1. ÀÌ¸§");
-		System.out.println("2. ³ªÀÌ");
-		System.out.println("3. ÁÖ¼Ò");
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("ìˆ˜ì •í•­ëª© ì„ íƒ");
+		System.out.println("1. ì´ë¦„");
+		System.out.println("2. ë‚˜ì´");
+		System.out.println("3. ì£¼ì†Œ");
+		System.out.print("ì„ íƒ > ");
 		int sel = sc.nextInt();
 		
 		switch(sel) {
 		case 1:
-			System.out.print("¼öÁ¤ÇÒ ÀÌ¸§ ÀÔ·Â : ");
+			System.out.print("ìˆ˜ì •í•  ì´ë¦„ ì…ë ¥ : ");
 			String name = sc.next();
 			s.setName(name);
 			break;
 		case 2:
-			System.out.print("¼öÁ¤ÇÒ ³ªÀÌ ÀÔ·Â : ");
+			System.out.print("ìˆ˜ì •í•  ë‚˜ì´ ì…ë ¥ : ");
 			int age = sc.nextInt();
 			s.setAge(age);
 			break;
 		case 3:
-			System.out.print("¼öÁ¤ÇÒ ÁÖ¼Ò ÀÔ·Â : ");
+			System.out.print("ìˆ˜ì •í•  ì£¼ì†Œ ì…ë ¥ : ");
 			String addr = sc.next();
 			s.setAddr(addr);
 			break;
 		default:
-			System.out.println("Àß¸øµÈ ÀÔ·Â");
+			System.out.println("ì˜ëª»ëœ ì…ë ¥");
 			break;
 		}
 	}
 	
-	//°ªÀ» »èÁ¦(ÃÊ±âÈ­)ÇÏ´Â ¸Ş¼Òµå
+	//ê°’ì„ ì‚­ì œ(ì´ˆê¸°í™”)í•˜ëŠ” ë©”ì†Œë“œ
 	public void deleteStudent() {
-		System.out.print("ÁøÂ¥ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î(y/n)?");
+		System.out.print("ì§„ì§œ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ(y/n)?");
 		char ch = sc.next().charAt(0);
 		if(ch=='y') {
 			s.setName(null);

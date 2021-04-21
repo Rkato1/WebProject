@@ -1,10 +1,10 @@
 package kh.java.func;
 
-//±âº»ÀûÀ¸·Î Ãß»óÀÌ¹Ç·Î abstract´Â ¹¬½ÃÀûÀÓ 
-//µû¶ó¼­ ±¸ÇöÇÏ°Ô µÇ¸é(»ó¼Ó¹Þ¾ÒÀ» °æ¿ì) ´Ù ¿À¹ö¶óÀÌµù ÇØÁà¾ßÇÔ
-//ÇÏÀ§ Å¬·¡½º¿¡¼­ implementsÅ°¿öµå »ç¿ëÇØ¼­ ±¸Çö¹ÞÀ½
+//ê¸°ë³¸ì ìœ¼ë¡œ ì¶”ìƒì´ë¯€ë¡œ abstractëŠ” ë¬µì‹œì ìž„ 
+//ë”°ë¼ì„œ êµ¬í˜„í•˜ê²Œ ë˜ë©´(ìƒì†ë°›ì•˜ì„ ê²½ìš°) ë‹¤ ì˜¤ë²„ë¼ì´ë”© í•´ì¤˜ì•¼í•¨
+//í•˜ìœ„ í´ëž˜ìŠ¤ì—ì„œ implementsí‚¤ì›Œë“œ ì‚¬ìš©í•´ì„œ êµ¬í˜„ë°›ìŒ
 public interface test {
-	//¸Þ¼Òµåµµ abstarct ¾È Àû¾îµµ µÊ
-	//º¯¼ö´Â public static fianl a
-	//°´Ã¼ »ý¼ºÀº ¾ÈµÇÁö¸¸ ÂüÁ¶Çü º¯¼ö·Î´Â °¡´É
+	//ë©”ì†Œë“œë„ abstarct ì•ˆ ì ì–´ë„ ë¨
+	//ë³€ìˆ˜ëŠ” public static fianl a
+	//ê°ì²´ ìƒì„±ì€ ì•ˆë˜ì§€ë§Œ ì°¸ì¡°í˜• ë³€ìˆ˜ë¡œëŠ” ê°€ëŠ¥
 }

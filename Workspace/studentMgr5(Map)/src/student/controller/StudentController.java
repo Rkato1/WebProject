@@ -35,7 +35,7 @@ public class StudentController {
 				deleteStudent();
 				break;
 			default:
-				System.out.println("Àß¸øµÈ ¼ıÀÚ. ´Ù½Ã ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ìˆ«ì. ë‹¤ì‹œ ì…ë ¥");
 				break;
 			}
 		}
@@ -58,7 +58,7 @@ public class StudentController {
 		if(st.isEmpty()) {
 			view.cannotSearch();
 		}else {
-			String name = view.getName("Á¶È¸");
+			String name = view.getName("ì¡°íšŒ");
 			if(st.containsKey(name)) {
 				view.printStudent(st.get(name));
 			}else {
@@ -71,7 +71,7 @@ public class StudentController {
 		if(st.isEmpty()) {
 			view.cannotSearch();
 		}else {
-			String name = view.getName("¼öÁ¤");
+			String name = view.getName("ìˆ˜ì •");
 			if(st.containsKey(name)) {
 				st.remove(name);
 				Student stTemp = view.insertStudent();
@@ -86,7 +86,7 @@ public class StudentController {
 		if(st.isEmpty()) {
 			view.cannotSearch();
 		}else {
-			String name = view.getName("»èÁ¦");
+			String name = view.getName("ì‚­ì œ");
 			if(st.containsKey(name)) {
 				st.remove(name);
 			}

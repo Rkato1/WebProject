@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Dict2Word {
-	//»çÀü¿¡ µé¾î°¥ ÀÓ½Ã ¹®ÀÚ¿­µéÀ» ÀúÀåÇÒ ¸®½ºÆ®
+	//ì‚¬ì „ì— ë“¤ì–´ê°ˆ ì„ì‹œ ë¬¸ìì—´ë“¤ì„ ì €ì¥í•  ë¦¬ìŠ¤íŠ¸
 	ArrayList<String> words;
 	Scanner sc;
 	
@@ -28,9 +28,9 @@ public class Dict2Word {
 			FileReader fr = new FileReader("dict.txt");
 			br = new BufferedReader(fr);
 			while(true) {
-				//ÆÄÀÏ¿¡¼­ ÇÑÁÙÀ» ÀĞ¾î¼­ lineº¯¼ö¿¡ ÀúÀå
+				//íŒŒì¼ì—ì„œ í•œì¤„ì„ ì½ì–´ì„œ lineë³€ìˆ˜ì— ì €ì¥
 				String str = br.readLine();
-				//³¡±îÁö ´Ù ÀĞ¾úÀ¸¸é
+				//ëê¹Œì§€ ë‹¤ ì½ì—ˆìœ¼ë©´
 				if(str == null) {
 					break;
 				}
@@ -38,7 +38,7 @@ public class Dict2Word {
 				boolean b = true;
 				if(str.length()>1) {
 					for(int i=0;i<str.length();i++) {
-						if(str.charAt(i)<'°¡'||str.charAt(i)>'ÆR') {
+						if(str.charAt(i)<'ê°€'||str.charAt(i)>'í£') {
 							b = false;
 							break;
 						}
@@ -59,8 +59,8 @@ public class Dict2Word {
 		}finally {
 			try {
 				br.close();
-				System.out.println("¹Ù²î±âÀü"+i1);
-				System.out.println("¹Ù²ïÀÌÈÄ"+i2);
+				System.out.println("ë°”ë€Œê¸°ì „"+i1);
+				System.out.println("ë°”ë€ì´í›„"+i2);
 				outputText();				
 				//cutWords2();
 			} catch (IOException e) {
@@ -76,16 +76,16 @@ public class Dict2Word {
 		for(String str : words) {
 			count++;
 		}
-		System.out.println("Á¦°ÅÀü : "+count);
+		System.out.println("ì œê±°ì „ : "+count);
 		for(int i=0; i<words.size(); i++) {
 			String stemp = convertUnicode(words.get(i));
 			char ch[] = stemp.toCharArray();
-			//±æÀÌ 2¹Ì¸¸ Á¦¿Ü
+			//ê¸¸ì´ 2ë¯¸ë§Œ ì œì™¸
 			if(words.get(i).length()<2) {
 				words.remove(i);
 			}else{
 				for(int j=0;j<ch.length;j++) {
-					//ÇÑ±Û ¿Ï¼ºÇü ±¸ºĞ
+					//í•œê¸€ ì™„ì„±í˜• êµ¬ë¶„
 					if(ch[j]<0xAC00 && ch[j]>0xD7AF) {
 						words.remove(i);
 					}
@@ -96,7 +96,7 @@ public class Dict2Word {
 		for(String str : words) {
 			count++;
 		}
-		System.out.println("Á¦°ÅÈÄ : "+count);
+		System.out.println("ì œê±°í›„ : "+count);
 		outputText();
 	}
 		
@@ -109,7 +109,7 @@ public class Dict2Word {
 			while(true) {
 				String str = words.get(i);
 				bw.write(str);
-				//ÁÙ¹Ù²Ş
+				//ì¤„ë°”ê¿ˆ
 				bw.newLine();
 				i++;
 				if(i==words.size()) {
@@ -122,7 +122,7 @@ public class Dict2Word {
 		}finally {
 			try {
 				bw.close();
-				System.out.println("Á¾·á");
+				System.out.println("ì¢…ë£Œ");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -130,46 +130,46 @@ public class Dict2Word {
 		}
 	}
 	
-	// À¯´ÏÄÚµå¿¡¼­ StringÀ¸·Î º¯È¯
+	// ìœ ë‹ˆì½”ë“œì—ì„œ Stringìœ¼ë¡œ ë³€í™˜
 	public static String convertString(String val) {
-		// º¯È¯ÇÒ ¹®ÀÚ¸¦ ÀúÀåÇÒ ¹öÆÛ ¼±¾ğ
+		// ë³€í™˜í•  ë¬¸ìë¥¼ ì €ì¥í•  ë²„í¼ ì„ ì–¸
 		StringBuffer sb = new StringBuffer();
-		// ±ÛÀÚ¸¦ ÇÏ³ªÇÏ³ª Å½»öÇÑ´Ù.
+		// ê¸€ìë¥¼ í•˜ë‚˜í•˜ë‚˜ íƒìƒ‰í•œë‹¤.
 		for (int i = 0; i < val.length(); i++) {
-			// Á¶ÇÕÀÌ \\u·Î ½ÃÀÛÇÏ¸é 6±ÛÀÚ¸¦ º¯È¯ÇÑ´Ù. \\uxxxx
+			// ì¡°í•©ì´ \\uë¡œ ì‹œì‘í•˜ë©´ 6ê¸€ìë¥¼ ë³€í™˜í•œë‹¤. \\uxxxx
 			if ('\\' == val.charAt(i) && 'u' == val.charAt(i + 1)) {
-				// ±× µÚ ³×±ÛÀÚ´Â À¯´ÏÄÚµåÀÇ 16Áø¼ö ÄÚµåÀÌ´Ù. intÇüÀ¸·Î ¹Ù²Ù¾î¼­ ´Ù½Ã char Å¸ÀÔÀ¸·Î °­Á¦ º¯È¯ÇÑ´Ù.
+				// ê·¸ ë’¤ ë„¤ê¸€ìëŠ” ìœ ë‹ˆì½”ë“œì˜ 16ì§„ìˆ˜ ì½”ë“œì´ë‹¤. intí˜•ìœ¼ë¡œ ë°”ê¾¸ì–´ì„œ ë‹¤ì‹œ char íƒ€ì…ìœ¼ë¡œ ê°•ì œ ë³€í™˜í•œë‹¤.
 				Character r = (char) Integer.parseInt(val.substring(i + 2, i + 6), 16);
-				// º¯È¯µÈ ±ÛÀÚ¸¦ ¹öÆÛ¿¡ ³Ö´Â´Ù.
+				// ë³€í™˜ëœ ê¸€ìë¥¼ ë²„í¼ì— ë„£ëŠ”ë‹¤.
 				sb.append(r);
-				// forÀÇ Áõ°¡ °ª 1°ú 5¸¦ ÇÕÇØ 6±ÛÀÚ¸¦ Á¡ÇÁ
+				// forì˜ ì¦ê°€ ê°’ 1ê³¼ 5ë¥¼ í•©í•´ 6ê¸€ìë¥¼ ì í”„
 				i += 5;
 			} else {
-				// asciiÄÚµå¸é ±×´ë·Î ¹öÆÛ¿¡ ³Ö´Â´Ù.
+				// asciiì½”ë“œë©´ ê·¸ëŒ€ë¡œ ë²„í¼ì— ë„£ëŠ”ë‹¤.
 				sb.append(val.charAt(i));
 			}
 		}
-		// °á°ú ¸®ÅÏ
+		// ê²°ê³¼ ë¦¬í„´
 		return sb.toString();
 	}
 		
-	// String¿¡¼­ À¯´ÏÄÚµå·Î º¯È¯
+	// Stringì—ì„œ ìœ ë‹ˆì½”ë“œë¡œ ë³€í™˜
 	private static String convertUnicode(String val) {
-		// º¯È¯ÇÒ ¹®ÀÚ¸¦ ÀúÀåÇÒ ¹öÆÛ ¼±¾ğ
+		// ë³€í™˜í•  ë¬¸ìë¥¼ ì €ì¥í•  ë²„í¼ ì„ ì–¸
 		StringBuffer sb = new StringBuffer();
-		// ±ÛÀÚ¸¦ ÇÏ³ªÇÏ³ª Å½»öÇÑ´Ù.
+		// ê¸€ìë¥¼ í•˜ë‚˜í•˜ë‚˜ íƒìƒ‰í•œë‹¤.
 		for (int i = 0; i < val.length(); i++) {
-			// ±ÛÀÚ ÃßÃú int°ªÀ¸·Î °¡Á®¿Â´Ù.
+			// ê¸€ì ì¶”ì¸¨ intê°’ìœ¼ë¡œ ê°€ì ¸ì˜¨ë‹¤.
 			int code = val.codePointAt(i);
-			// 128ÀÌÇÏ¸é asciiÄÚµå·Î º¯È¯ÇÏÁö ¾Ê´Â´Ù.
+			// 128ì´í•˜ë©´ asciiì½”ë“œë¡œ ë³€í™˜í•˜ì§€ ì•ŠëŠ”ë‹¤.
 			if (code < 128) {
 			sb.append(String.format("%c", code));
 			} else {
-			// 16Áø¼ö À¯´ÏÄÚµå·Î º¯È¯ÇÑ´Ù.
+			// 16ì§„ìˆ˜ ìœ ë‹ˆì½”ë“œë¡œ ë³€í™˜í•œë‹¤.
 			sb.append(String.format("\\u%04x", code));
 			}
 		}
-		// °á°ú ¸®ÅÏ
+		// ê²°ê³¼ ë¦¬í„´
 		return sb.toString();
 	}
 }

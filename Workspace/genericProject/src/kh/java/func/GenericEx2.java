@@ -1,10 +1,10 @@
 package kh.java.func;
 
-//<T>°¡ ºÙÀ¸¸é GenericÀ¸·Î µÊ
-//ÀÌ°Ô ¾øÀ¸¸é »ç¿ëÇÒ¼ö ¾øÀ½
-//2°³¸¦ »ç¿ëÇÒ°æ¿ì <T,E>
+//<T>ê°€ ë¶™ìœ¼ë©´ Genericìœ¼ë¡œ ë¨
+//ì´ê²Œ ì—†ìœ¼ë©´ ì‚¬ìš©í• ìˆ˜ ì—†ìŒ
+//2ê°œë¥¼ ì‚¬ìš©í• ê²½ìš° <T,E>
 public class GenericEx2<T,E> {
-	//°´Ã¼¸¦ ¸¸µé¶§ ¾î¶² ÀÚ·áÇüÀÌ µÉÁö¸¦ °áÁ¤
+	//ê°ì²´ë¥¼ ë§Œë“¤ë•Œ ì–´ë–¤ ìžë£Œí˜•ì´ ë ì§€ë¥¼ ê²°ì •
 	T data;
 	E data1;
 

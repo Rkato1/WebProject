@@ -6,25 +6,25 @@ public class test1 {
   private static void solution(int numOfAllPlayers, int numOfQuickPlayers, char[] namesOfQuickPlayers, int numOfGames, int[] numOfMovesPerGame){
 	boolean game = false;
 	if(numOfAllPlayers<6 || numOfAllPlayers>26){
-		System.out.println("ÃÑ ÀÎ¿ø¼ö ÃÊ°ú");
+		System.out.println("ì´ ì¸ì›ìˆ˜ ì´ˆê³¼");
 	} else if(numOfQuickPlayers<=0 || numOfQuickPlayers>numOfAllPlayers/2) {
-		System.out.println("´Ş¸®±â ºü¸¥ »ç¶÷ÀÇ ¼ö ÃÊ°ú");
+		System.out.println("ë‹¬ë¦¬ê¸° ë¹ ë¥¸ ì‚¬ëŒì˜ ìˆ˜ ì´ˆê³¼");
 	}else if(namesOfQuickPlayers.length!=numOfQuickPlayers) {
 		for(char c : namesOfQuickPlayers){
 			if(c=='A') {
-				System.out.println("A´Â Ã¹¹øÂ° °ÔÀÓ¿¡¼­ ¹«Á¶°Ç ¼ú·¡ÀÌ¸ç ´Ş¸®±â°¡ ºü¸¥ »ç¶÷ÀÌ µÉ¼ö ¾ø½À´Ï´Ù.");
+				System.out.println("AëŠ” ì²«ë²ˆì§¸ ê²Œì„ì—ì„œ ë¬´ì¡°ê±´ ìˆ ë˜ì´ë©° ë‹¬ë¦¬ê¸°ê°€ ë¹ ë¥¸ ì‚¬ëŒì´ ë ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			}
 		}
-		System.out.println("´Ş¸®±â ºü¸¥ »ç¶÷µéÀÇ ÀÌ¸§ÀÇ ¼ö°¡ ºÎÁ·ÇÏ°Å³ª ¸¹À½");
+		System.out.println("ë‹¬ë¦¬ê¸° ë¹ ë¥¸ ì‚¬ëŒë“¤ì˜ ì´ë¦„ì˜ ìˆ˜ê°€ ë¶€ì¡±í•˜ê±°ë‚˜ ë§ìŒ");
 	}else if(numOfGames<=0 || numOfGames>100){
-		System.out.println("°ÔÀÓ ÁøÇàÈ½¼ö ÃÊ°ú");
+		System.out.println("ê²Œì„ ì§„í–‰íšŸìˆ˜ ì´ˆê³¼");
 	}else {
 		if(numOfMovesPerGame.length != numOfGames) {
-			System.out.println("°ÔÀÓ ÁøÇàÈ½¼ö¿Í ÀÌµ¿ÇÏ´Â Ä­¼öÀÇ ÃÑ È¸¼ö°¡ °ªÀÌ ´Ù¸¨´Ï´Ù.");
+			System.out.println("ê²Œì„ ì§„í–‰íšŸìˆ˜ì™€ ì´ë™í•˜ëŠ” ì¹¸ìˆ˜ì˜ ì´ íšŒìˆ˜ê°€ ê°’ì´ ë‹¤ë¦…ë‹ˆë‹¤.");
 		}
 		for(int i=0; i<numOfMovesPerGame.length; i++) {
 			if(numOfMovesPerGame[i]>100 || numOfMovesPerGame[i]<-100) {
-				System.out.println("Á¤ÇØÁø Ä­¼ö ¹üÀ§ÃÊ°ú");
+				System.out.println("ì •í•´ì§„ ì¹¸ìˆ˜ ë²”ìœ„ì´ˆê³¼");
 			}else {
 				game = true;
 			}
@@ -36,11 +36,11 @@ public class test1 {
 		for(int i=1; i<namesOfQuickPlayers.length; i++) {
 			gamerList.add(namesOfQuickPlayers[i]);
 		}
-		//°ÔÀÓ¿¡¼­ ½ÃÀÛÇÏ´Â ÀÚ¸®À§Ä¡(Ã³À½¿¡´Â 0ÀÌ´Ï±î)
+		//ê²Œì„ì—ì„œ ì‹œì‘í•˜ëŠ” ìë¦¬ìœ„ì¹˜(ì²˜ìŒì—ëŠ” 0ì´ë‹ˆê¹Œ)
 		int startPoint = 0;
-		//¼ú·¡¿¡ °É¸° È¸¼ö
+		//ìˆ ë˜ì— ê±¸ë¦° íšŒìˆ˜
 		ArrayList<Integer> taggerPoint = new ArrayList<Integer>();
-		//A´Â Ã³À½¿¡ ¹«Á¶°Ç ¼ú·¡´Ï±î
+		//AëŠ” ì²˜ìŒì— ë¬´ì¡°ê±´ ìˆ ë˜ë‹ˆê¹Œ
 		for(int i=0; i<numOfAllPlayers; i++) {
 			if(i==0) {
 				taggerPoint.add(i, 1);
@@ -48,11 +48,11 @@ public class test1 {
 				taggerPoint.add(i, 0);
 			}
 		}
-		//°ÔÀÓÁøÇàÈ½¼ö¸¸Å­
+		//ê²Œì„ì§„í–‰íšŸìˆ˜ë§Œí¼
 		for(int i=0; i<numOfGames; i++) {
-			//°¢ °ÔÀÓ¿¡¼­ ÀÌµ¿ÇÏ´Â Ä­¼ö
+			//ê° ê²Œì„ì—ì„œ ì´ë™í•˜ëŠ” ì¹¸ìˆ˜
 			int games = numOfMovesPerGame[i];
-			//Ä­¼ö´Â -°¡ Á¸Àç½Ã ¸®½ºÆ®¿¡ ¹Ù·Î ´ëÀÔÀÌ ¾ÈµÊ
+			//ì¹¸ìˆ˜ëŠ” -ê°€ ì¡´ì¬ì‹œ ë¦¬ìŠ¤íŠ¸ì— ë°”ë¡œ ëŒ€ì…ì´ ì•ˆë¨
 			if(games>numOfAllPlayers-1) {
 				int tempInt = numOfAllPlayers % games;
 				games = tempInt;
@@ -62,14 +62,14 @@ public class test1 {
 			}else {
 				
 			}
-			//¾ê°¡ ºü¸¥¾ÖÀÎÁö °Ë»ç ÈÄ ¼ú·¡¿Í À§Ä¡º¯µ¿
+			//ì–˜ê°€ ë¹ ë¥¸ì• ì¸ì§€ ê²€ì‚¬ í›„ ìˆ ë˜ì™€ ìœ„ì¹˜ë³€ë™
 			for(char ch : namesOfQuickPlayers) {
 				if(ch==gamerList.get(games)) {
 					tagger='A';
 				}else {
 					char chTemp = tagger;
 					tagger=gamerList.get(games);
-					//°ªº¯È­ 1Áõ°¡
+					//ê°’ë³€í™” 1ì¦ê°€
 					int count = taggerPoint.get(games)+1;
 					taggerPoint.set(games, count);
 					gamerList.remove(games);

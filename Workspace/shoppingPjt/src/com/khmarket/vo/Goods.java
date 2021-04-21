@@ -2,6 +2,6 @@ package com.khmarket.vo;
 
 public class Goods {
 	public void printList() {
-		System.out.println("³ëÆ®ºÏ, 300¸¸¿ø");
+		System.out.println("ë…¸íŠ¸ë¶, 300ë§Œì›");
 	}
 }

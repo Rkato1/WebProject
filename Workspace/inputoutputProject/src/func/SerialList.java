@@ -18,18 +18,18 @@ public class SerialList {
 		// TODO Auto-generated constructor stub
 		users = new ArrayList<UserInfo>();
 		sc = new Scanner(System.in);
-		//½ÃÀÛÇÏÀÚ¸¶ÀÚ ºÒ·¯¿À±â
+		//ì‹œì‘í•˜ìë§ˆì ë¶ˆëŸ¬ì˜¤ê¸°
 		loadInfo();
 	}
 	
 	public void main() {
 		while(true) {
-			System.out.println("1. È¸¿ø Á¤º¸ µî·Ï");
-			System.out.println("2. È¸¿ø Á¤º¸ »èÁ¦");
-			System.out.println("3. ÀüÃ¼ È¸¿ø Ãâ·Â");
-			System.out.println("4. ÀúÀå");
-			System.out.println("5. ºÒ·¯¿À±â");
-			System.out.print("¼±ÅÃ > ");
+			System.out.println("1. íšŒì› ì •ë³´ ë“±ë¡");
+			System.out.println("2. íšŒì› ì •ë³´ ì‚­ì œ");
+			System.out.println("3. ì „ì²´ íšŒì› ì¶œë ¥");
+			System.out.println("4. ì €ì¥");
+			System.out.println("5. ë¶ˆëŸ¬ì˜¤ê¸°");
+			System.out.print("ì„ íƒ > ");
 			int sel = sc.nextInt();
 			switch(sel) {
 			case 1:
@@ -48,7 +48,7 @@ public class SerialList {
 				loadInfo();
 				break;
 			default:
-				System.out.println("1~5 »çÀÌ Á¤¼ö Á¦´ë·Î ÀÔ·Â");
+				System.out.println("1~5 ì‚¬ì´ ì •ìˆ˜ ì œëŒ€ë¡œ ì…ë ¥");
 				continue;
 			}
 		}
@@ -56,38 +56,38 @@ public class SerialList {
 
 	public void insertUser() {
 		// TODO Auto-generated method stub
-		System.out.println("\n==== È¸¿ø Á¤º¸ ÀÔ·Â====\n");		
-		System.out.print("ÀÌ¸§ ÀÔ·Â : ");
+		System.out.println("\n==== íšŒì› ì •ë³´ ì…ë ¥====\n");		
+		System.out.print("ì´ë¦„ ì…ë ¥ : ");
 		String name = sc.next();
-		System.out.print("³ªÀÌ ÀÔ·Â : ");
+		System.out.print("ë‚˜ì´ ì…ë ¥ : ");
 		int age = sc.nextInt();
-		System.out.print("ÁÖ¼Ò ÀÔ·Â : ");
+		System.out.print("ì£¼ì†Œ ì…ë ¥ : ");
 		String addr = sc.next();
 		UserInfo ui = new UserInfo(name,age,addr);
 		users.add(ui);
-		System.out.println("µî·Ï ¿Ï·á");
+		System.out.println("ë“±ë¡ ì™„ë£Œ");
 	}
 	
 	public void deleteUser() {
 		// TODO Auto-generated method stub
-		System.out.println("\n---È¸¿øÁ¤º¸»èÁ¦---\n");
-		System.out.print("»èÁ¦ÇÒ È¸¿ø ÀÌ¸§ ÀÔ·Â : ");
+		System.out.println("\n---íšŒì›ì •ë³´ì‚­ì œ---\n");
+		System.out.print("ì‚­ì œí•  íšŒì› ì´ë¦„ ì…ë ¥ : ");
 		String name = sc.next();
 		for(int i=0;i<users.size();i++) {
 			if(users.get(i).getName().equals(name)) {
 				users.remove(i);
-				System.out.println("»èÁ¦ ¿Ï·á");
+				System.out.println("ì‚­ì œ ì™„ë£Œ");
 				return;
 			}
 		}
-		System.out.println("È¸¿ø Á¸ÀçÇÏÁö ¾ÊÀ½");
+		System.out.println("íšŒì› ì¡´ì¬í•˜ì§€ ì•ŠìŒ");
 	}
 	
 
 	public void printAllUser() {
 		// TODO Auto-generated method stub
-		System.out.println("\n---ÀüÃ¼È¸¿øÁ¤º¸Ãâ·Â---\n");
-		System.out.println("ÀÌ¸§\t³ªÀÌ\tÁÖ¼Ò");
+		System.out.println("\n---ì „ì²´íšŒì›ì •ë³´ì¶œë ¥---\n");
+		System.out.println("ì´ë¦„\të‚˜ì´\tì£¼ì†Œ");
 		for(UserInfo uis : users) {
 			System.out.println(uis.getName()+"\t"+uis.getAge()+"\t"+uis.getAddr());
 		}
@@ -100,7 +100,7 @@ public class SerialList {
 			FileOutputStream fis = new FileOutputStream("userList.txt");
 			oos = new ObjectOutputStream(oos);
 			oos.writeObject(users);
-			System.out.println("ÀúÀå¿Ï·á");
+			System.out.println("ì €ì¥ì™„ë£Œ");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -124,7 +124,7 @@ public class SerialList {
 			FileInputStream fis = new FileInputStream("userList.txt");
 			ois = new ObjectInputStream(fis);
 			users = (ArrayList<UserInfo>)ois.readObject();
-			System.out.println("ºÒ·¯¿À±â ¿Ï·á");
+			System.out.println("ë¶ˆëŸ¬ì˜¤ê¸° ì™„ë£Œ");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

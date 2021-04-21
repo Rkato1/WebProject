@@ -2,7 +2,7 @@ package kh.point.vo;
 
 import java.util.Scanner;
 
-//extends Object(±âº»°ª)
+//extends Object(ê¸°ë³¸ê°’)
 public class Vip { 
 	String name;
 	String grade;
@@ -38,8 +38,8 @@ public class Vip {
 	public int getPoint() {
 		return this.point;
 	}
-	//º¸³Ê½º°³³ä
-	//¹ö±× °°Àºµ¥ ÀÚ²Ù ¼Ò¼öÁ¡ ¿ÀÁö°Ô ³ª¿È
+	//ë³´ë„ˆìŠ¤ê°œë…
+	//ë²„ê·¸ ê°™ì€ë° ìê¾¸ ì†Œìˆ˜ì  ì˜¤ì§€ê²Œ ë‚˜ì˜´
 	public double getBonus() {
 		return 0.07*this.point;
 	}

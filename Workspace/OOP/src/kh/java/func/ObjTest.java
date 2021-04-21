@@ -2,7 +2,7 @@ package kh.java.func;
 
 public class ObjTest {
 	
-	//toString ¿À¹ö¶óÀÌµù °¡´É	
+	//toString ì˜¤ë²„ë¼ì´ë”© ê°€ëŠ¥	
 	@Override
 	public String toString() {
 		return "toStringTest";

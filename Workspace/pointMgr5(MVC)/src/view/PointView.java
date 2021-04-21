@@ -15,24 +15,24 @@ public class PointView {
 	}
 	
 	public int showMenu() {
-		System.out.println("\n\n---- È¸¿ø °ü¸® ÇÁ·Î±×·¥ vMVC ----\n");
-		System.out.println("1.È¸¿ø µî·Ï");
-		System.out.println("2.È¸¿ø ÀüÃ¼ Á¤º¸ Ãâ·Â");
-		System.out.println("3.È¸¿ø 1¸í Á¤º¸ Ãâ·Â");
-		System.out.println("4.È¸¿ø Á¤º¸ ¼öÁ¤");
-		System.out.println("5.È¸¿ø »èÁ¦");
-		System.out.println("0.ÇÁ·Î±×·¥ Á¾·á");
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("\n\n---- íšŒì› ê´€ë¦¬ í”„ë¡œê·¸ë¨ vMVC ----\n");
+		System.out.println("1.íšŒì› ë“±ë¡");
+		System.out.println("2.íšŒì› ì „ì²´ ì •ë³´ ì¶œë ¥");
+		System.out.println("3.íšŒì› 1ëª… ì •ë³´ ì¶œë ¥");
+		System.out.println("4.íšŒì› ì •ë³´ ìˆ˜ì •");
+		System.out.println("5.íšŒì› ì‚­ì œ");
+		System.out.println("0.í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+		System.out.print("ì„ íƒ > ");
 		int itemp = sc.nextInt();
 		return itemp;
 	}
 	public Grade insertMember(int index) {
-		System.out.println("\n==== È¸¿ø Á¤º¸ ÀÔ·Â====\n");		
-		System.out.print("È¸¿ø ÀÌ¸§ ÀÔ·Â : ");
+		System.out.println("\n==== íšŒì› ì •ë³´ ì…ë ¥====\n");		
+		System.out.print("íšŒì› ì´ë¦„ ì…ë ¥ : ");
 		String name = sc.next();		
-		System.out.print("È¸¿ø µî±Ş ÀÔ·Â[silver/gold/vip] : ");
+		System.out.print("íšŒì› ë“±ê¸‰ ì…ë ¥[silver/gold/vip] : ");
 		String grade = sc.next();
-		System.out.print("È¸¿ø Æ÷ÀÎÆ® ÀÔ·Â : ");
+		System.out.print("íšŒì› í¬ì¸íŠ¸ ì…ë ¥ : ");
 		int point = sc.nextInt();
 		switch(grade) {
 		case"silver":
@@ -42,23 +42,23 @@ public class PointView {
 		case "vip":			
 			return new Vip(name, grade, point);
 		default:
-			System.out.println("Àß¸øµÈ µî±Ş ÀÔ·Â");
+			System.out.println("ì˜ëª»ëœ ë“±ê¸‰ ì…ë ¥");
 			break;
 		}
 		return null;
 	}
 	
 	public void cannotSearch() {
-		System.out.println("ÀÔ·ÂµÈ Á¤º¸°¡ ¾øÀ½");
+		System.out.println("ì…ë ¥ëœ ì •ë³´ê°€ ì—†ìŒ");
 	}
 	
 	public void noSearch() {
-		System.out.println("°Ë»ö°á°ú¾øÀ½");
+		System.out.println("ê²€ìƒ‰ê²°ê³¼ì—†ìŒ");
 	}
 
 	public void selectAllMember(Grade[] members, int index) {
-		System.out.println("\n---- ÀüÃ¼ È¸¿ø Á¤º¸ Ãâ·Â ----\n");
-		System.out.println("ÀÌ¸§\tµî±Ş\tÆ÷ÀÎÆ®\tº¸³Ê½º");
+		System.out.println("\n---- ì „ì²´ íšŒì› ì •ë³´ ì¶œë ¥ ----\n");
+		System.out.println("ì´ë¦„\të“±ê¸‰\tí¬ì¸íŠ¸\të³´ë„ˆìŠ¤");
 		for(int i=0; i<index; i++) {
 			System.out.print(members[i]);
 		}		
@@ -66,13 +66,13 @@ public class PointView {
 	
 	
 	public void selectMember(Grade member) {		
-		System.out.println("ÀÌ¸§\tµî±Ş\tÆ÷ÀÎÆ®\tº¸³Ê½º");
+		System.out.println("ì´ë¦„\të“±ê¸‰\tí¬ì¸íŠ¸\të³´ë„ˆìŠ¤");
 		System.out.print(member);
 	}
 	
 	public String searchName(String str) {
-		System.out.println("==== È¸¿ø Á¤º¸ "+str+" ====");
-		System.out.print(str+"ÇÒ È¸¿øÀÇ ÀÌ¸§À» ÀÔ·Â : ");
+		System.out.println("==== íšŒì› ì •ë³´ "+str+" ====");
+		System.out.print(str+"í•  íšŒì›ì˜ ì´ë¦„ì„ ì…ë ¥ : ");
 		return sc.next();
 	}
 

@@ -4,8 +4,8 @@ import kh.java.func.Calc;
 import kh.java.func.MethodTest;
 import kh.java.func.MethodTest2;
 
-//¿À¹ö·Îµù-ÇÑ Å¬·¡½º ³» parameter ¼±¾ğºÎ°¡ ´Ù¸£°í
-//ÀÌ¸§ÀÌ °°Àº ¸Ş¼Òµå¸¦ ¿©·¯°³ Á¤ÀÇÇÏ´Â °Í
+//ì˜¤ë²„ë¡œë”©-í•œ í´ë˜ìŠ¤ ë‚´ parameter ì„ ì–¸ë¶€ê°€ ë‹¤ë¥´ê³ 
+//ì´ë¦„ì´ ê°™ì€ ë©”ì†Œë“œë¥¼ ì—¬ëŸ¬ê°œ ì •ì˜í•˜ëŠ” ê²ƒ
 //ex) int Add(int a)
 //	  int Add(int a,int b)
 //    int Add(int a,int b,int c)

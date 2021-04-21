@@ -8,40 +8,40 @@ import java.net.SocketException;
 
 public class UDPServer {
 	
-	//¼Óµµ Áß½Ã byte
+	//ì†ë„ ì¤‘ì‹œ byte
 	public void main() {
-		//1.¼­¹ö¿¡¼­ »ç¿ëÇÒ Æ÷Æ®¹øÈ£ ÁöÁ¤
+		//1.ì„œë²„ì—ì„œ ì‚¬ìš©í•  í¬íŠ¸ë²ˆí˜¸ ì§€ì •
 		int port = 8888;
-		//2.DatagramSocket °´Ã¼»ı¼º
+		//2.DatagramSocket ê°ì²´ìƒì„±
 		DatagramSocket socket = null;
-		//Data ¹Ş±â À§ÇÑ ÆĞÅ¶°´Ã¼
+		//Data ë°›ê¸° ìœ„í•œ íŒ¨í‚·ê°ì²´
 		DatagramPacket inPacket = null;
-		//Data º¸³»±â À§ÇÑ ÆĞÅ¶°´Ã¼
+		//Data ë³´ë‚´ê¸° ìœ„í•œ íŒ¨í‚·ê°ì²´
 		DatagramPacket outPacket = null;
-		//µé¾î¿À´Â ¸Ş½ÃÁö ÀúÀå°ø°£
+		//ë“¤ì–´ì˜¤ëŠ” ë©”ì‹œì§€ ì €ì¥ê³µê°„
 		byte inMsg[] = new byte[1024];
 		String msg = "UDP Server";
-		//³ª°¡´Â ¸Ş½ÃÁö ÀúÀå°ø°£
+		//ë‚˜ê°€ëŠ” ë©”ì‹œì§€ ì €ì¥ê³µê°„
 		byte outMsg[] = msg.getBytes();
 		try {
-			//UDP¼ÒÄÏ»ı¼º(port listen)
+			//UDPì†Œì¼“ìƒì„±(port listen)
 			socket = new DatagramSocket(port);
-			System.out.println("¼­¹ö ¼ÒÄÏ »ı¼º ¿Ï·á");
-			//(¹ÙÀÌÆ® ¹è¿­, ±æÀÌ)
+			System.out.println("ì„œë²„ ì†Œì¼“ ìƒì„± ì™„ë£Œ");
+			//(ë°”ì´íŠ¸ ë°°ì—´, ê¸¸ì´)
 			inPacket = new DatagramPacket(inMsg, inMsg.length);
-			//Å¬¶óÀÌ¾ğÆ® ¸Ş¼¼Áö¸¦ ¹Ş±âÀ§ÇØ ±â´Ù¸²
+			//í´ë¼ì´ì–¸íŠ¸ ë©”ì„¸ì§€ë¥¼ ë°›ê¸°ìœ„í•´ ê¸°ë‹¤ë¦¼
 			socket.receive(inPacket);
-			//byte¹è¿­À» StringÀ¸·Î º¯È¯
-			//µÚ¿¡ »ç¿ëÇÏÁö ¾Ê´Â °ø°£ ÀÚ¸£´Â ¸Ş¼Òµå , trim()
+			//byteë°°ì—´ì„ Stringìœ¼ë¡œ ë³€í™˜
+			//ë’¤ì— ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” ê³µê°„ ìë¥´ëŠ” ë©”ì†Œë“œ , trim()
 			String clientMsg = new String(inMsg).trim();
 			System.out.println(clientMsg);
-			//3.¿¬°áÇÒ Å¬¶óÀÌ¾ğÆ® IPÁÖ¼Ò¸¦ °¡Áø InetAddress°´Ã¼ »ı¼º
-			//Å¬¶óÀÌ¾ğÆ® ip ¹× Æ÷Æ® ÃßÃâ
+			//3.ì—°ê²°í•  í´ë¼ì´ì–¸íŠ¸ IPì£¼ì†Œë¥¼ ê°€ì§„ InetAddressê°ì²´ ìƒì„±
+			//í´ë¼ì´ì–¸íŠ¸ ip ë° í¬íŠ¸ ì¶”ì¶œ
 			InetAddress clientIp = inPacket.getAddress();
 			int clientPort = inPacket.getPort();
-			//5.Àü¼ÛÇÒ ¸Ş½ÃÁö¸¦ DatagramPacket°´Ã¼¿¡ ÀúÀå
+			//5.ì „ì†¡í•  ë©”ì‹œì§€ë¥¼ DatagramPacketê°ì²´ì— ì €ì¥
 			outPacket = new DatagramPacket(outMsg, outMsg.length, clientIp, clientPort);
-			//6.¼ÒÄÏÀ» ÀÌ¿ëÇÏ¿© Àü¼Û
+			//6.ì†Œì¼“ì„ ì´ìš©í•˜ì—¬ ì „ì†¡
 			socket.send(outPacket);			
 		} catch (SocketException e) {
 			// TODO Auto-generated catch block
@@ -50,7 +50,7 @@ public class UDPServer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
-			//7.¼ÒÄÏÁ¾·á
+			//7.ì†Œì¼“ì¢…ë£Œ
 			socket.close();
 		}
 	}

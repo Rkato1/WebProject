@@ -4,12 +4,12 @@ public class PrintMsg {
 	public void print() {
 		System.out.println(1+1);
 		System.out.println(1+1.1);
-		//°­Á¦ Çüº¯È¯µÇ¾î ¼Ò¼öÁ¡À¸·Î ³ª¿È
+		//ê°•ì œ í˜•ë³€í™˜ë˜ì–´ ì†Œìˆ˜ì ìœ¼ë¡œ ë‚˜ì˜´
 		System.out.println('1'+1); //49+1, ascii code
-		//¹®ÀÚÀÇ °ªÀÇ ÇÕ
+		//ë¬¸ìì˜ ê°’ì˜ í•©
 		System.out.println('1'-'2'); //49-50, ascii code
 		System.out.println("1"+"1"); //1&1
-		//¹®ÀÚ ¿­ÀÇ ÇÕ»ê
+		//ë¬¸ì ì—´ì˜ í•©ì‚°
 	}
 
 }

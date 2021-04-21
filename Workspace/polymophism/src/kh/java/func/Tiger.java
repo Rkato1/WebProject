@@ -1,13 +1,13 @@
 package kh.java.func;
 
 public class Tiger extends Animal {
-	//ÀÚ½ÄÀÌ º¯ÇüÇØ¼­ »ç¿ë°¡´É
+	//ìì‹ì´ ë³€í˜•í•´ì„œ ì‚¬ìš©ê°€ëŠ¥
 	@Override
 	public void breath() {
-		System.out.println("ÈŞ~");
+		System.out.println("íœ´~");
 	}
 	
 	public void hunting() {
-		System.out.println("¾îÈï");
+		System.out.println("ì–´í¥");
 	}
 }

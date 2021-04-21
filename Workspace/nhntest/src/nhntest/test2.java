@@ -4,21 +4,21 @@ import java.util.ArrayList;
 
 public class test2 {
 	private static void solution(int day, int width, int[][] blocks) {
-	    // TODO: ÀÌ°÷¿¡ ÄÚµå¸¦ ÀÛ¼ºÇÏ¼¼¿ä. Ãß°¡·Î ÇÊ¿äÇÑ ÇÔ¼ö¿Í Àü¿ªº¯¼ö¸¦ ¼±¾ğÇØ¼­ »ç¿ëÇÏ¼Åµµ µË´Ï´Ù.
-		//ºÀ¿ì¸®Ã£±â·ÎÁ÷
+	    // TODO: ì´ê³³ì— ì½”ë“œë¥¼ ì‘ì„±í•˜ì„¸ìš”. ì¶”ê°€ë¡œ í•„ìš”í•œ í•¨ìˆ˜ì™€ ì „ì—­ë³€ìˆ˜ë¥¼ ì„ ì–¸í•´ì„œ ì‚¬ìš©í•˜ì…”ë„ ë©ë‹ˆë‹¤.
+		//ë´‰ìš°ë¦¬ì°¾ê¸°ë¡œì§
 		boolean isAvailable = false;
 		if(day<=0 || day>100) {
-			System.out.println("°ø»ç ±â°£ ÀÏ¼ö ¹üÀ§ ÃÊ°úÀÔ´Ï´Ù.");
+			System.out.println("ê³µì‚¬ ê¸°ê°„ ì¼ìˆ˜ ë²”ìœ„ ì´ˆê³¼ì…ë‹ˆë‹¤.");
 		}else if(width<=0 || width>100) {
-			System.out.println("ÀÛ¾÷ ¿µ¿ªÀÇ ³Êºñ ¹üÀ§ ÃÊ°úÀÔ´Ï´Ù.");
+			System.out.println("ì‘ì—… ì˜ì—­ì˜ ë„ˆë¹„ ë²”ìœ„ ì´ˆê³¼ì…ë‹ˆë‹¤.");
 		}else {
 			for(int i=0; i<blocks[i].length; i++) {
 				if(blocks[i].length<=0 || blocks[i].length>100) {
-					System.out.println("ÀÛ¾÷ ¿µ¿ªÀÇ ³Êºñ ¹üÀ§ ÃÊ°úÀÔ´Ï´Ù.");
+					System.out.println("ì‘ì—… ì˜ì—­ì˜ ë„ˆë¹„ ë²”ìœ„ ì´ˆê³¼ì…ë‹ˆë‹¤.");
 				}
 				for(int j=0; j<blocks[i].length; j++) {
 					if(blocks[i][j]<=0 || blocks[i][j]>100) {
-						System.out.println("ÀÛ¾÷ ¿µ¿ª Áß ÇÑ Ä­¿¡ ÇÏ·çµ¿¾È ½×À» º®µ¹ÀÇ °³¼ö ¹üÀ§ ÃÊ°úÀÔ´Ï´Ù.");
+						System.out.println("ì‘ì—… ì˜ì—­ ì¤‘ í•œ ì¹¸ì— í•˜ë£¨ë™ì•ˆ ìŒ“ì„ ë²½ëŒì˜ ê°œìˆ˜ ë²”ìœ„ ì´ˆê³¼ì…ë‹ˆë‹¤.");
 					}else {
 						isAvailable = true;
 					}
@@ -27,19 +27,19 @@ public class test2 {
 		}
 		
 		if(isAvailable) {
-			//½Ã¸àÆ®ÀÇ ÃÑ ¾ç
+			//ì‹œë©˜íŠ¸ì˜ ì´ ì–‘
 			int cementCount = 0;
-			//ºÀ¿ì¸® Å½»öÀ» À§ÇØ ÀúÀåÇÒ ¸®½ºÆ®
+			//ë´‰ìš°ë¦¬ íƒìƒ‰ì„ ìœ„í•´ ì €ì¥í•  ë¦¬ìŠ¤íŠ¸
 			ArrayList<Integer> findCementList = new ArrayList<Integer>();
-			//ÃÑ °ø»çÀÏ µ¿¾È ½×À» ¹İº¹¹®
+			//ì´ ê³µì‚¬ì¼ ë™ì•ˆ ìŒ“ì„ ë°˜ë³µë¬¸
 			for(int i=0; i<day; i++) {
-				//Àü³¯ ºÎÀº ½Ã¸àÆ®ÀÇ °³¼ö¸¦ Ãß°¡ÇØ¼­ »ı°¢ÇØ¾ßµÊ 2ÀÏÂ÷ºÎÅÍ´Â
+				//ì „ë‚  ë¶€ì€ ì‹œë©˜íŠ¸ì˜ ê°œìˆ˜ë¥¼ ì¶”ê°€í•´ì„œ ìƒê°í•´ì•¼ë¨ 2ì¼ì°¨ë¶€í„°ëŠ”
 				for(int j=0; j<blocks[i].length; j++) {
 					findCementList.add(j, blocks[i][j]);
 				}
-				//ºÀ¿ì¸® ±âÁØÁ¡ ¸®½ºÆ®
+				//ë´‰ìš°ë¦¬ ê¸°ì¤€ì  ë¦¬ìŠ¤íŠ¸
 				ArrayList<Integer> topList = new ArrayList<Integer>();
-				//ºÀ¿ì¸®Å½»ö·ÎÁ÷
+				//ë´‰ìš°ë¦¬íƒìƒ‰ë¡œì§
 				for(int j=0; j<findCementList.size(); j++) {
 					for(int k=j+1; k<findCementList.size(); k++) {
 						int itemp = findCementList.get(j)-findCementList.get(k);
@@ -47,16 +47,16 @@ public class test2 {
 					}
 				}
 				for(int j=1; j<topList.size(); j++) {
-					//µÑÀÌ °öÇØ¼­ À½¼ö°¡³ª¿À¸é ¾ÈµÇ°í 0ÀÌ ³ª¿À¸é Ãß°¡·ÎÁ÷ ¾ç¼ö¸é Ãß°¡
+					//ë‘˜ì´ ê³±í•´ì„œ ìŒìˆ˜ê°€ë‚˜ì˜¤ë©´ ì•ˆë˜ê³  0ì´ ë‚˜ì˜¤ë©´ ì¶”ê°€ë¡œì§ ì–‘ìˆ˜ë©´ ì¶”ê°€
 					int itemp = topList.get(j-1) * topList.get(j);
-					//½Ã¸àÆ®¼ö°¡ ´Ã¾î³¯‹š¸¶´Ù ±âÁ¸¿¡ º®µ¹¿¡ Ãß°¡ÇØÁà¾ßÇÔ
+					//ì‹œë©˜íŠ¸ìˆ˜ê°€ ëŠ˜ì–´ë‚ ë–„ë§ˆë‹¤ ê¸°ì¡´ì— ë²½ëŒì— ì¶”ê°€í•´ì¤˜ì•¼í•¨
 					if(itemp<0) {
 						if(j==1 && topList.get(j-1)>0) {
 							cementCount+=topList.get(j-1);
 							findCementList.set(j, findCementList.get(j)+topList.get(j-1));
 						}
 					}else if(itemp>0) {
-						//µÑ´Ù ++ÀÎÁö --ÀÎÁö±¸º°
+						//ë‘˜ë‹¤ ++ì¸ì§€ --ì¸ì§€êµ¬ë³„
 						if(topList.get(j-1)<0&&topList.get(j)<0) {
 							int itemp1=0;
 							for(int k=j; k>=0; k--) {
@@ -68,12 +68,12 @@ public class test2 {
 							cementCount+=Math.abs(topList.get(j-1)+2*topList.get(j));
 							findCementList.set(j, findCementList.get(j)+topList.get(j-1));							
 						}else {
-							//µÑ ´Ù ++ÀÎ °æ¿ì´Ï±î ÇÕ»êÇÒ ÇÊ¿ä°¡ ¾øÀ½
+							//ë‘˜ ë‹¤ ++ì¸ ê²½ìš°ë‹ˆê¹Œ í•©ì‚°í•  í•„ìš”ê°€ ì—†ìŒ
 						}
 					}else {
-						//0ÀÏ‹š ·ÎÁ÷ÀÎµ¥ Á¦ÀÏ ±î´Ù·Î¿ò
-						//ÁÂ ¿ìÁß¿¡ ³·Àº°ª *2
-						//¾î´À°Ô 0ÀÎÁö ÆÇº°
+						//0ì¼ë–„ ë¡œì§ì¸ë° ì œì¼ ê¹Œë‹¤ë¡œì›€
+						//ì¢Œ ìš°ì¤‘ì— ë‚®ì€ê°’ *2
+						//ì–´ëŠê²Œ 0ì¸ì§€ íŒë³„
 						if(topList.get(j-1)==0) {
 							cementCount+=2*topList.get(j-2);
 						}else {

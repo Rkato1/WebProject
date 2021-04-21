@@ -1,6 +1,6 @@
 package dangsan.a;
 
-//Å¸ ÆĞÅ°Áö¿¡¼­ ÂüÁ¶ÇÏ±â À§ÇÑ ¼±¾ğ
+//íƒ€ íŒ¨í‚¤ì§€ì—ì„œ ì°¸ì¡°í•˜ê¸° ìœ„í•œ ì„ ì–¸
 import dangsan.func.Func;
 
 public class FirstStart {
@@ -8,9 +8,9 @@ public class FirstStart {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		/*
-		//Å¸ Å¬·¡½º »ç¿ëÀ» À§ÇÑ »õ·Î¿î º¯¼ö ¼±¾ğ ¹× ÃÊ±âÈ­
+		//íƒ€ í´ë˜ìŠ¤ ì‚¬ìš©ì„ ìœ„í•œ ìƒˆë¡œìš´ ë³€ìˆ˜ ì„ ì–¸ ë° ì´ˆê¸°í™”
 		FirstFunc ff = new FirstFunc();
-		//Å¸ Å¬·¡½º¿¡ ¼±¾ğµÈ ÇÔ¼ö(¸Ş¼Òµå)¸¦ »ç¿ë
+		//íƒ€ í´ë˜ìŠ¤ì— ì„ ì–¸ëœ í•¨ìˆ˜(ë©”ì†Œë“œ)ë¥¼ ì‚¬ìš©
 		ff.ms1();
 		ff.ms2();
 		*/

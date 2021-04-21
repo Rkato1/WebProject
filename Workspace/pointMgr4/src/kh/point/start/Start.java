@@ -1,5 +1,5 @@
 package kh.point.start;
-//Ä¸½¶È­+»ó¼Ó+´ÙÇü¼º
+//ìº¡ìŠí™”+ìƒì†+ë‹¤í˜•ì„±
 import kh.point.controller.PointController;
 import kh.point.model.vo.Grade;
 import kh.point.model.vo.Silver;
@@ -7,9 +7,9 @@ import kh.point.model.vo.Silver;
 public class Start {
 
 	public static void main(String[] args) {
-		//Ãß»óÅ¬·¡½º´Â °´Ã¼¸¦ ¸¸µé ¼ö ¾øÀ½
+		//ì¶”ìƒí´ë˜ìŠ¤ëŠ” ê°ì²´ë¥¼ ë§Œë“¤ ìˆ˜ ì—†ìŒ
 		//Grade g = new Grade();
-		//±»ÀÌ »ç¿ëÇÏÀÚ¸é »ó¼ÓµÈ ÀÚ½ÄÅ¬·¡½º °´Ã¼·Î ¸¸µé ¼ö ÀÖÀ½
+		//êµ³ì´ ì‚¬ìš©í•˜ìë©´ ìƒì†ëœ ìì‹í´ë˜ìŠ¤ ê°ì²´ë¡œ ë§Œë“¤ ìˆ˜ ìˆìŒ
 		Grade g = new Silver();
 		
 		// TODO Auto-generated method stub

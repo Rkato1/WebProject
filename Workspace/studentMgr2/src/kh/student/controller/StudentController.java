@@ -12,29 +12,29 @@ import kh.student.model.vo.Student;
 public class StudentController {
 	Scanner sc;
 	
-	//ÇĞ»ıÁ¤º¸¸¦ ÀúÀåÇÒ ¹è¿­
+	//í•™ìƒì •ë³´ë¥¼ ì €ì¥í•  ë°°ì—´
 	Student stu[];
 	
-	//parameterÁ¢±Ù¿ë º¯¼ö
+	//parameterì ‘ê·¼ìš© ë³€ìˆ˜
 	int index;
 	
-	//»ı¼ºÀÚ(ÃÊ±âÈ­ ¹× °ª ÇÒ´ç)
+	//ìƒì„±ì(ì´ˆê¸°í™” ë° ê°’ í• ë‹¹)
 	public StudentController() {
 		sc = new Scanner(System.in);
 		stu = new Student[10];
 	}
 	
-	//Ã¹ È­¸é Ãâ·Â
+	//ì²« í™”ë©´ ì¶œë ¥
 	public void main() {
 		while(true) {
-			System.out.println("==== ÇĞ»ı °ü¸® ÇÁ·Î±×·¥ v1 ====");
-			System.out.println("1.ÇĞ»ı Á¤º¸ µî·Ï");
-			System.out.println("2.ÇĞ»ı Á¤º¸ Ãâ·Â(µî·ÏµÈ ÇĞ»ı ÀüÃ¼ Ãâ·Â)");
-			System.out.println("3.ÇĞ»ı Á¤º¸ Ãâ·Â(ÀÌ¸§À¸·Î °Ë»öÇÏ¿© 1¸í Á¤º¸ Ãâ·Â)");
-			System.out.println("4.ÇĞ»ı Á¤º¸ ¼öÁ¤");
-			System.out.println("5.ÇĞ»ı Á¤º¸ »èÁ¦");
-			System.out.println("0.ÇÁ·Î±×·¥ Á¾·á");
-			System.out.print("¼±ÅÃ > ");
+			System.out.println("==== í•™ìƒ ê´€ë¦¬ í”„ë¡œê·¸ë¨ v1 ====");
+			System.out.println("1.í•™ìƒ ì •ë³´ ë“±ë¡");
+			System.out.println("2.í•™ìƒ ì •ë³´ ì¶œë ¥(ë“±ë¡ëœ í•™ìƒ ì „ì²´ ì¶œë ¥)");
+			System.out.println("3.í•™ìƒ ì •ë³´ ì¶œë ¥(ì´ë¦„ìœ¼ë¡œ ê²€ìƒ‰í•˜ì—¬ 1ëª… ì •ë³´ ì¶œë ¥)");
+			System.out.println("4.í•™ìƒ ì •ë³´ ìˆ˜ì •");
+			System.out.println("5.í•™ìƒ ì •ë³´ ì‚­ì œ");
+			System.out.println("0.í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+			System.out.print("ì„ íƒ > ");
 			int itemp = sc.nextInt();
 			switch(itemp) {
 			case 1:
@@ -53,128 +53,128 @@ public class StudentController {
 				deleteStudent();
 				break;
 			case 0:
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				return;
 			default:
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				break;
 			}
 		}
 	}
 	
-	//ÇĞ»ı Á¤º¸ ÀÔ·Â¹Ş¾Æ ¹è¿­¿¡ ÀúÀåÇÏ´Â ¸Ş¼Òµå
+	//í•™ìƒ ì •ë³´ ì…ë ¥ë°›ì•„ ë°°ì—´ì— ì €ì¥í•˜ëŠ” ë©”ì†Œë“œ
 	public void insertStudent() {
 		if(index!=10) {
-			System.out.println("\n==== ÇĞ»ı Á¤º¸ ÀÔ·Â====\n");
+			System.out.println("\n==== í•™ìƒ ì •ë³´ ì…ë ¥====\n");
 			
-			//ÀÔ·Â
-			System.out.print("ÀÌ¸§ ÀÔ·Â : ");
+			//ì…ë ¥
+			System.out.print("ì´ë¦„ ì…ë ¥ : ");
 			String str = sc.next();
 			
-			System.out.print("³ªÀÌ ÀÔ·Â : ");
+			System.out.print("ë‚˜ì´ ì…ë ¥ : ");
 			int i = sc.nextInt();
-			//ÁÙ¹Ù²Ş(next´Â µÎ ¹ø ¿¬¼ÓÀ¸·Î ¾²¸é ¹«ÇÑ·çÇÁ ¿¡·¯³²)
+			//ì¤„ë°”ê¿ˆ(nextëŠ” ë‘ ë²ˆ ì—°ì†ìœ¼ë¡œ ì“°ë©´ ë¬´í•œë£¨í”„ ì—ëŸ¬ë‚¨)
 			sc.nextLine();
-			System.out.print("ÁÖ¼Ò ÀÔ·Â : ");
+			System.out.print("ì£¼ì†Œ ì…ë ¥ : ");
 			String str1 = sc.next();
 			sc.nextLine();
 			
-			//ÃÊ±âÈ­
+			//ì´ˆê¸°í™”
 			/*
 			stu[index] = new Student();
 			stu[index].setName(str);
 			stu[index].setAge(i);
 			stu[index].setAddr(str1);
 			*/
-			//À§ ¾Æ·¡ ¸ğµÎ °°Áö¸¸ È¿À²¼ºÀº ¹ØÀÌ ´õ ÁÁ´Ù
+			//ìœ„ ì•„ë˜ ëª¨ë‘ ê°™ì§€ë§Œ íš¨ìœ¨ì„±ì€ ë°‘ì´ ë” ì¢‹ë‹¤
 			stu[index] = new Student(str, i, str1);
 			
 			index++;
 		}else {
-			System.out.println("ÇĞ»ı Á¤º¸°¡ °¡µæ Ã¡½À´Ï´Ù.");
+			System.out.println("í•™ìƒ ì •ë³´ê°€ ê°€ë“ ì°¼ìŠµë‹ˆë‹¤.");
 		}
 	}
 	
-	//ÇĞ»ı Á¤º¸¸¦ ÀüºÎ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
+	//í•™ìƒ ì •ë³´ë¥¼ ì „ë¶€ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 	public void selectAllStudent() {
 		if(index == 0) {
-			System.out.println("ÀÔ·ÂµÈ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ì…ë ¥ëœ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 			return;
 		}
-		System.out.println("ÀÌ¸§\t³ªÀÌ\tÁÖ¼Ò");
+		System.out.println("ì´ë¦„\të‚˜ì´\tì£¼ì†Œ");
 		for(int i=0; i<index; i++) {
 			System.out.print(stu[i].getName() + "\t" + stu[i].getAge() + "\t" + stu[i].getAddr() + "\n");
 		}
 	}
 	
-	//ÇĞ»ı ÀÌ¸§À» °Ë»öÇØ¼­ Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
+	//í•™ìƒ ì´ë¦„ì„ ê²€ìƒ‰í•´ì„œ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 	public void selectStudent(){
 		if(index == 0) {
-			System.out.println("ÀÔ·ÂµÈ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ì…ë ¥ëœ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 			return;
 		}
 		
-		//°Ë»ö °á°ú ÆÇº° À§ÇÑ ÀÓ½Ãº¯¼ö
+		//ê²€ìƒ‰ ê²°ê³¼ íŒë³„ ìœ„í•œ ì„ì‹œë³€ìˆ˜
 		boolean isSearch=false;
-		System.out.println("==== ÇĞ»ı Á¤º¸ Ãâ·Â(1¸í) ====");
-		System.out.print("°Ë»öÇÒ ÇĞ»ıÀÇ ÀÌ¸§À» ÀÔ·Â : ");
+		System.out.println("==== í•™ìƒ ì •ë³´ ì¶œë ¥(1ëª…) ====");
+		System.out.print("ê²€ìƒ‰í•  í•™ìƒì˜ ì´ë¦„ì„ ì…ë ¥ : ");
 		int itemp = searchIndex(sc.next());
 		if(itemp != -1) {
-			System.out.println("ÀÌ¸§\t³ªÀÌ\tÁÖ¼Ò");
+			System.out.println("ì´ë¦„\të‚˜ì´\tì£¼ì†Œ");
 			System.out.print(stu[itemp].getName() + "\t" + stu[itemp].getAge() + "\t" + stu[itemp].getAddr() + "\n");
 		}
 
-		//ÁÙ¹Ù²Ş ÃÊ±âÈ­
+		//ì¤„ë°”ê¿ˆ ì´ˆê¸°í™”
 		sc.nextLine();
-		//°Ë»ö °á°ú°¡ ÀÖÀ»¼öµµ ÀÖ°í, ¾øÀ»¼öµµ ÀÖÀ½
+		//ê²€ìƒ‰ ê²°ê³¼ê°€ ìˆì„ìˆ˜ë„ ìˆê³ , ì—†ì„ìˆ˜ë„ ìˆìŒ
 		if(!isSearch) {
-			System.out.println("°Ë»ö °á°ú ¾øÀ½");
+			System.out.println("ê²€ìƒ‰ ê²°ê³¼ ì—†ìŒ");
 		}
 	}
 	
-	//ÇĞ»ı Á¤º¸¸¦ ¼öÁ¤ÇÏ´Â ¸Ş¼Òµå
+	//í•™ìƒ ì •ë³´ë¥¼ ìˆ˜ì •í•˜ëŠ” ë©”ì†Œë“œ
 	public void updateStudent() {
 		if(index == 0) {
-			System.out.println("ÀÔ·ÂµÈ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ì…ë ¥ëœ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 			return;
 		}
 		
-		//°Ë»ö °á°ú ÆÇº° À§ÇÑ ÀÓ½Ãº¯¼ö
+		//ê²€ìƒ‰ ê²°ê³¼ íŒë³„ ìœ„í•œ ì„ì‹œë³€ìˆ˜
 		boolean isSearch=false;
-		System.out.println("==== ÇĞ»ı Á¤º¸ ¼öÁ¤ ====");
-		System.out.print("¼öÁ¤ÇÒ ÇĞ»ıÀÇ ÀÌ¸§À» ÀÔ·Â : ");
+		System.out.println("==== í•™ìƒ ì •ë³´ ìˆ˜ì • ====");
+		System.out.print("ìˆ˜ì •í•  í•™ìƒì˜ ì´ë¦„ì„ ì…ë ¥ : ");
 		int itemp = searchIndex(sc.next());
 		if(itemp != -1) {
-			System.out.print("¼öÁ¤ÇÒ ÀÌ¸§ ÀÔ·Â : ");
+			System.out.print("ìˆ˜ì •í•  ì´ë¦„ ì…ë ¥ : ");
 			stu[itemp].setName(sc.next());
-			System.out.print("¼öÁ¤ÇÒ ³ªÀÌ ÀÔ·Â : ");
+			System.out.print("ìˆ˜ì •í•  ë‚˜ì´ ì…ë ¥ : ");
 			stu[itemp].setAge(sc.nextInt());				
-			System.out.print("¼öÁ¤ÇÒ ÁÖ¼Ò ÀÔ·Â : ");
+			System.out.print("ìˆ˜ì •í•  ì£¼ì†Œ ì…ë ¥ : ");
 			stu[itemp].setAddr(sc.next());
 			
-			//À§¿Í °°Àº ¸Ş¼Òµå
-			//stu[itemp] = new Student(ÀÌ¸§ÀÔ·Â°ª, ³ªÀÌÀÔ·Â°ª, ÁÖ¼ÒÀÔ·Â°ª);
+			//ìœ„ì™€ ê°™ì€ ë©”ì†Œë“œ
+			//stu[itemp] = new Student(ì´ë¦„ì…ë ¥ê°’, ë‚˜ì´ì…ë ¥ê°’, ì£¼ì†Œì…ë ¥ê°’);
 		}
 		
-		//ÁÙ¹Ù²Ş ÃÊ±âÈ­
+		//ì¤„ë°”ê¿ˆ ì´ˆê¸°í™”
 		sc.nextLine();
-		//°Ë»ö °á°ú°¡ ÀÖÀ»¼öµµ ÀÖ°í, ¾øÀ»¼öµµ ÀÖÀ½
+		//ê²€ìƒ‰ ê²°ê³¼ê°€ ìˆì„ìˆ˜ë„ ìˆê³ , ì—†ì„ìˆ˜ë„ ìˆìŒ
 		if(!isSearch) {
-			System.out.println("°Ë»ö °á°ú ¾øÀ½");
+			System.out.println("ê²€ìƒ‰ ê²°ê³¼ ì—†ìŒ");
 		}
 	}
 	
-	//ÇĞ»ı Á¤º¸¸¦ »èÁ¦ÇÏ´Â ¸Ş¼Òµå
+	//í•™ìƒ ì •ë³´ë¥¼ ì‚­ì œí•˜ëŠ” ë©”ì†Œë“œ
 	public void deleteStudent() {
 		if(index == 0) {
-			System.out.println("ÀÔ·ÂµÈ Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ì…ë ¥ëœ ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 			return;
 		}
 		
-		//°Ë»ö °á°ú ÆÇº° À§ÇÑ ÀÓ½Ãº¯¼ö
+		//ê²€ìƒ‰ ê²°ê³¼ íŒë³„ ìœ„í•œ ì„ì‹œë³€ìˆ˜
 		boolean isSearch=false;
-		System.out.println("==== ÇĞ»ı Á¤º¸ »èÁ¦ ====");
-		System.out.print("»èÁ¦ÇÒ ÇĞ»ıÀÇ ÀÌ¸§À» ÀÔ·Â : ");
+		System.out.println("==== í•™ìƒ ì •ë³´ ì‚­ì œ ====");
+		System.out.print("ì‚­ì œí•  í•™ìƒì˜ ì´ë¦„ì„ ì…ë ¥ : ");
 		int itemp = searchIndex(sc.next());
 		if(itemp != -1) {
 			for(int i=itemp;i<index-1;i++) {
@@ -185,16 +185,16 @@ public class StudentController {
 			index--;
 		}
 
-		//ÁÙ¹Ù²Ş ÃÊ±âÈ­
+		//ì¤„ë°”ê¿ˆ ì´ˆê¸°í™”
 		sc.nextLine();
-		//°Ë»ö °á°ú°¡ ÀÖÀ»¼öµµ ÀÖ°í, ¾øÀ»¼öµµ ÀÖÀ½
+		//ê²€ìƒ‰ ê²°ê³¼ê°€ ìˆì„ìˆ˜ë„ ìˆê³ , ì—†ì„ìˆ˜ë„ ìˆìŒ
 		if(!isSearch) {
-			System.out.println("°Ë»ö °á°ú ¾øÀ½");
+			System.out.println("ê²€ìƒ‰ ê²°ê³¼ ì—†ìŒ");
 		}
 	}
 	
-	//Á¶È¸ÇÒ ÀÌ¸§À» ¸Å°³º¯¼ö·Î ¹Ş¾Æ ¹è¿­ÀÇ
-	//¸î ¹øÂ° ÀÎµ¦½º¿¡ ÀÖ´ÂÁö Á¶È¸ÇÏ¿© ÀÎµ¦½º ¹øÈ£¸®ÅÏ
+	//ì¡°íšŒí•  ì´ë¦„ì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ ë°°ì—´ì˜
+	//ëª‡ ë²ˆì§¸ ì¸ë±ìŠ¤ì— ìˆëŠ”ì§€ ì¡°íšŒí•˜ì—¬ ì¸ë±ìŠ¤ ë²ˆí˜¸ë¦¬í„´
 	public int searchIndex(String name) {
 		for(int i=0;i<index;i++) {
 			if(stu[i].getName().equals(name)) {

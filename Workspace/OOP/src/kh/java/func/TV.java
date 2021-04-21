@@ -1,20 +1,20 @@
 package kh.java.func;
 
 public class TV {
-	//¼Ó¼º:Å©±â,Àü¿ø,Ã¤³Î,º¼·ı
-	//Àü¿ªº¯¼ö·Î »ı¼º
-	public int inch;		//ÃÊ±âÈ­ 0
+	//ì†ì„±:í¬ê¸°,ì „ì›,ì±„ë„,ë³¼ë¥¨
+	//ì „ì—­ë³€ìˆ˜ë¡œ ìƒì„±
+	public int inch;		//ì´ˆê¸°í™” 0
 	public boolean power;	//false
 	public int channel;		//0
 	public int volume;		//0
 	
-	//»ı¼ºÀÚ »ı¼º(¿©·¯°³ »ı¼º°¡´É)
-	//µû·Î ¼±¾ğÇÏÁö ¾ÊÀ¸¸é jvmÀÌ ÀÚµ¿À¸·Î ¸¸µë
-	//ÇÏÁö¸¸ ¼±¾ğÇÑ ÀÌÈÄ¿¡´Â ´Ù ¼³Á¤ÇØÁà¾ßÇÔ
-	//º¯¼öÀÇ ÃÊ±â°ª¼³Á¤
-	//¹İ´ëÀÇ °³³äÀº ¼Ò¸êÀÚ
-	//java´Â ¾ğ¾î Æ¯¼º»ó Á¸ÀçÇÏÁö ¾ÊÀ½
-	//GC°¡ ¾Ë¾Æ¼­ Ã³¸®ÇÔ
+	//ìƒì„±ì ìƒì„±(ì—¬ëŸ¬ê°œ ìƒì„±ê°€ëŠ¥)
+	//ë”°ë¡œ ì„ ì–¸í•˜ì§€ ì•Šìœ¼ë©´ jvmì´ ìë™ìœ¼ë¡œ ë§Œë“¬
+	//í•˜ì§€ë§Œ ì„ ì–¸í•œ ì´í›„ì—ëŠ” ë‹¤ ì„¤ì •í•´ì¤˜ì•¼í•¨
+	//ë³€ìˆ˜ì˜ ì´ˆê¸°ê°’ì„¤ì •
+	//ë°˜ëŒ€ì˜ ê°œë…ì€ ì†Œë©¸ì
+	//javaëŠ” ì–¸ì–´ íŠ¹ì„±ìƒ ì¡´ì¬í•˜ì§€ ì•ŠìŒ
+	//GCê°€ ì•Œì•„ì„œ ì²˜ë¦¬í•¨
 	public TV() {
 		this.inch = 100;
 	}
@@ -23,36 +23,36 @@ public class TV {
 		this.inch = inch;
 	}
 	
-	//±â´ÉÀü¿ø(on/off)
+	//ê¸°ëŠ¥ì „ì›(on/off)
 	public void powerOnOff() {
-		//ÀÌ Ä£±¸´Â ÁÙ¿© ¾µ ¼ö ¾øÀ½
-		//³í¸®°ª ¹İÀü
+		//ì´ ì¹œêµ¬ëŠ” ì¤„ì—¬ ì“¸ ìˆ˜ ì—†ìŒ
+		//ë…¼ë¦¬ê°’ ë°˜ì „
 		power = !power;
 		if(power) {
-			System.out.println("Àü¿øÅ´");
+			System.out.println("ì „ì›í‚´");
 		}
 		else {
-			System.out.println("Àü¿ø²û");
+			System.out.println("ì „ì›ë”");
 		}
 	}
 	
-	//Ã¤³Î¾÷-´Ù¿î
+	//ì±„ë„ì—…-ë‹¤ìš´
 	public void channelUp() {
 		channel++;
-		System.out.println("ÇöÀç Ã¤³Î : "+channel);
+		System.out.println("í˜„ì¬ ì±„ë„ : "+channel);
 	}
 	public void channelDown() {
 		channel--;
-		System.out.println("ÇöÀç Ã¤³Î : "+channel);
+		System.out.println("í˜„ì¬ ì±„ë„ : "+channel);
 	}
 	
-	//º¼·ı¾÷-´Ù¿î
+	//ë³¼ë¥¨ì—…-ë‹¤ìš´
 	public void volumeUp() {
 		volume++;
-		System.out.println("ÇöÀç Å©±â : "+volume);
+		System.out.println("í˜„ì¬ í¬ê¸° : "+volume);
 	}
 	public void volumeDown() {
 		volume--;
-		System.out.println("ÇöÀç Å©±â : "+volume);
+		System.out.println("í˜„ì¬ í¬ê¸° : "+volume);
 	}
 }

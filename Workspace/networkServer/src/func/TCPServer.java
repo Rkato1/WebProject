@@ -10,43 +10,43 @@ import java.net.Socket;
 
 public class TCPServer {
 	public void main() {
-		//1.¼­¹ö¿¡¼­ »ç¿ëÇÒ Æ÷Æ®¹øÈ£ ÁöÁ¤
+		//1.ì„œë²„ì—ì„œ ì‚¬ìš©í•  í¬íŠ¸ë²ˆí˜¸ ì§€ì •
 		//0~65535
 		int port = 7777;
-		//2.¼­¹ö¿ë ¼ÒÄÏ°´Ã¼»ı¼º
+		//2.ì„œë²„ìš© ì†Œì¼“ê°ì²´ìƒì„±
 		ServerSocket serverSocket = null;
 		DataOutputStream dos = null;
 		DataInputStream dis = null;
-		//¸Å°³º¯¼ö·Î Æ÷Æ®¹øÈ£
+		//ë§¤ê°œë³€ìˆ˜ë¡œ í¬íŠ¸ë²ˆí˜¸
 		try {
 			serverSocket = new ServerSocket(port);
-			System.out.println("¼­¹ö¼ÒÄÏ °´Ã¼ »ı¼º ¿Ï·á!!");
+			System.out.println("ì„œë²„ì†Œì¼“ ê°ì²´ ìƒì„± ì™„ë£Œ!!");
 
-			//3.Å¬¶óÀÌ¾ğÆ® Á¢¼Ó¿äÃ»´ë±â	
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ´ë±â»óÅÂ....");
-			//4.Á¢¼Ó ¿äÃ»ÀÌ ¿À¸é ¼ö¶ôÇÏ°í ÇØ´ç Å¬¶óÀÌ¾ğÆ®¿¡ ´ëÇÑ ¼ÒÄÏ°´Ã¼»ı¼º
+			//3.í´ë¼ì´ì–¸íŠ¸ ì ‘ì†ìš”ì²­ëŒ€ê¸°	
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ëŒ€ê¸°ìƒíƒœ....");
+			//4.ì ‘ì† ìš”ì²­ì´ ì˜¤ë©´ ìˆ˜ë½í•˜ê³  í•´ë‹¹ í´ë¼ì´ì–¸íŠ¸ì— ëŒ€í•œ ì†Œì¼“ê°ì²´ìƒì„±
 			Socket clinetSocket = serverSocket.accept();
-			//5.¿¬°áµÈ Å¬¶óÀÌ¾ğÆ®¿Í ÀÔ·Â ¹× Ãâ·Â ½ºÆ®¸² »ı¼º(Å¬¶óÀÌ¾ğÆ®¿ë)
+			//5.ì—°ê²°ëœ í´ë¼ì´ì–¸íŠ¸ì™€ ì…ë ¥ ë° ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ ìƒì„±(í´ë¼ì´ì–¸íŠ¸ìš©)
 			OutputStream out = clinetSocket.getOutputStream();
 			InputStream in = clinetSocket.getInputStream();
-			//6.º¸Á¶½ºÆ®¸²À» ÅëÇÑ ¼º´É°³¼±
+			//6.ë³´ì¡°ìŠ¤íŠ¸ë¦¼ì„ í†µí•œ ì„±ëŠ¥ê°œì„ 
 			dos = new DataOutputStream(out);
 			dis = new DataInputStream(in);
-			//7.½ºÆ®¸²À» ÅëÇÑ ÀÔ·Â ¹× Ãâ·Â
-			//clinet¿¡ ¸Ş¼¼Áö Àü¼Û
-			dos.writeUTF("¼­¹ö");
-			//clinet°¡ º¸³½ ¸Ş½ÃÁö¸¦ ¼ö½ÅÇÏ¿© º¯¼ö¿¡ ÀúÀå
+			//7.ìŠ¤íŠ¸ë¦¼ì„ í†µí•œ ì…ë ¥ ë° ì¶œë ¥
+			//clinetì— ë©”ì„¸ì§€ ì „ì†¡
+			dos.writeUTF("ì„œë²„");
+			//clinetê°€ ë³´ë‚¸ ë©”ì‹œì§€ë¥¼ ìˆ˜ì‹ í•˜ì—¬ ë³€ìˆ˜ì— ì €ì¥
 			String clientMsg = dis.readUTF();
-			System.out.println("Å¬¶óÀÌ¾ğÆ® ¸Ş¼¼Áö : "+clientMsg);			
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ë©”ì„¸ì§€ : "+clientMsg);			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
-			//8.Åë½ÅÁ¾·á
+			//8.í†µì‹ ì¢…ë£Œ
 			try {
 				dos.close();
 				dis.close();
-				//Å¬¶óÀÌ¾ğÆ®¿¡¼­ ¼ÒÄÏ ´İÀ¸´Ï±î ¿©±â¼± ¼­¹ö°Í¸¸ ´İ¾ÆµµµÊ
+				//í´ë¼ì´ì–¸íŠ¸ì—ì„œ ì†Œì¼“ ë‹«ìœ¼ë‹ˆê¹Œ ì—¬ê¸°ì„  ì„œë²„ê²ƒë§Œ ë‹«ì•„ë„ë¨
 				serverSocket.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

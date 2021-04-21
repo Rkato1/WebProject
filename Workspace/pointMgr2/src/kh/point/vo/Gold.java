@@ -1,15 +1,15 @@
 package kh.point.vo;
 
 public class Gold extends Silver{
-	//Silver¿¡ ÀÖ´Â º¯¼ö¿Í getter,setter±îÁö ¸ğµÎ °¡Á®¿È
-	//»ı¼ºÀÚ´Â »ó¼ÓµÇÁö ¾ÊÀ½
+	//Silverì— ìˆëŠ” ë³€ìˆ˜ì™€ getter,setterê¹Œì§€ ëª¨ë‘ ê°€ì ¸ì˜´
+	//ìƒì„±ìëŠ” ìƒì†ë˜ì§€ ì•ŠìŒ
 	
 	public Gold() {
 		
 	}
 	
 	public Gold(String str, String str1, int i) {
-		//»óÀ§ Å¬·¡½ºÀÇ »ı¼ºÀÚ
+		//ìƒìœ„ í´ë˜ìŠ¤ì˜ ìƒì„±ì
 		super(str,str1,i);
 	}
 	

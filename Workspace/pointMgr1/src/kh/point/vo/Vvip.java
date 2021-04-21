@@ -1,35 +1,33 @@
 package kh.point.vo;
 
-//extendsÅ°¿öµå·Î ºÎ¸ğÅ¬·¡½º·ÎºÎÅÍ »ó¼Ó
+//extendsí‚¤ì›Œë“œë¡œ ë¶€ëª¨í´ë˜ìŠ¤ë¡œë¶€í„° ìƒì†
 public class Vvip extends Vip {
 	
 	public Vvip() {
-		//¼û¾îÀÖÀ½
+		//ìˆ¨ì–´ìˆìŒ
 		//super();
 	}
 	
-	//ºÎ¸ğÅ¬·¡½º´Â superÅ°¿öµå·Î Á¢±Ù °¡´É
+	//ë¶€ëª¨í´ë˜ìŠ¤ëŠ” superí‚¤ì›Œë“œë¡œ ì ‘ê·¼ ê°€ëŠ¥
 	public Vvip(String str, String str1, int i) {
 		super(str,str1,i);
-		//super´Â ÀÚ½Ä »ı¼ºÀÚÀÇ Ç×»ó Ã¹¹ø¤Š
-		//±× À§¿¡ ÄÚµå ºÒ°¡´É
-		//¹ØÀÌ³ª À§³ª °°À½
+		//superëŠ” ìì‹ ìƒì„±ìì˜ í•­ìƒ ì²«ë²ˆì¨°
+		//ê·¸ ìœ„ì— ì½”ë“œ ë¶ˆê°€ëŠ¥
+		//ë°‘ì´ë‚˜ ìœ„ë‚˜ ê°™ìŒ
 		/*
 		super.name = str;
 		super.grade = str1;
 		super.point = i;
 		*/
-		System.out.println("°ª ÃÊ±âÈ­ ¿Ï·á");
+		System.out.println("ê°’ ì´ˆê¸°í™” ì™„ë£Œ");
 	}
-	
-
 	
 	public String toString() {
 		return "";		
 	}
 
-	//¿À¹ö¶óÀÌµù(»ó¼Ó¹Ş¾Æ ¸Ş¼Òµå ÀçÁ¤ÀÇ)
-	//ÄÄÆÄÀÏ·¯¿¡°Ô ¾Ë¸®´Â ÁÖ¼®¹®(¾È ºÙ¿©µµ µÊ)
+	//ì˜¤ë²„ë¼ì´ë”©(ìƒì†ë°›ì•„ ë©”ì†Œë“œ ì¬ì •ì˜)
+	//ì»´íŒŒì¼ëŸ¬ì—ê²Œ ì•Œë¦¬ëŠ” ì£¼ì„ë¬¸(ì•ˆ ë¶™ì—¬ë„ ë¨)
 	@Override
 	public double getBonus() {
 		return 0.1*point;		

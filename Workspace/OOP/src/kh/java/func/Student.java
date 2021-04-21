@@ -5,33 +5,33 @@ public class Student {
 	private int age;
 	private String addr;
 	
-	//±âº»»ý¼ºÀÚ
+	//ê¸°ë³¸ìƒì„±ìž
 	public Student() {
 		 
 	}
 	
-	//¸Å°³º¯¼ö »ý¼ºÀÚ(º¯¼ö°ª ÃÊ±â¼³Á¤)
+	//ë§¤ê°œë³€ìˆ˜ ìƒì„±ìž(ë³€ìˆ˜ê°’ ì´ˆê¸°ì„¤ì •)
 	public Student(String str, int i, String str2) {
 		 this.name = str;
 		 this.age = i;
 		 this.addr = str2;
 	}
 	
-	//nameÀÇ getter
-	//Á¢±ÙÁ¦¾îÁö½ÃÀÚ´Â public
-	//returnÅ¸ÀÔÀº ÇØ´ç º¯¼öÀÇ ÀÚ·áÇü
-	//¸Å°³º¯¼ö¾øÀ½
+	//nameì˜ getter
+	//ì ‘ê·¼ì œì–´ì§€ì‹œìžëŠ” public
+	//returníƒ€ìž…ì€ í•´ë‹¹ ë³€ìˆ˜ì˜ ìžë£Œí˜•
+	//ë§¤ê°œë³€ìˆ˜ì—†ìŒ
 	public String getName() {
 		return name;
 	}
 	//setter
-	//Á¢±ÙÁ¦¾îÁö½ÃÀÚ public
-	//¸®ÅÏÅ¸ÀÔ void
-	//¸Þ¼ÒµåÀÌ¸§ setº¯¼ö¸í ->Ä«¸áÇ¥±â¹ý
-	//¸Å°³º¯¼ö´Â 1°³ ->ÇØ´ç º¯¼öÀÇ ÀÚ·áÇü
+	//ì ‘ê·¼ì œì–´ì§€ì‹œìž public
+	//ë¦¬í„´íƒ€ìž… void
+	//ë©”ì†Œë“œì´ë¦„ setë³€ìˆ˜ëª… ->ì¹´ë©œí‘œê¸°ë²•
+	//ë§¤ê°œë³€ìˆ˜ëŠ” 1ê°œ ->í•´ë‹¹ ë³€ìˆ˜ì˜ ìžë£Œí˜•
 	public void setName(String name) {
-		//Àü¿ªº¯¼ö¿¡ Áö¿ªº¯¼öÀÇ °ªÀ» ´ëÀÔ
-		//thisÅ°¿öµå´Â Àü¿ªº¯¼ö ¾Õ¿¡ ºÙÀÓ
+		//ì „ì—­ë³€ìˆ˜ì— ì§€ì—­ë³€ìˆ˜ì˜ ê°’ì„ ëŒ€ìž…
+		//thisí‚¤ì›Œë“œëŠ” ì „ì—­ë³€ìˆ˜ ì•žì— ë¶™ìž„
 		this.name = name;
 	}
 	/*

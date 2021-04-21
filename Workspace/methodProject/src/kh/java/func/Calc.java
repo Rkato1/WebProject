@@ -6,15 +6,15 @@ public class Calc {
 	public void main() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Ã¹¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		int iNum = sc.nextInt();
-		System.out.print("µÎ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		int iNum1 = sc.nextInt();
 		
-		//°á°ú°ª
+		//ê²°ê³¼ê°’
 		int result;
 		double result2;
-		System.out.print("¿¬»êÀÚ ÀÔ·Â : ");
+		System.out.print("ì—°ì‚°ì ì…ë ¥ : ");
 		char ch = sc.next().charAt(0);
 		switch(ch) {
 		case '+':
@@ -34,7 +34,7 @@ public class Calc {
 			System.out.printf("%d %c %d = %.2f", iNum, ch, iNum1, result2);
 			break;
 		default:
-			System.out.println("Àß¸øµÈ ¿¬»êÀÚ");
+			System.out.println("ì˜ëª»ëœ ì—°ì‚°ì");
 			break;
 		}
 	}

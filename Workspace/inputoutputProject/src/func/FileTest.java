@@ -6,18 +6,18 @@ import java.util.Scanner;
 public class FileTest {
 	public void fileTest() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÆÄÀÏ¸í ÀÔ·Â : ");
+		System.out.print("íŒŒì¼ëª… ì…ë ¥ : ");
 		String fileName = sc.nextLine();
 		File file = new File(fileName);
-		//ÆÄÀÏÀÌ Á¸ÀçÇÏ¸é
+		//íŒŒì¼ì´ ì¡´ì¬í•˜ë©´
 		if(file.exists()) {
-			System.out.println("ÆÄÀÏÀÌ¸§ : "+file.getName());
-			System.out.println("ÇØ´ç µğ·ºÅä¸® : "+file.getParent());
-			System.out.println("ÆÄÀÏ »ó´ë°æ·Î : "+file.getPath());
-			System.out.println("ÆÄÀÏ Àı´ë°æ·Î : "+file.getAbsolutePath());
-			System.out.println("ÆÄÀÏ Å©±â : "+file.length()+"Byte");
+			System.out.println("íŒŒì¼ì´ë¦„ : "+file.getName());
+			System.out.println("í•´ë‹¹ ë””ë ‰í† ë¦¬ : "+file.getParent());
+			System.out.println("íŒŒì¼ ìƒëŒ€ê²½ë¡œ : "+file.getPath());
+			System.out.println("íŒŒì¼ ì ˆëŒ€ê²½ë¡œ : "+file.getAbsolutePath());
+			System.out.println("íŒŒì¼ í¬ê¸° : "+file.length()+"Byte");
 		}else {
-			System.out.println("ÇØ´ç ÆÄÀÏÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("í•´ë‹¹ íŒŒì¼ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 	}
 }

@@ -5,57 +5,57 @@ import java.util.Scanner;
 public class Example {
 	public void exam1() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²« ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		int first = sc.nextInt();
-		System.out.print("µÎ ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		int second = sc.nextInt();
-		System.out.println("========== °á°ú ==========");
-		System.out.printf("´õÇÏ±â °á°ú : %d\n", first + second);
-		System.out.printf("»©±â °á°ú : %d\n", first - second);
-		System.out.printf("°öÇÏ±â °á°ú : %d\n", first * second);
-		System.out.printf("³ª´©±â ¸ò : %d\n", first / second);
-		System.out.printf("³ª´©±â ³ª¸ÓÁö : %d\n", first % second);
+		System.out.println("========== ê²°ê³¼ ==========");
+		System.out.printf("ë”í•˜ê¸° ê²°ê³¼ : %d\n", first + second);
+		System.out.printf("ë¹¼ê¸° ê²°ê³¼ : %d\n", first - second);
+		System.out.printf("ê³±í•˜ê¸° ê²°ê³¼ : %d\n", first * second);
+		System.out.printf("ë‚˜ëˆ„ê¸° ëª« : %d\n", first / second);
+		System.out.printf("ë‚˜ëˆ„ê¸° ë‚˜ë¨¸ì§€ : %d\n", first % second);
 	}
 	
 	public void exam2() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("°¡·Î ±æÀÌ ÀÔ·Â : ");
+		System.out.print("ê°€ë¡œ ê¸¸ì´ ì…ë ¥ : ");
 		double first = sc.nextDouble();
-		System.out.print("¼¼·Î ±æÀÌ ÀÔ·Â : ");
+		System.out.print("ì„¸ë¡œ ê¸¸ì´ ì…ë ¥ : ");
 		double second = sc.nextDouble();
-		System.out.println("========== °á°ú ==========");
-		System.out.printf("¸éÀû : %f\n", first * second);
-		System.out.printf("µÑ·¹ : %f\n", 2 * (first + second));
+		System.out.println("========== ê²°ê³¼ ==========");
+		System.out.printf("ë©´ì  : %f\n", first * second);
+		System.out.printf("ë‘˜ë ˆ : %f\n", 2 * (first + second));
 	}
 	
 	public void exam3() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¿µ¾î´Ü¾î ÀÔ·Â : ");
+		System.out.print("ì˜ì–´ë‹¨ì–´ ì…ë ¥ : ");
 		String str = sc.nextLine();
-		System.out.printf("Ã¹¹øÂ° ¹®ÀÚ : %c\n", str.charAt(0));
-		System.out.printf("µÎ¹øÂ° ¹®ÀÚ : %c\n", str.charAt(1));
-		System.out.printf("¼¼¹øÂ° ¹®ÀÚ : %c\n", str.charAt(2));
+		System.out.printf("ì²«ë²ˆì§¸ ë¬¸ì : %c\n", str.charAt(0));
+		System.out.printf("ë‘ë²ˆì§¸ ë¬¸ì : %c\n", str.charAt(1));
+		System.out.printf("ì„¸ë²ˆì§¸ ë¬¸ì : %c\n", str.charAt(2));
 		
 	}
 	
 	public void exam4() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¹®ÀÚ ÀÔ·Â : ");
+		System.out.print("ë¬¸ì ì…ë ¥ : ");
 		char ch = sc.next().charAt(0);
-		System.out.printf("%cÀÇ À¯´ÏÄÚµå °ª : %d\n", ch, (int)ch);
+		System.out.printf("%cì˜ ìœ ë‹ˆì½”ë“œ ê°’ : %d\n", ch, (int)ch);
 	}
 	
 	public void exam5() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("±¹¾î Á¡¼ö ÀÔ·Â : ");
+		System.out.print("êµ­ì–´ ì ìˆ˜ ì…ë ¥ : ");
 		double first = sc.nextDouble();
-		System.out.print("¼öÇĞ Á¡¼ö ÀÔ·Â : ");
+		System.out.print("ìˆ˜í•™ ì ìˆ˜ ì…ë ¥ : ");
 		double second = sc.nextDouble();
-		System.out.print("¿µ¾î Á¡¼ö ÀÔ·Â : ");
+		System.out.print("ì˜ì–´ ì ìˆ˜ ì…ë ¥ : ");
 		double third = sc.nextDouble();
-		System.out.println("========== °á°ú ==========");
-		System.out.printf("ÃÑÁ¡ : %d\n", (int)(first + second + third));
-		System.out.printf("Æò±Õ : %d\n", (int)((first + second + third)/3));
+		System.out.println("========== ê²°ê³¼ ==========");
+		System.out.printf("ì´ì  : %d\n", (int)(first + second + third));
+		System.out.printf("í‰ê·  : %d\n", (int)((first + second + third)/3));
 		
 	}
 }

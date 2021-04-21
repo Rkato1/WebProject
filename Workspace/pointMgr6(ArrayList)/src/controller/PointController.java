@@ -34,21 +34,21 @@ public class PointController {
 				deleteMember();
 				break;
 			case 0:
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 				return;
 			default:
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				break;
 			}
 		}		
 	}
 	
-	//È¸¿ø Á¤º¸ ÀÔ·Â¹Ş¾Æ ¹è¿­¿¡ ÀúÀåÇÏ´Â ¸Ş¼Òµå
+	//íšŒì› ì •ë³´ ì…ë ¥ë°›ì•„ ë°°ì—´ì— ì €ì¥í•˜ëŠ” ë©”ì†Œë“œ
 	public void insertMember() {
 		members.add(pv.insertMember());
 	}	
 	
-	//È¸¿ø Á¤º¸¸¦ ÀüºÎ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
+	//íšŒì› ì •ë³´ë¥¼ ì „ë¶€ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 	public void selectAllMember() {
 		if(members.isEmpty()) {
 			pv.cannotSearch();
@@ -57,13 +57,13 @@ public class PointController {
 		pv.selectAllMember(members);			
 	}
 	
-	//È¸¿ø ÀÌ¸§À» °Ë»öÇØ¼­ Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ¸Ş¼Òµå
+	//íšŒì› ì´ë¦„ì„ ê²€ìƒ‰í•´ì„œ ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” ë©”ì†Œë“œ
 	public void selectMember(){
 		if(members.isEmpty()) {
 			pv.cannotSearch();
 			return;
 		}
-		String str = pv.searchName("Á¶È¸");
+		String str = pv.searchName("ì¡°íšŒ");
 		searchResult = searchIndex(str);
 		if(searchResult != -1) {
 			pv.selectMember(members.get(searchResult));			
@@ -72,13 +72,13 @@ public class PointController {
 		}
 	}
 	
-	//È¸¿ø Á¤º¸¸¦ ¼öÁ¤ÇÏ´Â ¸Ş¼Òµå
+	//íšŒì› ì •ë³´ë¥¼ ìˆ˜ì •í•˜ëŠ” ë©”ì†Œë“œ
 	public void updateMember() {
 		if(members.isEmpty()) {
 			pv.cannotSearch();
 			return;
 		}
-		String str = pv.searchName("¼öÁ¤");
+		String str = pv.searchName("ìˆ˜ì •");
 		searchResult = searchIndex(str);
 		pv.updateMember();
 		if(searchResult!=-1) {
@@ -89,13 +89,13 @@ public class PointController {
 		}
 	}
 	
-	//È¸¿ø Á¤º¸¸¦ »èÁ¦ÇÏ´Â ¸Ş¼Òµå
+	//íšŒì› ì •ë³´ë¥¼ ì‚­ì œí•˜ëŠ” ë©”ì†Œë“œ
 	public void deleteMember() {
 		if(members.isEmpty()) {
 			pv.cannotSearch();
 			return;
 		}
-		String str = pv.searchName("»èÁ¦");
+		String str = pv.searchName("ì‚­ì œ");
 		searchResult = searchIndex(str);
 		if(searchResult != -1) {
 			members.remove(searchResult);
@@ -104,8 +104,8 @@ public class PointController {
 		}
 	}
 	
-	//Á¶È¸ÇÒ ÀÌ¸§À» ¸Å°³º¯¼ö·Î ¹Ş¾Æ ¹è¿­ÀÇ
-	//¸î ¹øÂ° ÀÎµ¦½º¿¡ ÀÖ´ÂÁö Á¶È¸ÇÏ¿© ÀÎµ¦½º ¹øÈ£¸®ÅÏ
+	//ì¡°íšŒí•  ì´ë¦„ì„ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ ë°°ì—´ì˜
+	//ëª‡ ë²ˆì§¸ ì¸ë±ìŠ¤ì— ìˆëŠ”ì§€ ì¡°íšŒí•˜ì—¬ ì¸ë±ìŠ¤ ë²ˆí˜¸ë¦¬í„´
 	public int searchIndex(String name) {
 		for(int i=0;i<members.size();i++) {
 			if(members.get(i).getName().equals(name)) {

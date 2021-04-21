@@ -7,7 +7,7 @@ public class Vip extends Silver{
 	}
 	
 	public Vip(String str, String str1, int i) {
-		//»óÀ§ Å¬·¡½ºÀÇ »ı¼ºÀÚ
+		//ìƒìœ„ í´ë˜ìŠ¤ì˜ ìƒì„±ì
 		super(str,str1,i);
 	}
 	

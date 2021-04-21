@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class TCPChatServer {
 	public void main() {
-		//1.Æ÷Æ®¹øÈ£ÁöÁ¤
+		//1.í¬íŠ¸ë²ˆí˜¸ì§€ì •
 		int port = 5678;
 		ServerSocket serverSocket = null;
 		DataOutputStream dos = null;
@@ -20,20 +20,20 @@ public class TCPChatServer {
 		
 		try {
 			serverSocket = new ServerSocket(port);
-			System.out.println("[Ã¤ÆÃ¼­¹ö ½ÃÀÛ]");
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ´ë±â Áß..");
+			System.out.println("[ì±„íŒ…ì„œë²„ ì‹œì‘]");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ëŒ€ê¸° ì¤‘..");
 			Socket clientSocket = serverSocket.accept();
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ¿Ï·á");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ì™„ë£Œ");
 			InputStream in = clientSocket.getInputStream();
 			OutputStream out = clientSocket.getOutputStream();
 			dis = new DataInputStream(in);
 			dos = new DataOutputStream(out);
-			dos.writeUTF("´Ğ³×ÀÓÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+			dos.writeUTF("ë‹‰ë„¤ì„ì„ ì…ë ¥í•˜ì„¸ìš”");
 			String nickName = dis.readUTF();
-			System.out.println("----- Ã¤ÆÃ ½ÃÀÛ -----");
-			System.out.println("Á¾·á´Â exit ÀÔ·Â");
+			System.out.println("----- ì±„íŒ… ì‹œì‘ -----");
+			System.out.println("ì¢…ë£ŒëŠ” exit ì…ë ¥");
 			while(true) {
-				System.out.print("[¼­¹ö] : ");
+				System.out.print("[ì„œë²„] : ");
 				String sendMsg = sc.nextLine();
 				dos.writeUTF(sendMsg);
 				if(sendMsg.equals("exit")) {
@@ -69,22 +69,22 @@ public class TCPChatServer {
 		
 		try {
 			serverSocket = new ServerSocket(port);
-			System.out.println("[Ã¤ÆÃ¼­¹ö ½ÃÀÛ]");
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ´ë±â Áß..");
+			System.out.println("[ì±„íŒ…ì„œë²„ ì‹œì‘]");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ëŒ€ê¸° ì¤‘..");
 			Socket clientSocket = serverSocket.accept();
-			System.out.println("Å¬¶óÀÌ¾ğÆ® Á¢¼Ó ¿Ï·á");
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ì ‘ì† ì™„ë£Œ");
 			InputStream in = clientSocket.getInputStream();
 			OutputStream out = clientSocket.getOutputStream();
 			dis = new DataInputStream(in);
 			dos = new DataOutputStream(out);
-			System.out.println("----- Ã¤ÆÃ ½ÃÀÛ -----");
-			System.out.println("Á¾·á´Â exit ÀÔ·Â");
+			System.out.println("----- ì±„íŒ… ì‹œì‘ -----");
+			System.out.println("ì¢…ë£ŒëŠ” exit ì…ë ¥");
 			while(true) {				
 				String recMsg = dis.readUTF();
 				if(recMsg.equals("exit")) {
 					break;
 				}
-				System.out.println("[Å¬¶óÀÌ¾ğÆ®] : "+recMsg);
+				System.out.println("[í´ë¼ì´ì–¸íŠ¸] : "+recMsg);
 				dos.writeUTF(recMsg);
 			}
 		} catch (IOException e) {

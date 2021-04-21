@@ -18,23 +18,23 @@ public class Start {
 		t.hunting();
 		
 		
-		//»ó¼Ó°ü°è·Î ÀÌ·ç¾îÁ® ´ÙÇü¼ºÀÌ Àû¿ëµÈ °æ¿ì,
-		//¸Þ¼Òµå ¿À¹ö¶óÀÌµùÀÌ µÇ¾îÀÖÀ¸¸é, ¿À¹ö¶óÀÌµù µÈ ¸Þ¼ÒµåÄÚµå°¡ ¿ì¼±ÀûÀ¸·Î ¼öÇà
-		//=>µ¿Àû ¹ÙÀÎµù
-		//´ÙÇü¼º
+		//ìƒì†ê´€ê³„ë¡œ ì´ë£¨ì–´ì ¸ ë‹¤í˜•ì„±ì´ ì ìš©ëœ ê²½ìš°,
+		//ë©”ì†Œë“œ ì˜¤ë²„ë¼ì´ë”©ì´ ë˜ì–´ìžˆìœ¼ë©´, ì˜¤ë²„ë¼ì´ë”© ëœ ë©”ì†Œë“œì½”ë“œê°€ ìš°ì„ ì ìœ¼ë¡œ ìˆ˜í–‰
+		//=>ë™ì  ë°”ì¸ë”©
+		//ë‹¤í˜•ì„±
 		Animal t1 = new Tiger();
-		t1.breath(); //ÈÞ~
-		//upcating¿¡ ÀÇÇØ¼­ ºÎ¸ðÅ¸ÀÔ °´Ã¼¿¡ ÀÖ´Â
-		//º¯¼ö¿Í ¸Þ¼Òµå¸¸ »ç¿ë°¡´ÉÇÔ 
-		//ÀÖ±â´Â ÇÑµ¥ ¾µ¼ö´Â ¾øÀ½
+		t1.breath(); //íœ´~
+		//upcatingì— ì˜í•´ì„œ ë¶€ëª¨íƒ€ìž… ê°ì²´ì— ìžˆëŠ”
+		//ë³€ìˆ˜ì™€ ë©”ì†Œë“œë§Œ ì‚¬ìš©ê°€ëŠ¥í•¨ 
+		//ìžˆê¸°ëŠ” í•œë° ì“¸ìˆ˜ëŠ” ì—†ìŒ
 		//t1.hunting();
-		//±»ÀÌ ¾´´Ù¸é ´Ù¿îÄ³½ºÆÃÀ» »ç¿ë(ºÎ¸ðÀÚ½Ä°£)
-		//Ä³½ºÆÃ-Å¬·¡½º°£ÀÇ Çüº¯È¯
+		//êµ³ì´ ì“´ë‹¤ë©´ ë‹¤ìš´ìºìŠ¤íŒ…ì„ ì‚¬ìš©(ë¶€ëª¨ìžì‹ê°„)
+		//ìºìŠ¤íŒ…-í´ëž˜ìŠ¤ê°„ì˜ í˜•ë³€í™˜
 		((Tiger)t1).hunting();
 		
 		
-		//´ÙÇü¼º ÀÌ¿ë ¿¹½Ã
-		//Object´Â ¸ðµç Å¬·¡½ºÀÇ Á¶»óÅ¬·¡½º
+		//ë‹¤í˜•ì„± ì´ìš© ì˜ˆì‹œ
+		//ObjectëŠ” ëª¨ë“  í´ëž˜ìŠ¤ì˜ ì¡°ìƒí´ëž˜ìŠ¤
 		Object o1 = new Animal();
 		Object o2 = new Tiger();
 		Object o3 = new Scanner(System.in);

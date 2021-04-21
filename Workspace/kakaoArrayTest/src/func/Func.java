@@ -5,19 +5,19 @@ import java.util.Scanner;
 
 public class Func {
 	Scanner sc;
-	//Ä³½ÃÀÇ Å©±â
+	//ìºì‹œì˜ í¬ê¸°
 	int cacheSize;
-	//µµ½ÃÀÌ¸§ ÀÔ·ÂÇÒ º¯¼ö
+	//ë„ì‹œì´ë¦„ ì…ë ¥í•  ë³€ìˆ˜
 	String city;	
-	//ÀúÀåµÉ µµ½Ã
+	//ì €ì¥ë  ë„ì‹œ
 	ArrayList<String> cities;
-	//ÀÎÀÚ¿¡ Á¢±ÙÇÒ º¯¼ö
+	//ì¸ìì— ì ‘ê·¼í•  ë³€ìˆ˜
 	int index;
-	//ÀÔ·Â ÆÇº° º¯¼ö
+	//ì…ë ¥ íŒë³„ ë³€ìˆ˜
 	boolean btemp=true;
-	//ÀÓ½Ã ÀúÀåµÉ Ä³½Ã¸®½ºÆ®
+	//ì„ì‹œ ì €ì¥ë  ìºì‹œë¦¬ìŠ¤íŠ¸
 	ArrayList<String> cacheList;
-	//ÃÑ ½ÇÇà½Ã°£
+	//ì´ ì‹¤í–‰ì‹œê°„
 	int totTime;
 	public Func() {
 		sc = new Scanner(System.in);
@@ -27,44 +27,44 @@ public class Func {
 	
 	public void main() {
 		while(true) {
-			System.out.print("Ä³½ÃÀÇ Å©±â ÀÔ·Â : ");
+			System.out.print("ìºì‹œì˜ í¬ê¸° ì…ë ¥ : ");
 			cacheSize = sc.nextInt();
 			if(cacheSize >=0 && cacheSize <= 30) {
-				//0ÀÌ °ªÀ¸·Î µé¾î°¨
+				//0ì´ ê°’ìœ¼ë¡œ ë“¤ì–´ê°
 				//cacheList = new ArrayList<String>(cacheSize);
 				break;
 			}else {
-				System.out.println("0ºÎÅÍ 30»çÀÌÀÇ °ª ÀÔ·Â");
+				System.out.println("0ë¶€í„° 30ì‚¬ì´ì˜ ê°’ ì…ë ¥");
 			}
 		}
 		while(true) {
-			System.out.print("µµ½Ã ÀÌ¸§ ÀÔ·Â : ");
+			System.out.print("ë„ì‹œ ì´ë¦„ ì…ë ¥ : ");
 			city = sc.next();
 			if((city.length()<21)) {
 				for(int i=0; i<city.length(); i++) {
 					char ch = city.charAt(i);
 					if(!((ch >= 65 && ch <=90)||(ch>=97 && ch<=122))) {
-						System.out.println("¿µ¹®ÀÚ¸¸ ÀÔ·Â");
+						System.out.println("ì˜ë¬¸ìë§Œ ì…ë ¥");
 						btemp = false;
 						break;
 					}
 				}
 				if(btemp == true) {					
-					//¾ö¹ĞÈ÷ µûÁöÀÚ¸é ´Ù¸¥ ¸®½ºÆ®¿¡ ³Ö¾î¾ßÇÔ
-					//ÇÏÁö¸¸ ±âÁ¸ ¸®½ºÆ® Ãâ·ÂÇÏ¶ó°í ÇÏÁö ¾Ê¾Æ¼­ ´ëÃæ Ã³¸®
+					//ì—„ë°€íˆ ë”°ì§€ìë©´ ë‹¤ë¥¸ ë¦¬ìŠ¤íŠ¸ì— ë„£ì–´ì•¼í•¨
+					//í•˜ì§€ë§Œ ê¸°ì¡´ ë¦¬ìŠ¤íŠ¸ ì¶œë ¥í•˜ë¼ê³  í•˜ì§€ ì•Šì•„ì„œ ëŒ€ì¶© ì²˜ë¦¬
 					cities.add(city.toLowerCase());
 				}else {
 					btemp = true;
 				}
 			} else {
-				System.out.println("¹®ÀÚ¿­ ±æÀÌÃÊ°ú È¤Àº °ø¹é ¹ß°ß");
+				System.out.println("ë¬¸ìì—´ ê¸¸ì´ì´ˆê³¼ í˜¹ì€ ê³µë°± ë°œê²¬");
 				break;
 			}
 			if(cities.size()>100001) {
-				System.out.println("ÃÖ´ë ÀÔ·Â°¹¼ö µµ´Ş");
+				System.out.println("ìµœëŒ€ ì…ë ¥ê°¯ìˆ˜ ë„ë‹¬");
 				break;
 			}
-			System.out.print("´õ ÀÔ·ÂÇÏ½Ã°Ú½À´Ï±î?(y/n): ");
+			System.out.print("ë” ì…ë ¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n): ");
 			if(sc.next().charAt(0)=='n') {
 				break;
 			}
@@ -83,6 +83,6 @@ public class Func {
 				totTime+=5;
 			}
 		}
-		System.out.println("ÃÑ ½ÇÇà½Ã°£Àº : "+totTime);
+		System.out.println("ì´ ì‹¤í–‰ì‹œê°„ì€ : "+totTime);
 	}
 }

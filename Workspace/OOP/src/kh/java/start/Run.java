@@ -18,11 +18,11 @@ public class Run {
 		// TODO Auto-generated method stub
 
 		/*
-		//¸Ş¸ğ¸®¿¡ TV°´Ã¼ »ı¼º->ÀÎ½ºÅÏ½º tv
+		//ë©”ëª¨ë¦¬ì— TVê°ì²´ ìƒì„±->ì¸ìŠ¤í„´ìŠ¤ tv
 		TV tv = new TV();
 		TV tv1 = new TV(30);
 		
-		//°¡Áø ¼Ó¼º Á¢±ÙÇØ¼­ Ãâ·Â
+		//ê°€ì§„ ì†ì„± ì ‘ê·¼í•´ì„œ ì¶œë ¥
 		System.out.println(tv.inch);
 		System.out.println(tv.power);
 		System.out.println(tv.channel);
@@ -35,27 +35,27 @@ public class Run {
 		tv.volumeUp();
 		tv.volumeDown();
 		
-		//»ı¼ºÀÚ(ÃÊ±âÈ­ ´ã´ç), newÅ°¿öµå
-		//¸®ÅÏ°ª Á¸ÀçÇÏÁö¾ÊÀ½(void¿Í ´Ù¸§)
-		//»ı¼ºÀÚÀÇ ÀÌ¸§Àº Å¬·¡½º¸í°ú µ¿ÀÏ
+		//ìƒì„±ì(ì´ˆê¸°í™” ë‹´ë‹¹), newí‚¤ì›Œë“œ
+		//ë¦¬í„´ê°’ ì¡´ì¬í•˜ì§€ì•ŠìŒ(voidì™€ ë‹¤ë¦„)
+		//ìƒì„±ìì˜ ì´ë¦„ì€ í´ë˜ìŠ¤ëª…ê³¼ ë™ì¼
 		Student st = new Student();
-		//private¶ó Á¢±Ù ºÒ°¡´É
-		//st.name = "±èÇö½Ä";
-		//µû¶ó¼­ getter, setter¸Ş¼Òµå¸¦ È°¿ë
-		st.setName("±èÇö½Ä");
+		//privateë¼ ì ‘ê·¼ ë¶ˆê°€ëŠ¥
+		//st.name = "ê¹€í˜„ì‹";
+		//ë”°ë¼ì„œ getter, setterë©”ì†Œë“œë¥¼ í™œìš©
+		st.setName("ê¹€í˜„ì‹");
 		st.setAge(28);
-		st.setAddr("°æ±â");
-		System.out.println("ÀÌ¸§ : "+st.getName());
-		System.out.println("³ªÀÌ : "+st.getAge());
-		System.out.println("ÁÖ¼Ò : "+st.getAddr());
+		st.setAddr("ê²½ê¸°");
+		System.out.println("ì´ë¦„ : "+st.getName());
+		System.out.println("ë‚˜ì´ : "+st.getAge());
+		System.out.println("ì£¼ì†Œ : "+st.getAddr());
 		
 		Student st1 = new Student();
 		Scanner sc = new Scanner(System.in);
-		System.out.println("ÀÌ¸§ ÀÔ·Â : ");
+		System.out.println("ì´ë¦„ ì…ë ¥ : ");
 		st1.setName(sc.next());
-		System.out.println("³ªÀÌ ÀÔ·Â : ");
+		System.out.println("ë‚˜ì´ ì…ë ¥ : ");
 		st1.setAge(sc.nextInt());
-		System.out.println("ÁÖ¼Ò ÀÔ·Â : ");
+		System.out.println("ì£¼ì†Œ ì…ë ¥ : ");
 		st1.setAddr(sc.next());
 		*/
 	}

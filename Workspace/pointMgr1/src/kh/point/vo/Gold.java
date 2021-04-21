@@ -37,7 +37,7 @@ public class Gold {
 	public int getPoint() {
 		return this.point;
 	}
-	//º¸³Ê½º°³³ä
+	//ë³´ë„ˆìŠ¤ê°œë…
 	public double getBonus() {
 		return 0.05*this.point;
 	}

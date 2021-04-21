@@ -5,30 +5,30 @@ import java.util.Scanner;
 public class MethodTest2 {
 	public void main() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		int num1 = sc.nextInt();
-		System.out.print("µÎ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ ìž…ë ¥ : ");
 		int num2 = sc.nextInt();
 		
-		//µ¿ÀÏ ÆÐÅ°Áö¸é import¸¦ µû·Î ÇÏÁö ¾Ê¾Æµµ
-		//È£ÃâÀÌ °¡´ÉÇÏ´Ù
-		//Å¸ ÇÁ·ÎÁ§Æ®¿¡¼­´Â import¸¦ ÇÒ¼ö ¾ø°í
-		//library°³³äÀ» »ç¿ëÇØ¾ßÇÔ
+		//ë™ì¼ íŒ¨í‚¤ì§€ë©´ importë¥¼ ë”°ë¡œ í•˜ì§€ ì•Šì•„ë„
+		//í˜¸ì¶œì´ ê°€ëŠ¥í•˜ë‹¤
+		//íƒ€ í”„ë¡œì íŠ¸ì—ì„œëŠ” importë¥¼ í• ìˆ˜ ì—†ê³ 
+		//libraryê°œë…ì„ ì‚¬ìš©í•´ì•¼í•¨
 		Calc c = new Calc();
 		int result = c.plus(num1, num2);
-		System.out.println("µÎ ¼öÀÇ ÇÕÀº : "+result);
+		System.out.println("ë‘ ìˆ˜ì˜ í•©ì€ : "+result);
 	}
 	
 	public void method1() {
-		//stringÀº ÂüÁ¶ÇüÀÌÁö¸¸ ±âº»ÇüÃ³·³ »ç¿ëµÊ
-		//¹è¿­Àº ÂüÁ¶Çü
+		//stringì€ ì°¸ì¡°í˜•ì´ì§€ë§Œ ê¸°ë³¸í˜•ì²˜ëŸ¼ ì‚¬ìš©ë¨
+		//ë°°ì—´ì€ ì°¸ì¡°í˜•
 		int arr[] = {1,2,3,4,5};
-		//¾èÀºº¹»ç(ÁÖ¼Ò°ª °øÀ¯), ¼­·Î °ª ¿µÇâÁÜ
+		//ì–•ì€ë³µì‚¬(ì£¼ì†Œê°’ ê³µìœ ), ì„œë¡œ ê°’ ì˜í–¥ì¤Œ
 		//int arr1[] = arr;
 		
 		//call by value
-		//arr[2]ÀÇ °ªÀ» °¡Á®´Ù º¯È¯
-		//±×·¯¹Ç·Î arr[2]ÀÇ °ªÀº º¯ÇÏÁö ¾ÊÀ½
+		//arr[2]ì˜ ê°’ì„ ê°€ì ¸ë‹¤ ë³€í™˜
+		//ê·¸ëŸ¬ë¯€ë¡œ arr[2]ì˜ ê°’ì€ ë³€í•˜ì§€ ì•ŠìŒ
 		method2(arr[2]);
 		System.out.println("call by value => "+arr[2]);
 		method3(arr);

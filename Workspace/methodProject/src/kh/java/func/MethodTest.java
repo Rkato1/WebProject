@@ -5,46 +5,46 @@ import java.util.Scanner;
 public class MethodTest {
 	public void main() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Àú´Â MethodTestÅ¬·¡½ºÀÇ main¸Ş¼ÒµåÀÔ´Ï´Ù.");
-		//µ¿ÀÏ Å¬·¡½º ³»ÀÇ ´Ù¸¥ ¸Ş¼Òµå È£Ãâ
+		System.out.println("ì €ëŠ” MethodTestí´ë˜ìŠ¤ì˜ mainë©”ì†Œë“œì…ë‹ˆë‹¤.");
+		//ë™ì¼ í´ë˜ìŠ¤ ë‚´ì˜ ë‹¤ë¥¸ ë©”ì†Œë“œ í˜¸ì¶œ
 		method1();
-		System.out.print("Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :");
+		System.out.print("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” :");
 		int num = sc.nextInt();
 		method2(num);
 		
-		System.out.print("Ã¹¹ø¤Š Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :");
+		System.out.print("ì²«ë²ˆì¨° ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” :");
 		int num1 = sc.nextInt();
-		System.out.print("µÎ¹ø¤Š Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :");
+		System.out.print("ë‘ë²ˆì¨° ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” :");
 		int num2 = sc.nextInt();
 		method3(num1,num2);
 		int tot = method5(num1,num2);
 	}
 	
-	//ÀÎÀÚ°¡ 0°³ÀÎ ¸Ş¼Òµå
+	//ì¸ìê°€ 0ê°œì¸ ë©”ì†Œë“œ
 	public void method1(){
-		System.out.println("Àú´Â method1() ÀÔ´Ï´Ù.");
+		System.out.println("ì €ëŠ” method1() ì…ë‹ˆë‹¤.");
 	}
 	
-	//ÀÎÀÚ°¡ 1°³ÀÎ ¸Ş¼Òµå
+	//ì¸ìê°€ 1ê°œì¸ ë©”ì†Œë“œ
 	public void method2(int i) {
-		System.out.println("ÀÔ·ÂÇÏ½Å Á¤¼ö´Â " + i + "ÀÔ´Ï´Ù.");
+		System.out.println("ì…ë ¥í•˜ì‹  ì •ìˆ˜ëŠ” " + i + "ì…ë‹ˆë‹¤.");
 	}
 	
-	//ÀÎÀÚ°¡ 2°³ÀÎ ¸Ş¼Òµå(°°Àº Á¾·ù)
+	//ì¸ìê°€ 2ê°œì¸ ë©”ì†Œë“œ(ê°™ì€ ì¢…ë¥˜)
 	public void method3(int i, int j) {
-		System.out.println("Ã¹¹øÂ° Á¤¼ö´Â : "+ i);
-		System.out.println("µÎ¹øÂ° Á¤¼ö´Â : "+ j);
+		System.out.println("ì²«ë²ˆì§¸ ì •ìˆ˜ëŠ” : "+ i);
+		System.out.println("ë‘ë²ˆì§¸ ì •ìˆ˜ëŠ” : "+ j);
 	}
 	
-	//ÀÎÀÚ°¡ 2°³ÀÎ ¸Ş¼Òµå(´Ù¸¥ Á¾·ù)
-	//³Ñ±â´Â º¯¼ö ¼ø¼­´Â ÀÎÀÚ ¼ø¼­¿¡ ¸ÂÃç¾ßÇÔ
+	//ì¸ìê°€ 2ê°œì¸ ë©”ì†Œë“œ(ë‹¤ë¥¸ ì¢…ë¥˜)
+	//ë„˜ê¸°ëŠ” ë³€ìˆ˜ ìˆœì„œëŠ” ì¸ì ìˆœì„œì— ë§ì¶°ì•¼í•¨
 	public void method4(String str, int i) {
-		System.out.println("ÀÔ·ÂÇÑ ¹®ÀÚ¿­À» : \""+str+"\"]");
-		System.out.println("ÀÔ·ÂÇÑ ¼ıÀÚ´Â : "+i);
+		System.out.println("ì…ë ¥í•œ ë¬¸ìì—´ì„ : \""+str+"\"]");
+		System.out.println("ì…ë ¥í•œ ìˆ«ìëŠ” : "+i);
 	}
 
-	//¸í½ÃÇüÀÇ Â÷ÀÌ(voidµµ returnÀ» ¾µ¼ö´Â ÀÖÀ½)
-	//void°¡ ¾Æ´Ñ °æ¿ì ¸ğµÎ return°ªÀÌ Á¸ÀçÇØ¾ßÇÔ	
+	//ëª…ì‹œí˜•ì˜ ì°¨ì´(voidë„ returnì„ ì“¸ìˆ˜ëŠ” ìˆìŒ)
+	//voidê°€ ì•„ë‹Œ ê²½ìš° ëª¨ë‘ returnê°’ì´ ì¡´ì¬í•´ì•¼í•¨	
 	int method5(int i, int j) {		
 		return i+j;
 	}

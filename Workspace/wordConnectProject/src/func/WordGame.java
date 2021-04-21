@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-//°­»ç´Ô ÄÚµå
+//ê°•ì‚¬ë‹˜ ì½”ë“œ
 public class WordGame {
 	Scanner sc;
 	ArrayList<String> words;
@@ -25,7 +25,7 @@ public class WordGame {
 			br = new BufferedReader(fr);
 			while(true) {
 				String line = br.readLine();
-				//³¡±îÁö ´Ù ÀĞ¾úÀ¸¸é
+				//ëê¹Œì§€ ë‹¤ ì½ì—ˆìœ¼ë©´
 				if(line == null) {
 					break;
 				}
@@ -42,17 +42,17 @@ public class WordGame {
 				e.printStackTrace();
 			}
 		}
-		System.out.println("ÃÑ "+words.size()+"°³ ´Ü¾îÀÔ·Â");
+		System.out.println("ì´ "+words.size()+"ê°œ ë‹¨ì–´ì…ë ¥");
 	}
 	
 	public void main() {
 		int w=0,l=0;
 		while(true) {
-			System.out.println("\n----- ³¡¸»ÀÕ±â -----\n");
-			System.out.println("1.°ÔÀÓ ½ÃÀÛ");
-			System.out.println("2.ÀüÀû È®ÀÎ");
-			System.out.println("3.ÇÁ·Î±×·¥ Á¾·á");
-			System.out.print("¼±ÅÃ > ");
+			System.out.println("\n----- ëë§ì‡ê¸° -----\n");
+			System.out.println("1.ê²Œì„ ì‹œì‘");
+			System.out.println("2.ì „ì  í™•ì¸");
+			System.out.println("3.í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
+			System.out.print("ì„ íƒ > ");
 			int sel = sc.nextInt();
 			switch(sel) {
 			case 1:
@@ -61,20 +61,20 @@ public class WordGame {
 					
 				}else if(result.equals("win")) {
 					w++;
-					//System.out.println("½Â¸®");
+					//System.out.println("ìŠ¹ë¦¬");
 				}else {
 					l++;
-					//System.out.println("ÆĞ¹è");
+					//System.out.println("íŒ¨ë°°");
 				}
 				break;
 			case 2:
-				System.out.printf("½Â¸® : %d½Â\nÆĞ¹è : %dÆĞ\n", w, l);
+				System.out.printf("ìŠ¹ë¦¬ : %dìŠ¹\níŒ¨ë°° : %díŒ¨\n", w, l);
 				break;
 			case 3:
-				System.out.println("½Ã½ºÅÛ Á¾·á");
+				System.out.println("ì‹œìŠ¤í…œ ì¢…ë£Œ");
 				return;
 			default:
-				System.out.println("1~3 »çÀÌ Á¤¼ö ÀÔ·Â");
+				System.out.println("1~3 ì‚¬ì´ ì •ìˆ˜ ì…ë ¥");
 				break;
 			}
 		}
@@ -83,10 +83,10 @@ public class WordGame {
 	private String startwordGame() {
 		// TODO Auto-generated method stub
 		while(true) {
-			System.out.println("\n--- ¼±°ø/ÈÄ°ø ¼±ÅÃ ---\n");
-			System.out.println("1.¼±°ø");
-			System.out.println("2.ÈÄ°ø");
-			System.out.print("¼±ÅÃ > ");
+			System.out.println("\n--- ì„ ê³µ/í›„ê³µ ì„ íƒ ---\n");
+			System.out.println("1.ì„ ê³µ");
+			System.out.println("2.í›„ê³µ");
+			System.out.print("ì„ íƒ > ");
 			int sel = sc.nextInt();
 			switch(sel) {
 			case 1:
@@ -102,15 +102,15 @@ public class WordGame {
 				String result = gameLoop(com, false);
 				return result;
 			default:
-				System.out.println("1~2 »çÀÌ Á¤¼ö ÀÔ·Â. ¸ŞÀÎ¸Ş´º·Î µ¹¾Æ°¨");
+				System.out.println("1~2 ì‚¬ì´ ì •ìˆ˜ ì…ë ¥. ë©”ì¸ë©”ë‰´ë¡œ ëŒì•„ê°");
 				return null;
 			}
 		}
 	}
 	
-	//ÄÄÇ»ÅÍ ´Ü¾î¸¦ ¸Å°³º¯¼ö·Î ¹Ş¾Æ¼­ ´ÙÀ½´Ü¾î¸¦ ÀÔ·ÂÇÏ´Â ÄÚµå
+	//ì»´í“¨í„° ë‹¨ì–´ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ì„œ ë‹¤ìŒë‹¨ì–´ë¥¼ ì…ë ¥í•˜ëŠ” ì½”ë“œ
 	public String userInput(String com) {
-		//3¹ø ¼¼±âÀ§ÇÑ º¯¼ö
+		//3ë²ˆ ì„¸ê¸°ìœ„í•œ ë³€ìˆ˜
 		int count = 0;
 		if(com!=null) {
 			while(true) {
@@ -120,7 +120,7 @@ public class WordGame {
 					return "lose";
 				}
 				count++;
-				//ÄÄÇ»ÅÍÀÇ °¡Àå ³¡±ÛÀÚ¿Í À¯ÀúÀÇ °¡Àå Ã³À½ ±ÛÀÚ°¡ °°Àº°æ¿ì
+				//ì»´í“¨í„°ì˜ ê°€ì¥ ëê¸€ìì™€ ìœ ì €ì˜ ê°€ì¥ ì²˜ìŒ ê¸€ìê°€ ê°™ì€ê²½ìš°
 				if(com.charAt(com.length()-1) == user.charAt(0)) {
 					int result = searchWord(user);
 					if(result!=-1) {
@@ -130,7 +130,7 @@ public class WordGame {
 				if(count == 3) {
 					return "lose";
 				}
-				System.out.println("Àß¸øµÈ ÀÔ·Â, ´Ù½Ã ÀÔ·Â,"+(3-count)+"¹øÀÇ ±âÈ¸ ³²À½");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥, ë‹¤ì‹œ ì…ë ¥,"+(3-count)+"ë²ˆì˜ ê¸°íšŒ ë‚¨ìŒ");
 			}
 		}else {
 			while(true) {
@@ -147,18 +147,18 @@ public class WordGame {
 				if(count == 3) {
 					return "lose";
 				}
-				System.out.println("Àß¸øµÈ ÀÔ·Â, ´Ù½Ã ÀÔ·Â,"+(3-count)+"¹øÀÇ ±âÈ¸ ³²À½");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥, ë‹¤ì‹œ ì…ë ¥,"+(3-count)+"ë²ˆì˜ ê¸°íšŒ ë‚¨ìŒ");
 			}
 		}
 	}
 	
-	//ÄÄÇ»ÅÍ ´Ü¾î¸¦ ¸Å°³º¯¼ö·Î ¹Ş¾Æ¼­ ´ÙÀ½´Ü¾î¸¦ ÀÔ·ÂÇÏ´Â ÄÚµå
+	//ì»´í“¨í„° ë‹¨ì–´ë¥¼ ë§¤ê°œë³€ìˆ˜ë¡œ ë°›ì•„ì„œ ë‹¤ìŒë‹¨ì–´ë¥¼ ì…ë ¥í•˜ëŠ” ì½”ë“œ
 	public String comInput(String user) {
 		if(user!=null) {
-			//À¯ÀúÀÇ ³¡ ±ÛÀÚ·Î ½ÃÀÛÇÏ´Â ´Ü¾î¸¦ ´ãÀ» list
+			//ìœ ì €ì˜ ë ê¸€ìë¡œ ì‹œì‘í•˜ëŠ” ë‹¨ì–´ë¥¼ ë‹´ì„ list
 			ArrayList<String> comWords = new ArrayList<String>();
 			for(String str : words) {
-				//³¡¸»ÀÕ±â Á¶°ÇÀÌ µÈ´Ù
+				//ëë§ì‡ê¸° ì¡°ê±´ì´ ëœë‹¤
 				if(user.charAt(user.length()-1)==str.charAt(0)) {
 					comWords.add(str);
 				}
@@ -166,7 +166,7 @@ public class WordGame {
 			if(comWords.isEmpty()) {
 				return "win";
 			}
-			//°°Àº ¶æ
+			//ê°™ì€ ëœ»
 //			if(comWords.size()==0) {
 //				return "win";
 //			}
@@ -184,32 +184,32 @@ public class WordGame {
 	
 	private String gameLoop(String str, boolean b) {
 		String result = str;
-		//¼±°øÀÎ°æ¿ì
+		//ì„ ê³µì¸ê²½ìš°
 		if(b) {
 			while(true) {
 				result = comInput(result);
 				if(result.equals("win")) {
-					System.out.println("´ç½ÅÀÇ ½Â¸®!");
+					System.out.println("ë‹¹ì‹ ì˜ ìŠ¹ë¦¬!");
 					return result;
 				}
 				result = userInput(result);
 				if(result.equals("lose")) {
-					System.out.println("ÆĞ¹è");
+					System.out.println("íŒ¨ë°°");
 					return result;
 				}
 			}
 		}
-		//ÈÄ°øÀÎ °æ¿ì
+		//í›„ê³µì¸ ê²½ìš°
 		else {
 			while(true) {
 				result = userInput(result);
 				if(result.equals("\"lose\"")) {
-					System.out.println("ÆĞ¹è");
+					System.out.println("íŒ¨ë°°");
 					return result;
 				}
 				result = userInput(result);
 				if(result.equals("win")) {
-					System.out.println("´ç½ÅÀÇ ½Â¸®!");
+					System.out.println("ë‹¹ì‹ ì˜ ìŠ¹ë¦¬!");
 					return result;
 				}
 			}
