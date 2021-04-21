@@ -8,13 +8,13 @@ import func.TCPServer;
 import func.TCPServerDNS;
 import func.UDPServer;
 //netstat -nao | findstr :7777
-//cmdÃ¢¿¡¼­ Ä¡¸éµÊ
+//cmdì°½ì—ì„œ ì¹˜ë©´ë¨
 public class Run {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TCPServer tcpServer = new TCPServer();
-		//tcpServer.main();
+		tcpServer.main();
 		TCPChatServer tcpChatServer = new TCPChatServer();
 		//tcpChatServer.main();
 		//tcpChatServer.main2();
@@ -28,7 +28,7 @@ public class Run {
 		TCPNumBaseballGameServer tcpNumBaseballGame = new TCPNumBaseballGameServer();
 		//tcpNumBaseballGame.main();
 		ChattingServer test = new ChattingServer();
-		test.chattingServer();
+		//test.chattingServer();
 	}
 
 }
