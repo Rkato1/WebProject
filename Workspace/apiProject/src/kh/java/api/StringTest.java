@@ -6,58 +6,58 @@ import java.util.StringTokenizer;
 public class StringTest {
 	public void stringBufferTest() {
 		StringBuffer sb = new StringBuffer();
-		//ÇÒ´çµÈ ¹®ÀÚ¿­ ÀúÀå¼ÒÀÇ ±æÀÌ
+		//í• ë‹¹ëœ ë¬¸ìì—´ ì €ì¥ì†Œì˜ ê¸¸ì´
 		System.out.println(sb.capacity());
-		//½ÇÁ¦ ÀúÀåµÈ ¹®ÀÚ¿­ÀÇ ±æÀÌ
+		//ì‹¤ì œ ì €ì¥ëœ ë¬¸ìì—´ì˜ ê¸¸ì´
 		System.out.println(sb.length());
 		
-		//StringBuffer·Î ÇÒ´ç
-		//¹®ÀÚ¿­ÀÇ ³¡¿¡ Ãß°¡µÇ´Â °³³äÀÓ
-		sb.append("¹®ÀÚ¿­ÇÒ´ç");
+		//StringBufferë¡œ í• ë‹¹
+		//ë¬¸ìì—´ì˜ ëì— ì¶”ê°€ë˜ëŠ” ê°œë…ì„
+		sb.append("ë¬¸ìì—´í• ë‹¹");
 		System.out.println(sb.length());
-		sb.append(" °ø ¹é ");
+		sb.append(" ê³µ ë°± ");
 		System.out.println(sb.length());
-		sb.append("Ãß°¡");
+		sb.append("ì¶”ê°€");
 		System.out.println(sb.length());
 		System.out.println(sb);
 		
 		//sb.insert(offset, c)
-		//»ğÀÔÇÏ´Â ¸Ş¼Òµå(À§Ä¡, »ğÀÔÇÒ ¹®ÀÚ¿­)		
+		//ì‚½ì…í•˜ëŠ” ë©”ì†Œë“œ(ìœ„ì¹˜, ì‚½ì…í•  ë¬¸ìì—´)		
 		sb.insert(5, "a");
 		System.out.println(sb);
 		
 		//sb.replace(start, end, str)
-		//´ëÃ¼ÇÏ´Â °³³ä
-		//½ÃÀÛÁ¡, ³¡Á¡, ´ëÃ¼ÇÒ ¹®ÀÚ¿­
+		//ëŒ€ì²´í•˜ëŠ” ê°œë…
+		//ì‹œì‘ì , ëì , ëŒ€ì²´í•  ë¬¸ìì—´
 		sb.replace(5, 6, "b");
 		System.out.println(sb);
 		
-		//µÚÁı±â
+		//ë’¤ì§‘ê¸°
 		sb.reverse();
 		System.out.println(sb);
 		sb.reverse();
 		System.out.println(sb);
 		
-		//»èÁ¦(½ÃÀÛÁ¡°ú ³¡Á¡)
+		//ì‚­ì œ(ì‹œì‘ì ê³¼ ëì )
 		//sb.delete(start, end)
 		sb.delete(5, sb.length());
 		System.out.println(sb);
 	}
 	
 	public void token() {
-		String str = "a/20/¤¾b c¤·";
-		//±¸ºĞÀÚ¸¦ ±âÁØÀ¸·Î ¹®ÀÚ¿­À» ³ª´²¼­ ¹Ş´Â°³³ä(¹®ÀÚ¿­,±¸ºĞÀÚ)
-		//ÂüÁ¶ÇüÀÌ¶ó ½ÇÁ¦ µ¥ÀÌÅÍ¸¦ ºĞÇÒÇÏ´Â °³³äÀÌ ¾Æ´Ô
+		String str = "a/20/ã…b cã…‡";
+		//êµ¬ë¶„ìë¥¼ ê¸°ì¤€ìœ¼ë¡œ ë¬¸ìì—´ì„ ë‚˜ëˆ ì„œ ë°›ëŠ”ê°œë…(ë¬¸ìì—´,êµ¬ë¶„ì)
+		//ì°¸ì¡°í˜•ì´ë¼ ì‹¤ì œ ë°ì´í„°ë¥¼ ë¶„í• í•˜ëŠ” ê°œë…ì´ ì•„ë‹˜
 		StringTokenizer st = new StringTokenizer(str, "/");
 		//st.countTokens()
-		//±¸ºĞÀÚ·Î ³ª´²¼­ ÃÑ ¸î°³·Î ³ª´²Á³´ÂÁö °³¼ö¸¦ ¹İÈ¯
+		//êµ¬ë¶„ìë¡œ ë‚˜ëˆ ì„œ ì´ ëª‡ê°œë¡œ ë‚˜ëˆ ì¡ŒëŠ”ì§€ ê°œìˆ˜ë¥¼ ë°˜í™˜
 		System.out.println(st.countTokens());//3
-		//ÅäÅ«²¨³»¿È ¹®ÀÚ¿­ ¸®ÅÏ(0¹ø ÀÎ¼ö¿¡ ÀÖ´Â)
+		//í† í°êº¼ë‚´ì˜´ ë¬¸ìì—´ ë¦¬í„´(0ë²ˆ ì¸ìˆ˜ì— ìˆëŠ”)
 		System.out.println(st.nextToken());
-		//ÇöÀç ³²¾ÆÀÖ´Â ÅäÅ«ÀÌ ÀÖ´ÂÁö È®ÀÎÈÄ ¹İÈ¯(t/f)
+		//í˜„ì¬ ë‚¨ì•„ìˆëŠ” í† í°ì´ ìˆëŠ”ì§€ í™•ì¸í›„ ë°˜í™˜(t/f)
 		System.out.println(st.hasMoreTokens());
 		
-		//´Ù »ÌÈú¶§±îÁö ³ª¿È
+		//ë‹¤ ë½‘íë•Œê¹Œì§€ ë‚˜ì˜´
 		/*
 		while(st.hasMoreTokens()) {
 			System.out.println(st.nextToken());
@@ -69,7 +69,7 @@ public class StringTest {
 		String str = "J a v a P r o g r a m";
 		char ch[] = new char[str.length()];
 		/*
-		//°­»ç´Ô¹æ¹ı
+		//ê°•ì‚¬ë‹˜ë°©ë²•
 		StringBuffer sb = new StringBuffer();
 		char arr[] = new char[st.countTokens()];
 		for(int j=0; j<arr.length;j++) {
@@ -96,11 +96,11 @@ public class StringTest {
 		}
 	}
 	
-	//ÀÎÁõ¹øÈ£´À³¦
+	//ì¸ì¦ë²ˆí˜¸ëŠë‚Œ
 	public void test() {
 		StringBuffer sb = new StringBuffer();
 		Random r = new Random();
-		//sb.append(ÀÚ·áÇü)
+		//sb.append(ìë£Œí˜•)
 		for(int i=0;i<6;i++) {
 			//0~9
 			sb.append(r.nextInt(10));
@@ -109,21 +109,21 @@ public class StringTest {
 	}
 	
 	public void mathTest() {
-		//Math´Â °´Ã¼¸¦ »ı¼ºÇÏÁö ¾Ê¾Æµµ ¹Ù·Î »ç¿ë°¡´É
+		//MathëŠ” ê°ì²´ë¥¼ ìƒì„±í•˜ì§€ ì•Šì•„ë„ ë°”ë¡œ ì‚¬ìš©ê°€ëŠ¥
 		
-		//Àı´ë°ª(½Ç¼ö,Á¤¼ö)
+		//ì ˆëŒ€ê°’(ì‹¤ìˆ˜,ì •ìˆ˜)
 		//Math.abs(arg0);
-		//¿Ã¸²
+		//ì˜¬ë¦¼
 		//Math.ceil(a);
-		//³»¸²
+		//ë‚´ë¦¼
 		//Math.floor(a);
-		//¹İ¿Ã¸²
+		//ë°˜ì˜¬ë¦¼
 		//Math.ceil(round);
-		//0.0~1.0»çÀÌ°ª Ãâ·Â
+		//0.0~1.0ì‚¬ì´ê°’ ì¶œë ¥
 		//Math.random();
-		//a,b Áß ´õ Å«°ª ¹İÈ¯
+		//a,b ì¤‘ ë” í°ê°’ ë°˜í™˜
 		//Math.max(a,b);
-		//a,b Áß ´õ ÀÛÀº°ª ¹İÈ¯
+		//a,b ì¤‘ ë” ì‘ì€ê°’ ë°˜í™˜
 		//Math.min(a,b);		
 	}
 }

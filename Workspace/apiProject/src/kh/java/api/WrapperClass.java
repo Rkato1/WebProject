@@ -2,31 +2,31 @@ package kh.java.api;
 
 public class WrapperClass {
 	public void test() {
-		//³í¸®Çüº¯¼ö
-		//±âº»ÀÚ·áÇü
+		//ë…¼ë¦¬í˜•ë³€ìˆ˜
+		//ê¸°ë³¸ìë£Œí˜•
 		boolean b = true;		
 		//boxing
-		//Wrapper·Î ¹­¾î¼­ ÂüÁ¶Çü °´Ã¼È­
+		//Wrapperë¡œ ë¬¶ì–´ì„œ ì°¸ì¡°í˜• ê°ì²´í™”
 		Boolean b1 = new Boolean(true);
 		//unboxing
-		//°ªÀ» ²¨³»¿È
+		//ê°’ì„ êº¼ë‚´ì˜´
 		boolean b2 = b1.booleanValue();
 		//autoboxing
 		Boolean b3 = true;
 		//autounboxing
 		boolean b4 = b3;		
 		
-		//Á¤¼öÇü(int)
+		//ì •ìˆ˜í˜•(int)
 		int i = 10;
 		Integer i1 = new Integer(20);
 		int i2 = i1.intValue();
 		Integer i3 = 10;
 		int i4 = i3;
-		//objectÀÇ »ó¼ÓµÈ Å¬·¡½º¶ó¼­ ÀÌ°Íµµ µÊ
+		//objectì˜ ìƒì†ëœ í´ë˜ìŠ¤ë¼ì„œ ì´ê²ƒë„ ë¨
 		i3.equals("");
 		i3.toString();
 		
-		//±âº»ÀÚ·áÇü->¹®ÀÚ¿­ / ¹®ÀÚ¿­->±âº»ÀÚ·áÇüÀ¸·Î º¯°æ
+		//ê¸°ë³¸ìë£Œí˜•->ë¬¸ìì—´ / ë¬¸ìì—´->ê¸°ë³¸ìë£Œí˜•ìœ¼ë¡œ ë³€ê²½
 		String str = "1000";
 		System.out.println(str+1);
 		int itemp = Integer.parseInt(str);
@@ -46,7 +46,7 @@ public class WrapperClass {
 		
 		int i5 = 999;
 		double d = 3.141592;
-		//WrapperÅ¬·¡½º
+		//Wrapperí´ë˜ìŠ¤
 		String stemp = Integer.valueOf(i5).toString();
 		System.out.println(stemp);
 		stemp = Double.valueOf(d).toString();

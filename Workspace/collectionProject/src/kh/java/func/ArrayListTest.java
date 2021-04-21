@@ -7,7 +7,7 @@ public class ArrayListTest {
 	public void test() {
 		ArrayList<Integer> ar = new ArrayList<Integer>();
 		ArrayList<String> ar1 = new ArrayList<String>();
-		//°¡Àå ¸¶Áö¸· ÀÎµ¦½º¿¡ Ãß°¡
+		//ê°€ì¥ ë§ˆì§€ë§‰ ì¸ë±ìŠ¤ì— ì¶”ê°€
 		ar.add(1);
 		ar.add(2);
 		ar.add(3);
@@ -19,42 +19,42 @@ public class ArrayListTest {
 		ar1.add("a");
 		ar1.add("b");
 		ar1.add("c");
-		//¼öÁ¤
+		//ìˆ˜ì •
 		ar1.set(0, "1");
-		//»èÁ¦(¾Ë¾Æ¼­ ÀÎÀÚ Á¶ÀıµÊ)
+		//ì‚­ì œ(ì•Œì•„ì„œ ì¸ì ì¡°ì ˆë¨)
 		ar1.remove(1);
-		//ÀüÃ¼»èÁ¦
+		//ì „ì²´ì‚­ì œ
 		//ar1.clear();
 		
-		//length»ç¿ë ºÒ°¡(»ç½Ç»óÀÇ µ¿Àû¹è¿­)
+		//lengthì‚¬ìš© ë¶ˆê°€(ì‚¬ì‹¤ìƒì˜ ë™ì ë°°ì—´)
 		//for(int i=0;i<ar.length;i++) {
-		//´ë½Å »ç¿ëÇÏ´Â °ÍÀÌ size¸Ş¼Òµå
+		//ëŒ€ì‹  ì‚¬ìš©í•˜ëŠ” ê²ƒì´ sizeë©”ì†Œë“œ
 		for(int i=0;i<ar.size();i++) {
 			//ArrayList.get(index)
-			//index¹øÂ° À§Ä¡ÇÑ °ª ¹İÈ¯
+			//indexë²ˆì§¸ ìœ„ì¹˜í•œ ê°’ ë°˜í™˜
 			System.out.print(ar.get(i)+"\t");
 		}
 		System.out.println();
 		for(int i=0;i<ar1.size();i++) {
 			//ArrayList.get(index)
-			//index¹øÂ° À§Ä¡ÇÑ °ª ¹İÈ¯
+			//indexë²ˆì§¸ ìœ„ì¹˜í•œ ê°’ ë°˜í™˜
 			System.out.print(ar1.get(i)+"\t");
 		}
 		System.out.println();
-		//foreach¹®
+		//foreachë¬¸
 		for(String str : ar1) {
 			System.out.print(str+"\t");
 		}
 		System.out.println();
-		//Á¤·Ä
+		//ì •ë ¬
 		Collections.sort(ar);
 		for(int i=0;i<ar.size();i++) {
 			//ArrayList.get(index)
-			//index¹øÂ° À§Ä¡ÇÑ °ª ¹İÈ¯
+			//indexë²ˆì§¸ ìœ„ì¹˜í•œ ê°’ ë°˜í™˜
 			System.out.print(ar.get(i)+"\t");
 		}
 		
-		//foreach¹®
+		//foreachë¬¸
 		for(int i : ar) {
 			System.out.print("\n"+i+"\t");
 		}

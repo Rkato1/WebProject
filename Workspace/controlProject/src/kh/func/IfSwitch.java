@@ -4,70 +4,70 @@ import java.util.Scanner;
 public class IfSwitch {
 	
 	public void ifTest() {
-		//Å°º¸µå·Î °ªÀ» ÀÔ·Â¹Ş±â À§ÇÑ ½ºÄ³³Ê ¼³Á¤
+		//í‚¤ë³´ë“œë¡œ ê°’ì„ ì…ë ¥ë°›ê¸° ìœ„í•œ ìŠ¤ìºë„ˆ ì„¤ì •
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("10À» ÀÔ·ÂÇØº¸¼¼¿ä : ");
+		System.out.print("10ì„ ì…ë ¥í•´ë³´ì„¸ìš” : ");
 		int inum = sc.nextInt();
-		//¸¸¾à ÀÔ·Â ¹ŞÀº °ªÀÌ 10ÀÎ °æ¿ì
+		//ë§Œì•½ ì…ë ¥ ë°›ì€ ê°’ì´ 10ì¸ ê²½ìš°
 		if(inum == 10) {
-			System.out.print("ÀÔ·ÂÇÑ °ªÀº 10");
+			System.out.print("ì…ë ¥í•œ ê°’ì€ 10");
 		}
 		else
 		{
-			System.out.print("ÀÔ·ÂÇÑ °ªÀº 10ÀÌ ¾Æ´Ñ " + inum);
+			System.out.print("ì…ë ¥í•œ ê°’ì€ 10ì´ ì•„ë‹Œ " + inum);
 		}
 	}
 	
 	public void test() {
-		System.out.print("========= ¼ıÀÚ ±¸º° ÇÁ·Î±×·¥ =========\n");
+		System.out.print("========= ìˆ«ì êµ¬ë³„ í”„ë¡œê·¸ë¨ =========\n");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀÓÀÇÀÇ Á¤¼ö¸¦  ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.print("ì„ì˜ì˜ ì •ìˆ˜ë¥¼  ì…ë ¥ í•˜ì„¸ìš” : ");
 		int inum = sc.nextInt();
 		
 		if(inum > 0) {
-			System.out.println("´ç½ÅÀÌ ÀÔ·ÂÇÑ ¼ö " + inum + "Àº(´Â) ¾ç¼öÀÔ´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ì…ë ¥í•œ ìˆ˜ " + inum + "ì€(ëŠ”) ì–‘ìˆ˜ì…ë‹ˆë‹¤.");
 		}
 		//else if(inum == 0) {
 		if(inum == 0) {
-			System.out.println("´ç½ÅÀÌ ÀÔ·ÂÇÑ ¼ö " + inum + "Àº(´Â) 0ÀÔ´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ì…ë ¥í•œ ìˆ˜ " + inum + "ì€(ëŠ”) 0ì…ë‹ˆë‹¤.");
 		}
 		//else {
 		if(inum < 0) {
-			System.out.println("´ç½ÅÀÌ ÀÔ·ÂÇÑ ¼ö " + inum + "Àº(´Â) À½¼öÀÔ´Ï´Ù.");
+			System.out.println("ë‹¹ì‹ ì´ ì…ë ¥í•œ ìˆ˜ " + inum + "ì€(ëŠ”) ìŒìˆ˜ì…ë‹ˆë‹¤.");
 		}
 	}
 	
 	public void test1() {
-		System.out.print("========= µÎ¼ö ºñ±³ ÇÁ·Î±×·¥ =========\n");
+		System.out.print("========= ë‘ìˆ˜ ë¹„êµ í”„ë¡œê·¸ë¨ =========\n");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹¹øÂ° Á¤¼ö¸¦  ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ë¥¼  ì…ë ¥ í•˜ì„¸ìš” : ");
 		int inum = sc.nextInt();
-		System.out.print("µÎ¹øÂ° Á¤¼ö¸¦  ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ë¥¼  ì…ë ¥ í•˜ì„¸ìš” : ");
 		int inum1 = sc.nextInt();
 		
 		if(inum > inum1) {
 			System.out.println(inum + ">" + inum1);
-			System.out.println("Ã¹¹øÂ° ¼ö°¡ ´õ Å®´Ï´Ù.");
+			System.out.println("ì²«ë²ˆì§¸ ìˆ˜ê°€ ë” í½ë‹ˆë‹¤.");
 		}
 		if(inum == inum1) {
 			System.out.println(inum + "=" + inum1);
-			System.out.println("µÎ ¼ö°¡ °°½À´Ï´Ù.");
+			System.out.println("ë‘ ìˆ˜ê°€ ê°™ìŠµë‹ˆë‹¤.");
 		}
 		if(inum < inum1) {
 			System.out.println(inum + "<" + inum1);
-			System.out.println("µÎ¹øÂ° ¼ö°¡ ´õ Å®´Ï´Ù.");
+			System.out.println("ë‘ë²ˆì§¸ ìˆ˜ê°€ ë” í½ë‹ˆë‹¤.");
 		}
 	}
 	
 	public void test2() {
-		System.out.print("========= µÎ¼ö ºñ±³ ÇÁ·Î±×·¥ =========\n");
+		System.out.print("========= ë‘ìˆ˜ ë¹„êµ í”„ë¡œê·¸ë¨ =========\n");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¿¬»êÀÚ¸¦  ÀÔ·Â ÇÏ¼¼¿ä(+,-,*,/) : ");
+		System.out.print("ì—°ì‚°ìë¥¼  ì…ë ¥ í•˜ì„¸ìš”(+,-,*,/) : ");
 		char ch = sc.next().charAt(0);
-		System.out.print("Ã¹¹øÂ° Á¤¼ö¸¦  ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ë¥¼  ì…ë ¥ í•˜ì„¸ìš” : ");
 		int inum = sc.nextInt();
-		System.out.print("µÎ¹øÂ° Á¤¼ö¸¦  ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ë¥¼  ì…ë ¥ í•˜ì„¸ìš” : ");
 		int inum1 = sc.nextInt();
 		
 		if(ch == '+') {
@@ -100,165 +100,165 @@ public class IfSwitch {
 	}
 	
 	public void test3() {
-		System.out.print("========= ³îÀÌ°ø¿ø ÇÁ·Î±×·¥ =========\n");
+		System.out.print("========= ë†€ì´ê³µì› í”„ë¡œê·¸ë¨ =========\n");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀÔÀåÇÏ½Ç ÃÑ ÀÎ¿øÀº ¸î¸íÀÔ´Ï±î? : ");
+		System.out.print("ì…ì¥í•˜ì‹¤ ì´ ì¸ì›ì€ ëª‡ëª…ì…ë‹ˆê¹Œ? : ");
 		int inum = sc.nextInt();
-		System.out.print("¾î¸¥Àº ¸î¸íÀÔ´Ï±î?(1ÀÎ´ç 15000¿ø) : ");
+		System.out.print("ì–´ë¥¸ì€ ëª‡ëª…ì…ë‹ˆê¹Œ?(1ì¸ë‹¹ 15000ì›) : ");
 		int inum1 = sc.nextInt();
-		System.out.print("¾ÆÀÌ´Â ¸î¸íÀÔ´Ï±î?(1ÀÎ´ç 5000¿ø) : ");
+		System.out.print("ì•„ì´ëŠ” ëª‡ëª…ì…ë‹ˆê¹Œ?(1ì¸ë‹¹ 5000ì›) : ");
 		int inum2 = sc.nextInt();
 		
 		if(inum == inum1 + inum2) {
-			System.out.println("ÁöºÒÇÏ½Ç ÃÑ ±İ¾×Àº " + (inum1*15000 + inum2*5000) + "¿ø ÀÔ´Ï´Ù.");
+			System.out.println("ì§€ë¶ˆí•˜ì‹¤ ì´ ê¸ˆì•¡ì€ " + (inum1*15000 + inum2*5000) + "ì› ì…ë‹ˆë‹¤.");
 		}
 		else {
-			System.out.println("ÀÎ¿ø¼ö°¡ ¸ÂÁö ¾Ê½À´Ï´Ù.");
+			System.out.println("ì¸ì›ìˆ˜ê°€ ë§ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}
 	}
 	
 	public void test4() {
 		int itemp = 0;
-		//¸ÂÃá°³¼ö ÀúÀåÀ§ÇÑ º¯¼ö
+		//ë§ì¶˜ê°œìˆ˜ ì €ì¥ìœ„í•œ ë³€ìˆ˜
 		
-		System.out.print("========= ÄûÁî ÇÁ·Î±×·¥ =========\n");
+		System.out.print("========= í€´ì¦ˆ í”„ë¡œê·¸ë¨ =========\n");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹¹øÂ° ÄûÁî\n");
-		System.out.print("»ç°ú´Â ¿µ¾î·Î ¹«¾ùÀÏ±î¿ä(1.apple,2.½ºÆ¼ºê Àâ½º)?");
+		System.out.print("ì²«ë²ˆì§¸ í€´ì¦ˆ\n");
+		System.out.print("ì‚¬ê³¼ëŠ” ì˜ì–´ë¡œ ë¬´ì—‡ì¼ê¹Œìš”(1.apple,2.ìŠ¤í‹°ë¸Œ ì¡ìŠ¤)?");
 		int inum = sc.nextInt();
 		if(inum == 1) {
-			System.out.println("Á¤´ä!!!");
+			System.out.println("ì •ë‹µ!!!");
 			itemp++;
 		}
 		else {
-			System.out.println("¶¯!!");
+			System.out.println("ë•¡!!");
 		}
 		
-		System.out.print("µÎ¹øÂ° ÄûÁî\n");
-		System.out.print("¹Ù³ª³ª´Â ±æ¾î ±æÀ¸¸é ±âÂ÷ ±âÂ÷´Â(1.ºñ½Î,2.»¡¶ó)?");
+		System.out.print("ë‘ë²ˆì§¸ í€´ì¦ˆ\n");
+		System.out.print("ë°”ë‚˜ë‚˜ëŠ” ê¸¸ì–´ ê¸¸ìœ¼ë©´ ê¸°ì°¨ ê¸°ì°¨ëŠ”(1.ë¹„ì‹¸,2.ë¹¨ë¼)?");
 		int inum1 = sc.nextInt();
 		if(inum1 == 2) {
-			System.out.println("Á¤´ä!!!");
+			System.out.println("ì •ë‹µ!!!");
 			itemp++;
-			System.out.printf("ÃÑ %d¹®Á¦¸¦ ¸ÂÃè½À´Ï´Ù.", itemp);
+			System.out.printf("ì´ %dë¬¸ì œë¥¼ ë§ì·„ìŠµë‹ˆë‹¤.", itemp);
 		}
 		else {
-			System.out.println("¶¯!!");
-			System.out.printf("ÃÑ %d¹®Á¦¸¦ ¸ÂÃè½À´Ï´Ù.", itemp);
+			System.out.println("ë•¡!!");
+			System.out.printf("ì´ %dë¬¸ì œë¥¼ ë§ì·„ìŠµë‹ˆë‹¤.", itemp);
 		}
 	}
 	
 	public void test5() {
-		System.out.print("========= ½É¸®Å×½ºÆ® =========\n");
+		System.out.print("========= ì‹¬ë¦¬í…ŒìŠ¤íŠ¸ =========\n");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("´ç½ÅÀº ¼úÀ» ÁÁ¾ÆÇÏ½Ê´Ï±î(1.yes,2.no)?");		
+		System.out.print("ë‹¹ì‹ ì€ ìˆ ì„ ì¢‹ì•„í•˜ì‹­ë‹ˆê¹Œ(1.yes,2.no)?");		
 		int inum = sc.nextInt();
 		if(inum == 1) {
-			System.out.print("´ç½ÅÀº ´ã¹è¸¦ ÇÇ¿ó´Ï±î(1.yes,2.no)?");		
+			System.out.print("ë‹¹ì‹ ì€ ë‹´ë°°ë¥¼ í”¼ì›ë‹ˆê¹Œ(1.yes,2.no)?");		
 			int inum1 = sc.nextInt();
 			if(inum1 == 1) {
-				System.out.println("´ã¹è´Â °Ç°­¿¡ ÁÁÁö ¾Ê½À´Ï´Ù.");
+				System.out.println("ë‹´ë°°ëŠ” ê±´ê°•ì— ì¢‹ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			}
 			else if(inum1 == 2) {
-				System.out.println("¼úÀº °£¿¡ ÁÁÁö ¾Ê½À´Ï´Ù.");
+				System.out.println("ìˆ ì€ ê°„ì— ì¢‹ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 			}
 			else {
-				System.out.println("Àß¸øµÈ ¼ıÀÚ");
+				System.out.println("ì˜ëª»ëœ ìˆ«ì");
 			}
 		}
 		else if(inum ==2) {
-			System.out.print("´ç½ÅÀº ÀÌ¼ºÄ£±¸°¡ ÀÖ½À´Ï±î(1.yes,2.no)?");		
+			System.out.print("ë‹¹ì‹ ì€ ì´ì„±ì¹œêµ¬ê°€ ìˆìŠµë‹ˆê¹Œ(1.yes,2.no)?");		
 			int inum1 = sc.nextInt();
 			if(inum1 == 1) {
-				System.out.println("¿Ã..¤»");
+				System.out.println("ì˜¬..ã…‹");
 			}
 			else if(inum1 == 2) {
-				System.out.println("Èû³»¿ä ¤Ğ¤Ğ");
+				System.out.println("í˜ë‚´ìš” ã… ã… ");
 			}
 			else {
-				System.out.println("Àß¸øµÈ ¼ıÀÚ");
+				System.out.println("ì˜ëª»ëœ ìˆ«ì");
 			}
 		}
 		else {
-			System.out.println("Àß¸øµÈ ¼ıÀÚ");
+			System.out.println("ì˜ëª»ëœ ìˆ«ì");
 		}	
 	}
 	
 	public void test6() {
-		System.out.print("========= ´ë/¼Ò¹®ÀÚ º¯È¯ ÇÁ·Î±×·¥ =========\n");
+		System.out.print("========= ëŒ€/ì†Œë¬¸ì ë³€í™˜ í”„ë¡œê·¸ë¨ =========\n");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¹®ÀÚÀÔ·Â : ");		
+		System.out.print("ë¬¸ìì…ë ¥ : ");		
 		char ch = sc.next().charAt(0);
 		if(ch >= 65 && ch < 91) {
 		//if(ch >= 'A' && ch <= 'Z') {
-			System.out.println("´ë¹®ÀÚ¸¦ ÀÔ·Â ÇÏ¿´½À´Ï´Ù.");
-			System.out.println("¼Ò¹®ÀÚ·Î º¯È¯ : " + (char)(ch + 32));
-			//System.out.println("¼Ò¹®ÀÚ·Î º¯È¯ : " + (char)(ch ^ 32));
-			//xor¿¬»ê
+			System.out.println("ëŒ€ë¬¸ìë¥¼ ì…ë ¥ í•˜ì˜€ìŠµë‹ˆë‹¤.");
+			System.out.println("ì†Œë¬¸ìë¡œ ë³€í™˜ : " + (char)(ch + 32));
+			//System.out.println("ì†Œë¬¸ìë¡œ ë³€í™˜ : " + (char)(ch ^ 32));
+			//xorì—°ì‚°
 		}
 		else if(ch >= 97 && ch < 123) {
 		//else if(ch >= 'a' && ch <= 'z') {
-			System.out.println("¼Ò¹®ÀÚ¸¦ ÀÔ·Â ÇÏ¿´½À´Ï´Ù.");
-			System.out.println("´ë¹®ÀÚ·Î º¯È¯ : " + (char)(ch - 32));
-			//System.out.println("´ë¹®ÀÚ·Î º¯È¯ : " + (char)(ch ^ 32));
-			//xor¿¬»ê
+			System.out.println("ì†Œë¬¸ìë¥¼ ì…ë ¥ í•˜ì˜€ìŠµë‹ˆë‹¤.");
+			System.out.println("ëŒ€ë¬¸ìë¡œ ë³€í™˜ : " + (char)(ch - 32));
+			//System.out.println("ëŒ€ë¬¸ìë¡œ ë³€í™˜ : " + (char)(ch ^ 32));
+			//xorì—°ì‚°
 		}
 		else {
-			System.out.println("Àß¸øÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. ¿µ¹®ÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			System.out.println("ì˜ëª»ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. ì˜ë¬¸ìë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		}
 	}
 	
 	public void test7() {		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Á¤¼öÀÔ·Â : ");
+		System.out.print("ì •ìˆ˜ì…ë ¥ : ");
 		int inum = sc.nextInt();
-		System.out.print("===== °á °ú=====\n");
+		System.out.print("===== ê²° ê³¼=====\n");
 		if(inum == 0) {
-			System.out.printf("[%d]Àº(´Â) 3ÀÇ ¹è¼öµµ 4ÀÇ ¹è¼öµµ ¾Æ´Õ´Ï´Ù.", inum);
+			System.out.printf("[%d]ì€(ëŠ”) 3ì˜ ë°°ìˆ˜ë„ 4ì˜ ë°°ìˆ˜ë„ ì•„ë‹™ë‹ˆë‹¤.", inum);
 		}
 		else {
 			if((inum % 3 == 0) && (inum % 4 == 0)) {
-				System.out.printf("[%d]Àº(´Â) 3ÀÇ ¹è¼ö¸é¼­ 4ÀÇ ¹è¼öÀÔ´Ï´Ù.", inum);
+				System.out.printf("[%d]ì€(ëŠ”) 3ì˜ ë°°ìˆ˜ë©´ì„œ 4ì˜ ë°°ìˆ˜ì…ë‹ˆë‹¤.", inum);
 			}
 			else if(inum % 3 == 0) {
-				System.out.printf("[%d]Àº(´Â) 3ÀÇ ¹è¼öÀÔ´Ï´Ù.", inum);
+				System.out.printf("[%d]ì€(ëŠ”) 3ì˜ ë°°ìˆ˜ì…ë‹ˆë‹¤.", inum);
 			}
 			else if(inum % 4 == 0) {
-				System.out.printf("[%d]Àº(´Â) 4ÀÇ ¹è¼öÀÔ´Ï´Ù.", inum);
+				System.out.printf("[%d]ì€(ëŠ”) 4ì˜ ë°°ìˆ˜ì…ë‹ˆë‹¤.", inum);
 			}
 			else {
-				System.out.printf("[%d]Àº(´Â) 3ÀÇ ¹è¼öµµ 4ÀÇ ¹è¼öµµ ¾Æ´Õ´Ï´Ù.", inum);
+				System.out.printf("[%d]ì€(ëŠ”) 3ì˜ ë°°ìˆ˜ë„ 4ì˜ ë°°ìˆ˜ë„ ì•„ë‹™ë‹ˆë‹¤.", inum);
 			}
 		}
 	}
 	
 	public void test8() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("1~3 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("1~3 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int inum = sc.nextInt();
 		
 		switch(inum) {
 		case 1:
-			System.out.print("1À» ÀÔ·ÂÇß½À´Ï´Ù.");
+			System.out.print("1ì„ ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
 			break;
 		case 2:
-			System.out.print("2¸¦ ÀÔ·ÂÇß½À´Ï´Ù.");
+			System.out.print("2ë¥¼ ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
 			break;
 		case 3:
-			System.out.print("3À» ÀÔ·ÂÇß½À´Ï´Ù.");
+			System.out.print("3ì„ ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
 			break;
 		default:
-			System.out.print("Àß¸øÀÔ·ÂÇß½À´Ï´Ù.");
+			System.out.print("ì˜ëª»ì…ë ¥í–ˆìŠµë‹ˆë‹¤.");
 			break;
 		}
 	}
 	
 	public void test9() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀÏ¼ö¸¦ ¾Ë°í½ÍÀº ´ŞÀ» ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ì¼ìˆ˜ë¥¼ ì•Œê³ ì‹¶ì€ ë‹¬ì„ ì…ë ¥í•˜ì„¸ìš” : ");
 		int inum = sc.nextInt();
 		
-		//break¸¦ ÀÏºÎ·¯ ¾ÈÁà¼­ Ãâ·ÂµÇ°Ô ¸¸µå´Â °æ¿ì
+		//breakë¥¼ ì¼ë¶€ëŸ¬ ì•ˆì¤˜ì„œ ì¶œë ¥ë˜ê²Œ ë§Œë“œëŠ” ê²½ìš°
 		switch(inum) {
 		case 1:
 		case 3:
@@ -267,53 +267,53 @@ public class IfSwitch {
 		case 8:
 		case 10:
 		case 12:
-			System.out.println(inum + "¿ù´ŞÀº 31ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 31ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 2:
-			System.out.println(inum + "¿ù´ŞÀº 29ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 29ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 4:
 		case 6:
 		case 9:
 		case 11:
-			System.out.println(inum + "¿ù´ŞÀº 30ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 30ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		/*
 		case 1:
-			System.out.println(inum + "¿ù´ŞÀº 31ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 31ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 2:
-			System.out.println(inum + "¿ù´ŞÀº 29ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 29ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 3:
-			System.out.println(inum + "¿ù´ŞÀº 31ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 31ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 4:
-			System.out.println(inum + "¿ù´ŞÀº 30ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 30ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 5:
-			System.out.println(inum + "¿ù´ŞÀº 31ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 31ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 6:
-			System.out.println(inum + "¿ù´ŞÀº 30ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 30ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 7:
-			System.out.println(inum + "¿ù´ŞÀº 31ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 31ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 8:
-			System.out.println(inum + "¿ù´ŞÀº 31ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 31ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 9:
-			System.out.println(inum + "¿ù´ŞÀº 30ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 30ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 10:
-			System.out.println(inum + "¿ù´ŞÀº 31ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 31ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 11:
-			System.out.println(inum + "¿ù´ŞÀº 30ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 30ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 		case 12:
-			System.out.println(inum + "¿ù´ŞÀº 31ÀÏ±îÁö ÀÖ½À´Ï´Ù.");
+			System.out.println(inum + "ì›”ë‹¬ì€ 31ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
 			break;
 			*/
 		}
@@ -321,36 +321,36 @@ public class IfSwitch {
 	
 	public void test10() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀåÇĞ±İ ÁöºÒ ½Ã½ºÅÛÀÔ´Ï´Ù.\nÇĞÁ¡À» ÀÔ·ÂÇÏ¼¼¿ä(A,B,C,D,F) : ");
+		System.out.print("ì¥í•™ê¸ˆ ì§€ë¶ˆ ì‹œìŠ¤í…œì…ë‹ˆë‹¤.\ní•™ì ì„ ì…ë ¥í•˜ì„¸ìš”(A,B,C,D,F) : ");
 		char ch = sc.next().charAt(0);
 		
 		switch(ch) {
 		case 'A':
-			System.out.println("¼ö°íÇÏ¼Ì½À´Ï´Ù. ÀåÇĞ±İÀ» 100%Áö±ŞÇØµå¸®°Ú½À´Ï´Ù.");
+			System.out.println("ìˆ˜ê³ í•˜ì…¨ìŠµë‹ˆë‹¤. ì¥í•™ê¸ˆì„ 100%ì§€ê¸‰í•´ë“œë¦¬ê² ìŠµë‹ˆë‹¤.");
 			break;
 		case 'B':
-			System.out.println("¾Æ½±±º¿ä. ÀåÇĞ±İÀ» 50%Áö±ŞÇØµå¸®°Ú½À´Ï´Ù.");
+			System.out.println("ì•„ì‰½êµ°ìš”. ì¥í•™ê¸ˆì„ 50%ì§€ê¸‰í•´ë“œë¦¬ê² ìŠµë‹ˆë‹¤.");
 			break;
 		case 'C':
-			System.out.println("ÀåÇĞ±İÀ» ¹Ù¶ó½Ã¸é Á»´õ ¿­½ÉÈ÷ ÇØÁÖ¼¼¿ä.");
+			System.out.println("ì¥í•™ê¸ˆì„ ë°”ë¼ì‹œë©´ ì¢€ë” ì—´ì‹¬íˆ í•´ì£¼ì„¸ìš”.");
 			break;
 		case 'D':
-			System.out.println("Å©Èì.......");
+			System.out.println("í¬í .......");
 			break;
 		case 'F':
-			System.out.println("ÇĞ»ç°æ°íÀÔ´Ï´Ù!!!");
+			System.out.println("í•™ì‚¬ê²½ê³ ì…ë‹ˆë‹¤!!!");
 			break;
 		}
 	}
 	
 	public void test11() {
-		System.out.print("========= µÎ¼ö ºñ±³ ÇÁ·Î±×·¥ =========\n");
+		System.out.print("========= ë‘ìˆ˜ ë¹„êµ í”„ë¡œê·¸ë¨ =========\n");
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¿¬»êÀÚ¸¦  ÀÔ·Â ÇÏ¼¼¿ä(+,-,*,/) : ");
+		System.out.print("ì—°ì‚°ìë¥¼  ì…ë ¥ í•˜ì„¸ìš”(+,-,*,/) : ");
 		char ch = sc.next().charAt(0);
-		System.out.print("Ã¹¹øÂ° Á¤¼ö¸¦  ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ë¥¼  ì…ë ¥ í•˜ì„¸ìš” : ");
 		int inum = sc.nextInt();
-		System.out.print("µÎ¹øÂ° Á¤¼ö¸¦  ÀÔ·Â ÇÏ¼¼¿ä : ");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ë¥¼  ì…ë ¥ í•˜ì„¸ìš” : ");
 		int inum1 = sc.nextInt();
 		
 		switch(ch) {
@@ -370,31 +370,31 @@ public class IfSwitch {
 	}
 	
 	public void test12() {
-		System.out.print("========= µÎ¼ö ºñ±³ ÇÁ·Î±×·¥ =========\n");
+		System.out.print("========= ë‘ìˆ˜ ë¹„êµ í”„ë¡œê·¸ë¨ =========\n");
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Á¡¼öÀÔ·Â : ");
+		System.out.print("ì ìˆ˜ì…ë ¥ : ");
 		int inum = sc.nextInt();
 		
 		switch(inum/10) {
 		case 9:
-			System.out.println(inum + "Á¡ ==> A µî±Ş");
+			System.out.println(inum + "ì  ==> A ë“±ê¸‰");
 			break;
 		case 8:
-			System.out.println(inum + "Á¡ ==> B µî±Ş");
+			System.out.println(inum + "ì  ==> B ë“±ê¸‰");
 			break;
 		case 7:
-			System.out.println(inum + "Á¡ ==> C µî±Ş");
+			System.out.println(inum + "ì  ==> C ë“±ê¸‰");
 			break;
 		case 6:
-			System.out.println(inum + "Á¡ ==> D µî±Ş");
+			System.out.println(inum + "ì  ==> D ë“±ê¸‰");
 			break;
 		default:
 			if(inum < 0 || inum > 100) {
-				System.out.println("Àß¸øµÈ ÀÔ·Â(0~100»çÀÌ ÀÔ·Â)");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥(0~100ì‚¬ì´ ì…ë ¥)");
 			}
 			else {
-				System.out.println(inum + "Á¡ ==> F µî±Ş");	
+				System.out.println(inum + "ì  ==> F ë“±ê¸‰");	
 			}
 			break;
 		}

@@ -10,52 +10,52 @@ public class ExceptionTest {
 	public void test() {
 		Scanner sc = new Scanner(System.in);
 		try {
-			System.out.print("1¹ø¤Š ¼ö ÀÔ·Â : ");
+			System.out.print("1ë²ˆì¨° ìˆ˜ ì…ë ¥ : ");
 			int num1 = sc.nextInt();
-			System.out.print("2¹ø¤Š ¼ö ÀÔ·Â : ");
+			System.out.print("2ë²ˆì¨° ìˆ˜ ì…ë ¥ : ");
 			int num2 = sc.nextInt();
 			int result = num1/num2;
-			System.out.println("°á°ú : "+result);
+			System.out.println("ê²°ê³¼ : "+result);
 		}
 		catch(InputMismatchException e) {
-			System.out.println("Á¤¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			System.out.println("ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 		}
 		catch(ArithmeticException e) {
-			System.out.println("0À¸·Î´Â ¸ø ³ª´¯´Ï´Ù");
+			System.out.println("0ìœ¼ë¡œëŠ” ëª» ë‚˜ëˆ•ë‹ˆë‹¤");
 		}
 		catch(Exception e){
-			System.out.println("¿¡·¯ ¹ß»ı : "+e);
+			System.out.println("ì—ëŸ¬ ë°œìƒ : "+e);
 		}
 	}
 	
 	public void menuPrint() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("1.¾È³çÇÏ¼¼¿ä. Ãâ·Â");
-		System.out.println("2.¹İ°¡¿ö¿ä. Ãâ·Â");
-		System.out.println("3.Àß°¡¿ä. Ãâ·Â");
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("1.ì•ˆë…•í•˜ì„¸ìš”. ì¶œë ¥");
+		System.out.println("2.ë°˜ê°€ì›Œìš”. ì¶œë ¥");
+		System.out.println("3.ì˜ê°€ìš”. ì¶œë ¥");
+		System.out.print("ì„ íƒ > ");
 		try {
 			print(sc.nextInt());
 		}catch(Exception e){
-			System.out.println("Á¤¼öÀÔ·ÂÇÏ¼¼¿ä\n"+e);
+			System.out.println("ì •ìˆ˜ì…ë ¥í•˜ì„¸ìš”\n"+e);
 		}finally {
-			System.out.println("¹«Á¶°Ç ¿À°ÔµÇ´Â ºí·Ï");
+			System.out.println("ë¬´ì¡°ê±´ ì˜¤ê²Œë˜ëŠ” ë¸”ë¡");
 		}
 	}
 	
 	public void print(int sel) {
 		switch(sel) {
 		case 1:
-			System.out.println("¾È³çÇÏ¼¼¿ä.");
+			System.out.println("ì•ˆë…•í•˜ì„¸ìš”.");
 			break;
 		case 2:
-			System.out.println("¹İ°¡¿ö¿ä.");
+			System.out.println("ë°˜ê°€ì›Œìš”.");
 			break;
 		case 3:
-			System.out.println("Àß°¡¿ä.");
+			System.out.println("ì˜ê°€ìš”.");
 			break;
 		default:
-			System.out.println("1~3 Áß ¼±ÅÃÇØÁÖ¼¼¿ä.");
+			System.out.println("1~3 ì¤‘ ì„ íƒí•´ì£¼ì„¸ìš”.");
 			break;
 		}
 	}
@@ -63,40 +63,40 @@ public class ExceptionTest {
 	public void test2() {
 		try {
 			FileReader fr = new FileReader("test.txt");
-			//ÆÄÀÏ Á¸Àç½Ã
-			System.out.println("ÆÄÀÏÀÖÀ½");			
+			//íŒŒì¼ ì¡´ì¬ì‹œ
+			System.out.println("íŒŒì¼ìˆìŒ");			
 		}
-		//ÆÄÀÏ ¾øÀ»¶§ÀÇ ¿¹¿Ü
+		//íŒŒì¼ ì—†ì„ë•Œì˜ ì˜ˆì™¸
 		catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("ÆÄÀÏ¾øÀ½");
+			System.out.println("íŒŒì¼ì—†ìŒ");
 		}
 	}
 	
-	//class¸¦ ¼±¾ğÇÒ‹š throws Å°¿öµå·Î ¿¹¿ÜÃ³¸® °¡´É 
-	//¿¹¿Ü¸íÀÌ ÀûÈù Å¬·¡½º¸¦ µÚ¿¡ Àû¾îÁÜ
+	//classë¥¼ ì„ ì–¸í• ë–„ throws í‚¤ì›Œë“œë¡œ ì˜ˆì™¸ì²˜ë¦¬ ê°€ëŠ¥ 
+	//ì˜ˆì™¸ëª…ì´ ì íŒ í´ë˜ìŠ¤ë¥¼ ë’¤ì— ì ì–´ì¤Œ
 	public void test3() throws FileNotFoundException{
 		FileReader fr = new FileReader("test.txt");
 	}
 	
 	public void test4() {
-		//¿¡·¯¹ß»ı
+		//ì—ëŸ¬ë°œìƒ
 		//test3();
-		//»ç¿ëÇÒ°Å¸é try{} catch{}·Î °¨½ÎÁà¾ß »ç¿ëÇÔ
+		//ì‚¬ìš©í• ê±°ë©´ try{} catch{}ë¡œ ê°ì‹¸ì¤˜ì•¼ ì‚¬ìš©í•¨
 		FileReader fr = null;
 		try {
 			fr = new FileReader("test.txt");
-			System.out.println("ÆÄÀÏÀÖÀ½");
+			System.out.println("íŒŒì¼ìˆìŒ");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("ÆÄÀÏ¾øÀ½");
+			System.out.println("íŒŒì¼ì—†ìŒ");
 		} finally {
 			try {
-				//¿­¸é ´İ¾Æ¾ßÇÔ
+				//ì—´ë©´ ë‹«ì•„ì•¼í•¨
 				fr.close();
-				System.out.println("ÆÄÀÏ´İÈû");
+				System.out.println("íŒŒì¼ë‹«í˜");
 			}catch(IOException e){
 				e.printStackTrace();
 			}
@@ -106,16 +106,16 @@ public class ExceptionTest {
 	public void test5() {
 		//try with resource
 		try(FileReader fr = new FileReader("test.txt")){
-			//ÀÌ·¯¸é close()ÄÚµå ÇÊ¿ä¾øÀ½
-			System.out.println("ÆÄÀÏÁ¸Àç");
+			//ì´ëŸ¬ë©´ close()ì½”ë“œ í•„ìš”ì—†ìŒ
+			System.out.println("íŒŒì¼ì¡´ì¬");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("ÆÄÀÏ¾øÀ½");
+			System.out.println("íŒŒì¼ì—†ìŒ");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println("ÀÔÃâ·Â¿¡·¯");
+			System.out.println("ì…ì¶œë ¥ì—ëŸ¬");
 		}
 	}
 }

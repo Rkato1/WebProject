@@ -5,15 +5,15 @@ import java.util.Scanner;
 
 public class ArrayTest {
 	public void arrayTest1() {
-		//±æÀÌ°¡ 3ÀÎ Á¤¼öÇü ¹è¿­»ı¼º
-		//stack¿µ¿ª¿¡ º¯¼ö ¼±¾ğ 
-		//heap¿¡ ±æÀÌ°¡ 3ÀÎ ¹è¿­ »ı¼º(data°¡ ÀúÀåµÇ´Â °ø°£)
-		//->°ªÀº 0À¸·Î ÃÊ±âÈ­ µÇ¾îÀÖÀ½
+		//ê¸¸ì´ê°€ 3ì¸ ì •ìˆ˜í˜• ë°°ì—´ìƒì„±
+		//stackì˜ì—­ì— ë³€ìˆ˜ ì„ ì–¸ 
+		//heapì— ê¸¸ì´ê°€ 3ì¸ ë°°ì—´ ìƒì„±(dataê°€ ì €ì¥ë˜ëŠ” ê³µê°„)
+		//->ê°’ì€ 0ìœ¼ë¡œ ì´ˆê¸°í™” ë˜ì–´ìˆìŒ
 		/*
 		int[] arr = new int[3];
-		//arrÀÇ Ã¹¹øÂ° °ø°£¿¡ 100´ëÀÔ
+		//arrì˜ ì²«ë²ˆì§¸ ê³µê°„ì— 100ëŒ€ì…
 		arr[0] = 100;
-		//arrÀÇ µÎ¹øÂ° °ø°£¿¡ 1000´ëÀÔ
+		//arrì˜ ë‘ë²ˆì§¸ ê³µê°„ì— 1000ëŒ€ì…
 		arr[1] = 1000;
 		for(int i=0;i<3;i++) {
 			System.out.println(arr[i]);
@@ -21,25 +21,25 @@ public class ArrayTest {
 		*/
 		int[] arr1 = new int[5];
 		//for(int i=0;i<5;i++) {
-		//arr1.length arr1 ¹è¿­ÀÇ ±æÀÌ°ª ¹İÈ¯
+		//arr1.length arr1 ë°°ì—´ì˜ ê¸¸ì´ê°’ ë°˜í™˜
 		for(int i=0;i<arr1.length;i++) {
 			arr1[i] = i+1;
 			System.out.println(arr1[i]);
 		}
-		//±æÀÌ 5Â¥¸® ¹è¿­ ¼±¾ğÈÄ °ª±îÁö ÇÑ¹ø¿¡ ÇÒ´ç
+		//ê¸¸ì´ 5ì§œë¦¬ ë°°ì—´ ì„ ì–¸í›„ ê°’ê¹Œì§€ í•œë²ˆì— í• ë‹¹
 		int[] arr2 = {1,2,3,4,5};
-		//¹®ÀÚ¿­ÀÇ ¹è¿­, []´Â À§Ä¡ »ó°ü¾øÀ½
+		//ë¬¸ìì—´ì˜ ë°°ì—´, []ëŠ” ìœ„ì¹˜ ìƒê´€ì—†ìŒ
 		String strArr[] = new String[10];
 		strArr[0] = "Hello";
 	}
 	
 	public void arrayTest2() {
 		String strArr[] = new String[5];
-		strArr[0] = "µş±â";
-		strArr[1] = "º¹¼ş¾Æ";
-		strArr[2] = "Å°À§";
-		strArr[3] = "»ç°ú";
-		strArr[4] = "¹Ù³ª³ª";
+		strArr[0] = "ë”¸ê¸°";
+		strArr[1] = "ë³µìˆ­ì•„";
+		strArr[2] = "í‚¤ìœ„";
+		strArr[3] = "ì‚¬ê³¼";
+		strArr[4] = "ë°”ë‚˜ë‚˜";
 		System.out.println(strArr[0]);
 		System.out.println(strArr[1]);
 		System.out.println(strArr[2]);
@@ -61,7 +61,7 @@ public class ArrayTest {
 		int tot=0;
 		for(int i=0;i<4;i++) {
 			if(i<3) {
-				System.out.print("Á¡¼ö ÀÔ·Â : ");
+				System.out.print("ì ìˆ˜ ì…ë ¥ : ");
 				int itemp = sc.nextInt();
 				arr[i] = itemp;
 				tot += itemp;
@@ -71,16 +71,16 @@ public class ArrayTest {
 		}
 		
 		for(int i=0;i<4;i++) {
-			System.out.println(i + "¹øÂ° Á¡¼ö´Â " + arr[i]);			
+			System.out.println(i + "ë²ˆì§¸ ì ìˆ˜ëŠ” " + arr[i]);			
 		}
-		System.out.printf("Æò±ÕÀº %.2f", (double)tot / 3);
+		System.out.printf("í‰ê· ì€ %.2f", (double)tot / 3);
 	}
 	
 	public void arrayTest5() {
 		int arr[] = new int[5];
 		Scanner sc = new Scanner(System.in);
 		for(int i=0;i<5;i++) {
-			System.out.print(i+1 + "¹øÂ° ¼ıÀÚ ÀÔ·Â : ");
+			System.out.print(i+1 + "ë²ˆì§¸ ìˆ«ì ì…ë ¥ : ");
 			int itemp = sc.nextInt();
 			arr[i] = itemp;
 		}
@@ -104,111 +104,111 @@ public class ArrayTest {
 		Scanner sc = new Scanner(System.in);
 		boolean b = true;
 		
-		//boolÇü º¯¼ö
+		//boolí˜• ë³€ìˆ˜
 		boolean room[] = new boolean[10];
 		while(b) {
-			System.out.println("¸ğÅÚ °ü¸® ÇÁ·Î±×·¥  v1.0");
-			System.out.print("1.ÀÔ½Ç\t2.Åğ½Ç\t3.¹æº¸±â\t4.Á¾·á\n¼±ÅÃ > ");
+			System.out.println("ëª¨í…” ê´€ë¦¬ í”„ë¡œê·¸ë¨  v1.0");
+			System.out.print("1.ì…ì‹¤\t2.í‡´ì‹¤\t3.ë°©ë³´ê¸°\t4.ì¢…ë£Œ\nì„ íƒ > ");
 			int itemp = sc.nextInt();
 			switch(itemp) {
 			case 1:
-				System.out.print("¸î¹ø¹æ¿¡ ÀÔ½ÇÇÏ½Ã°Ú½À´Ï±î?");
+				System.out.print("ëª‡ë²ˆë°©ì— ì…ì‹¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 				int i = sc.nextInt();
 				if(i>11 && i<1) {
-					System.out.println("Àß¸øµÈ ÀÔ·Â");
+					System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				}else {
 					if(room[i-1]!=false) {
-						System.out.println(i + "¹ø¹æÀº ÇöÀç ¼Õ´ÔÀÌ ÀÖ½À´Ï´Ù");
+						System.out.println(i + "ë²ˆë°©ì€ í˜„ì¬ ì†ë‹˜ì´ ìˆìŠµë‹ˆë‹¤");
 					}else {
 						room[i-1]=true;
-						System.out.println(i + "¹ø¹æ¿¡ ÀÔ½ÇÇÏ¼Ì½À´Ï´Ù");
+						System.out.println(i + "ë²ˆë°©ì— ì…ì‹¤í•˜ì…¨ìŠµë‹ˆë‹¤");
 					}
 				}
 				break;
 			case 2:
-				System.out.print("¸î¹ø¹æ¿¡¼­ Åğ½ÇÇÏ½Ã°Ú½À´Ï±î?");
+				System.out.print("ëª‡ë²ˆë°©ì—ì„œ í‡´ì‹¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 				int j = sc.nextInt();
 				if(j>11 && j<1) {
-					System.out.println("Àß¸øµÈ ÀÔ·Â");
+					System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				}else {
 					if(room[j-1]!=true) {
-						System.out.println(j + "¹ø¹æÀº ÇöÀç ºó ¹æÀÔ´Ï´Ù");
+						System.out.println(j + "ë²ˆë°©ì€ í˜„ì¬ ë¹ˆ ë°©ì…ë‹ˆë‹¤");
 					}else {
 						room[j-1]=false;
-						System.out.println(j + "¹ø¹æ¿¡¼­ Åğ½ÇÇÏ¼Ì½À´Ï´Ù");
+						System.out.println(j + "ë²ˆë°©ì—ì„œ í‡´ì‹¤í•˜ì…¨ìŠµë‹ˆë‹¤");
 					}
 				}
 				break;
 			case 3:
 				for(int k=0;k<room.length;k++) {
 					if(room[k]==true) {
-						System.out.println(k+1 + "¹ø¹æ¿¡´Â ÇöÀç ¼Õ´ÔÀÌ ÀÖ½À´Ï´Ù");
+						System.out.println(k+1 + "ë²ˆë°©ì—ëŠ” í˜„ì¬ ì†ë‹˜ì´ ìˆìŠµë‹ˆë‹¤");
 					}else {
-						System.out.println(k+1 + "¹ø¹æÀÌ ÇöÀç ºñ¾îÀÖ½À´Ï´Ù");
+						System.out.println(k+1 + "ë²ˆë°©ì´ í˜„ì¬ ë¹„ì–´ìˆìŠµë‹ˆë‹¤");
 					}
 				}
 				break;
 			case 4:
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤");
 				b = false;
 				break;
 			default:
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				break;
 			}
 		}
 		
-		//intÇü¹è¿­
+		//intí˜•ë°°ì—´
 		/*
 		int rNum[] = new int[10];
 		while(b) {
-			System.out.println("¸ğÅÚ °ü¸® ÇÁ·Î±×·¥  v1.0");
-			System.out.print("1.ÀÔ½Ç\t2.Åğ½Ç\t3.¹æº¸±â\t4.Á¾·á\n¼±ÅÃ > ");
+			System.out.println("ëª¨í…” ê´€ë¦¬ í”„ë¡œê·¸ë¨  v1.0");
+			System.out.print("1.ì…ì‹¤\t2.í‡´ì‹¤\t3.ë°©ë³´ê¸°\t4.ì¢…ë£Œ\nì„ íƒ > ");
 			int itemp = sc.nextInt();
 			switch(itemp) {
 			case 1:
-				System.out.print("¸î¹ø¹æ¿¡ ÀÔ½ÇÇÏ½Ã°Ú½À´Ï±î?");
+				System.out.print("ëª‡ë²ˆë°©ì— ì…ì‹¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 				int i = sc.nextInt();
 				if(i>11 && i<1) {
-					System.out.println("Àß¸øµÈ ÀÔ·Â");
+					System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				}else {
 					if(rNum[i-1]!=0) {
-						System.out.println(i + "¹ø¹æÀº ÇöÀç ¼Õ´ÔÀÌ ÀÖ½À´Ï´Ù");
+						System.out.println(i + "ë²ˆë°©ì€ í˜„ì¬ ì†ë‹˜ì´ ìˆìŠµë‹ˆë‹¤");
 					}else {
 						rNum[i-1]=1;
-						System.out.println(i + "¹ø¹æ¿¡ ÀÔ½ÇÇÏ¼Ì½À´Ï´Ù");
+						System.out.println(i + "ë²ˆë°©ì— ì…ì‹¤í•˜ì…¨ìŠµë‹ˆë‹¤");
 					}
 				}
 				break;
 			case 2:
-				System.out.print("¸î¹ø¹æ¿¡¼­ Åğ½ÇÇÏ½Ã°Ú½À´Ï±î?");
+				System.out.print("ëª‡ë²ˆë°©ì—ì„œ í‡´ì‹¤í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 				int j = sc.nextInt();
 				if(j>11 && j<1) {
-					System.out.println("Àß¸øµÈ ÀÔ·Â");
+					System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				}else {
 					if(rNum[j-1]==0) {
-						System.out.println(j + "¹ø¹æÀº ÇöÀç ºó ¹æÀÔ´Ï´Ù");
+						System.out.println(j + "ë²ˆë°©ì€ í˜„ì¬ ë¹ˆ ë°©ì…ë‹ˆë‹¤");
 					}else {
 						rNum[j-1]=0;
-						System.out.println(j + "¹ø¹æ¿¡¼­ Åğ½ÇÇÏ¼Ì½À´Ï´Ù");
+						System.out.println(j + "ë²ˆë°©ì—ì„œ í‡´ì‹¤í•˜ì…¨ìŠµë‹ˆë‹¤");
 					}
 				}
 				break;
 			case 3:
 				for(int k=0;k<rNum.length;k++) {
 					if(rNum[k]!=0) {
-						System.out.println(k+1 + "¹ø¹æ¿¡´Â ÇöÀç ¼Õ´ÔÀÌ ÀÖ½À´Ï´Ù");
+						System.out.println(k+1 + "ë²ˆë°©ì—ëŠ” í˜„ì¬ ì†ë‹˜ì´ ìˆìŠµë‹ˆë‹¤");
 					}else {
-						System.out.println(k+1 + "¹ø¹æÀÌ ÇöÀç ºñ¾îÀÖ½À´Ï´Ù");
+						System.out.println(k+1 + "ë²ˆë°©ì´ í˜„ì¬ ë¹„ì–´ìˆìŠµë‹ˆë‹¤");
 					}
 				}
 				break;
 			case 4:
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù");
+				System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤");
 				b = false;
 				break;
 			default:
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				break;
 			}
 		}
@@ -219,33 +219,33 @@ public class ArrayTest {
 		Scanner sc = new Scanner(System.in);
 		Random rd = new Random();
 		
-		//°ÔÀÓÀ» ´õÇÒÁö ¿©ºÎ¸¦ ÆÇ´ÜÇÏ´Â º¯¼ö
+		//ê²Œì„ì„ ë”í• ì§€ ì—¬ë¶€ë¥¼ íŒë‹¨í•˜ëŠ” ë³€ìˆ˜
 		char c = ' ';
 		boolean b = true;
 		
-		//À¯ÀúÀÇ¹øÈ£
+		//ìœ ì €ì˜ë²ˆí˜¸
 		int lottoA[] = new int[6];
-		//ÄÄÇ»ÅÍÀÇ ¹øÈ£
+		//ì»´í“¨í„°ì˜ ë²ˆí˜¸
 		int lottoC[] = new int[6];
-		//¸ÂÀº°³¼ö ÀúÀåº¯¼ö
+		//ë§ì€ê°œìˆ˜ ì €ì¥ë³€ìˆ˜
 		int count=0;
-		//°ªÀúÀåÀ§ÇÑ ÀÓ½Ãº¯¼ö
+		//ê°’ì €ì¥ìœ„í•œ ì„ì‹œë³€ìˆ˜
 		int itemp=0;
 		
-		//½ÃÀÛ ¹× À¯ÀúÀÇ ¹øÈ£ ÀÔ·Â¹Ş±â
-		System.out.println("============== ·Î¶Ç ÇÁ·Î±×·¥ ==============");
+		//ì‹œì‘ ë° ìœ ì €ì˜ ë²ˆí˜¸ ì…ë ¥ë°›ê¸°
+		System.out.println("============== ë¡œë˜ í”„ë¡œê·¸ë¨ ==============");
 		for(int i=0;i<lottoA.length;i++) {
-			System.out.print(i+1 + "¹øÂ° ¹øÈ£ ÀÔ·Â(1~45) : ");
-			//ÀÓ½Ã ¹øÈ£¸¦ ÀúÀåÇÒ º¯¼ö
+			System.out.print(i+1 + "ë²ˆì§¸ ë²ˆí˜¸ ì…ë ¥(1~45) : ");
+			//ì„ì‹œ ë²ˆí˜¸ë¥¼ ì €ì¥í•  ë³€ìˆ˜
 			itemp = sc.nextInt();
-			//¹üÀ§ ¹ş¾î³­°Å Àâ°í°¡±â
+			//ë²”ìœ„ ë²—ì–´ë‚œê±° ì¡ê³ ê°€ê¸°
 			if(itemp>45 || itemp<1) {
-				System.out.println("Àß¸øÀÔ·ÂÇÏ¼Ì½À´Ï´Ù. 1~45 Áß ÇÑ°³¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+				System.out.println("ì˜ëª»ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤. 1~45 ì¤‘ í•œê°œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				i--;
 			}else {
 				for(int k=0; k<lottoA.length; k++) {
 					if((itemp == lottoA[k])&&(i!=k)) {
-						System.out.println("ÀÌ¹Ì Áßº¹µÈ ¹øÈ£ÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä");
+						System.out.println("ì´ë¯¸ ì¤‘ë³µëœ ë²ˆí˜¸ì…ë‹ˆë‹¤. ë‹¤ì‹œ ì…ë ¥í•´ì£¼ì„¸ìš”");
 						i--;
 						break;
 					}
@@ -256,7 +256,7 @@ public class ArrayTest {
 			}
 		}
 		
-		//ÄÄÇ»ÅÍÀÇ ¹øÈ£ ÀÔ·Â¹Ş±â
+		//ì»´í“¨í„°ì˜ ë²ˆí˜¸ ì…ë ¥ë°›ê¸°
 		for(int i=0;i<lottoC.length;i++) {
 			int ranNum = rd.nextInt(45)+1;			
 			for(int k=0; k<lottoC.length; k++) {
@@ -270,7 +270,7 @@ public class ArrayTest {
 			}
 		}
 		
-		//¹öºíÁ¤·Ä
+		//ë²„ë¸”ì •ë ¬
 		for(int i=0;i<lottoA.length;i++) {			
 			for(int j=i+1; j<lottoA.length; j++) {
 				if(lottoA[i]>lottoA[j]) {
@@ -290,18 +290,18 @@ public class ArrayTest {
 			}
 		}
 		
-		//°¢°¢ÀÇ ¹øÈ£ ½Ã°¢Àû Ãâ·Â
-		System.out.println("»ç¿ëÀÚ ¹øÈ£");
+		//ê°ê°ì˜ ë²ˆí˜¸ ì‹œê°ì  ì¶œë ¥
+		System.out.println("ì‚¬ìš©ì ë²ˆí˜¸");
 		for(int i=0;i<lottoA.length;i++) {
 			System.out.print(lottoA[i]+"\t");
 		}
 		System.out.println();
-		System.out.println("ÄÄÇ»ÅÍ ¹øÈ£");
+		System.out.println("ì»´í“¨í„° ë²ˆí˜¸");
 		for(int i=0;i<lottoC.length;i++) {
 			System.out.print(lottoC[i]+"\t");
 		}
 		
-		//¸ÂÀº °³¼öÃøÁ¤
+		//ë§ì€ ê°œìˆ˜ì¸¡ì •
 		for(int i=0;i<lottoA.length;i++) {
 			itemp = lottoA[i];
 			for(int j=0;j<lottoC.length;j++) {
@@ -311,38 +311,38 @@ public class ArrayTest {
 			}
 		}
 		System.out.println();
-		System.out.println("¸ÂÀº °¹¼ö : " + count);
+		System.out.println("ë§ì€ ê°¯ìˆ˜ : " + count);
 		
-		//µî¼ö Ç¥Ãâ
+		//ë“±ìˆ˜ í‘œì¶œ
 		switch(count) {
 		case 6:
 		case 5:
 		case 4:
 		case 3:
 		case 2:
-			System.out.println(7-count + "µîÀÔ´Ï´Ù");
+			System.out.println(7-count + "ë“±ì…ë‹ˆë‹¤");
 			break;
 		case 1:
 		default:
-			System.out.println("²Î");
+			System.out.println("ê½");
 			break;
 		}
 		
-		//´õÇÒÁö ¿©ºÎ ÆÇ´Ü
-		System.out.print("ÇÑ¹ø ´õ ÇÏ½Ã°Ú½À´Ï±î(1.yes,2.no)?");
+		//ë”í• ì§€ ì—¬ë¶€ íŒë‹¨
+		System.out.print("í•œë²ˆ ë” í•˜ì‹œê² ìŠµë‹ˆê¹Œ(1.yes,2.no)?");
 		c = sc.next().charAt(0);
 	}
 
 	public void arrCopy() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀüÈ­¹øÈ£ ÀÔ·Â : ");
+		System.out.print("ì „í™”ë²ˆí˜¸ ì…ë ¥ : ");
 		String ph = sc.next();
-		//¹®ÀÚ¿­À» ¹®ÀÚ1°³¾¿ ºĞ¸®ÇØ¼­ ¹®ÀÚÇü ¹è¿­¿¡ ÀúÀå
-		//¹®ÀÚ¿­ Áß¿¡ ¸î¹øÂ° ±ÛÀÚ ÇÏ³ª¸¸ ¹®ÀÚ·Î ÃßÃâ
-		//¾èÀºº¹»ç(°ª¸¸ ÀúÀå, ¿øº» º¯ÇÏ¸é ¾êµµ ¹Ù²ñ)
+		//ë¬¸ìì—´ì„ ë¬¸ì1ê°œì”© ë¶„ë¦¬í•´ì„œ ë¬¸ìí˜• ë°°ì—´ì— ì €ì¥
+		//ë¬¸ìì—´ ì¤‘ì— ëª‡ë²ˆì§¸ ê¸€ì í•˜ë‚˜ë§Œ ë¬¸ìë¡œ ì¶”ì¶œ
+		//ì–•ì€ë³µì‚¬(ê°’ë§Œ ì €ì¥, ì›ë³¸ ë³€í•˜ë©´ ì–˜ë„ ë°”ë€œ)
 		int iA[] = {1,2,3};
 		int iA1[] = iA;
-		//±íÀºº¹»ç(°ª°ú ÁÖ¼Ò ¸ğµÎ ÀúÀå, ¿øº» º¯ÇØµµ ¿µÇâ¾øÀ½)
+		//ê¹Šì€ë³µì‚¬(ê°’ê³¼ ì£¼ì†Œ ëª¨ë‘ ì €ì¥, ì›ë³¸ ë³€í•´ë„ ì˜í–¥ì—†ìŒ)
 		char ph1[] = new char[13];
 		for(int i=0;i<ph.length();i++) {
 			ph1[i] = ph.charAt(i);
@@ -353,15 +353,15 @@ public class ArrayTest {
 		}
 		
 
-		//arraycopy¸Ş¼Òµå ¿øº»¹è¿­,½ÃÀÛÀ§Ä¡,º¹»ç¹è¿­,½ÃÀÛÀ§Ä¡,±æÀÌ
+		//arraycopyë©”ì†Œë“œ ì›ë³¸ë°°ì—´,ì‹œì‘ìœ„ì¹˜,ë³µì‚¬ë°°ì—´,ì‹œì‘ìœ„ì¹˜,ê¸¸ì´
 		
-		//cloneÅ°¿öµå¸¦ »ç¿ëÇØ¼­ ±íÀº º¹»ç
+		//cloneí‚¤ì›Œë“œë¥¼ ì‚¬ìš©í•´ì„œ ê¹Šì€ ë³µì‚¬
 		char ph2[] = ph.toCharArray().clone();
 	}
 	
 	public void arrTest() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÁÖ¹Î¹øÈ£ ÀÔ·Â : ");
+		System.out.print("ì£¼ë¯¼ë²ˆí˜¸ ì…ë ¥ : ");
 		String ph = sc.next();
 		char chs[] = new char[14];
 		
@@ -375,17 +375,17 @@ public class ArrayTest {
 	}
 
 	public void sdarrTest() {
-		//2Â÷¿ø ¹è¿­ arr[°¡·Î_Çà¹øÈ£][¼¼·Î_¿­¹øÈ£]
-		//±âº»°ªÀº ¼ıÀÚÇüÀº ¸ğµÎ 0 
-		//booleanÀº false, char ''		
+		//2ì°¨ì› ë°°ì—´ arr[ê°€ë¡œ_í–‰ë²ˆí˜¸][ì„¸ë¡œ_ì—´ë²ˆí˜¸]
+		//ê¸°ë³¸ê°’ì€ ìˆ«ìí˜•ì€ ëª¨ë‘ 0 
+		//booleanì€ false, char ''		
 		int sdarr[][] = {{1,2,3},{4,5,6}};
 		int arr[][] = new int[5][5];
 		int k = 0;
-		//arr.length´Â ÇàÀÇ °¹¼ö
+		//arr.lengthëŠ” í–‰ì˜ ê°¯ìˆ˜
 		for(int i=0;i<arr.length;i++) {
-			//arr[i].length´Â ±× ÇàÀÇ ¿­ÀÇ°³¼ö
-			//°¡º¯¹è¿­¿¡¼­´Â °¢ Çà¸¶´Ù ¿­ÀÇ ±æÀÌ°¡
-			//´Ù¸¦ ¼ö ÀÖ±â ¶§¹®¿¡ ²À Àû¾î¾ßÇÔ
+			//arr[i].lengthëŠ” ê·¸ í–‰ì˜ ì—´ì˜ê°œìˆ˜
+			//ê°€ë³€ë°°ì—´ì—ì„œëŠ” ê° í–‰ë§ˆë‹¤ ì—´ì˜ ê¸¸ì´ê°€
+			//ë‹¤ë¥¼ ìˆ˜ ìˆê¸° ë•Œë¬¸ì— ê¼­ ì ì–´ì•¼í•¨
 			for(int j=0;j<arr[i].length;j++) {
 				arr[i][j]=k;
 				k++;
@@ -469,24 +469,24 @@ public class ArrayTest {
 	public void kakaoArrayTest() {
 		Scanner sc = new Scanner(System.in);
 		Random rd = new Random();
-		//Çà°ú ¿­À» ÀúÀåÇÒ º¯¼ö
+		//í–‰ê³¼ ì—´ì„ ì €ì¥í•  ë³€ìˆ˜
 		int row = 0, col =0;
-		//°ª ÆÇº°°úÁ¤
+		//ê°’ íŒë³„ê³¼ì •
 		while(true) {
-			System.out.print("°¡·ÎÇàÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä(1~10) ==> ");
+			System.out.print("ê°€ë¡œí–‰ì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”(1~10) ==> ");
 			row = sc.nextInt();
 			if(row<1||row>10) {
-				System.out.println("¹İµå½Ã 1~10 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇØ¾ß ÇÕ´Ï´Ù.");
+				System.out.println("ë°˜ë“œì‹œ 1~10 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì•¼ í•©ë‹ˆë‹¤.");
 			}else {
 				break;
 			}
 		}
 		
 		while(true) {
-			System.out.print("¼¼·Î¿­ÀÇ °³¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä(1~10) ==> ");
+			System.out.print("ì„¸ë¡œì—´ì˜ ê°œìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”(1~10) ==> ");
 			col = sc.nextInt();
 			if(col<1||col>10) {
-				System.out.println("¹İµå½Ã 1~10 »çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇØ¾ß ÇÕ´Ï´Ù.");
+				System.out.println("ë°˜ë“œì‹œ 1~10 ì‚¬ì´ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•´ì•¼ í•©ë‹ˆë‹¤.");
 			}else {
 				break;
 			}
@@ -494,7 +494,7 @@ public class ArrayTest {
 		char chArray[][] = new char[row][col];
 		for(int i=0; i<row; i++) {
 			for(int j=0; j<col; j++) {
-				//¾ËÆÄºªÀº ÃÑ 26°³
+				//ì•ŒíŒŒë²³ì€ ì´ 26ê°œ
 				char ch = (char)(rd.nextInt(26)+97);
 				chArray[i][j] = ch;
 				System.out.print(chArray[i][j]+"\t");
@@ -505,37 +505,37 @@ public class ArrayTest {
 
 	public void snail2DArray() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("2Â÷¿ø ¹è¿­ Å©±â ÀÔ·Â(Á¤¹æÇü) > ");
+		System.out.print("2ì°¨ì› ë°°ì—´ í¬ê¸° ì…ë ¥(ì •ë°©í˜•) > ");
 		int temp = sc.nextInt();
 		int arr[][] = new int[temp][temp];
-		//Çà°ú ¿­
+		//í–‰ê³¼ ì—´
 		int row=0,col=-1;
-		//°ª º¯¼ö
+		//ê°’ ë³€ìˆ˜
 		int k=1;
-		//½ºÀ§Ä¡°³³äÀÇ º¯¼ö
+		//ìŠ¤ìœ„ì¹˜ê°œë…ì˜ ë³€ìˆ˜
 		int iSwitch = 1;
 		
 		while(true){
-			//ÇàÀÇ °ªÀÌ Áõ°¨ÇÏ´Â ÄÚµå
+			//í–‰ì˜ ê°’ì´ ì¦ê°í•˜ëŠ” ì½”ë“œ
 			for(int i=0;i<temp;i++){
         		col=col+iSwitch;
         		arr[row][col]=k++;
         	}
 
         	temp=temp-1;
-        	//°¢°¢ nÇàn¿­ÀÇ ¹è¿­Àº
-        	//´ŞÆØÀÌ½Ã n,n-1,n-1,n-2,n-2...
-        	//2,2,1,1À» °ÅÄ¡°ÔµÊ
+        	//ê°ê° ní–‰nì—´ì˜ ë°°ì—´ì€
+        	//ë‹¬íŒ½ì´ì‹œ n,n-1,n-1,n-2,n-2...
+        	//2,2,1,1ì„ ê±°ì¹˜ê²Œë¨
 
-        	//Á¾ÂøÁö¶ó¸é
+        	//ì¢…ì°©ì§€ë¼ë©´
         	if(temp==0)
         	break;
-        	//¿­ÀÇ°ªÀÌ Áõ°¨ÇÏ´ÂÄÚµå
+        	//ì—´ì˜ê°’ì´ ì¦ê°í•˜ëŠ”ì½”ë“œ
         	for(int i=0;i<temp;i++){
         		row=row+iSwitch;
         		arr[row][col]=k++;
         	}
-        	//Çà°ú ¿­ÀÌ ¸ğµÎ Áõ°¨µÇ¾úÀ¸¹Ç·Î Áõ°¨À» ¼­·Î º¯È¯
+        	//í–‰ê³¼ ì—´ì´ ëª¨ë‘ ì¦ê°ë˜ì—ˆìœ¼ë¯€ë¡œ ì¦ê°ì„ ì„œë¡œ ë³€í™˜
         	iSwitch=iSwitch*(-1);
         }
 		
@@ -545,42 +545,42 @@ public class ArrayTest {
 			}
 			System.out.println();
 		}
-		//ÃâÃ³: https://cbts.tistory.com/60 [ITÀÏ±âÀå]
+		//ì¶œì²˜: https://cbts.tistory.com/60 [ITì¼ê¸°ì¥]
 	}
 
 	public void snail2DArrayBack() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("2Â÷¿ø ¹è¿­ Å©±â ÀÔ·Â(Á¤¹æÇü) > ");
+		System.out.print("2ì°¨ì› ë°°ì—´ í¬ê¸° ì…ë ¥(ì •ë°©í˜•) > ");
 		int temp = sc.nextInt();
 		int arr[][] = new int[temp][temp];
-		//Çà°ú ¿­
+		//í–‰ê³¼ ì—´
 		int row=0,col=-1;
-		//°ª º¯¼ö
+		//ê°’ ë³€ìˆ˜
 		int k=1;
-		//½ºÀ§Ä¡°³³äÀÇ º¯¼ö
+		//ìŠ¤ìœ„ì¹˜ê°œë…ì˜ ë³€ìˆ˜
 		int iSwitch = 1;
 		
 		while(true){
-			//ÇàÀÇ °ªÀÌ Áõ°¨ÇÏ´Â ÄÚµå
+			//í–‰ì˜ ê°’ì´ ì¦ê°í•˜ëŠ” ì½”ë“œ
 			for(int i=0;i<temp;i++){
         		col=col+iSwitch;
         		arr[row][col]=k++;
         	}
 
         	temp=temp-1;
-        	//°¢°¢ nÇàn¿­ÀÇ ¹è¿­Àº
-        	//´ŞÆØÀÌ½Ã n,n-1,n-1,n-2,n-2...
-        	//2,2,1,1À» °ÅÄ¡°ÔµÊ
+        	//ê°ê° ní–‰nì—´ì˜ ë°°ì—´ì€
+        	//ë‹¬íŒ½ì´ì‹œ n,n-1,n-1,n-2,n-2...
+        	//2,2,1,1ì„ ê±°ì¹˜ê²Œë¨
 
-        	//Á¾ÂøÁö¶ó¸é
+        	//ì¢…ì°©ì§€ë¼ë©´
         	if(temp==0)
         	break;
-        	//¿­ÀÇ°ªÀÌ Áõ°¨ÇÏ´ÂÄÚµå
+        	//ì—´ì˜ê°’ì´ ì¦ê°í•˜ëŠ”ì½”ë“œ
         	for(int i=0;i<temp;i++){
         		row=row+iSwitch;
         		arr[row][col]=k++;
         	}
-        	//Çà°ú ¿­ÀÌ ¸ğµÎ Áõ°¨µÇ¾úÀ¸¹Ç·Î Áõ°¨À» ¼­·Î º¯È¯
+        	//í–‰ê³¼ ì—´ì´ ëª¨ë‘ ì¦ê°ë˜ì—ˆìœ¼ë¯€ë¡œ ì¦ê°ì„ ì„œë¡œ ë³€í™˜
         	iSwitch=iSwitch*(-1);
         }
 		
@@ -592,16 +592,16 @@ public class ArrayTest {
 		}
 	}
 
-	//°­»ç´Ô ¹æ½Ä
+	//ê°•ì‚¬ë‹˜ ë°©ì‹
 	public void snail2DArray2() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("2Â÷¿ø ¹è¿­ Å©±â ÀÔ·Â(Á¤¹æÇü) > ");
+		System.out.print("2ì°¨ì› ë°°ì—´ í¬ê¸° ì…ë ¥(ì •ë°©í˜•) > ");
 		int size = sc.nextInt();
-		int[][] arr = new int[size][size];					//ÀÔ·Â¹ŞÀºÅ©±âÀÇ Á¤¹æÇü ¹è¿­ »ı¼º
-		int k = 1;												//¹è¿­¾ÈÀÇ Ã¤¿ï °ª º¯¼ö
-		int inc =1;											//ÀÎµ¦½º¹øÈ£ Áõ°¨¿ë º¯¼ö
-		int r=0;												//2Â÷¿ø¹è¿­ Çà ÀÎµ¦½º¹øÈ£
-		int c=-1;												//2Â÷¿ø¹è¿­ ¿­ ÀÎµ¦½º¹øÈ£
+		int[][] arr = new int[size][size];					//ì…ë ¥ë°›ì€í¬ê¸°ì˜ ì •ë°©í˜• ë°°ì—´ ìƒì„±
+		int k = 1;												//ë°°ì—´ì•ˆì˜ ì±„ìš¸ ê°’ ë³€ìˆ˜
+		int inc =1;											//ì¸ë±ìŠ¤ë²ˆí˜¸ ì¦ê°ìš© ë³€ìˆ˜
+		int r=0;												//2ì°¨ì›ë°°ì—´ í–‰ ì¸ë±ìŠ¤ë²ˆí˜¸
+		int c=-1;												//2ì°¨ì›ë°°ì—´ ì—´ ì¸ë±ìŠ¤ë²ˆí˜¸
 		while(size>0) {
 			for(int i=0;i<size;i++) {
 				c=c+inc;
@@ -626,46 +626,46 @@ public class ArrayTest {
 
 	public void kakaoArrayTest2() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Áöµµ ÇÑ º¯ÀÇ ±æÀÌ ÀÔ·Â ");
+		System.out.print("ì§€ë„ í•œ ë³€ì˜ ê¸¸ì´ ì…ë ¥ ");
 		int iNum = sc.nextInt();
-		//Áöµµ1ÀÇ ¹è¿­
+		//ì§€ë„1ì˜ ë°°ì—´
 		int arr1[][] = new int[iNum][iNum];
-		//Áöµµ2ÀÇ ¹è¿­
+		//ì§€ë„2ì˜ ë°°ì—´
 		int arr2[][] = new int[iNum][iNum];
-		//¿Ï¼ºµÈ ÁöµµÀÇ ¹è¿­
+		//ì™„ì„±ëœ ì§€ë„ì˜ ë°°ì—´
 		char ch[][] = new char[iNum][iNum];
 		
-		System.out.println("Áöµµ1ÀÇ ¼ıÀÚ ÀÔ·Â : ");
-		//Áöµµ1¿¡ ¼ıÀÚ ÀÔ·Â
+		System.out.println("ì§€ë„1ì˜ ìˆ«ì ì…ë ¥ : ");
+		//ì§€ë„1ì— ìˆ«ì ì…ë ¥
 		for(int i=0; i<iNum; i++) {
-			System.out.print(i+1+"¹øÂ° ¼ıÀÚ ÀÔ·Â");
+			System.out.print(i+1+"ë²ˆì§¸ ìˆ«ì ì…ë ¥");
 			int k = sc.nextInt();
 			if(k>0 && k<Math.pow(2, iNum)) {
 				arr1[i] = dec2binary(k, iNum);
 			}
 			else {
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				i--;
 			}
 		}
 		
-		System.out.println("Áöµµ2ÀÇ ¼ıÀÚ ÀÔ·Â : ");
-		//Áöµµ2¿¡ ¼ıÀÚ ÀÔ·Â
+		System.out.println("ì§€ë„2ì˜ ìˆ«ì ì…ë ¥ : ");
+		//ì§€ë„2ì— ìˆ«ì ì…ë ¥
 		for(int i=0; i<iNum; i++) {
-			System.out.print(i+1+"¹øÂ° ¼ıÀÚ ÀÔ·Â");
+			System.out.print(i+1+"ë²ˆì§¸ ìˆ«ì ì…ë ¥");
 			int k = sc.nextInt();
-			//^´Â °ÅµìÁ¦°öÀ» ÀÇ¹ÌÇÏÁö¸¸
-			//¿©±â¼± xor¿¬»êÀÚÀÓ			
+			//^ëŠ” ê±°ë“­ì œê³±ì„ ì˜ë¯¸í•˜ì§€ë§Œ
+			//ì—¬ê¸°ì„  xorì—°ì‚°ìì„			
 			if(k>0 && k<Math.pow(2, iNum)) {
 				arr2[i] = dec2binary(k, iNum);
 			}
 			else {
-				System.out.println("Àß¸øµÈ ÀÔ·Â");
+				System.out.println("ì˜ëª»ëœ ì…ë ¥");
 				i--;
 			}
 		}
 		
-		//Áöµµ¸¦ ÇÕÃÄ ¿Ï¼ºµÈ Áöµµ·Î º¯È¯ÇÏ´Â ÄÚµå
+		//ì§€ë„ë¥¼ í•©ì³ ì™„ì„±ëœ ì§€ë„ë¡œ ë³€í™˜í•˜ëŠ” ì½”ë“œ
 		for(int i=0;i<ch.length;i++) {
 			for(int j=0;j<ch[i].length;j++) {
 				if(arr1[i][j]==1 || arr2[i][j]==1) {
@@ -677,8 +677,8 @@ public class ArrayTest {
 			}
 		}
 		
-		//¿Ï¼ºµÈ Áöµµ Ãâ·Â
-		System.out.println("¿Ï¼ºµÈ Áöµµ");
+		//ì™„ì„±ëœ ì§€ë„ ì¶œë ¥
+		System.out.println("ì™„ì„±ëœ ì§€ë„");
 		for(int i=0;i<ch.length;i++) {
 			for(int j=0;j<ch[i].length;j++) {
 				System.out.print(ch[i][j]+"\t");
@@ -687,15 +687,15 @@ public class ArrayTest {
 		}
 	}
 	
-	//10Áø¼ö¸¦ 2Áø¼ö·Î ¸¸µå´Â ÄÚµå
+	//10ì§„ìˆ˜ë¥¼ 2ì§„ìˆ˜ë¡œ ë§Œë“œëŠ” ì½”ë“œ
 	int[] dec2binary(int i, int all) {
 		int arrTemp[] = new int[all];
 		int ori = i;
 		
 		for(int j=0; j<all; j++) {
-			//±æÀÌ°¡ nÀÎ ¹è¿­ÀÇ ¸¶Áö¸· ÀÎÀÚ´Â n-1
+			//ê¸¸ì´ê°€ nì¸ ë°°ì—´ì˜ ë§ˆì§€ë§‰ ì¸ìëŠ” n-1
 			arrTemp[all-j-1] = ori%2;
-			//³ª¸ÓÁö
+			//ë‚˜ë¨¸ì§€
 			ori /= 2;
 		}
 		return arrTemp;
@@ -705,20 +705,20 @@ public class ArrayTest {
 		Scanner sc = new Scanner(System.in);
 		int map1[][] = new int[5][5];
 		int map2[][] = new int[5][5];
-		//ÀÌºÎºĞÀ» booleanÇü º¯¼ö·Î ÇØµµ
-		//¶È°°ÀÌ ±¸ÇöÀÌ °¡´ÉÇÔ
+		//ì´ë¶€ë¶„ì„ booleaní˜• ë³€ìˆ˜ë¡œ í•´ë„
+		//ë˜‘ê°™ì´ êµ¬í˜„ì´ ê°€ëŠ¥í•¨
 		char map[][] = new char[5][5];
 		
 		int size = 5;
 		int itemp=0;
-		//°ÅµìÁ¦°ö
+		//ê±°ë“­ì œê³±
 		for(int i=0;i<size;i++) {
 			itemp*=2;
 		}
 		
-		System.out.println("Ã¹¹øÂ° ¹è¿­ ¼ıÀÚÀÔ·Â");
+		System.out.println("ì²«ë²ˆì§¸ ë°°ì—´ ìˆ«ìì…ë ¥");
 		for(int i=0;i<map1.length;i++) {
-			System.out.print(i+1+"¹øÂ° Çà ¼ıÀÚ ÀÔ·Â(¹üÀ§0~31) : ");
+			System.out.print(i+1+"ë²ˆì§¸ í–‰ ìˆ«ì ì…ë ¥(ë²”ìœ„0~31) : ");
 			int iNum = sc.nextInt();
 			map1[i] = dec2binary(iNum, 5);
 			/*
@@ -738,7 +738,7 @@ public class ArrayTest {
 		
 		for(int i=0;i<map.length;i++) {
 			for(int j=0;j<map[i].length;j++) {
-				//3Ç×¿¬»êÀÚ
+				//3í•­ì—°ì‚°ì
 				//map[i][j] = map1[i][j]|map2[i][j]?'#':' ';
 				if(map1[i][j]==1 || map2[i][j]==1) {
 					map[i][j]='#';

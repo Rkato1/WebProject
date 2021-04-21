@@ -11,10 +11,10 @@ import java.util.Scanner;
 
 public class TCPClient2 {
 	public void main() {
-		//1.¼­¹ö ¾ÆÀÌÇÇÁÖ¼Ò ¹× Æ÷Æ®¹øÈ£ ÁöÁ¤
-		//ÇöÀç´Â ÀÚ±â ÀÚ½ÅÀ» È£ÃâÇÏ¹Ç·Î localhost
+		//1.ì„œë²„ ì•„ì´í”¼ì£¼ì†Œ ë° í¬íŠ¸ë²ˆí˜¸ ì§€ì •
+		//í˜„ì¬ëŠ” ìê¸° ìì‹ ì„ í˜¸ì¶œí•˜ë¯€ë¡œ localhost
 		String serverIp = "127.0.0.1";
-		//¼­¹ö°¡ ÀÀ´äÀ» ±â´Ù¸®´Â Æ÷Æ®¹øÈ£
+		//ì„œë²„ê°€ ì‘ë‹µì„ ê¸°ë‹¤ë¦¬ëŠ” í¬íŠ¸ë²ˆí˜¸
 		int serverPort = 5555;
 		Socket socket = null;
 		DataInputStream dis = null;
@@ -22,18 +22,18 @@ public class TCPClient2 {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
-			//2.Socket °´Ã¼¸¦ »ı¼ºÇÏ¸é¼­ ¼­¹ö¿¡ ¿äÃ»
+			//2.Socket ê°ì²´ë¥¼ ìƒì„±í•˜ë©´ì„œ ì„œë²„ì— ìš”ì²­
 			socket = new Socket(serverIp, serverPort);
-			//3.¼­¹ö¿ÍÀÇ ÀÔÃâ·Â ½ºÆ®¸²»ı¼º
+			//3.ì„œë²„ì™€ì˜ ì…ì¶œë ¥ ìŠ¤íŠ¸ë¦¼ìƒì„±
 			InputStream in = socket.getInputStream();
 			OutputStream out = socket.getOutputStream();
-			//4.º¸Á¶½ºÆ®¸²À» ÅëÇÑ ¼º´É°³¼±
+			//4.ë³´ì¡°ìŠ¤íŠ¸ë¦¼ì„ í†µí•œ ì„±ëŠ¥ê°œì„ 
 			dis = new DataInputStream(in);
 			dos = new DataOutputStream(out);
-			//5.½ºÆ®¸²À» ÅëÇÑ ÀÔ·Â ¹× Ãâ·Â 
+			//5.ìŠ¤íŠ¸ë¦¼ì„ í†µí•œ ì…ë ¥ ë° ì¶œë ¥ 
 			String serverMsg = dis.readUTF();
-			dos.writeUTF("Å¬¶óÀÌ¾ğÆ®");
-			System.out.println("¼­¹ö ¸Ş¼¼Áö : "+serverMsg);
+			dos.writeUTF("í´ë¼ì´ì–¸íŠ¸");
+			System.out.println("ì„œë²„ ë©”ì„¸ì§€ : "+serverMsg);
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -41,7 +41,7 @@ public class TCPClient2 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
-			//6.Åë½Å Á¾·á
+			//6.í†µì‹  ì¢…ë£Œ
 			try {
 				dis.close();
 				dos.close();				

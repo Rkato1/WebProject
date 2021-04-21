@@ -9,15 +9,15 @@ public class Start {
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
 		ExceptionTest et = new ExceptionTest();
-		//Å¬·¡½º³»¿¡¼­ try catchÃ³¸® ÇØ¼­ ¹Ù·Î »ç¿ë°¡´É
+		//í´ë˜ìŠ¤ë‚´ì—ì„œ try catchì²˜ë¦¬ í•´ì„œ ë°”ë¡œ ì‚¬ìš©ê°€ëŠ¥
 		et.test2();
 		try {
-			//¹İ´ë·Î Å¬·¡½º¸¦ throws·Î Ã³¸®ÇÏ¸é
-			//try catch¸¦ ¹«Á¶°Ç ÇÑ¹øÀº °ÅÃÄ¾ßÇÔ
+			//ë°˜ëŒ€ë¡œ í´ë˜ìŠ¤ë¥¼ throwsë¡œ ì²˜ë¦¬í•˜ë©´
+			//try catchë¥¼ ë¬´ì¡°ê±´ í•œë²ˆì€ ê±°ì³ì•¼í•¨
 			et.test3();
-			System.out.println("ÆÄÀÏÀÖÀ½");
+			System.out.println("íŒŒì¼ìˆìŒ");
 		}catch(FileNotFoundException e) {
-			System.out.println("ÆÄÀÏ¾øÀ½");
+			System.out.println("íŒŒì¼ì—†ìŒ");
 		}
 	}
 

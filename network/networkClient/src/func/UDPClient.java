@@ -17,7 +17,7 @@ public class UDPClient {
 		String msg = "UDP Client";
 		byte outMsg[] = msg.getBytes();
 		try {
-			//¼­ºñ½º¸¦ ¿äÃ»ÇÏ´Â ÂÊÀº °´Ã¼»ı¼º½Ã port¹øÈ£¸¦ ÀÔ·ÂÇÏÁö ¾ÊÀ½
+			//ì„œë¹„ìŠ¤ë¥¼ ìš”ì²­í•˜ëŠ” ìª½ì€ ê°ì²´ìƒì„±ì‹œ portë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì§€ ì•ŠìŒ
 			socket = new DatagramSocket();
 			InetAddress serverAddres = InetAddress.getByName("127.0.0.1");
 			outPacket = new DatagramPacket(outMsg, outMsg.length,serverAddres,port);
@@ -25,7 +25,7 @@ public class UDPClient {
 			inPacket = new DatagramPacket(inMsg, inMsg.length);
 			socket.receive(inPacket);
 			String recMsg = new String(inMsg).trim();
-			System.out.println("¼­¹ö : "+recMsg);
+			System.out.println("ì„œë²„ : "+recMsg);
 		} catch (SocketException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

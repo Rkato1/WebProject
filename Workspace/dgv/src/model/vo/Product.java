@@ -1,13 +1,13 @@
 package model.vo;
 
 public class Product {
-	//Á¦Ç°¹øÈ£
+	//ì œí’ˆë²ˆí˜¸
 	int pNum;
-	//Á¦Ç°¸í
+	//ì œí’ˆëª…
 	String pName;
-	//¼ö·®
+	//ìˆ˜ëŸ‰
 	int quantity;
-	//°¡°Ý
+	//ê°€ê²©
 	int price;
 	public Product() {
 		super();

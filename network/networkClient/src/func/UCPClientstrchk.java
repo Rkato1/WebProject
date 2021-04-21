@@ -19,9 +19,9 @@ public class UCPClientstrchk {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
-			System.out.println("Ã¤ÆÃ¼­¹ö Á¢¼Ó Áß...");
+			System.out.println("ì±„íŒ…ì„œë²„ ì ‘ì† ì¤‘...");
 			socket = new Socket(serverIp, serverPort);
-			System.out.println("[Á¢¼Ó ¿Ï·á]");
+			System.out.println("[ì ‘ì† ì™„ë£Œ]");
 			InputStream in = socket.getInputStream();
 			OutputStream out = socket.getOutputStream();
 			dis = new DataInputStream(in);

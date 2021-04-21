@@ -1,11 +1,11 @@
 package model.vo;
 
 public class Movie {
-	//¿µÈ­¹øÈ£
+	//ì˜í™”ë²ˆí˜¸
 	int mNum;
-	//¿µÈ­ Á¦¸ñ
+	//ì˜í™” ì œëª©
 	String mName;
-	//¿µÈ­»ó¿µ½Ã°£
+	//ì˜í™”ìƒì˜ì‹œê°„
 	String mTime;
 	
 	public Movie() {

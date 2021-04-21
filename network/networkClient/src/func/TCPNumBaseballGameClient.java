@@ -21,9 +21,9 @@ public class TCPNumBaseballGameClient {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
-			System.out.println("¼­¹ö Á¢¼Ó Áß...");
+			System.out.println("ì„œë²„ ì ‘ì† ì¤‘...");
 			socket = new Socket(serverIp, serverPort);
-			System.out.println("[Á¢¼Ó ¿Ï·á]");
+			System.out.println("[ì ‘ì† ì™„ë£Œ]");
 			InputStream in = socket.getInputStream();
 			OutputStream out = socket.getOutputStream();
 			dis = new DataInputStream(in);
@@ -31,18 +31,18 @@ public class TCPNumBaseballGameClient {
 			System.out.println("<<<<< Baseball Game >>>>>");
 			System.out.println("<<<<< Game Start >>>>>");
 			while(true) {
-				System.out.print("1¹ø¤Š ¼ıÀÚ ÀÔ·Â : ");
+				System.out.print("1ë²ˆì¨° ìˆ«ì ì…ë ¥ : ");
 				int num1 = sc.nextInt();
 				dos.writeInt(num1);
-				System.out.print("2¹ø¤Š ¼ıÀÚ ÀÔ·Â : ");
+				System.out.print("2ë²ˆì¨° ìˆ«ì ì…ë ¥ : ");
 				int num2 = sc.nextInt();
 				dos.writeInt(num2);
-				System.out.print("3¹ø¤Š ¼ıÀÚ ÀÔ·Â : ");
+				System.out.print("3ë²ˆì¨° ìˆ«ì ì…ë ¥ : ");
 				int num3 = sc.nextInt();
 				dos.writeInt(num3);
 				String sendMsg = dis.readUTF();				
 				System.out.println(sendMsg+"\n");
-				if(sendMsg.equals("°ÔÀÓ ³¡")) {
+				if(sendMsg.equals("ê²Œì„ ë")) {
 					break;
 				}
 			}

@@ -23,33 +23,33 @@ public class ForWhile {
 		//for
 		/*
 		for(int i = 0; i < 5; i++) {
-			System.out.println("¾È³çÇÏ¼¼¿ä");
+			System.out.println("ì•ˆë…•í•˜ì„¸ìš”");
 		}
 		*/
 		
 		//while
 		int i = 0;
 		while(i<5) {
-			System.out.println("¾È³çÇÏ¼¼¿ä");
+			System.out.println("ì•ˆë…•í•˜ì„¸ìš”");
 			i++;
 		}
 	}
 	
 	public void test1() {		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¸î¹ø Ãâ·ÂÇÏ½Ã°Ú½À´Ï±î?");
+		System.out.print("ëª‡ë²ˆ ì¶œë ¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
 		int j = sc.nextInt();
 		//for
 		/*
 		for(int i = 0; i < j; i++) {
-			System.out.println("¾È³çÇÏ¼¼¿ä");
+			System.out.println("ì•ˆë…•í•˜ì„¸ìš”");
 		}
 		*/
 		
 		//while
 		int i = 0;
 		while(i<j) {
-			System.out.println("¾È³çÇÏ¼¼¿ä");
+			System.out.println("ì•ˆë…•í•˜ì„¸ìš”");
 			i++;
 		}
 	}
@@ -57,7 +57,7 @@ public class ForWhile {
 	public void test2() {
 		Scanner sc = new Scanner(System.in);		
 		int j = sc.nextInt();
-		System.out.println(j + "´Ü ÀÔ´Ï´Ù.");
+		System.out.println(j + "ë‹¨ ìž…ë‹ˆë‹¤.");
 		//for
 		/*
 		for(int i = 1; i <= 9; i++) {
@@ -75,9 +75,9 @@ public class ForWhile {
 	
 	public void test3() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¸î´ÜÀ» Ãâ·ÂÇÏ½Ã°Ú½À´Ï±î? ");
+		System.out.print("ëª‡ë‹¨ì„ ì¶œë ¥í•˜ì‹œê² ìŠµë‹ˆê¹Œ? ");
 		int j = sc.nextInt();
-		System.out.println(j + "´Ü ÀÔ´Ï´Ù.");
+		System.out.println(j + "ë‹¨ ìž…ë‹ˆë‹¤.");
 		
 		//for
 		/*
@@ -100,7 +100,7 @@ public class ForWhile {
 		//for
 		/*
 		for(int i = 0; i < 5; i++) {
-			System.out.print("Á¤¼ö °ªÀ» ÀÔ·ÂÇÏ½Ã¿À : ");
+			System.out.print("ì •ìˆ˜ ê°’ì„ ìž…ë ¥í•˜ì‹œì˜¤ : ");
 			int j = sc.nextInt();
 			tot += j;
 		}
@@ -109,19 +109,19 @@ public class ForWhile {
 		//while
 		int k = 0;
 		while(k<5) {
-			System.out.print("Á¤¼ö °ªÀ» ÀÔ·ÂÇÏ½Ã¿À : ");
+			System.out.print("ì •ìˆ˜ ê°’ì„ ìž…ë ¥í•˜ì‹œì˜¤ : ");
 			int j = sc.nextInt();
 			tot += j;
 			k++;
 		}
-		System.out.println("ÀÔ·ÂÇÑ 5°³ÀÇ Á¤¼öÀÇ ÇÕ : " + tot);
+		System.out.println("ìž…ë ¥í•œ 5ê°œì˜ ì •ìˆ˜ì˜ í•© : " + tot);
 	}
 	
 	public void test5() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹¹øÂ° ¼ö ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì§¸ ìˆ˜ ìž…ë ¥ : ");
 		int i = sc.nextInt();
-		System.out.print("µÎ¹øÂ° ¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì§¸ ìˆ˜ ìž…ë ¥ : ");
 		int j = sc.nextInt();
 		int tot = 0;
 		//for
@@ -138,12 +138,12 @@ public class ForWhile {
 			tot += k;
 			k++;
 		}
-		System.out.printf("%d ~ %dÀÇ Á¤¼öÀÇ ÇÕ : %d", i, j, tot);
+		System.out.printf("%d ~ %dì˜ ì •ìˆ˜ì˜ í•© : %d", i, j, tot);
 	}
 	
 	public void test6() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("¼ýÀÚ ÀÔ·Â : ");
+		System.out.print("ìˆ«ìž ìž…ë ¥ : ");
 		int i = sc.nextInt();
 		int tot = 0;
 		//for
@@ -163,13 +163,13 @@ public class ForWhile {
 			}
 			j++;
 		}
-		System.out.printf("Â¦¼öµéÀÇ ÇÕÀº : %d", tot);
+		System.out.printf("ì§ìˆ˜ë“¤ì˜ í•©ì€ : %d", tot);
 	}
 	
 	public void whileTest() {
 		int i = 0;
 		while(i<5) {
-			System.out.println("¾È³çÇÏ¼¼¿ä");
+			System.out.println("ì•ˆë…•í•˜ì„¸ìš”");
 			i++;
 			if(i == 3) {
 				break;
@@ -177,18 +177,18 @@ public class ForWhile {
 		}
 		
 		do {
-			System.out.println("¾È³çÇÏ¼¼¿ä 2Æ®");
+			System.out.println("ì•ˆë…•í•˜ì„¸ìš” 2íŠ¸");
 			i++;
 		}
 		while(i<5);
-		//Á¶°Ç¹®ÀÌ µÚ¿¡ ÀÖ±â ¶§¹®¿¡ °°Àº Á¶°ÇÀÌ¶óµµ 1¹øÀ» ´õ ¹Ýº¹ÇÔ
+		//ì¡°ê±´ë¬¸ì´ ë’¤ì— ìžˆê¸° ë•Œë¬¸ì— ê°™ì€ ì¡°ê±´ì´ë¼ë„ 1ë²ˆì„ ë” ë°˜ë³µí•¨
 	}
 	
 	public void forTest2() {
-		//°¢ ´Ü
+		//ê° ë‹¨
 		/*
 		for(int i=2; i<=9; i++) {
-			System.out.println(i+"´Ü");
+			System.out.println(i+"ë‹¨");
 			for(int j=2; j<=9; j++) {
 				System.out.print(i+"*" +j + "=" + i*j + " ");
 			}
@@ -196,9 +196,9 @@ public class ForWhile {
 		}
 		*/
 		
-		//°¢ ´Ü ver2
+		//ê° ë‹¨ ver2
 		for(int i=1; i<=9; i++) {
-			//System.out.println(i+"´Ü");
+			//System.out.println(i+"ë‹¨");
 			for(int j=2; j<=9; j++) {
 				System.out.print(j+"*" +i + "=" + i*j + "\t");
 			}
@@ -207,21 +207,21 @@ public class ForWhile {
 	}
 	
 	public void forTest3() {
-		//º°Âï±â1
+		//ë³„ì°ê¸°1
 		/*
 		for(int i=0; i<5; i++) {
 			System.out.print("*");
 		}
 		*/
 		
-		//º°Âï±â2
+		//ë³„ì°ê¸°2
 		/*
 		for(int i=0; i<5; i++) {
 			System.out.println("*");
 		}
 		*/
 		
-		//º°Âï±â3
+		//ë³„ì°ê¸°3
 		/*
 		for(int j=0; j<5; j++) {
 			for(int i=0; i<5; i++) {
@@ -231,7 +231,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â4
+		//ë³„ì°ê¸°4
 		/*
 		for(int j=0; j<5; j++) {
 			for(int i=0; i<5; i++) {
@@ -241,7 +241,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â5
+		//ë³„ì°ê¸°5
 		/*
 		for(int j=0; j<5; j++) {
 			for(int i=0; i<5; i++) {
@@ -251,7 +251,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â6
+		//ë³„ì°ê¸°6
 		/*
 		for(int j=0; j<5; j++) {
 			for(int i=0; i<5; i++) {
@@ -261,7 +261,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â7
+		//ë³„ì°ê¸°7
 		/*
 		for(int j=4; j>=0; j--) {
 			for(int i=0; i<5; i++) {
@@ -271,7 +271,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â8
+		//ë³„ì°ê¸°8
 		/*
 		int i, j, k;
 		
@@ -286,7 +286,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â9
+		//ë³„ì°ê¸°9
 		/*
 		int i, j, k;
 				
@@ -301,7 +301,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â10
+		//ë³„ì°ê¸°10
 		/*
 		int i, j, k;
 		
@@ -316,7 +316,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â11
+		//ë³„ì°ê¸°11
 		/*
 		int i, j, k;
 		
@@ -331,7 +331,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â12
+		//ë³„ì°ê¸°12
 		/*
 		int i, j, k;
 		for(j=0; j<10; j++) {
@@ -355,7 +355,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â 13
+		//ë³„ì°ê¸° 13
 		/*
 		int i, j, k;
 		for(j=0; j<9; j++) {
@@ -379,7 +379,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â14, ¸ð·¡½Ã°è
+		//ë³„ì°ê¸°14, ëª¨ëž˜ì‹œê³„
 		/*
 		int h, i, j, k, itemp = 0;
 		for(h=0; h<9; h++) {
@@ -411,7 +411,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â15 ¹Ý¸ð·¡½Ã°è, ¾Æ·¡
+		//ë³„ì°ê¸°15 ë°˜ëª¨ëž˜ì‹œê³„, ì•„ëž˜
 		/*
 		int h, i, j, k, itemp = 1;
 		for(h=0; h<5; h++) {
@@ -429,7 +429,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â16 ¹Ý¸ð·¡½Ã°è, À§
+		//ë³„ì°ê¸°16 ë°˜ëª¨ëž˜ì‹œê³„, ìœ„
 		/*
 		int h, i, j, k, itemp = 9;
 		for(h=0; h<5; h++) {
@@ -447,7 +447,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â17 ¸ð·¡½Ã°è
+		//ë³„ì°ê¸°17 ëª¨ëž˜ì‹œê³„
 		/*
 		int h, i, j, k, itemp = 1;
 		for(h=0; h<9; h++) {
@@ -479,7 +479,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//º°Âï±â18 °ø¹é¸¶¸§¸ð
+		//ë³„ì°ê¸°18 ê³µë°±ë§ˆë¦„ëª¨
 		/*
 		int h, i, j, k, itemp = 1;
 		for(h=0; h<9; h++) {
@@ -511,7 +511,7 @@ public class ForWhile {
 		}
 		*/
 		
-		//¸ð·¡½Ã°è19 °ø¹é¸ð·¡½Ã°è
+		//ëª¨ëž˜ì‹œê³„19 ê³µë°±ëª¨ëž˜ì‹œê³„
 		/*
 		int h, i, j, k, itemp = 9;
 		for(h=0; h<10; h++) {
@@ -544,7 +544,7 @@ public class ForWhile {
 		*/
 		
 		/*
-		//¸ð·¡½Ã°è 19, °ø¹é¸ð·¡½Ã°è
+		//ëª¨ëž˜ì‹œê³„ 19, ê³µë°±ëª¨ëž˜ì‹œê³„
 		int h, i, j, k, itemp = 1;
 		for(h=0; h<9; h++) {
 			if(h <= 4) {
@@ -575,41 +575,41 @@ public class ForWhile {
 		}
 		*/
 		
-		//¹«ÇÑ¹Ýº¹ »ý¼ºÄÚµå
-		//for¹®
+		//ë¬´í•œë°˜ë³µ ìƒì„±ì½”ë“œ
+		//forë¬¸
 		/*
 		for(;;) {
-			System.out.println("¹«ÇÑ¹Ýº¹");
+			System.out.println("ë¬´í•œë°˜ë³µ");
 		}
 		*/
 		
-		//while¹®
+		//whileë¬¸
 		/*
 		while(true) {
-			System.out.println("¹«ÇÑ¹Ýº¹");
+			System.out.println("ë¬´í•œë°˜ë³µ");
 		}
 		*/
 		
-		//ºÐ±âÁ¡
+		//ë¶„ê¸°ì 
 		/*
 		Scanner sc = new Scanner(System.in);
 		for(int i=0; i<5; i++) {
 			System.out.println("Hello");
-			System.out.print("¼ýÀÚ ÀÔ·Â(1À» ÀÔ·ÂÇÏ¸é ±×¸¸Ãâ·ÂÇÔ) : ");
+			System.out.print("ìˆ«ìž ìž…ë ¥(1ì„ ìž…ë ¥í•˜ë©´ ê·¸ë§Œì¶œë ¥í•¨) : ");
 			int j = sc.nextInt();
 			if(j == 1) {
-				System.out.println("1 ÀÔ·Â break; ½ÇÇà");
-				//Å»ÃâÇÏ´Â ºÐ±âÁ¡ ÄÚµå
-				//¹Ýº¹¹® Á¾·á
+				System.out.println("1 ìž…ë ¥ break; ì‹¤í–‰");
+				//íƒˆì¶œí•˜ëŠ” ë¶„ê¸°ì  ì½”ë“œ
+				//ë°˜ë³µë¬¸ ì¢…ë£Œ
 				break;
 			}
 			else {
-				System.out.println( j + " ÀÔ·Â continue; ½ÇÇà");
-				//°è¼Ó ½ÇÇàÇÏ°Ô ¸¸µå´Â ºÐ±âÁ¡ ÄÚµå
-				//¹Ø¿¡ ¹¹°¡ ÀÖ¾îµµ ¹Ù·Î ÃÖ»ó´ÜÀ¸·Î ÀÌµ¿
-				//for¹®Àº Áõ°¨Ã³¸®ºÎÅÍ ´Ù½Ã ½ÃÀÛ
-				//while¹®Àº ÃÖ»ó´ÜºÎÅÍ ´Ù½Ã ½ÃÀÛ
-				//continueÀÌÈÄÄÚµå´Â ½ÇÇàµÇÁö ¾ÊÀ½
+				System.out.println( j + " ìž…ë ¥ continue; ì‹¤í–‰");
+				//ê³„ì† ì‹¤í–‰í•˜ê²Œ ë§Œë“œëŠ” ë¶„ê¸°ì  ì½”ë“œ
+				//ë°‘ì— ë­ê°€ ìžˆì–´ë„ ë°”ë¡œ ìµœìƒë‹¨ìœ¼ë¡œ ì´ë™
+				//forë¬¸ì€ ì¦ê°ì²˜ë¦¬ë¶€í„° ë‹¤ì‹œ ì‹œìž‘
+				//whileë¬¸ì€ ìµœìƒë‹¨ë¶€í„° ë‹¤ì‹œ ì‹œìž‘
+				//continueì´í›„ì½”ë“œëŠ” ì‹¤í–‰ë˜ì§€ ì•ŠìŒ
 				continue;
 			}
 		}
@@ -618,12 +618,12 @@ public class ForWhile {
 	
 	public void forWhileTest4() {
 		for(int i=0; i<=5; i++) {
-			System.out.println(i + ".¿ÜºÎ for¹®");
+			System.out.println(i + ".ì™¸ë¶€ forë¬¸");
 			for(int j=0; j<=5; j++) {
 				if(i==3) {
 					break;
 				}
-				System.out.println(j + ".³»ºÎ for¹®");
+				System.out.println(j + ".ë‚´ë¶€ forë¬¸");
 			}
 		}
 	}	

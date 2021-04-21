@@ -10,10 +10,10 @@ public class Controller {
 	Product p[];
 	View v;
 	
-	//2Â÷¿ø¹è¿­ÀÌ¹Ç·Î °¡·Î ¼¼·Î ÀÎÀÚ
+	//2ì°¨ì›ë°°ì—´ì´ë¯€ë¡œ ê°€ë¡œ ì„¸ë¡œ ì¸ì
 	int vIndex, hIndex;
 	
-	//Ã³¸®¸¦ À§ÇÑ ÀÓ½ÃÀü¿ªº¯¼ö
+	//ì²˜ë¦¬ë¥¼ ìœ„í•œ ì„ì‹œì „ì—­ë³€ìˆ˜
 	int itemp, itemp1;
 	public Controller() {
 		super();

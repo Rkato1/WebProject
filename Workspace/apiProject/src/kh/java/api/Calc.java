@@ -6,11 +6,11 @@ public class Calc {
 
 	public void main() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Ã¹¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ì²«ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		String num1 = sc.next();
-		System.out.print("µÎ¹øÂ° Á¤¼ö ÀÔ·Â : ");
+		System.out.print("ë‘ë²ˆì§¸ ì •ìˆ˜ ì…ë ¥ : ");
 		String num2 = sc.next();
-		System.out.print("¿¬»êÀÚ ÀÔ·Â(+,-,*,/) : ");
+		System.out.print("ì—°ì‚°ì ì…ë ¥(+,-,*,/) : ");
 		String oper = sc.next();
 		Integer i = Integer.valueOf(num1);
 		Integer i1 = Integer.valueOf(num2);
@@ -29,7 +29,7 @@ public class Calc {
 			System.out.println(num1+oper+num2+"="+d.doubleValue()/i1.intValue());
 			break;
 		default:
-			System.out.println("Àß¸øµÈ ¿¬»êÀÚ ÀÔ·Â");
+			System.out.println("ì˜ëª»ëœ ì—°ì‚°ì ì…ë ¥");
 			break;
 		}
 	}

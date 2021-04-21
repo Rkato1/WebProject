@@ -21,9 +21,9 @@ public class TCPChatClient {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
-			System.out.println("Ã¤ÆÃ¼­¹ö Á¢¼Ó Áß...");
+			System.out.println("ì±„íŒ…ì„œë²„ ì ‘ì† ì¤‘...");
 			socket = new Socket(serverIp, serverPort);
-			System.out.println("[Á¢¼Ó ¿Ï·á]");
+			System.out.println("[ì ‘ì† ì™„ë£Œ]");
 			InputStream in = socket.getInputStream();
 			OutputStream out = socket.getOutputStream();
 			dis = new DataInputStream(in);
@@ -32,19 +32,19 @@ public class TCPChatClient {
 			System.out.println(recMsg);
 			String nickName = sc.nextLine();
 			dos.writeUTF(nickName);
-			System.out.println("----- Ã¤ÆÃ ½ÃÀÛ -----");
-			System.out.println("Á¾·á´Â exit ÀÔ·Â");
+			System.out.println("----- ì±„íŒ… ì‹œìž‘ -----");
+			System.out.println("ì¢…ë£ŒëŠ” exit ìž…ë ¥");
 			while(true) {
-				//½Ã°£Àº ±×¶§±×‹š ¹Ù²ñ
+				//ì‹œê°„ì€ ê·¸ë•Œê·¸ë–„ ë°”ë€œ
 				SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 				recMsg = dis.readUTF();
 				String serverDate = dis.readUTF();
 				if(recMsg.equals("exit")) {
 					break;
 				}
-				System.out.println("("+serverDate+")¼­¹ö > "+recMsg);
+				System.out.println("("+serverDate+")ì„œë²„ > "+recMsg);
 				Date clientDate = new Date();
-				System.out.print("("+sdf.format(clientDate)+")³ª > ");
+				System.out.print("("+sdf.format(clientDate)+")ë‚˜ > ");
 				String sendMsg = sc.nextLine();
 				dos.writeUTF(sendMsg);
 				dos.writeUTF(sdf.format(clientDate));
@@ -79,24 +79,24 @@ public class TCPChatClient {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
-			System.out.println("Ã¤ÆÃ¼­¹ö Á¢¼Ó Áß...");
+			System.out.println("ì±„íŒ…ì„œë²„ ì ‘ì† ì¤‘...");
 			socket = new Socket(serverIp, serverPort);
-			System.out.println("[Á¢¼Ó ¿Ï·á]");
+			System.out.println("[ì ‘ì† ì™„ë£Œ]");
 			InputStream in = socket.getInputStream();
 			OutputStream out = socket.getOutputStream();
 			dis = new DataInputStream(in);
 			dos = new DataOutputStream(out);
-			System.out.println("----- Ã¤ÆÃ ½ÃÀÛ -----");
-			System.out.println("Á¾·á´Â exit ÀÔ·Â");
+			System.out.println("----- ì±„íŒ… ì‹œìž‘ -----");
+			System.out.println("ì¢…ë£ŒëŠ” exit ìž…ë ¥");
 			while(true) {				
-				System.out.print("³ª > ");
+				System.out.print("ë‚˜ > ");
 				String sendMsg = sc.nextLine();
 				dos.writeUTF(sendMsg);
 				if(sendMsg.equals("exit")) {
 					break;
 				}
 				String recMsg = dis.readUTF();
-				System.out.println("[¼­¹ö] : "+recMsg);
+				System.out.println("[ì„œë²„] : "+recMsg);
 			}
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block

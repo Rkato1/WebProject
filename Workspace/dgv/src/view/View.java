@@ -15,32 +15,32 @@ public class View {
 		// TODO Auto-generated method stub
 		System.out.println("Welcome to DGV");
 		System.out.println("--------------");
-		System.out.println("-1. ¾Ë¹Ù»ý------");
-		System.out.println("-2. ¼Õ ´Ô-------");
-		System.out.println("-0. Á¾ ·á-------");
+		System.out.println("-1. ì•Œë°”ìƒ------");
+		System.out.println("-2. ì† ë‹˜-------");
+		System.out.println("-0. ì¢… ë£Œ-------");
 		System.out.println("--------------");
-		System.out.print("¼±ÅÃ > ");
+		System.out.print("ì„ íƒ > ");
 		int temp = sc.nextInt();
 		return temp;
 	}
 
 	public int showMenu() {
 		// TODO Auto-generated method stub
-		System.out.println("---- »ó ¿µ °ü -----");
+		System.out.println("---- ìƒ ì˜ ê´€ -----");
 		System.out.println("---------------");
-		System.out.println("-1. ¿µÈ­Ãß°¡------");
-		System.out.println("-2. ¿µÈ­¼öÁ¤------");
-		System.out.println("-3. ¿µÈ­»èÁ¦------");
-		System.out.println("-4. »ó¿µ¿µÈ­------");
+		System.out.println("-1. ì˜í™”ì¶”ê°€------");
+		System.out.println("-2. ì˜í™”ìˆ˜ì •------");
+		System.out.println("-3. ì˜í™”ì‚­ì œ------");
+		System.out.println("-4. ìƒì˜ì˜í™”------");
 		System.out.println("---------------");
-		System.out.println("----- ¸Å Á¡ ------");
+		System.out.println("----- ë§¤ ì  ------");
 
-		System.out.println("-5. Àç°íÇöÈ²------");
-		System.out.println("-6. »óÇ°µî·Ï------");
-		System.out.println("-7. »óÇ°¼öÁ¤------");
-		System.out.println("-8. »óÇ°»èÁ¦------");
-		System.out.println("-0. Ã³À½È­¸é------");
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("-5. ìž¬ê³ í˜„í™©------");
+		System.out.println("-6. ìƒí’ˆë“±ë¡------");
+		System.out.println("-7. ìƒí’ˆìˆ˜ì •------");
+		System.out.println("-8. ìƒí’ˆì‚­ì œ------");
+		System.out.println("-0. ì²˜ìŒí™”ë©´------");
+		System.out.print("ì„ íƒ > ");
 		int temp = sc.nextInt();
 		return temp;
 	}
@@ -49,10 +49,10 @@ public class View {
 		// TODO Auto-generated method stub
 		System.out.println("Welcome to DGV");
 		System.out.println("---------------");
-		System.out.println("-1. ¿µ È­ °ü------");
-		System.out.println("-2. ¸Å     Á¡------");
-		System.out.println("-0. Ã³À½È­¸é------");
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("-1. ì˜ í™” ê´€------");
+		System.out.println("-2. ë§¤     ì ------");
+		System.out.println("-0. ì²˜ìŒí™”ë©´------");
+		System.out.print("ì„ íƒ > ");
 		int temp = sc.nextInt();
 		return temp;
 	}
@@ -78,45 +78,45 @@ public class View {
 	
 	public int movieShow() {
 		System.out.println("---------------");
-		System.out.println("-1. ¿µÈ­¿¹¸Å------");
-		System.out.println("-2. ¿¹¸ÅÈ®ÀÎ------");
-		System.out.println("-3. ¿¹¸ÅÃë¼Ò------");
-		System.out.println("-0. Ã³À½È­¸é------");
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("-1. ì˜í™”ì˜ˆë§¤------");
+		System.out.println("-2. ì˜ˆë§¤í™•ì¸------");
+		System.out.println("-3. ì˜ˆë§¤ì·¨ì†Œ------");
+		System.out.println("-0. ì²˜ìŒí™”ë©´------");
+		System.out.print("ì„ íƒ > ");
 		int temp = sc.nextInt();
 		return temp;
 	}
 	public int storeShow() {
 		System.out.println("---------------");
-		System.out.println("-1. À½·á±¸¸Å------");
-		System.out.println("-2. À½½Ä±¸¸Å------");
-		System.out.println("-3. ÆËÄÜ±¸¸Å------");
-		System.out.println("-0. Ã³À½È­¸é------");
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("-1. ìŒë£Œêµ¬ë§¤------");
+		System.out.println("-2. ìŒì‹êµ¬ë§¤------");
+		System.out.println("-3. íŒì½˜êµ¬ë§¤------");
+		System.out.println("-0. ì²˜ìŒí™”ë©´------");
+		System.out.print("ì„ íƒ > ");
 		int temp = sc.nextInt();
 		return temp;
 	}
 	public int showFood() {
-		System.out.println("\t\tÀ½½Ä\t\t");
-		System.out.print("No.\tÁ¦Ç°¸í\t¼ö·®\t°¡°Ý\n");
-		//À½½Ä¹è¿­
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("\t\tìŒì‹\t\t");
+		System.out.print("No.\tì œí’ˆëª…\tìˆ˜ëŸ‰\tê°€ê²©\n");
+		//ìŒì‹ë°°ì—´
+		System.out.print("ì„ íƒ > ");
 		int temp = sc.nextInt();
 		return temp;
 	}
 	public int showDrink() {
-		System.out.println("\t\tÀ½·á\t\t");
-		System.out.print("No.\tÁ¦Ç°¸í\t¼ö·®\t°¡°Ý\n");
-		//À½·á¹è¿­
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("\t\tìŒë£Œ\t\t");
+		System.out.print("No.\tì œí’ˆëª…\tìˆ˜ëŸ‰\tê°€ê²©\n");
+		//ìŒë£Œë°°ì—´
+		System.out.print("ì„ íƒ > ");
 		int temp = sc.nextInt();
 		return temp;
 	}
 	public int showPopcorn() {
-		System.out.println("\t\tÆËÄÜ\t\t");
-		System.out.print("No.\tÁ¦Ç°¸í\t¼ö·®\t°¡°Ý\t¸À\n");
-		//ÆËÄÜ¹è¿­
-		System.out.print("¼±ÅÃ > ");
+		System.out.println("\t\tíŒì½˜\t\t");
+		System.out.print("No.\tì œí’ˆëª…\tìˆ˜ëŸ‰\tê°€ê²©\të§›\n");
+		//íŒì½˜ë°°ì—´
+		System.out.print("ì„ íƒ > ");
 		int temp = sc.nextInt();
 		return temp;
 	}

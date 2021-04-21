@@ -9,33 +9,33 @@ import java.util.Scanner;
 public class HashSetTest {
 	public void main() {
 		HashSet<Integer> data = new HashSet<Integer>();
-		//°ªÀ» ÀÔ·Â(Áßº¹ÀÌ Çã¿ëµÇÁö ¾ÊÀ½)->true
+		//ê°’ì„ ì…ë ¥(ì¤‘ë³µì´ í—ˆìš©ë˜ì§€ ì•ŠìŒ)->true
 		data.add(10);
-		//°ªÀ» ÀÔ·Â(Áßº¹ÀÌ Çã¿ëµÇÁö ¾ÊÀ½)->false
+		//ê°’ì„ ì…ë ¥(ì¤‘ë³µì´ í—ˆìš©ë˜ì§€ ì•ŠìŒ)->false
 		data.add(10);
 		data.add(20);
 		data.add(30);
 		data.add(40);
 		System.out.println(data.size());
-		//¼ø¼­µµ À¯ÁöÇÏÁö ¾ÊÀ½
+		//ìˆœì„œë„ ìœ ì§€í•˜ì§€ ì•ŠìŒ
 		System.out.println(data);
 		
-		//index¹øÈ£¸¦ ¾È¾²±â ¶§¹®¿¡ ²¨³»±â Èûµë
-		//ArrayList·Î HashSetÀ» ¹Ş¾Æ¿Í¼­ Ãâ·ÂÇÏ±â ¿ëÀÌÇÔ
+		//indexë²ˆí˜¸ë¥¼ ì•ˆì“°ê¸° ë•Œë¬¸ì— êº¼ë‚´ê¸° í˜ë“¬
+		//ArrayListë¡œ HashSetì„ ë°›ì•„ì™€ì„œ ì¶œë ¥í•˜ê¸° ìš©ì´í•¨
 		ArrayList<Integer> list = new ArrayList<Integer>(data);
 		for(int i : list) {
 			System.out.println(i);
 		}
 		
-		//iterator¸¦ ÀÌ¿ëÇÏ¿© Set¿¡ ÀÖ´Â µ¥ÀÌÅÍ ÃßÃâ
+		//iteratorë¥¼ ì´ìš©í•˜ì—¬ Setì— ìˆëŠ” ë°ì´í„° ì¶”ì¶œ
 		Iterator<Integer> iterData = data.iterator();
 		while(iterData.hasNext()) {
-			//°¢ °ª¿¡ Á÷Á¢ Á¢±ÙÇÑÈÄ ÀúÀå
-			//±× ÀÌÈÄ¿¡ °ªÀÌ ¾ø¾îÁú¶§±îÁö °ªÀ» º¸¿©ÁÜ
+			//ê° ê°’ì— ì§ì ‘ ì ‘ê·¼í•œí›„ ì €ì¥
+			//ê·¸ ì´í›„ì— ê°’ì´ ì—†ì–´ì§ˆë•Œê¹Œì§€ ê°’ì„ ë³´ì—¬ì¤Œ
 			System.out.println(iterData.next());
 		}
 		
-		//foreach´Â ¹Ù·Î Ãâ·ÂÀÌ µÇÁö¸¸ ÀÏ¹İ for¹®Àº »ç¿ë ºÒ°¡
+		//foreachëŠ” ë°”ë¡œ ì¶œë ¥ì´ ë˜ì§€ë§Œ ì¼ë°˜ forë¬¸ì€ ì‚¬ìš© ë¶ˆê°€
 		for(int i:data) {
 			System.out.println(i);
 		}
@@ -44,17 +44,17 @@ public class HashSetTest {
 	public void lotto() {
 		Scanner sc = new Scanner(System.in);
 		HashSet<Integer> user = new HashSet<Integer>();
-		//¸î¹øÂ°¹øÈ£ÀÔ·Â
+		//ëª‡ë²ˆì§¸ë²ˆí˜¸ì…ë ¥
 		int i=1;
 		while(user.size() != 6) {
-			System.out.print(i+"¹øÂ° ¹øÈ£ ÀÔ·Â : ");
+			System.out.print(i+"ë²ˆì§¸ ë²ˆí˜¸ ì…ë ¥ : ");
 			int iNum = sc.nextInt();
-			//Áßº¹Ã¼Å©
+			//ì¤‘ë³µì²´í¬
 			if(user.add(iNum)) {
 				i++;
 			}
 		}
-		//Á¤·ÄÃ³¸® µû·Î ÇØÁà¾ßÇÔ
+		//ì •ë ¬ì²˜ë¦¬ ë”°ë¡œ í•´ì¤˜ì•¼í•¨
 		ArrayList<Integer> userList = new ArrayList<Integer>(user);
 		Collections.sort(userList);
 		for(int j:userList) {

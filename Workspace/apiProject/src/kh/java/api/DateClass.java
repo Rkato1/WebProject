@@ -7,56 +7,56 @@ import java.util.Scanner;
 
 public class DateClass {
 	public void calendarClass(){
-		//°´Ã¼ »ı¼º
-		//Calendar´Â Ãß»óÅ¬·¡½º°í »ı¼ºÀÚµµ  protected
+		//ê°ì²´ ìƒì„±
+		//CalendarëŠ” ì¶”ìƒí´ë˜ìŠ¤ê³  ìƒì„±ìë„  protected
 		Calendar today = Calendar.getInstance();
-		//CalendarÀÇ ÀÚ½ÄÅ¬·¡½º GregorianCalendar°´Ã¼¸¦ »ı¼º
-		//ÇÑ±¹Ç¥ÁØ½Ã°£´ëÀÇ Á¤º¸¸¦ °¡Á®¿È(ÄÄÇ»ÅÍ ½Ã½ºÅÛ ±âÁØÀ¸·Î ¸ÂÃçÁø °ªÀ» °¡Á®¿È)
-		//Calendar.YEAR->¿ÃÇØÀÇ ¿¬µµ ¹İÈ¯
+		//Calendarì˜ ìì‹í´ë˜ìŠ¤ GregorianCalendarê°ì²´ë¥¼ ìƒì„±
+		//í•œêµ­í‘œì¤€ì‹œê°„ëŒ€ì˜ ì •ë³´ë¥¼ ê°€ì ¸ì˜´(ì»´í“¨í„° ì‹œìŠ¤í…œ ê¸°ì¤€ìœ¼ë¡œ ë§ì¶°ì§„ ê°’ì„ ê°€ì ¸ì˜´)
+		//Calendar.YEAR->ì˜¬í•´ì˜ ì—°ë„ ë°˜í™˜
 		System.out.println(today.get(Calendar.YEAR));
-		//Calendar.MONTH->(0~11)¹İÈ¯,¿ù Ãâ·Â
+		//Calendar.MONTH->(0~11)ë°˜í™˜,ì›” ì¶œë ¥
 		System.out.println(today.get(Calendar.MONTH) + 1);
-		//ÀÏ Ãâ·Â
+		//ì¼ ì¶œë ¥
 		System.out.println(today.get(Calendar.DATE));
-		//am/pm±¸ºĞ 0/1¹İÈ¯
+		//am/pmêµ¬ë¶„ 0/1ë°˜í™˜
 		System.out.println(today.get(Calendar.AM_PM));
-		//½Ã°£
+		//ì‹œê°„
 		System.out.println(today.get(Calendar.HOUR));
-		//ºĞ
+		//ë¶„
 		System.out.println(today.get(Calendar.MINUTE));
-		//ÃÊ
+		//ì´ˆ
 		System.out.println(today.get(Calendar.SECOND));
-		//ÃÊ/1000 (1~1000)
+		//ì´ˆ/1000 (1~1000)
 		System.out.println(today.get(Calendar.MILLISECOND));
-		//¿äÀÏ(1(ÀÏ)~7(Åä))
+		//ìš”ì¼(1(ì¼)~7(í† ))
 		System.out.println(today.get(Calendar.DAY_OF_WEEK));
 		
 		Calendar yesterday = Calendar.getInstance();
 		System. out.println(yesterday.get(Calendar.DAY_OF_WEEK));
-		//¿¬µµ º¯°æ
+		//ì—°ë„ ë³€ê²½
 		yesterday.set(Calendar.YEAR, 2019);
 		System.out.println(yesterday.get(Calendar.YEAR));
 		System.out.println(yesterday.get(Calendar.DAY_OF_WEEK));
 		
 		long todaySec = today.getTimeInMillis();
-		//1970/01/01ºÎÅÍ ÇöÀç½Ã°£±îÁö Èå¸¥½Ã°£À»
-		//MILLISECOND·Î ³ªÅ¸³»´Â ¸Ş¼Òµå
+		//1970/01/01ë¶€í„° í˜„ì¬ì‹œê°„ê¹Œì§€ íë¥¸ì‹œê°„ì„
+		//MILLISECONDë¡œ ë‚˜íƒ€ë‚´ëŠ” ë©”ì†Œë“œ
 		long yesterdaySec = yesterday.getTimeInMillis();
 		System.out.println(todaySec);
 		long ltodaySec = todaySec/1000;
 		long lyesterdaySec = yesterdaySec/1000;
 		
-		//ÇÏ·ç´Â 86400ÃÊ
+		//í•˜ë£¨ëŠ” 86400ì´ˆ
 		int itoday = (int)ltodaySec/86400;
 		int iyesterday = (int)lyesterdaySec/86400;
 		
-		//À±³âÀÌ ÀÖÀ»¶§´Â 366, ¾Æ´Ñ °æ¿ì 365
+		//ìœ¤ë…„ì´ ìˆì„ë•ŒëŠ” 366, ì•„ë‹Œ ê²½ìš° 365
 		System.out.println(itoday-iyesterday);
 	}
 
-	//ÀÚÁÖ ¾È »ç¿ëÇØ¼­ »ç¶óÁú¼öµµ ÀÖÀ½
+	//ìì£¼ ì•ˆ ì‚¬ìš©í•´ì„œ ì‚¬ë¼ì§ˆìˆ˜ë„ ìˆìŒ
 	public void dateTest() {
-		//ÄÄÇ»ÅÍ ½Ã°£¿¡ ¿µÇâ
+		//ì»´í“¨í„° ì‹œê°„ì— ì˜í–¥
 		Date date = new Date();
 		System.out.println(date);
 		Calendar today = Calendar.getInstance();
@@ -76,30 +76,30 @@ public class DateClass {
 		int iDate = c.get(Calendar.DATE);
 		int iDay = c.get(Calendar.DAY_OF_WEEK);
 		StringBuffer sb = new StringBuffer();
-		sb.append(iYear+"³â ");
-		sb.append(iMonth+"¿ù ");
-		sb.append(iDate+"ÀÏ ");
+		sb.append(iYear+"ë…„ ");
+		sb.append(iMonth+"ì›” ");
+		sb.append(iDate+"ì¼ ");
 		switch(iDay) {
 		case 1:
-			sb.append("ÀÏ¿äÀÏ");
+			sb.append("ì¼ìš”ì¼");
 			break;
 		case 2:
-			sb.append("¿ù¿äÀÏ");
+			sb.append("ì›”ìš”ì¼");
 			break;
 		case 3:
-			sb.append("È­¿äÀÏ");
+			sb.append("í™”ìš”ì¼");
 			break;
 		case 4:
-			sb.append("¼ö¿äÀÏ");
+			sb.append("ìˆ˜ìš”ì¼");
 			break;
 		case 5:
-			sb.append("¸ñ¿äÀÏ");
+			sb.append("ëª©ìš”ì¼");
 			break;
 		case 6:
-			sb.append("±İ¿äÀÏ");
+			sb.append("ê¸ˆìš”ì¼");
 			break;
 		case 7:
-			sb.append("Åä¿äÀÏ");
+			sb.append("í† ìš”ì¼");
 			break;
 		}
 		System.out.println(sb);
@@ -111,29 +111,29 @@ public class DateClass {
 		int iMonth = c.get(Calendar.MONTH)+1;
 		int iDay = c.get(Calendar.DATE);
 		Scanner sc = new Scanner(System.in);
-		System.out.println("============ D-Day °è»ê±â ============");
-		System.out.print("D-Day [³âµµ] ÀÔ·Â : ");
+		System.out.println("============ D-Day ê³„ì‚°ê¸° ============");
+		System.out.print("D-Day [ë…„ë„] ì…ë ¥ : ");
 		int dYear = sc.nextInt();
-		System.out.print("D-Day [¿ù] ÀÔ·Â : ");
+		System.out.print("D-Day [ì›”] ì…ë ¥ : ");
 		int dMonth = sc.nextInt();
-		System.out.print("D-Day [ÀÏ] ÀÔ·Â : ");
+		System.out.print("D-Day [ì¼] ì…ë ¥ : ");
 		int dDay = sc.nextInt();
 		Calendar c1 = Calendar.getInstance();
 		c1.set(Calendar.YEAR, dYear);
 		c1.set(Calendar.MONTH, dMonth-1);
 		c1.set(Calendar.DATE, dDay);
-		System.out.printf("¿À´Ã ³¯Â¥ : %d³â %d¿ù %dÀÏ\n", iYear, iMonth, iDay);
-		System.out.printf("D-Day ³¯Â¥ : %d³â %d¿ù %dÀÏ\n", dYear, dMonth, dDay);
-		//³²Àº ÀÏ·Î °è»ê
+		System.out.printf("ì˜¤ëŠ˜ ë‚ ì§œ : %dë…„ %dì›” %dì¼\n", iYear, iMonth, iDay);
+		System.out.printf("D-Day ë‚ ì§œ : %dë…„ %dì›” %dì¼\n", dYear, dMonth, dDay);
+		//ë‚¨ì€ ì¼ë¡œ ê³„ì‚°
 		//24*60*60*1000
 		int iToday = (int)(c.getTimeInMillis()/86400000);
 		int dToday = (int)(c1.getTimeInMillis()/86400000);
 		if(iToday-dToday>0) {
-			System.out.printf("%dÀÏ Áö³µ½À´Ï´Ù.\n", iToday-dToday);
+			System.out.printf("%dì¼ ì§€ë‚¬ìŠµë‹ˆë‹¤.\n", iToday-dToday);
 		}else if(iToday-dToday<0) {
-			System.out.printf("%dÀÏ ³²¾Ò½À´Ï´Ù.\n", dToday-iToday);
+			System.out.printf("%dì¼ ë‚¨ì•˜ìŠµë‹ˆë‹¤.\n", dToday-iToday);
 		}else {
-			System.out.println("D-Day ÀÔ´Ï´Ù.");
+			System.out.println("D-Day ì…ë‹ˆë‹¤.");
 		}
 	}
 }

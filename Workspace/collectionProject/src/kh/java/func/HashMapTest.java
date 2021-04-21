@@ -8,9 +8,9 @@ public class HashMapTest {
 		//Key, Value
 		//HashMap<K,V>
 		HashMap<Integer, String> map = new HashMap<Integer, String>();
-		//°ª ´ëÀÔ
-		//Key±âÁØÀ¸·Î Á¤·Ä
-		map.put(2,"¾È³ç");
+		//ê°’ ëŒ€ì…
+		//Keyê¸°ì¤€ìœ¼ë¡œ ì •ë ¬
+		map.put(2,"ì•ˆë…•");
 		map.put(0,"Hello");
 		map.put(1,"Hi");
 		System.out.println(map.get(2));
@@ -18,16 +18,16 @@ public class HashMapTest {
 		System.out.println(map.get(0));
 		map.put(3,"H!I!");
 		System.out.println(map);
-		//µ¿ÀÏÇÑ key°ªÀÌ ÀÖÀ»½Ã µ¤¾î¾²±âµÊ
-		map.put(2,"¾È³ç¸øÇÔ");
+		//ë™ì¼í•œ keyê°’ì´ ìˆì„ì‹œ ë®ì–´ì“°ê¸°ë¨
+		map.put(2,"ì•ˆë…•ëª»í•¨");
 		System.out.println(map);
-		//key°ªÀÌ ¾øÀ¸¸é nullÀÌ ³ª¿È
+		//keyê°’ì´ ì—†ìœ¼ë©´ nullì´ ë‚˜ì˜´
 		System.out.println(map.get(4));
 		
-		//»èÁ¦(Å°°ª)
+		//ì‚­ì œ(í‚¤ê°’)
 		map.remove(1);
 		System.out.println(map);
-		//ÇöÀç ()¿¡ µé¾î°£ Key°ªÀÌ Á¸ÀçÇÏ´ÂÁö ¿©ºÎ ¹İÈ¯
+		//í˜„ì¬ ()ì— ë“¤ì–´ê°„ Keyê°’ì´ ì¡´ì¬í•˜ëŠ”ì§€ ì—¬ë¶€ ë°˜í™˜
 		System.out.println(map.containsKey(1));
 		System.out.println(map.containsKey(3));
 	}
@@ -38,13 +38,13 @@ public class HashMapTest {
 		map.put("two", 2);
 		map.put("three", 3);
 		System.out.println(map.get("two"));
-		//µ¤¾î¾²±â
+		//ë®ì–´ì“°ê¸°
 		map.put("three", 5);
 		System.out.println(map.get("three"));
 		
 		map.put("asdf", 101010);
 		map.put("kh", 999);
-		//map¿¡ µé¾îÀÖ´Â Å°°ªµéÀ» °¡Á®¿È
+		//mapì— ë“¤ì–´ìˆëŠ” í‚¤ê°’ë“¤ì„ ê°€ì ¸ì˜´
 		Set<String> keys = map.keySet();
 		System.out.println(keys);
 		for(String str : keys) {
