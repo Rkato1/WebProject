@@ -13,7 +13,7 @@ public class Run {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		TCPClient tcpClient = new TCPClient();
-		//tcpClient.main();
+		tcpClient.main();
 		TCPChatClient tcpChatClient = new TCPChatClient();
 		//tcpChatClient.main();
 		//tcpChatClient.main2();
@@ -26,7 +26,7 @@ public class Run {
 		TCPNumBaseballGameClient tcpNumBaseballGameClient = new TCPNumBaseballGameClient();
 		//tcpNumBaseballGameClient.main();
 		ChattingClient tests = new ChattingClient();
-		tests.chattingClient();
+		//tests.chattingClient();
 	}
 
 }

@@ -12,7 +12,7 @@ public class TCPtestServer {
 	public void main() {
 		// 1.서버에서 사용할 포트번호 지정
 		// 0~65535
-		int port = 9999;
+		int port = 8701;
 		// 2.서버용 소켓객체생성
 		ServerSocket serverSocket = null;
 		DataOutputStream dos = null;
@@ -20,6 +20,7 @@ public class TCPtestServer {
 		// 매개변수로 포트번호
 		try {
 			serverSocket = new ServerSocket(port);
+			System.out.println("포트번호 : "+port);
 			System.out.println("서버소켓 객체 생성 완료!!");
 
 			// 3.클라이언트 접속요청대기
